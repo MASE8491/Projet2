@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="page-head">
+  <div class="container">
+    {{ ui.breadcrumbs([("Contact", None)]) }}
+    <h1>Contact</h1>
+    <p class="lead">Une question, une correction, des photos à partager sous licence libre&nbsp;? Écrivez-nous.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container with-aside">
+    <form class="form" action="mailto:contact@komori.com" method="post" enctype="text/plain">
+      <label>Nom<input type="text" name="nom" autocomplete="name" required></label>
+      <label>Adresse e-mail<input type="email" name="email" autocomplete="email" required></label>
+      <label>Sujet
+        <select name="sujet">
+          <option>Préparer un voyage</option>
+          <option>Signaler une erreur</option>
+          <option>Partager des photos ou vidéos</option>
+          <option>Autre</option>
+        </select>
+      </label>
+      <label>Message<textarea name="message" rows="6" required></textarea></label>
+      <button class="btn btn-ocean" type="submit">Envoyer</button>
+      <p class="note">Le formulaire ouvre votre logiciel de messagerie. Adresse&nbsp;: contact@komori.com</p>
+    </form>
+    <aside class="tips">
+      <h2>Avant d'écrire</h2>
+      <p>Les réponses à la plupart des questions se trouvent dans nos <a href="{{ url('preparer-son-voyage/index.html') }}">infos pratiques</a>.
+      Komori est un guide éditorial&nbsp;: nous ne vendons ni billets ni séjours.</p>
+    </aside>
+  </div>
+</section>
+{% endblock %}

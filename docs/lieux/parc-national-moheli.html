@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parc national de Mohéli — Mohéli · Komori — Les îles de la Lune</title>
+  <meta name="description" content="Îlots déserts, mangroves, herbiers et récifs : le premier parc marin des Comores est un modèle de conservation pilotée par les communautés.">
+  <link rel="canonical" href="https://komori.com/lieux/parc-national-moheli.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Komori">
+  <meta property="og:title" content="Parc national de Mohéli — Mohéli">
+  <meta property="og:description" content="Îlots déserts, mangroves, herbiers et récifs : le premier parc marin des Comores est un modèle de conservation pilotée par les communautés.">
+<meta property="og:image" content="https://commons.wikimedia.org/wiki/Special:FilePath/%C3%8Elot_de_Nioumachoua.jpg?width=1280">  <meta name="theme-color" content="#0b4f5c">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+</head>
+<body class="">
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header" data-header>
+  <div class="container header-inner">
+    <a class="brand" href="../index.html" aria-label="Komori, accueil">
+      <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+        <path d="M30 6a18 18 0 1 0 12 31.5A15 15 0 1 1 30 6z" fill="currentColor"/>
+        <circle cx="34" cy="16" r="2.4" fill="var(--ylang)"/><circle cx="38" cy="22" r="1.8" fill="var(--ylang)"/>
+        <circle cx="40" cy="28" r="2" fill="var(--ylang)"/><circle cx="37" cy="34" r="2.6" fill="var(--ylang)"/>
+      </svg>
+      <span class="brand-text"><strong>Komori</strong><small>Les îles de la Lune</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu-principal" data-nav-toggle>
+      <span></span><span></span><span></span><span class="sr-only">Menu</span>
+    </button>
+    <nav class="main-nav" id="menu-principal" aria-label="Navigation principale" data-nav>
+      <ul>
+        <li class="has-sub is-active">
+          <a href="../destinations/index.html">Destinations</a>
+          <button class="sub-toggle" aria-label="Ouvrir le sous-menu Destinations" aria-expanded="false"></button>
+          <ul class="sub">
+            <li><a href="../destinations/grande-comore.html">Grande Comore<small>Ngazidja · L&#39;île du volcan</small></a></li>
+            <li><a href="../destinations/moheli.html">Mohéli<small>Mwali · L&#39;île nature</small></a></li>
+            <li><a href="../destinations/anjouan.html">Anjouan<small>Ndzuwani · L&#39;île aux parfums</small></a></li>
+            <li><a href="../destinations/mayotte.html">Mayotte<small>Maore · L&#39;île au lagon</small></a></li>
+            <li><a href="../archipel.html">Découvrir l&#39;archipel<small>Géographie &amp; histoire</small></a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <a href="../experiences/index.html">Expériences</a>
+          <button class="sub-toggle" aria-label="Ouvrir le sous-menu Expériences" aria-expanded="false"></button>
+          <ul class="sub">
+            <li><a href="../experiences/nature-et-faune.html">Nature &amp; faune sauvage</a></li>
+            <li><a href="../experiences/plages-et-lagons.html">Plages &amp; lagons</a></li>
+            <li><a href="../experiences/plongee-et-ocean.html">Plongée &amp; océan</a></li>
+            <li><a href="../experiences/randonnees-et-volcans.html">Randonnées &amp; volcans</a></li>
+            <li><a href="../experiences/culture-et-patrimoine.html">Culture &amp; patrimoine</a></li>
+            <li><a href="../experiences/gastronomie.html">Gastronomie</a></li>
+            <li><a href="../experiences/route-des-parfums.html">Route des parfums</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <a href="../itineraires/index.html">Itinéraires</a>
+          <button class="sub-toggle" aria-label="Ouvrir le sous-menu Itinéraires" aria-expanded="false"></button>
+          <ul class="sub">
+            <li><a href="../itineraires/grand-tour-des-quatre-iles.html">Le grand tour des quatre îles<small>14 à 16 jours</small></a></li>
+            <li><a href="../itineraires/volcans-et-sommets.html">Volcans &amp; sommets<small>8 à 10 jours</small></a></li>
+            <li><a href="../itineraires/lagons-et-tortues.html">Lagons &amp; tortues<small>10 à 12 jours</small></a></li>
+            <li><a href="../itineraires/route-des-sultans.html">Sur la route des sultans<small>7 à 9 jours</small></a></li>
+            <li><a href="../itineraires/escapade-a-deux-a-moheli.html">Escapade à deux à Mohéli<small>5 à 6 jours</small></a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <a href="../preparer-son-voyage/index.html">Préparer</a>
+          <button class="sub-toggle" aria-label="Ouvrir le sous-menu Préparer" aria-expanded="false"></button>
+          <ul class="sub">
+            <li><a href="../preparer-son-voyage/comment-venir.html">Comment venir</a></li>
+            <li><a href="../preparer-son-voyage/formalites.html">Visas &amp; formalités</a></li>
+            <li><a href="../preparer-son-voyage/quand-partir.html">Quand partir ?</a></li>
+            <li><a href="../preparer-son-voyage/se-deplacer.html">Se déplacer</a></li>
+            <li><a href="../preparer-son-voyage/sante-securite.html">Santé &amp; sécurité</a></li>
+            <li><a href="../preparer-son-voyage/argent-et-budget.html">Argent &amp; budget</a></li>
+            <li><a href="../preparer-son-voyage/hebergement.html">Où dormir</a></li>
+            <li><a href="../preparer-son-voyage/langues-et-coutumes.html">Langues &amp; savoir-vivre</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <a href="../galerie.html">Galerie &amp; vidéos</a>
+          <button class="sub-toggle" aria-label="Ouvrir le sous-menu Galerie &amp; vidéos" aria-expanded="false"></button>
+          <ul class="sub">
+            <li><a href="../galerie.html">Galerie photos</a></li>
+            <li><a href="../videos.html">Vidéos</a></li>
+          </ul>
+        </li>
+        <li class="">
+          <a href="../agenda.html">Agenda</a>
+        </li>
+      </ul>
+      <a class="btn btn-small btn-ylang nav-cta" href="../preparer-son-voyage/index.html">Préparer mon voyage</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenu">
+<section class="hero ">
+  <div class="hero-media"><img class="" src="https://commons.wikimedia.org/wiki/Special:FilePath/%C3%8Elot_de_Nioumachoua.jpg?width=1280" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/%C3%8Elot_de_Nioumachoua.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/%C3%8Elot_de_Nioumachoua.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/%C3%8Elot_de_Nioumachoua.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/%C3%8Elot_de_Nioumachoua.jpg?width=1920 1920w" sizes="100vw"
+     alt="" loading="eager" decoding="async" fetchpriority="high"     data-fallback="Les îlots de Nioumachoua, joyaux du parc national de Mohéli"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+<nav class="breadcrumbs" aria-label="Fil d'Ariane">
+  <ol>
+    <li><a href="../index.html">Accueil</a></li>
+    <li><a href="../destinations/index.html">Destinations</a></li>
+    <li><a href="../destinations/moheli.html">Mohéli</a></li>
+    <li><span aria-current="page">Parc national de Mohéli</span></li>
+  </ol>
+</nav><p class="kicker">Mohéli · Aire protégée</p>    <h1>Parc national de Mohéli</h1>
+<p class="lead">Îlots déserts, mangroves, herbiers et récifs : le premier parc marin des Comores est un modèle de conservation pilotée par les communautés.</p>  </div>
+  <p class="hero-credit">Les îlots de Nioumachoua, joyaux du parc national de Mohéli — © Wikimedia Commons</p>
+</section>
+
+<section class="section">
+  <div class="container with-aside">
+    <div class="prose">
+      <h2>Un parc géré avec les villages</h2>
+      
+<p>Créé au début des années 2000, le parc marin de Mohéli est devenu un <strong>parc
+national</strong> qui protège une grande partie du littoral sud de l'île. Sa particularité&nbsp;:
+les villages riverains participent à sa gestion, définissent des zones de pêche et forment des
+écoguides. Votre visite contribue directement à cette économie de la conservation.</p>
+
+      <h2>Les îlots de Nioumachoua</h2>
+<figure class="figure figure-inline">
+<a href="https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_mangrove_de_nioumachoua.jpg?width=1920" class="zoom" data-lightbox-item data-caption="La mangrove de Nioumachoua, nurserie de la vie marine — © Wikimedia Commons">  <img class="" src="https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_mangrove_de_nioumachoua.jpg?width=1280" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_mangrove_de_nioumachoua.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_mangrove_de_nioumachoua.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_mangrove_de_nioumachoua.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_mangrove_de_nioumachoua.jpg?width=1920 1920w" sizes="(min-width: 900px) 50vw, 100vw"
+     alt="La mangrove de Nioumachoua, nurserie de la vie marine" loading="lazy" decoding="async"     data-fallback="La mangrove de Nioumachoua, nurserie de la vie marine">
+</a>  <figcaption>La mangrove de Nioumachoua, nurserie de la vie marine <span class="credit">© Wikimedia Commons</span></figcaption>
+</figure>      
+<p>Depuis le village de <strong>Nioumachoua</strong>, des barques rejoignent en une vingtaine de
+minutes les îlots qui ferment la baie. Snorkeling au-dessus des jardins de corail, pique-nique
+de poisson grillé sur le sable et baignade dans une eau d'une transparence rare&nbsp;: la journée
+passe trop vite. La mangrove voisine, nurserie de nombreux poissons, se découvre à marée
+haute.</p>
+
+      <h2>Baleines et dauphins</h2>
+<figure class="figure figure-inline">
+<a href="https://commons.wikimedia.org/wiki/Special:FilePath/026e_Humpback_whale_jump_and_splash_Photo_by_Giles_Laurent.jpg?width=1920" class="zoom" data-lightbox-item data-caption="Saut de baleine à bosse (photo d&#39;illustration) — © Giles Laurent, CC BY-SA 4.0">  <img class="" src="https://commons.wikimedia.org/wiki/Special:FilePath/026e_Humpback_whale_jump_and_splash_Photo_by_Giles_Laurent.jpg?width=1280" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/026e_Humpback_whale_jump_and_splash_Photo_by_Giles_Laurent.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/026e_Humpback_whale_jump_and_splash_Photo_by_Giles_Laurent.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/026e_Humpback_whale_jump_and_splash_Photo_by_Giles_Laurent.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/026e_Humpback_whale_jump_and_splash_Photo_by_Giles_Laurent.jpg?width=1920 1920w" sizes="(min-width: 900px) 50vw, 100vw"
+     alt="Saut de baleine à bosse (photo d&#39;illustration)" loading="lazy" decoding="async"     data-fallback="Saut de baleine à bosse (photo d&#39;illustration)">
+</a>  <figcaption>Saut de baleine à bosse (photo d&#39;illustration) <span class="credit">© Giles Laurent, CC BY-SA 4.0</span></figcaption>
+</figure>      
+<p>De juillet à octobre, les <strong>baleines à bosse</strong> remontent du Grand Sud pour se
+reproduire dans les eaux chaudes de l'archipel. Les sorties en mer depuis Nioumachoua ou
+Fomboni permettent de les observer, ainsi que plusieurs espèces de dauphins présentes toute
+l'année.</p>
+
+    </div>
+    <div class="aside-stack">
+      <aside class="factbox">
+  <h2>En bref</h2>
+  <dl>
+    <div><dt>Statut</dt><dd>Parc national, réserve de biosphère UNESCO</dd></div>
+    <div><dt>Village d&#39;accès</dt><dd>Nioumachoua</dd></div>
+    <div><dt>À faire</dt><dd>Îlots, snorkeling, baleines</dd></div>
+    <div><dt>Meilleure période</dt><dd>Mai à novembre</dd></div>
+  </dl>
+</aside>
+      <div class="map map-small" data-map='[{"color": "#2f7d55", "href": "lieux/parc-national-moheli.html", "island": "Moh\u00e9li", "lat": -12.36, "lng": 43.72, "name": "Parc national de Moh\u00e9li"}]' data-center="-12.36,43.72" data-zoom="11"></div>
+      <p class="map-note">Position indicative.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-sand">
+  <div class="container">
+    <div class="section-head">
+  <div>
+    <h2>Galerie</h2>
+  </div>
+</div>
+    <div class="gallery ">
+  <a class="gallery-item" href="https://commons.wikimedia.org/wiki/Special:FilePath/%C3%8Elot_de_Nioumachoua.jpg?width=1920" data-lightbox-item data-caption="Les îlots de Nioumachoua, joyaux du parc national de Mohéli — © Wikimedia Commons" data-island="moheli">
+    <img class="" src="https://commons.wikimedia.org/wiki/Special:FilePath/%C3%8Elot_de_Nioumachoua.jpg?width=1280" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/%C3%8Elot_de_Nioumachoua.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/%C3%8Elot_de_Nioumachoua.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/%C3%8Elot_de_Nioumachoua.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/%C3%8Elot_de_Nioumachoua.jpg?width=1920 1920w" sizes="(min-width: 900px) 33vw, 50vw"
+     alt="Les îlots de Nioumachoua, joyaux du parc national de Mohéli" loading="lazy" decoding="async"     data-fallback="Les îlots de Nioumachoua, joyaux du parc national de Mohéli">
+  </a>
+  <a class="gallery-item" href="https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_mangrove_de_nioumachoua.jpg?width=1920" data-lightbox-item data-caption="La mangrove de Nioumachoua, nurserie de la vie marine — © Wikimedia Commons" data-island="moheli">
+    <img class="" src="https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_mangrove_de_nioumachoua.jpg?width=1280" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_mangrove_de_nioumachoua.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_mangrove_de_nioumachoua.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_mangrove_de_nioumachoua.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_mangrove_de_nioumachoua.jpg?width=1920 1920w" sizes="(min-width: 900px) 33vw, 50vw"
+     alt="La mangrove de Nioumachoua, nurserie de la vie marine" loading="lazy" decoding="async"     data-fallback="La mangrove de Nioumachoua, nurserie de la vie marine">
+  </a>
+  <a class="gallery-item" href="https://commons.wikimedia.org/wiki/Special:FilePath/026e_Humpback_whale_jump_and_splash_Photo_by_Giles_Laurent.jpg?width=1920" data-lightbox-item data-caption="Saut de baleine à bosse (photo d&#39;illustration) — © Giles Laurent, CC BY-SA 4.0" data-island="archipel">
+    <img class="" src="https://commons.wikimedia.org/wiki/Special:FilePath/026e_Humpback_whale_jump_and_splash_Photo_by_Giles_Laurent.jpg?width=1280" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/026e_Humpback_whale_jump_and_splash_Photo_by_Giles_Laurent.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/026e_Humpback_whale_jump_and_splash_Photo_by_Giles_Laurent.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/026e_Humpback_whale_jump_and_splash_Photo_by_Giles_Laurent.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/026e_Humpback_whale_jump_and_splash_Photo_by_Giles_Laurent.jpg?width=1920 1920w" sizes="(min-width: 900px) 33vw, 50vw"
+     alt="Saut de baleine à bosse (photo d&#39;illustration)" loading="lazy" decoding="async"     data-fallback="Saut de baleine à bosse (photo d&#39;illustration)">
+  </a>
+  <a class="gallery-item" href="https://commons.wikimedia.org/wiki/Special:FilePath/Green_sea_turtle_%28Chelonia_mydas%29_Moorea.jpg?width=1920" data-lightbox-item data-caption="Tortue verte en pleine eau (photo d&#39;illustration) — © Wikimedia Commons" data-island="archipel">
+    <img class="" src="https://commons.wikimedia.org/wiki/Special:FilePath/Green_sea_turtle_%28Chelonia_mydas%29_Moorea.jpg?width=1280" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Green_sea_turtle_%28Chelonia_mydas%29_Moorea.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Green_sea_turtle_%28Chelonia_mydas%29_Moorea.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Green_sea_turtle_%28Chelonia_mydas%29_Moorea.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Green_sea_turtle_%28Chelonia_mydas%29_Moorea.jpg?width=1920 1920w" sizes="(min-width: 900px) 33vw, 50vw"
+     alt="Tortue verte en pleine eau (photo d&#39;illustration)" loading="lazy" decoding="async"     data-fallback="Tortue verte en pleine eau (photo d&#39;illustration)">
+  </a>
+</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+  <div>
+    <h2>Autres lieux à Mohéli</h2>
+  </div>
+<a class="link-arrow" href="../destinations/moheli.html">Tout sur Mohéli</a></div>
+    <div class="card-grid">
+      <article class="card ">
+  <a href="itsamia.html" class="card-link">
+    <div class="card-media"><img class="" src="https://commons.wikimedia.org/wiki/Special:FilePath/Green_sea_turtle_%28Chelonia_mydas%29_Moorea.jpg?width=1280" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Green_sea_turtle_%28Chelonia_mydas%29_Moorea.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Green_sea_turtle_%28Chelonia_mydas%29_Moorea.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Green_sea_turtle_%28Chelonia_mydas%29_Moorea.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Green_sea_turtle_%28Chelonia_mydas%29_Moorea.jpg?width=1920 1920w" sizes="(min-width: 1100px) 25vw, (min-width: 700px) 45vw, 100vw"
+     alt="Tortue verte en pleine eau (photo d&#39;illustration)" loading="lazy" decoding="async"     data-fallback="Tortue verte en pleine eau (photo d&#39;illustration)"></div>
+    <div class="card-body">
+<p class="card-kicker">Mohéli · Faune</p>      <h3>Itsamia, la plage des tortues</h3>
+<p>Chaque nuit, des tortues vertes viennent pondre sur les plages d&#39;Itsamia. Un spectacle rare, encadré par les écoguides du village.</p>    </div>
+  </a>
+</article>
+      <article class="card ">
+  <a href="forets-et-lacs-de-moheli.html" class="card-link">
+    <div class="card-media"><img class="" src="https://commons.wikimedia.org/wiki/Special:FilePath/Bristol.zoo.livfruitbat.arp.jpg?width=1280" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Bristol.zoo.livfruitbat.arp.jpg?width=500 500w, https://commons.wikimedia.org/wiki/Special:FilePath/Bristol.zoo.livfruitbat.arp.jpg?width=960 960w, https://commons.wikimedia.org/wiki/Special:FilePath/Bristol.zoo.livfruitbat.arp.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Bristol.zoo.livfruitbat.arp.jpg?width=1920 1920w" sizes="(min-width: 1100px) 25vw, (min-width: 700px) 45vw, 100vw"
+     alt="La roussette de Livingstone, chauve-souris géante endémique d&#39;Anjouan et de Mohéli" loading="lazy" decoding="async"     data-fallback="La roussette de Livingstone, chauve-souris géante endémique d&#39;Anjouan et de Mohéli"></div>
+    <div class="card-body">
+<p class="card-kicker">Mohéli · Randonnée</p>      <h3>Forêts et lac Dziani Boundouni</h3>
+<p>Sous la canopée de Mohéli vivent des espèces que l&#39;on ne voit nulle part ailleurs. Randonnée vers un lac de cratère, à la rencontre des roussettes géantes.</p>    </div>
+  </a>
+</article>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand brand-light" href="../index.html">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+          <path d="M30 6a18 18 0 1 0 12 31.5A15 15 0 1 1 30 6z" fill="currentColor"/>
+          <circle cx="34" cy="16" r="2.4" fill="var(--ylang)"/><circle cx="38" cy="22" r="1.8" fill="var(--ylang)"/>
+          <circle cx="40" cy="28" r="2" fill="var(--ylang)"/><circle cx="37" cy="34" r="2.6" fill="var(--ylang)"/>
+        </svg>
+        <span class="brand-text"><strong>Komori</strong><small>Les îles de la Lune</small></span>
+      </a>
+      <p>Le guide de voyage des quatre îles de l'archipel des Comores&nbsp;: Grande Comore, Mohéli, Anjouan et Mayotte.</p>
+    </div>
+    <div>
+      <h2 class="footer-title">Destinations</h2>
+      <ul>
+<li><a href="../destinations/grande-comore.html">Grande Comore</a></li><li><a href="../destinations/moheli.html">Mohéli</a></li><li><a href="../destinations/anjouan.html">Anjouan</a></li><li><a href="../destinations/mayotte.html">Mayotte</a></li><li><a href="../archipel.html">Découvrir l&#39;archipel</a></li>      </ul>
+    </div>
+    <div>
+      <h2 class="footer-title">Expériences</h2>
+      <ul>
+<li><a href="../experiences/nature-et-faune.html">Nature &amp; faune sauvage</a></li><li><a href="../experiences/plages-et-lagons.html">Plages &amp; lagons</a></li><li><a href="../experiences/plongee-et-ocean.html">Plongée &amp; océan</a></li><li><a href="../experiences/randonnees-et-volcans.html">Randonnées &amp; volcans</a></li><li><a href="../experiences/culture-et-patrimoine.html">Culture &amp; patrimoine</a></li><li><a href="../itineraires/index.html">Itinéraires</a></li>      </ul>
+    </div>
+    <div>
+      <h2 class="footer-title">Préparer</h2>
+      <ul>
+<li><a href="../preparer-son-voyage/comment-venir.html">Comment venir</a></li><li><a href="../preparer-son-voyage/formalites.html">Visas &amp; formalités</a></li><li><a href="../preparer-son-voyage/quand-partir.html">Quand partir ?</a></li><li><a href="../preparer-son-voyage/se-deplacer.html">Se déplacer</a></li><li><a href="../preparer-son-voyage/sante-securite.html">Santé &amp; sécurité</a></li><li><a href="../agenda.html">Agenda</a></li>      </ul>
+    </div>
+    <div>
+      <h2 class="footer-title">Komori</h2>
+      <ul>
+<li><a href="../galerie.html">Galerie photos</a></li><li><a href="../videos.html">Vidéos</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../credits.html">Crédits</a></li><li><a href="../mentions-legales.html">Mentions légales</a></li><li><a href="../plan-du-site.html">Plan du site</a></li>      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© 2026 Komori. Textes originaux. Photos et vidéos sous licences libres via <a href="https://commons.wikimedia.org/" rel="noopener">Wikimedia Commons</a> — <a href="../credits.html">voir les crédits</a>.</p>
+    <p>Informations données à titre indicatif&nbsp;: vérifiez toujours les conditions de voyage auprès des sources officielles.</p>
+  </div>
+</footer>
+
+<dialog class="lightbox" data-lightbox aria-label="Visionneuse d'images">
+  <button class="lightbox-close" data-lightbox-close aria-label="Fermer">×</button>
+  <button class="lightbox-nav prev" data-lightbox-prev aria-label="Image précédente">‹</button>
+  <figure>
+    <img alt="" data-lightbox-img>
+    <figcaption data-lightbox-caption></figcaption>
+  </figure>
+  <button class="lightbox-nav next" data-lightbox-next aria-label="Image suivante">›</button>
+</dialog>
+
+<script src="../assets/js/main.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+{{ ui.hero(page.hero, page.name, lead=page.summary, kicker="Préparer son voyage",
+   crumbs=[("Préparer son voyage", "preparer-son-voyage/index.html"), (page.name, None)]) }}
+
+<section class="section">
+  <div class="container with-aside">
+    <div class="prose">
+      {% for s in page.sections %}
+      <h2 id="{{ s.title | slugify }}">{{ s.title }}</h2>
+      {% if s.get("media") %}{{ ui.figure(s.media, cls="figure-wide") }}{% endif %}
+      {{ s.html | links | safe }}
+      {% endfor %}
+      <p class="updated">Dernière mise à jour du contenu&nbsp;: {{ updated }}. Ces informations sont données à titre indicatif.</p>
+    </div>
+    <nav class="side-nav" aria-label="Préparer son voyage">
+      <h2>Infos pratiques</h2>
+      <ul>
+        {% for p in practical %}
+        <li{% if p.slug == page.slug %} class="is-active"{% endif %}><a href="{{ url('preparer-son-voyage/' ~ p.slug ~ '.html') }}">{{ ui.icon(p.icon) }} {{ p.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</section>
+{% endblock %}

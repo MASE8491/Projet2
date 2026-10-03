@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+{{ ui.hero(exp.hero, exp.name, lead=exp.lead, kicker="Expérience",
+   crumbs=[("Expériences", "experiences/index.html"), (exp.name, None)]) }}
+
+<section class="section">
+  <div class="container narrow prose">
+    {% for s in exp.sections %}
+    <h2>{{ s.title }}</h2>
+    {% if s.get("media") %}{{ ui.figure(s.media, cls="figure-wide") }}{% endif %}
+    {{ s.html | links | safe }}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section section-sand">
+  <div class="container">
+    {{ ui.section_head("Où vivre cette expérience ?") }}
+    <div class="card-grid">
+      {% for slug in exp.places %}{% set p = places[slug] %}
+      {{ ui.card('lieux/' ~ slug ~ '.html', p.hero, p.name, p.lead, kicker=p.kicker) }}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {{ ui.section_head("Galerie") }}
+    {{ ui.gallery(exp.gallery) }}
+  </div>
+</section>
+
+<section class="section section-ocean">
+  <div class="container">
+    {{ ui.section_head("Autres expériences", href="experiences/index.html", link_label="Toutes les expériences") }}
+    <div class="exp-grid">
+      {% for e in experiences if e.slug != exp.slug %}
+      <a class="exp-tile" href="{{ url('experiences/' ~ e.slug ~ '.html') }}">
+        <span class="tile-media">{{ ui.picture(e.card, sizes="(min-width: 900px) 25vw, 50vw", alt="") }}</span>
+        <span class="exp-tile-label">{{ ui.icon(e.icon) }} {{ e.name }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

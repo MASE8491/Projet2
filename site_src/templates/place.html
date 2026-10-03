@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block head %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+{% endblock %}
+{% block content %}
+{{ ui.hero(place.hero, place.name, lead=place.lead, kicker=place.kicker,
+   crumbs=[("Destinations", "destinations/index.html"), (island.name, "destinations/" ~ island.slug ~ ".html"), (place.name, None)]) }}
+
+<section class="section">
+  <div class="container with-aside">
+    <div class="prose">
+      {% for s in place.sections %}
+      <h2>{{ s.title }}</h2>
+      {% if s.get("media") %}{{ ui.figure(s.media, cls="figure-inline") }}{% endif %}
+      {{ s.html | links | safe }}
+      {% endfor %}
+    </div>
+    <div class="aside-stack">
+      {{ ui.factbox(place.facts) }}
+      <div class="map map-small" data-map='{{ [map_point] | tojson }}' data-center="{{ place.coords[0] }},{{ place.coords[1] }}" data-zoom="11"></div>
+      <p class="map-note">Position indicative.</p>
+    </div>
+  </div>
+</section>
+
+{% if place.gallery %}
+<section class="section section-sand">
+  <div class="container">
+    {{ ui.section_head("Galerie") }}
+    {{ ui.gallery(place.gallery) }}
+  </div>
+</section>
+{% endif %}
+
+<section class="section">
+  <div class="container">
+    {{ ui.section_head("Autres lieux à " ~ island.name, href="destinations/" ~ island.slug ~ ".html", link_label="Tout sur " ~ island.name) }}
+    <div class="card-grid">
+      {% for slug in island.places if slug != place.slug %}{% set p = places[slug] %}
+      {{ ui.card('lieux/' ~ slug ~ '.html', p.hero, p.name, p.lead, kicker=p.kicker) }}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" defer></script>
+{% endblock %}

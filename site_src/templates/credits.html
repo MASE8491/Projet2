@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="page-head">
+  <div class="container">
+    {{ ui.breadcrumbs([("Crédits photos & vidéos", None)]) }}
+    <h1>Crédits photos & vidéos</h1>
+    <p class="lead">Tous les médias de Komori proviennent de <a href="https://commons.wikimedia.org/" rel="noopener">Wikimedia Commons</a>,
+    qui n'accepte que des fichiers sous licence libre ou dans le domaine public. Merci à leurs auteurs.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="table-wrap">
+      <table class="table credits-table">
+        <thead><tr><th>Aperçu</th><th>Fichier</th><th>Auteur</th><th>Licence</th><th>Île</th></tr></thead>
+        <tbody>
+          {% for key, m in media.items() %}
+          <tr>
+            <td>{% if m.kind == "image" %}<img src="{{ img_url(key, 120) }}" alt="" loading="lazy" width="80" height="54">{% else %}{{ ui.icon('play') }} vidéo{% endif %}</td>
+            <td><a href="{{ commons_page(key) }}" rel="noopener">{{ m.file }}</a><br><small>{{ m.caption }}</small></td>
+            <td>{{ m.author or "Voir la page source" }}</td>
+            <td>{{ m.license or "Licence libre — voir la page source" }}</td>
+            <td>{{ island_labels[m.island] }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <div class="prose narrow-left">
+      <h2>Réutiliser ces médias</h2>
+      <p>Les licences Creative Commons «&nbsp;BY&nbsp;» imposent de citer l'auteur et la licence&nbsp;; les licences
+      «&nbsp;SA&nbsp;» demandent de partager les œuvres dérivées sous la même licence. Avant toute réutilisation,
+      consultez la page de chaque fichier sur Wikimedia Commons, qui fait foi.</p>
+      <p>Les textes du site sont des créations originales de Komori.</p>
+    </div>
+  </div>
+</section>
+{% endblock %}

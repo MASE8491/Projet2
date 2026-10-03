@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+{{ ui.hero(it.hero, it.name, lead=it.lead, kicker=it.theme ~ " · " ~ it.duration,
+   crumbs=[("Itinéraires", "itineraires/index.html"), (it.name, None)]) }}
+
+<section class="section">
+  <div class="container with-aside">
+    <ol class="timeline">
+      {% for when, title, text, place_slug in it.days %}
+      <li class="timeline-step">
+        <p class="timeline-when">{{ when }}</p>
+        <div class="timeline-card">
+          {% if place_slug %}{% set p = places[place_slug] %}
+          <a class="timeline-media" href="{{ url('lieux/' ~ place_slug ~ '.html') }}">{{ ui.picture(p.hero, sizes="(min-width: 900px) 220px, 100vw", alt="") }}</a>
+          {% endif %}
+          <div>
+            <h2>{{ title }}</h2>
+            <p>{{ text }}</p>
+            {% if place_slug %}<a class="link-arrow" href="{{ url('lieux/' ~ place_slug ~ '.html') }}">{{ places[place_slug].name }}</a>{% endif %}
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+    <div class="aside-stack">
+      {{ ui.factbox([("Durée", it.duration), ("Thème", it.theme), ("Îles", it.islands | map("island_name") | join(", "))], title="L'itinéraire en bref") }}
+      <aside class="tips">
+        <h2>Notre conseil</h2>
+        <p>{{ it.tips }}</p>
+        <a class="link-arrow" href="{{ url('preparer-son-voyage/se-deplacer.html') }}">Se déplacer entre les îles</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section section-sand">
+  <div class="container">
+    {{ ui.section_head("Autres itinéraires", href="itineraires/index.html", link_label="Tous les itinéraires") }}
+    <div class="card-grid">
+      {% for other in itineraries if other.slug != it.slug %}
+      {{ ui.card('itineraires/' ~ other.slug ~ '.html', other.card, other.name, other.lead, kicker=other.theme, meta=other.duration) }}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

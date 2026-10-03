@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="page-head page-404">
+  <div class="container narrow">
+    <p class="kicker">Erreur 404</p>
+    <h1>Cette page a pris le large</h1>
+    <p class="lead">Elle s'est peut-être perdue quelque part entre Moroni et Mamoudzou. Reprenez la route&nbsp;:</p>
+    <div class="hero-ctas">
+      <a class="btn btn-ocean" href="{{ url('index.html') }}">Retour à l'accueil</a>
+      <a class="btn btn-outline" href="{{ url('destinations/index.html') }}">Les destinations</a>
+      <a class="btn btn-outline" href="{{ url('plan-du-site.html') }}">Plan du site</a>
+    </div>
+  </div>
+</section>
+{% endblock %}
