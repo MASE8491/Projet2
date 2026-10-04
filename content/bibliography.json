@@ -515,5 +515,71 @@
     "category": "anthropologie",
     "note": "Trois fêtes agraires d'origine préislamique : le koma à Ouani, le trimba au Nyumakele et le mudandra à Ouzini.",
     "url": "https://www.persee.fr/doc/jafr_0037-9166_1960_num_30_1_1919"
+  },
+  {
+    "id": "bourhane-2017",
+    "author": "Abderemane Bourhane",
+    "title": "Les rites pré-islamiques à Anjouan. Contribution à une étude culturelle des Comores",
+    "year": "2017",
+    "publisher": "thèse de doctorat, Inalco",
+    "kind": "comorien",
+    "category": "anthropologie",
+    "note": "Étude des rites agraires et des cultes des esprits d'Anjouan : nkoma, ntrimba, mdandra, anguilles sacrées, ziara.",
+    "url": "https://hal.science/tel-02079565/"
+  },
+  {
+    "id": "kashkazi-trimba",
+    "author": "Kashkazi (journal comorien)",
+    "title": "Trois jours de fête pour sceller le pacte avec les djinns",
+    "year": "2007",
+    "publisher": "Kashkazi n° 65, republié par Muzdalifa House",
+    "kind": "comorien",
+    "category": "tradition",
+    "note": "Reportage sur le trimba du Nyumakele et son origine : le pacte négocié par Waziri avec les djinns.",
+    "url": "https://muzdalifahouse.com/2023/08/18/trois-jours-de-fete-pour-sceller-le-pacte-avec-les-djinns/"
+  },
+  {
+    "id": "masiwa-nkoma",
+    "author": "Masiwa (revue comorienne)",
+    "title": "Le nkoma, une tradition en voie de disparition",
+    "year": "",
+    "publisher": "",
+    "kind": "comorien",
+    "category": "tradition",
+    "note": "La fête triennale de Ouani et le pacte entre les familles fondatrices et les djinns.",
+    "url": "https://masiwa-comores.com/non-classe/le-nkoma-une-tradition-en-voie-de-disparition/"
+  },
+  {
+    "id": "gazette-mwalimdjini",
+    "author": "La Gazette des Comores",
+    "title": "Mwalimdjini, un site archéologique en dégradation continue",
+    "year": "",
+    "publisher": "",
+    "kind": "comorien",
+    "category": "archeologie",
+    "note": "Le plus ancien site de Mohéli, sur les hauteurs de Djoiezi, et la tradition de la lignée Inya Matswa Mwali.",
+    "url": "https://lagazettedescomores.com/culture/mwalimdjini,-un-site-arch%C3%A9ologique-en-d%C3%A9gradation-continue-.html"
+  },
+  {
+    "id": "muzdalifa-mwali",
+    "author": "Muzdalifa House (entretien avec le sociologue Salim Djabir)",
+    "title": "Une histoire de Mwali",
+    "year": "2021",
+    "publisher": "",
+    "kind": "comorien",
+    "category": "tradition",
+    "note": "Histoire de Mohéli racontée de l'intérieur : régions anciennes, Fomboni, refuge fortifié de Bandamale.",
+    "url": "https://muzdalifahouse.com/2021/05/03/une-histoire-de-mwali/"
+  },
+  {
+    "id": "muzdalifa-fomboni",
+    "author": "Muzdalifa House",
+    "title": "Fomboni la ville aux sept villages",
+    "year": "2022",
+    "publisher": "",
+    "kind": "comorien",
+    "category": "tradition",
+    "note": "Les localités anciennes et les sept villages liés à la capitale de Mohéli.",
+    "url": "https://muzdalifahouse.com/2022/09/09/fomboni-la-ville-aux-sept-villages/"
   }
 ]

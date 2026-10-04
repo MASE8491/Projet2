@@ -588,6 +588,42 @@
         "answer": 0,
         "explain": "Ce que le talisman avait donné, le talisman le reprend : le roi n'a plus qu'un arbre.",
         "link": "contes/la-femme-de-bois.html"
+      },
+      {
+        "q": "Pendant la fête du nkoma, à Ouani (Anjouan), avec quoi joue-t-on ?",
+        "choices": [
+          "Des noix de coco pas encore mûres",
+          "Des galets de lave",
+          "Des oranges",
+          "Des coquillages"
+        ],
+        "answer": 0,
+        "explain": "Les koma, noix de coco dont l'amande n'est pas formée, servent de balles. La fête honore le pacte conclu avec les djinns.",
+        "link": "contes/le-pacte-de-basra.html"
+      },
+      {
+        "q": "Comment est vêtu le Trimba qui mène la procession du Nyumakele ?",
+        "choices": [
+          "De feuilles de bananier, avec des cornes et une queue",
+          "D'un djoho brodé d'or",
+          "D'une peau de zébu",
+          "D'un saluva rouge"
+        ],
+        "answer": 0,
+        "explain": "Nul ne doit savoir quel homme se cache sous le costume, sauf les chefs du rite.",
+        "link": "contes/le-trimba-du-nyumakele.html"
+      },
+      {
+        "q": "Où les Mohéliens se réfugiaient-ils en cas de grand danger, selon la tradition ?",
+        "choices": [
+          "Dans la cité fortifiée cachée de Bandamale",
+          "Sur l'îlot de sable blanc",
+          "Dans le cratère du Karthala",
+          "À Zanzibar"
+        ],
+        "answer": 0,
+        "explain": "On l'atteignait depuis le Djando par la « rivière des fugitifs », Mro wa watoro.",
+        "link": "contes/la-forteresse-de-bandamale.html"
       }
     ]
   },
