@@ -1,4 +1,4 @@
-"""Médiathèque de komori.com.
+"""Médiathèque du site Komori.
 
 Toutes les photos et vidéos proviennent de Wikimedia Commons, qui n'héberge que
 des fichiers sous licence libre (Creative Commons, GFDL…) ou dans le domaine

@@ -9,7 +9,8 @@
 </section>
 <section class="section">
   <div class="container with-aside">
-    <form class="form" action="mailto:contact@komori.com" method="post" enctype="text/plain">
+    {% if contact_email %}
+    <form class="form" action="mailto:{{ contact_email }}" method="post" enctype="text/plain">
       <label>Nom<input type="text" name="nom" autocomplete="name" required></label>
       <label>Adresse e-mail<input type="email" name="email" autocomplete="email" required></label>
       <label>Sujet
@@ -22,12 +23,21 @@
       </label>
       <label>Message<textarea name="message" rows="6" required></textarea></label>
       <button class="btn btn-ocean" type="submit">Envoyer</button>
-      <p class="note">Le formulaire ouvre votre logiciel de messagerie. Adresse&nbsp;: contact@komori.com</p>
+      <p class="note">Le formulaire ouvre votre logiciel de messagerie. Adresse&nbsp;: {{ contact_email }}</p>
     </form>
+    {% else %}
+    <div class="prose">
+      <p>L'adresse de contact de Komori sera publiée prochainement.</p>
+      <p>En attendant, vous trouverez la plupart des réponses dans nos
+      <a href="{{ url('preparer-son-voyage/index.html') }}">informations pratiques</a> et dans les rubriques
+      <a href="{{ url('geographie/index.html') }}">Géographie</a>, <a href="{{ url('histoire/index.html') }}">Histoire</a>
+      et <a href="{{ url('culture/index.html') }}">Culture &amp; folklore</a>.</p>
+    </div>
+    {% endif %}
     <aside class="tips">
       <h2>Avant d'écrire</h2>
       <p>Les réponses à la plupart des questions se trouvent dans nos <a href="{{ url('preparer-son-voyage/index.html') }}">infos pratiques</a>.
-      Komori est un guide éditorial&nbsp;: nous ne vendons ni billets ni séjours.</p>
+      Komori est un site éditorial&nbsp;: nous ne vendons ni billets ni séjours.</p>
     </aside>
   </div>
 </section>
