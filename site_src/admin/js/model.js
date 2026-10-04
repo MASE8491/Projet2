@@ -182,7 +182,8 @@ TYPES.quiz = {
     { key: "questions", label: "Questions", type: "list", itemLabel: "q", addLabel: "Ajouter une question", fields: [
       { key: "q", label: "Question", type: "text", required: true },
       { key: "choices", label: "Réponses proposées", type: "stringlist", addLabel: "Ajouter une réponse" },
-      { key: "answer", label: "Numéro de la bonne réponse (1 = la première)", type: "answer" },
+      { key: "answer", label: "Numéro de la bonne réponse (1 = la première)", type: "answer",
+        help: "Sur le site, l'ordre des réponses est mélangé à chaque partie : la bonne réponse peut être écrite à n'importe quelle place." },
       { key: "explain", label: "Explication affichée après la réponse", type: "textarea" },
       { key: "link", label: "Page pour en savoir plus (facultatif)", type: "link", optional: true },
     ] },

@@ -581,5 +581,82 @@
     "category": "tradition",
     "note": "Les localités anciennes et les sept villages liés à la capitale de Mohéli.",
     "url": "https://muzdalifahouse.com/2022/09/09/fomboni-la-ville-aux-sept-villages/"
+  },
+  {
+    "id": "blanchy-djabir-2021",
+    "author": "Sophie Blanchy et Haddad Salim Djabir",
+    "title": "Construction et contestation des hiérarchies dans les échanges cérémoniels aux Comores (île de Mohéli)",
+    "year": "2021",
+    "publisher": "L'Homme, n° 238, p. 101 – 140",
+    "kind": "exterieur",
+    "category": "anthropologie",
+    "note": "Article d'une anthropologue du CNRS et d'un sociologue mohélien : moitiés mdjaume et mdjawashe, maisons matrilinéaires, échanges cérémoniels et traditions de fondation de Mohéli.",
+    "url": "https://doi.org/10.4000/lhomme.39984"
+  },
+  {
+    "id": "muzdalifa-djumbe",
+    "author": "Muzdalifa House",
+    "title": "Djumbe Fatima, Ramanetaka, Makadara, Lambert et Fleuriot",
+    "year": "2019",
+    "publisher": "",
+    "kind": "comorien",
+    "category": "histoire",
+    "note": "Les souverains de Mohéli au XIXe siècle et l'affaire Lambert, racontés depuis l'archipel.",
+    "url": "https://muzdalifahouse.com/2019/11/25/ramanetaka-makadara-lambert-et-fleuriot/"
+  },
+  {
+    "id": "muzdalifa-fomboni-bombardements",
+    "author": "Muzdalifa House",
+    "title": "Fomboni fondation et bombardements",
+    "year": "2022",
+    "publisher": "",
+    "kind": "comorien",
+    "category": "histoire",
+    "note": "La naissance de Fomboni et sa destruction par la marine française sous le règne de Djoumbé Fatima.",
+    "url": "https://muzdalifahouse.com/2022/09/16/fomboni-fondation-et-bombardements/"
+  },
+  {
+    "id": "grosdidier",
+    "author": "Christophe Grosdidier",
+    "title": "Djoumbé Fatima, reine de Mohéli",
+    "year": "2004",
+    "publisher": "L'Harmattan",
+    "kind": "exterieur",
+    "category": "histoire",
+    "note": "Roman historique (et non ouvrage d'histoire) consacré à la vie de la reine.",
+    "url": ""
+  },
+  {
+    "id": "academie-dijon-salima",
+    "author": "Académie des sciences, arts et belles-lettres de Dijon",
+    "title": "Décès d'Ursule Salima Machamba, dernière reine de Mohéli devenue bourguignonne",
+    "year": "",
+    "publisher": "",
+    "kind": "exterieur",
+    "category": "histoire",
+    "note": "Notice commémorative sur la vie de Salima Machamba en France.",
+    "url": "https://www.academie-sabl-dijon.org/celebration/deces-dursule-salima-machamba-derniere-reine-de-moheli-devenue-bourguignonne/"
+  },
+  {
+    "id": "habari-salima",
+    "author": "Habari za Comores",
+    "title": "Ursule Salima Machamba, dernière reine de Mohéli",
+    "year": "2013",
+    "publisher": "",
+    "kind": "comorien",
+    "category": "histoire",
+    "note": "Portrait de la dernière reine publié par un site d'information comorien.",
+    "url": "https://www.habarizacomores.com/2013/04/ursule-salima-machamba-derniere-reine.html"
+  },
+  {
+    "id": "rezida-masiwa-2025",
+    "author": "Mohamed Ahmed Bacar Rezida",
+    "title": "Mythes et réalités aux Comores : et si nos ancêtres les djinns étaient des lépreux ?",
+    "year": "2025",
+    "publisher": "Masiwa",
+    "kind": "comorien",
+    "category": "tradition",
+    "note": "Hypothèse d'un médecin comorien sur la lèpre et les récits de djinns ; évoque les lieux d'isolement des malades, dont l'îlot des wenefu à Mohéli.",
+    "url": "https://masiwa-comores.com/culture/mythes-et-realites-aux-comores-et-si-nos-ancetres-les-djinns-etaient-des-lepreux/"
   }
 ]
