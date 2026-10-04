@@ -449,5 +449,26 @@
     "island": "archipel",
     "kind": "video",
     "poster": "itsandra"
+  },
+  "lac_sale": {
+    "file": "LAC SALE MISTAMIHOULI COMORES.JPG",
+    "island": "gc",
+    "caption": "Le lac Salé (Niamawi), ancien cratère au nord de la Grande Comore",
+    "author": null,
+    "license": null
+  },
+  "bangoi_kouni": {
+    "file": "Bangoi-kouni Comores.jpg",
+    "island": "gc",
+    "caption": "Bangoi-Kouni, village de la « mosquée miraculeuse », au nord-est de la Grande Comore",
+    "author": null,
+    "license": null
+  },
+  "tsingoni_mosquee": {
+    "file": "Mosquée - panoramio (1).jpg",
+    "island": "mayotte",
+    "caption": "La mosquée de Tsingoni, ancienne mosquée royale de Mayotte (mihrab de 1538)",
+    "author": null,
+    "license": null
   }
 }

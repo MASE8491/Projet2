@@ -35,11 +35,23 @@ THUMB_WIDTHS = (500, 960, 1280, 1920)
 # Dossiers occupés par le générateur : une rubrique ne peut pas porter ces noms.
 RESERVED_SLUGS = {"iles", "lieux", "experiences", "itineraires", "preparer-son-voyage", "voyager",
                   "assets", "admin", "index", "galerie", "videos", "agenda", "glossaire", "quiz",
-                  "credits", "contact", "mentions-legales", "plan-du-site", "404"}
+                  "credits", "contact", "mentions-legales", "plan-du-site", "404", "contes", "loisirs",
+                  "bibliographie"}
 
 CONTENT_FILES = ["settings", "navigation", "media", "home", "pages", "islands", "places", "topics",
-                 "timeline", "experiences", "itineraries", "practical", "events", "glossary", "quiz",
-                 "videos"]
+                 "timeline", "experiences", "itineraries", "practical", "events", "glossary", "quizzes",
+                 "videos", "tales", "bibliography"]
+
+# Catégories des récits de la zone « Hale halele », dans l'ordre d'affichage
+TALE_KINDS = {"mythe": "Mythes des origines", "legende": "Légendes de lieux",
+              "recit": "Récits d'hier et d'aujourd'hui", "conte": "Contes du soir"}
+TALE_KIND_SINGULAR = {"mythe": "Mythe des origines", "legende": "Légende de lieu",
+                      "recit": "Récit", "conte": "Conte"}
+# Catégories de la bibliographie, dans l'ordre d'affichage
+BIBLIO_CATEGORIES = {"chronique": "Chroniques et manuscrits", "tradition": "Traditions orales et littérature",
+                     "histoire": "Études historiques", "anthropologie": "Anthropologie et société",
+                     "archeologie": "Archéologie et sciences", "temoins": "Voyageurs et témoins",
+                     "contes": "Recueils de contes", "documents": "Textes officiels et rapports"}
 
 
 def load(name):
@@ -112,7 +124,19 @@ PRACTICAL = [p for p in RAW["practical"] if is_published(p)]
 TIMELINE = RAW["timeline"]
 EVENTS = RAW["events"]
 GLOSSARY = sorted(RAW["glossary"], key=lambda g: slugify(g["term"]))
-QUIZ = RAW["quiz"]
+QUIZZES = [q for q in RAW["quizzes"] if is_published(q)]
+TALES = [t for t in RAW["tales"] if is_published(t)]
+for _t in TALES:
+    if _t.get("island") not in ISLANDS_BY_SLUG:
+        _t["island"] = ""
+    if _t.get("place") not in PLACES_BY_SLUG:
+        _t["place"] = ""
+    if _t.get("kind") not in TALE_KINDS:
+        _t["kind"] = "conte"
+TALES_BY_KIND = [(k, label, [t for t in TALES if t["kind"] == k]) for k, label in TALE_KINDS.items()]
+TALES_BY_KIND = [g for g in TALES_BY_KIND if g[2]]
+BIBLIO = {b["id"]: b for b in RAW["bibliography"] if b.get("id")}
+REF_WARNINGS = set()
 VIDEOS = [k for k in RAW["videos"]["items"] if k in MEDIA and MEDIA[k]["kind"] == "video"]
 HOME = RAW["home"]
 PG = RAW["pages"]
@@ -220,7 +244,21 @@ def links_filter(ctx, html):
     return LINK_RE.sub(repl, html or "")
 
 
+@pass_context
+def refs_of(ctx, item):
+    """Références bibliographiques d'un élément (les identifiants inconnus sont ignorés)."""
+    out = []
+    for rid in (item.get("refs") or []):
+        if rid in BIBLIO:
+            out.append(BIBLIO[rid])
+        else:
+            REF_WARNINGS.add(f"{ctx['page_path']} : référence bibliographique inconnue « {rid} »")
+    return out
+
+
 env.globals.update(
+    refs_of=refs_of, tale_kinds=TALE_KINDS, tale_kind_singular=TALE_KIND_SINGULAR, tales=TALES, quizzes=QUIZZES,
+    featured_tales=[t for t in TALES if t.get("featured")][:4],
     url=url, img_url=img_url, img_srcset=img_srcset, img_abs=img_abs, file_url=file_url,
     commons_page=commons_page, credit_text=credit_text,
     media=MEDIA, settings=SETTINGS, site_url=SITE_URL, contact_email=CONTACT_EMAIL,
@@ -301,13 +339,34 @@ def collect_pages():
     # Médiathèque et outils
     gallery_keys = [k for k, m in MEDIA.items() if m["gallery"]]
     add("galerie.html", "gallery.html", PG["galerie"]["title"], PG["galerie"]["description"],
-        og_image=PG["galerie"]["hero"], section="medias", gallery_keys=gallery_keys)
+        og_image=PG["galerie"]["hero"], section="loisirs", gallery_keys=gallery_keys)
     add("videos.html", "videos.html", PG["videos"]["title"], PG["videos"]["description"],
-        og_image=PG["videos"]["hero"], section="medias")
+        og_image=PG["videos"]["hero"], section="loisirs")
     add("glossaire.html", "glossaire.html", PG["glossaire"]["title"], PG["glossaire"]["description"],
-        section="medias", glossary=GLOSSARY,
+        section="loisirs", glossary=GLOSSARY,
         glossary_letters=sorted({slugify(g["term"])[0].upper() for g in GLOSSARY}))
-    add("quiz.html", "quiz.html", "Quiz", PG["quiz"]["description"], section="medias", quiz=QUIZ)
+
+    # Hale halele : contes et récits
+    add("contes/index.html", "tales_index.html", PG["contes"]["title"], PG["contes"]["description"],
+        og_image=PG["contes"]["hero"], section="contes", groups=TALES_BY_KIND)
+    for idx, tale in enumerate(TALES):
+        add(f"contes/{tale['slug']}.html", "tale.html", tale["name"], tale["lead"], og_image=tale["hero"],
+            section="contes", tale=tale,
+            prev_tale=TALES[idx - 1] if idx > 0 else None,
+            next_tale=TALES[idx + 1] if idx + 1 < len(TALES) else None)
+
+    # Loisirs : quiz
+    add("loisirs/index.html", "loisirs.html", PG["loisirs"]["title"], PG["loisirs"]["description"],
+        og_image=PG["loisirs"]["hero"], section="loisirs")
+    for idx, q in enumerate(QUIZZES):
+        add(f"loisirs/{q['slug']}.html", "quiz.html", f"Quiz : {q['name']}", q["lead"], og_image=q["hero"],
+            section="loisirs", quiz=q, next_quiz=QUIZZES[(idx + 1) % len(QUIZZES)] if len(QUIZZES) > 1 else None)
+    # Ancienne adresse du quiz : page de redirection (hors plan du site)
+    add("quiz.html", "redirect.html", "Quiz", PG["loisirs"]["description"], target="loisirs/index.html")
+
+    # Bibliographie
+    add("bibliographie.html", "bibliography.html", PG["bibliographie"]["title"], PG["bibliographie"]["description"],
+        section="histoire", biblio_groups=biblio_groups())
 
     # Pages annexes
     add("credits.html", "credits.html", PG["credits"]["title"], PG["credits"]["description"])
@@ -316,6 +375,25 @@ def collect_pages():
     add("plan-du-site.html", "plan.html", PG["plan"]["title"], PG["plan"]["description"],
         sitemap_groups=sitemap_groups())
     add("404.html", "404.html", "Page introuvable", PG["404"]["description"], absolute_urls=True)
+
+
+def biblio_groups():
+    """Références groupées par catégorie, avec le nombre de pages qui les citent."""
+    cited = {}
+    for t in TOPICS:
+        for pg in t["pages"]:
+            for rid in pg.get("refs") or []:
+                cited.setdefault(rid, []).append((pg["name"], f"{t['slug']}/{pg['slug']}.html"))
+    for tale in TALES:
+        for rid in tale.get("refs") or []:
+            cited.setdefault(rid, []).append((tale["name"], f"contes/{tale['slug']}.html"))
+    groups = []
+    known = list(BIBLIO_CATEGORIES)
+    for cat in known + sorted({b.get("category") for b in BIBLIO.values()} - set(known)):
+        items = [dict(b, cited=cited.get(b["id"], [])) for b in BIBLIO.values() if b.get("category") == cat]
+        if items:
+            groups.append(dict(key=cat, title=BIBLIO_CATEGORIES.get(cat, cat or "Autres"), entries=items))
+    return groups
 
 
 def sitemap_groups():
@@ -336,10 +414,14 @@ def sitemap_groups():
         dict(title="Préparer son voyage", links=[("Vue d'ensemble", "preparer-son-voyage/index.html")]
              + [(p["name"], f"preparer-son-voyage/{p['slug']}.html") for p in PRACTICAL]
              + [(PG["agenda"]["title"], "agenda.html")]),
+        dict(title=PG["contes"]["title"], links=[("Tous les récits", "contes/index.html")]
+             + [(t["name"], f"contes/{t['slug']}.html") for t in TALES]),
+        dict(title=PG["loisirs"]["title"], links=[("Tous les quiz", "loisirs/index.html")]
+             + [(q["name"], f"loisirs/{q['slug']}.html") for q in QUIZZES]
+             + [("Glossaire", "glossaire.html"), ("Galerie photos", "galerie.html"), ("Vidéos", "videos.html")]),
         dict(title=SETTINGS.get("site_name", "Komori"), links=[
-            ("Galerie", "galerie.html"), ("Vidéos", "videos.html"), ("Glossaire", "glossaire.html"),
-            ("Quiz", "quiz.html"), ("Contact", "contact.html"), ("Crédits", "credits.html"),
-            ("Mentions légales", "mentions-legales.html")]),
+            ("Sources & bibliographie", "bibliographie.html"), ("Contact", "contact.html"),
+            ("Crédits", "credits.html"), ("Mentions légales", "mentions-legales.html")]),
     ]
     return groups
 
@@ -370,6 +452,14 @@ def auto_children(kind):
         return [dict(label=e["name"], note=None, href=f"experiences/{e['slug']}.html") for e in EXPERIENCES]
     if kind == "itineraires":
         return [dict(label=i["name"], note=i["duration"], href=f"itineraires/{i['slug']}.html") for i in ITINERARIES]
+    if kind == "contes":
+        return [dict(label="Tous les récits", note=None, href="contes/index.html")] + [
+            dict(label=label, note=f"{len(items)} récit{'s' if len(items) > 1 else ''}", href=f"contes/index.html#{key}")
+            for key, label, items in TALES_BY_KIND]
+    if kind == "loisirs":
+        return [dict(label="Tous les quiz", note=None, href="loisirs/index.html")] + [
+            dict(label=q["name"], note=f"Quiz · {q.get('level') or ''}".rstrip(" ·"), href=f"loisirs/{q['slug']}.html")
+            for q in QUIZZES]
     if kind == "pratique":
         return [dict(label=p["name"], note=None, href=f"preparer-son-voyage/{p['slug']}.html") for p in PRACTICAL]
     return []
@@ -382,8 +472,10 @@ def section_key(link):
         return "iles"
     if first in ("voyager", "experiences", "itineraires", "preparer-son-voyage") or link == "agenda.html":
         return "voyager"
-    if link in ("galerie.html", "videos.html", "glossaire.html", "quiz.html"):
-        return "medias"
+    if first == "loisirs" or link in ("galerie.html", "videos.html", "glossaire.html", "quiz.html"):
+        return "loisirs"
+    if link == "bibliographie.html":
+        return "histoire"
     return first or link
 
 
@@ -429,6 +521,24 @@ def validate():
     unique(RAW["experiences"], "Expériences")
     unique(RAW["itineraries"], "Itinéraires")
     unique(RAW["practical"], "Infos pratiques")
+    unique(RAW["tales"], "Contes et récits")
+    unique(RAW["quizzes"], "Quiz")
+    ids = [b.get("id") for b in RAW["bibliography"]]
+    for rid in {i for i in ids if ids.count(i) > 1}:
+        errors.append(f"Bibliographie : l'identifiant « {rid} » est utilisé deux fois")
+    for tale in TALES:
+        need_media(tale.get("hero"), f"récit {tale['slug']}")
+        if not tale.get("hero"):
+            errors.append(f"récit {tale['slug']} : image manquante")
+    for q in QUIZZES:
+        need_media(q.get("hero"), f"quiz {q['slug']}")
+        if not q.get("questions"):
+            errors.append(f"quiz {q['slug']} : aucune question")
+        for n, item in enumerate(q.get("questions", []), 1):
+            if len(item.get("choices", [])) < 2:
+                errors.append(f"quiz {q['slug']}, question {n} : il faut au moins deux réponses")
+            elif not 0 <= item.get("answer", -1) < len(item["choices"]):
+                errors.append(f"quiz {q['slug']}, question {n} : la bonne réponse n'existe pas")
     for t in RAW["topics"]:
         unique(t.get("pages", []), f"Rubrique {t.get('slug')}")
         if t.get("slug") in RESERVED_SLUGS:
@@ -503,7 +613,7 @@ def build():
     collect_pages()
     PATHS.update(path for path, _, _ in PAGES)
     menu, cta, footer = resolve_navigation()
-    env.globals.update(nav=menu, nav_cta=cta, footer=footer)
+    env.globals.update(nav=menu, nav_cta=cta, footer=footer, url_ok=link_ok)
 
     if OUT.exists():
         shutil.rmtree(OUT)
@@ -528,7 +638,7 @@ def build():
     today = datetime.date.today().isoformat()
     urls = "\n".join(
         f"  <url><loc>{SITE_URL}/{path}</loc><lastmod>{today}</lastmod></url>"
-        for path, _, _ in PAGES if path != "404.html"
+        for path, template, _ in PAGES if path != "404.html" and template != "redirect.html"
     )
     (OUT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
@@ -542,7 +652,7 @@ def build():
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
 
     check_internal_links()
-    for warning in sorted(LINK_WARNINGS):
+    for warning in sorted(LINK_WARNINGS | REF_WARNINGS):
         print("Avertissement :", warning, file=sys.stderr)
     print(f"{len(PAGES)} pages générées dans {OUT.relative_to(ROOT)}/")
 

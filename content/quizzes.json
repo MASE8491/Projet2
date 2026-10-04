@@ -1,0 +1,806 @@
+[
+  {
+    "slug": "geographie",
+    "name": "Volcans, lagons et nature",
+    "icon": "globe",
+    "hero": "karthala",
+    "level": "Facile",
+    "lead": "Dix questions sur les volcans, le climat, la mer et les animaux de l'archipel.",
+    "questions": [
+      {
+        "q": "Quelle est l'île la plus ancienne de l'archipel ?",
+        "choices": [
+          "La Grande Comore",
+          "Mohéli",
+          "Anjouan",
+          "Mayotte"
+        ],
+        "answer": 3,
+        "explain": "Mayotte est la doyenne : érodée et affaissée, elle est entourée d'un immense lagon. La Grande Comore est la plus jeune.",
+        "link": "geographie/volcans-et-reliefs.html"
+      },
+      {
+        "q": "Quelle est l'altitude du Karthala ?",
+        "choices": [
+          "1 595 m",
+          "2 361 m",
+          "3 070 m",
+          "660 m"
+        ],
+        "answer": 1,
+        "explain": "Avec 2 361 m, le Karthala est le point culminant de l'archipel et l'un des volcans les plus actifs de l'océan Indien.",
+        "link": "lieux/karthala.html"
+      },
+      {
+        "q": "Quel est le point culminant d'Anjouan ?",
+        "choices": [
+          "Le mont Ntingui",
+          "Le mont Choungui",
+          "Le mont Bénara",
+          "Le Karthala"
+        ],
+        "answer": 0,
+        "explain": "Le mont Ntingui culmine à 1 595 m. Le mont Bénara (660 m) est le point le plus haut de Mayotte.",
+        "link": "lieux/lac-dzialandze-et-ntingui.html"
+      },
+      {
+        "q": "Comment appelle-t-on la saison chaude et humide, de novembre à avril ?",
+        "choices": [
+          "Le kusi",
+          "Le kashkazi",
+          "Le mataba",
+          "Le hirimu"
+        ],
+        "answer": 1,
+        "explain": "Le kashkazi est porté par la mousson de nord-ouest ; le kusi est la saison fraîche et sèche des alizés.",
+        "link": "geographie/climat-et-saisons.html"
+      },
+      {
+        "q": "Quelle surface couvre environ le lagon de Mayotte ?",
+        "choices": [
+          "110 km²",
+          "400 km²",
+          "1 100 km²",
+          "11 000 km²"
+        ],
+        "answer": 2,
+        "explain": "Environ 1 100 km² : c'est l'un des plus grands lagons fermés du monde, protégé par une double barrière de corail par endroits.",
+        "link": "geographie/ocean-et-lagons.html"
+      },
+      {
+        "q": "Quel poisson « fossile vivant » vit dans les eaux profondes des Comores ?",
+        "choices": [
+          "Le cœlacanthe",
+          "Le requin-baleine",
+          "Le poisson-clown",
+          "L'espadon"
+        ],
+        "answer": 0,
+        "explain": "Le cœlacanthe, apparu il y a plus de 400 millions d'années, vit dans des grottes sous-marines au large de la Grande Comore et d'Anjouan.",
+        "link": "geographie/faune-et-flore.html"
+      },
+      {
+        "q": "Quelle chauve-souris géante ne vit qu'à Anjouan et Mohéli ?",
+        "choices": [
+          "La roussette de Livingstone",
+          "Le vampire commun",
+          "La pipistrelle",
+          "Le grand murin"
+        ],
+        "answer": 0,
+        "explain": "La roussette de Livingstone, l'un des mammifères les plus menacés de l'océan Indien, ne vit que dans les forêts d'altitude de ces deux îles.",
+        "link": "geographie/faune-et-flore.html"
+      },
+      {
+        "q": "Quel lémurien est l'emblème de Mayotte ?",
+        "choices": [
+          "Le maki",
+          "L'aye-aye",
+          "L'indri",
+          "Le sifaka"
+        ],
+        "answer": 0,
+        "explain": "Le maki de Mayotte, un lémur brun, est l'animal emblématique de l'île.",
+        "link": "geographie/faune-et-flore.html"
+      },
+      {
+        "q": "Comment s'appelle le volcan sous-marin né près de Mayotte en 2018 – 2019 ?",
+        "choices": [
+          "Fani Maoré",
+          "Karthala",
+          "Dziani",
+          "Mjombi"
+        ],
+        "answer": 0,
+        "explain": "Fani Maoré est apparu à environ 50 km à l'est de Mayotte, révélé par une longue crise sismique.",
+        "link": "geographie/volcans-et-reliefs.html"
+      },
+      {
+        "q": "En 2020, l'UNESCO a reconnu Mohéli comme…",
+        "choices": [
+          "un site du patrimoine mondial",
+          "une réserve de biosphère",
+          "un géoparc",
+          "une capitale de la culture"
+        ],
+        "answer": 1,
+        "explain": "L'île de Mohéli (Mwali) est réserve de biosphère de l'UNESCO depuis 2020, pour la richesse de ses milieux terrestres et marins.",
+        "link": "lieux/parc-national-moheli.html"
+      }
+    ]
+  },
+  {
+    "slug": "histoire",
+    "name": "Mille ans d'histoire",
+    "icon": "scroll",
+    "hero": "sultan_said_ali",
+    "level": "Moyen",
+    "lead": "Des premiers villages à l'Union des Comores : douze questions pour réviser la rubrique Histoire.",
+    "questions": [
+      {
+        "q": "Sur quel site d'Anjouan a-t-on trouvé du riz venu d'Asie, daté des VIIIe – Xe siècles ?",
+        "choices": [
+          "Sima",
+          "Domoni",
+          "Mutsamudu",
+          "Tsingoni"
+        ],
+        "answer": 0,
+        "explain": "Les fouilles de Sima ont livré du riz, du haricot mungo et du coton d'origine asiatique : la trace des navigateurs austronésiens.",
+        "link": "histoire/premiers-peuplements.html"
+      },
+      {
+        "q": "Selon la tradition, qui a rapporté l'islam à Ntsaweni ?",
+        "choices": [
+          "Mtswa Mwindza",
+          "Andriantsoly",
+          "Saïd Ali",
+          "Ramanetaka"
+        ],
+        "answer": 0,
+        "explain": "La tradition attribue l'islamisation à Mtswa Mwindza ; l'archéologie date les plus anciennes mosquées des XIe – XIIe siècles.",
+        "link": "contes/mtswa-mwindza.html"
+      },
+      {
+        "q": "Quelle mosquée possède un mihrab daté de 1538 ?",
+        "choices": [
+          "La mosquée du Vendredi de Moroni",
+          "La mosquée de Tsingoni",
+          "La mosquée de Domoni",
+          "La mosquée de Fomboni"
+        ],
+        "answer": 1,
+        "explain": "Deux inscriptions découvertes en 2006 datent de 944 de l'Hégire (1538) le mihrab de la mosquée royale de Tsingoni, à Mayotte.",
+        "link": "histoire/islam-et-monde-swahili.html"
+      },
+      {
+        "q": "Comment les marins anglais appelaient-ils Anjouan ?",
+        "choices": [
+          "Johanna",
+          "Angazija",
+          "Camora",
+          "Mawutu"
+        ],
+        "answer": 0,
+        "explain": "« Johanna » était l'escale favorite des navires de la Compagnie anglaise des Indes orientales.",
+        "link": "histoire/escales-et-pirates.html"
+      },
+      {
+        "q": "Quel pirate célèbre a fait escale à Anjouan en février 1695 ?",
+        "choices": [
+          "Henry Every",
+          "Barbe Noire",
+          "Francis Drake",
+          "Jean Bart"
+        ],
+        "answer": 0,
+        "explain": "Henry Every y laissa une lettre adressée aux capitaines anglais, quelques mois avant son coup le plus célèbre.",
+        "link": "histoire/escales-et-pirates.html"
+      },
+      {
+        "q": "En quelle année Andriantsoly a-t-il cédé Mayotte à la France ?",
+        "choices": [
+          "1814",
+          "1841",
+          "1886",
+          "1912"
+        ],
+        "answer": 1,
+        "explain": "Le traité est signé le 25 avril 1841 ; la prise de possession a lieu en 1843.",
+        "link": "histoire/periode-coloniale.html"
+      },
+      {
+        "q": "Quelle reine de Mohéli était la fille du prince merina Ramanetaka ?",
+        "choices": [
+          "Djoumbé Fatima",
+          "Salima Machamba",
+          "Bilqis",
+          "Zéna M'Déré"
+        ],
+        "answer": 0,
+        "explain": "Djoumbé Fatima régna de 1842 à 1865, puis de 1874 à 1878. Salima Machamba était sa fille.",
+        "link": "histoire/personnages.html"
+      },
+      {
+        "q": "En quelle année l'esclavage a-t-il été aboli en Grande Comore ?",
+        "choices": [
+          "1846",
+          "1891",
+          "1904",
+          "1946"
+        ],
+        "answer": 2,
+        "explain": "Le 29 février 1904 ; Mayotte l'avait aboli dès 1846, Anjouan en 1891 et Mohéli en 1902.",
+        "link": "histoire/traite-et-esclavage.html"
+      },
+      {
+        "q": "De 1912 à 1946, l'archipel était rattaché à…",
+        "choices": [
+          "La Réunion",
+          "Madagascar",
+          "Zanzibar",
+          "Maurice"
+        ],
+        "answer": 1,
+        "explain": "La loi du 25 juillet 1912 en fait une province de la colonie de Madagascar ; il en est détaché en 1946.",
+        "link": "histoire/periode-coloniale.html"
+      },
+      {
+        "q": "Quel mouvement indépendantiste est né en 1962 à Dar es Salaam ?",
+        "choices": [
+          "Le MOLINACO",
+          "Le Mouvement populaire mahorais",
+          "Udzima",
+          "Le CNDRS"
+        ],
+        "answer": 0,
+        "explain": "Le Mouvement de libération nationale des Comores a été fondé par des Comoriens d'Afrique de l'Est.",
+        "link": "histoire/vers-l-independance.html"
+      },
+      {
+        "q": "Quel jour l'indépendance des Comores a-t-elle été proclamée ?",
+        "choices": [
+          "22 décembre 1974",
+          "6 juillet 1975",
+          "3 août 1975",
+          "12 novembre 1975"
+        ],
+        "answer": 1,
+        "explain": "Le 6 juillet 1975, après la loi française prévoyant une ratification île par île de la constitution.",
+        "link": "histoire/vers-l-independance.html"
+      },
+      {
+        "q": "Quel accord de 2001 a mis fin à la crise séparatiste ?",
+        "choices": [
+          "L'accord de Fomboni",
+          "L'accord de Moroni",
+          "L'accord de Dzaoudzi",
+          "L'accord d'Addis-Abeba"
+        ],
+        "answer": 0,
+        "explain": "Signé le 17 février 2001, il ouvre la voie à la constitution de l'Union des Comores.",
+        "link": "histoire/independance-et-epoque-contemporaine.html"
+      }
+    ]
+  },
+  {
+    "slug": "culture",
+    "name": "Culture & traditions",
+    "icon": "drum",
+    "hero": "manzaraka",
+    "level": "Facile",
+    "lead": "Grand mariage, parures, musiques et plats : testez vos connaissances sur la culture comorienne.",
+    "questions": [
+      {
+        "q": "Qu'est-ce que le msindzano ?",
+        "choices": [
+          "Une danse",
+          "Un masque de beauté au santal",
+          "Un plat au coco",
+          "Un instrument de musique"
+        ],
+        "answer": 1,
+        "explain": "Le msindzano est un masque de beauté à base de bois de santal râpé sur du corail.",
+        "link": "culture/artisanat-et-costumes.html"
+      },
+      {
+        "q": "Comment s'appelle le grand mariage en Grande Comore ?",
+        "choices": [
+          "Le anda",
+          "Le debaa",
+          "Le twarab",
+          "Le kusi"
+        ],
+        "answer": 0,
+        "explain": "Le anda fait accéder le marié au rang de notable : c'est le cœur de la coutume de Ngazidja.",
+        "link": "culture/coutumes-et-rites.html"
+      },
+      {
+        "q": "Et à Mayotte ?",
+        "choices": [
+          "Le manzaraka",
+          "Le maoulid",
+          "Le wadaha",
+          "Le hirimu"
+        ],
+        "answer": 0,
+        "explain": "Le manzaraka est le grand mariage mahorais.",
+        "link": "culture/coutumes-et-rites.html"
+      },
+      {
+        "q": "Quelle fleur a valu aux Comores le surnom d'« îles aux parfums » ?",
+        "choices": [
+          "Le jasmin",
+          "La rose",
+          "L'ylang-ylang",
+          "Le frangipanier"
+        ],
+        "answer": 2,
+        "explain": "L'huile essentielle d'ylang-ylang est très recherchée par les parfumeurs.",
+        "link": "geographie/faune-et-flore.html"
+      },
+      {
+        "q": "Comment s'appelle la calotte brodée portée par les hommes ?",
+        "choices": [
+          "La kofia",
+          "Le djoho",
+          "Le saluva",
+          "Le chiromani"
+        ],
+        "answer": 0,
+        "explain": "La kofia est brodée à la main ; le djoho est un manteau d'apparat.",
+        "link": "culture/artisanat-et-costumes.html"
+      },
+      {
+        "q": "Quel vêtement drapé est emblématique des femmes de Mayotte ?",
+        "choices": [
+          "Le saluva",
+          "Le djoho",
+          "La kofia",
+          "Le boubou"
+        ],
+        "answer": 0,
+        "explain": "Le saluva (ou salouva) est porté au quotidien comme lors des fêtes.",
+        "link": "culture/artisanat-et-costumes.html"
+      },
+      {
+        "q": "Quelle musique d'origine zanzibarite anime les mariages ?",
+        "choices": [
+          "Le twarab",
+          "Le maloya",
+          "Le séga",
+          "Le reggae"
+        ],
+        "answer": 0,
+        "explain": "Le twarab mêle influences arabes et africaines ; il est arrivé de Zanzibar.",
+        "link": "culture/musique-et-danses.html"
+      },
+      {
+        "q": "Qu'est-ce que le mataba ?",
+        "choices": [
+          "Un plat de feuilles de manioc au lait de coco",
+          "Une pirogue",
+          "Une fête religieuse",
+          "Une danse"
+        ],
+        "answer": 0,
+        "explain": "Les feuilles de manioc pilées mijotent longuement dans le lait de coco.",
+        "link": "culture/cuisine.html"
+      },
+      {
+        "q": "À quelle famille de langues appartient le comorien ?",
+        "choices": [
+          "Les langues bantoues",
+          "Les langues sémitiques",
+          "Les langues austronésiennes",
+          "Les langues romanes"
+        ],
+        "answer": 0,
+        "explain": "Le comorien est une langue bantoue, très proche du swahili.",
+        "link": "culture/langues.html"
+      },
+      {
+        "q": "Quelle langue d'origine malgache parle-t-on dans plusieurs villages de Mayotte ?",
+        "choices": [
+          "Le kibushi",
+          "Le shindzuani",
+          "Le swahili",
+          "L'arabe"
+        ],
+        "answer": 0,
+        "explain": "Le kibushi témoigne des liens anciens entre Mayotte et Madagascar.",
+        "link": "culture/langues.html"
+      }
+    ]
+  },
+  {
+    "slug": "contes",
+    "name": "Hale halele : contes et légendes",
+    "icon": "moon",
+    "hero": "dziani",
+    "level": "Facile",
+    "lead": "Djinns, lacs engloutis et héros rusés : avez-vous bien écouté les conteurs ?",
+    "questions": [
+      {
+        "q": "Comment commencent traditionnellement les contes à Mayotte ?",
+        "choices": [
+          "« Hale ! » – « Halele ! »",
+          "« Il était une fois »",
+          "« Kwaheri ! »",
+          "« Bonne nuit ! »"
+        ],
+        "answer": 0,
+        "explain": "Le conteur lance « Hale ! », l'auditoire répond « Halele ! », et l'histoire peut commencer.",
+        "link": "contes/index.html"
+      },
+      {
+        "q": "Selon le mythe, qui furent les premiers habitants des îles ?",
+        "choices": [
+          "Des djinns",
+          "Des géants",
+          "Des tortues",
+          "Des marins portugais"
+        ],
+        "answer": 0,
+        "explain": "Le roi Souleymane (Salomon) y aurait exilé les djinns rebelles.",
+        "link": "contes/le-temps-des-djinns.html"
+      },
+      {
+        "q": "Qu'est-ce qui, selon la légende, a creusé le cratère du Karthala ?",
+        "choices": [
+          "L'anneau de la reine de Saba",
+          "Une lampe magique",
+          "Le trésor d'un pirate",
+          "Une étoile filante"
+        ],
+        "answer": 0,
+        "explain": "Les djinns auraient jeté l'anneau offert par Souleymane à Bilqis sur la montagne.",
+        "link": "contes/l-anneau-de-la-reine-de-saba.html"
+      },
+      {
+        "q": "Pourquoi le village du lac Salé a-t-il été englouti ?",
+        "choices": [
+          "Il avait refusé de l'eau à un étranger",
+          "Il avait coupé un arbre sacré",
+          "Il avait oublié la prière",
+          "Il avait volé un sultan"
+        ],
+        "answer": 0,
+        "explain": "Seule une femme avait offert à boire au voyageur : elle fut épargnée.",
+        "link": "contes/le-lac-sale.html"
+      },
+      {
+        "q": "En combien de temps la mosquée de Bangoi-Kouni aurait-elle été bâtie ?",
+        "choices": [
+          "En une nuit",
+          "En sept ans",
+          "En cent jours",
+          "En une lune"
+        ],
+        "answer": 0,
+        "explain": "Au réveil, les habitants trouvèrent la mosquée déjà construite : œuvre des djinns, dit-on.",
+        "link": "contes/la-mosquee-miraculeuse.html"
+      },
+      {
+        "q": "En quoi le riz du mariage royal a-t-il été changé, au large de Saziley ?",
+        "choices": [
+          "En sable blanc",
+          "En corail",
+          "En perles",
+          "En sel"
+        ],
+        "answer": 0,
+        "explain": "L'îlot de sable blanc, Mtsanga Tsoholé, serait né de ce gaspillage.",
+        "link": "contes/mtsanga-tsohole.html"
+      },
+      {
+        "q": "Qu'est-ce qui jaillit du lac Dziani quand la princesse y fut précipitée ?",
+        "choices": [
+          "Une nuée de grenouilles",
+          "Un dragon",
+          "Une source chaude",
+          "Des poissons d'or"
+        ],
+        "answer": 0,
+        "explain": "Depuis, le lac a pris sa couleur étrange.",
+        "link": "contes/la-fille-du-roi-et-le-lac-dziani.html"
+      },
+      {
+        "q": "Comment s'appelle la « cinquième île » engloutie entre Mayotte et Madagascar ?",
+        "choices": [
+          "Mjombi",
+          "Mwali",
+          "Nosy Be",
+          "Mtsamboro"
+        ],
+        "answer": 0,
+        "explain": "Les marins jettent une pièce aux djinns de l'océan en passant au-dessus du haut-fond de Mdjumbi.",
+        "link": "contes/mjombi-la-cinquieme-ile.html"
+      },
+      {
+        "q": "Selon la chronique de Kilwa, où aborda le septième navire parti de Chiraz ?",
+        "choices": [
+          "À Hanzuan (Anjouan)",
+          "À Mombasa",
+          "À Zanzibar",
+          "À Mogadiscio"
+        ],
+        "answer": 0,
+        "explain": "C'était le navire du père, le sultan Hassan.",
+        "link": "contes/les-sept-navires-de-chiraz.html"
+      },
+      {
+        "q": "Quel héros rusé prétend qu'une marmite a « accouché » ?",
+        "choices": [
+          "Ibnasya",
+          "Madi",
+          "Mtswa Mwindza",
+          "Andriantsoly"
+        ],
+        "answer": 0,
+        "explain": "Ibnasya, que les Swahilis appellent Abunuwasi, se joue des avares et des puissants.",
+        "link": "contes/la-marmite-qui-avait-accouche.html"
+      }
+    ]
+  },
+  {
+    "slug": "quatre-iles",
+    "name": "Quatre îles, quatre caractères",
+    "icon": "pin",
+    "hero": "nioumachoua_ilots",
+    "level": "Facile",
+    "lead": "Noms comoriens, chefs-lieux et particularités : saurez-vous reconnaître chaque île ?",
+    "questions": [
+      {
+        "q": "Quelle île appelle-t-on Ngazidja ?",
+        "choices": [
+          "La Grande Comore",
+          "Mohéli",
+          "Anjouan",
+          "Mayotte"
+        ],
+        "answer": 0,
+        "explain": "Ngazidja est la plus grande et la plus jeune des quatre îles.",
+        "link": "iles/grande-comore.html"
+      },
+      {
+        "q": "Et Mwali ?",
+        "choices": [
+          "La Grande Comore",
+          "Mohéli",
+          "Anjouan",
+          "Mayotte"
+        ],
+        "answer": 1,
+        "explain": "Mwali est le nom comorien de Mohéli, la plus petite et la plus sauvage des quatre.",
+        "link": "iles/moheli.html"
+      },
+      {
+        "q": "Et Ndzuwani ?",
+        "choices": [
+          "La Grande Comore",
+          "Mohéli",
+          "Anjouan",
+          "Mayotte"
+        ],
+        "answer": 2,
+        "explain": "Ndzuwani, Anjouan, l'île aux parfums et aux reliefs escarpés.",
+        "link": "iles/anjouan.html"
+      },
+      {
+        "q": "Et Maore ?",
+        "choices": [
+          "La Grande Comore",
+          "Mohéli",
+          "Anjouan",
+          "Mayotte"
+        ],
+        "answer": 3,
+        "explain": "Maore, Mayotte, l'île au lagon.",
+        "link": "iles/mayotte.html"
+      },
+      {
+        "q": "Quelle est la plus petite des quatre îles ?",
+        "choices": [
+          "Mohéli",
+          "Mayotte",
+          "Anjouan",
+          "La Grande Comore"
+        ],
+        "answer": 0,
+        "explain": "Mohéli couvre environ 211 km², contre 374 pour Mayotte, 424 pour Anjouan et plus de 1 000 pour la Grande Comore.",
+        "link": "iles/index.html"
+      },
+      {
+        "q": "Quel est le chef-lieu de Mohéli ?",
+        "choices": [
+          "Fomboni",
+          "Mutsamudu",
+          "Mamoudzou",
+          "Domoni"
+        ],
+        "answer": 0,
+        "explain": "Fomboni est le chef-lieu de Mohéli.",
+        "link": "iles/moheli.html"
+      },
+      {
+        "q": "Quel est le chef-lieu d'Anjouan ?",
+        "choices": [
+          "Domoni",
+          "Mutsamudu",
+          "Moroni",
+          "Dzaoudzi"
+        ],
+        "answer": 1,
+        "explain": "Mutsamudu a remplacé Domoni comme capitale à la fin du XVIIIe siècle.",
+        "link": "lieux/mutsamudu.html"
+      },
+      {
+        "q": "Quelle ville est la capitale de l'Union des Comores ?",
+        "choices": [
+          "Moroni",
+          "Mamoudzou",
+          "Fomboni",
+          "Mutsamudu"
+        ],
+        "answer": 0,
+        "explain": "Moroni est capitale depuis le transfert décidé en 1958.",
+        "link": "lieux/moroni.html"
+      },
+      {
+        "q": "Où se trouvent les célèbres plages de ponte des tortues d'Itsamia ?",
+        "choices": [
+          "À Mohéli",
+          "À Anjouan",
+          "En Grande Comore",
+          "À Mayotte"
+        ],
+        "answer": 0,
+        "explain": "Itsamia, à Mohéli, est l'un des plus importants sites de ponte de tortues vertes de l'océan Indien.",
+        "link": "lieux/itsamia.html"
+      },
+      {
+        "q": "Quelle île est un département français ?",
+        "choices": [
+          "Mayotte",
+          "Mohéli",
+          "Anjouan",
+          "La Grande Comore"
+        ],
+        "answer": 0,
+        "explain": "Mayotte est un département depuis le 31 mars 2011 ; les trois autres îles forment l'Union des Comores.",
+        "link": "histoire/question-de-mayotte.html"
+      }
+    ]
+  },
+  {
+    "slug": "mots",
+    "name": "Les mots des Comores",
+    "icon": "chat",
+    "hero": "kofia_couture",
+    "level": "Moyen",
+    "lead": "Hirimu, kusi, djoho, mila na ntsi… Connaissez-vous le vocabulaire de l'archipel ?",
+    "questions": [
+      {
+        "q": "Que désigne le mot hirimu ?",
+        "choices": [
+          "Une classe d'âge",
+          "Un plat de fête",
+          "Un vent de mousson",
+          "Un bateau"
+        ],
+        "answer": 0,
+        "explain": "En Grande Comore, le hirimu regroupe les hommes d'un même village nés à la même période.",
+        "link": "glossaire.html"
+      },
+      {
+        "q": "Qu'est-ce que le kusi ?",
+        "choices": [
+          "La saison fraîche et sèche",
+          "Une danse",
+          "Une coiffe",
+          "Un poisson"
+        ],
+        "answer": 0,
+        "explain": "Le kusi, de mai à octobre, est dominé par les alizés de sud-est.",
+        "link": "geographie/climat-et-saisons.html"
+      },
+      {
+        "q": "Qu'est-ce qu'un djoho ?",
+        "choices": [
+          "Un manteau d'apparat brodé",
+          "Un tambour",
+          "Une pirogue",
+          "Une mosquée"
+        ],
+        "answer": 0,
+        "explain": "Le djoho est porté par les hommes lors des cérémonies, notamment du grand mariage.",
+        "link": "culture/artisanat-et-costumes.html"
+      },
+      {
+        "q": "Qu'est-ce que le debaa ?",
+        "choices": [
+          "Un chant religieux dansé par les femmes",
+          "Un plat de poisson",
+          "Un impôt colonial",
+          "Un volcan"
+        ],
+        "answer": 0,
+        "explain": "À Mayotte, le debaa est chanté et dansé en l'honneur du Prophète.",
+        "link": "culture/musique-et-danses.html"
+      },
+      {
+        "q": "Que signifie mila na ntsi ?",
+        "choices": [
+          "Les us et le pays",
+          "La mer et le vent",
+          "Le roi et le peuple",
+          "La lune et les étoiles"
+        ],
+        "answer": 0,
+        "explain": "Mila na ntsi désigne le système coutumier de la Grande Comore.",
+        "link": "culture/coutumes-et-rites.html"
+      },
+      {
+        "q": "Qu'est-ce qu'un boutre ?",
+        "choices": [
+          "Un voilier traditionnel en bois",
+          "Un instrument à cordes",
+          "Un fruit",
+          "Une coiffe"
+        ],
+        "answer": 0,
+        "explain": "Le boutre a longtemps porté le commerce entre l'Arabie, l'Afrique et les îles.",
+        "link": "glossaire.html"
+      },
+      {
+        "q": "Que célèbre le maoulid ?",
+        "choices": [
+          "La naissance du Prophète",
+          "La fin des récoltes",
+          "Le nouvel an",
+          "Le retour des pêcheurs"
+        ],
+        "answer": 0,
+        "explain": "Le maoulid est fêté par des chants et des récitations collectifs.",
+        "link": "culture/fetes-et-religion.html"
+      },
+      {
+        "q": "Que désigne le titre de ntibe en Grande Comore ?",
+        "choices": [
+          "Le sultan suzerain de l'île",
+          "Le chef des pêcheurs",
+          "Le juge musulman",
+          "Le conteur"
+        ],
+        "answer": 0,
+        "explain": "Les sultans de Bambao et d'Itsandra se le disputaient.",
+        "link": "histoire/le-temps-des-sultans.html"
+      },
+      {
+        "q": "Qu'est-ce qu'un kwassa-kwassa ?",
+        "choices": [
+          "Une barque utilisée pour traverser vers Mayotte",
+          "Une danse de mariage",
+          "Un plat de riz",
+          "Un esprit de la forêt"
+        ],
+        "answer": 0,
+        "explain": "Ces barques surchargées sont au cœur des drames humains entre Anjouan et Mayotte.",
+        "link": "histoire/question-de-mayotte.html"
+      },
+      {
+        "q": "Que désigne le mot hale en shingazidja ?",
+        "choices": [
+          "Le conte",
+          "La prière",
+          "Le mariage",
+          "La pirogue"
+        ],
+        "answer": 0,
+        "explain": "Hale désigne le conte ; hadithi (ou hadisi) désigne plutôt un récit tenu pour vrai.",
+        "link": "contes/index.html"
+      }
+    ]
+  }
+]

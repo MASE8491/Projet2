@@ -162,19 +162,25 @@ export function tree(app) {
   root.append(h("ul", { class: "tree" },
     docLink("doc:home", "🏠"),
     group("Les îles", "🗺️", "fixed:iles", islandNodes, addButton("Île", "island")),
-    group("Rubriques de découverte", "📚", null, topicNodes, addButton("Rubrique", "topic")),
+    group("Rubriques de découverte", "📚", null, [
+      ...topicNodes,
+      group("Sources & bibliographie", "📖", "fixed:bibliographie", [docLink("list:bibliography", "📖"), docLink("list:timeline", "🕰️")]),
+    ], addButton("Rubrique", "topic")),
+    group("Hale halele : contes et récits", "🌙", "fixed:contes",
+      Object.entries(M.TALE_KINDS).map(([kind, label]) => group(label, "🌙", null,
+        data.tales.filter((t) => t.kind === kind).map((t) => node(`tale:${t.slug}`, { emoji: "🌙" })))),
+      addButton("Conte ou récit", "tale")),
+    group("Loisirs", "🎲", "fixed:loisirs", [
+      ...listNodes("quiz", "❓"),
+      group("Glossaire", "🔤", "fixed:glossaire", [docLink("list:glossary", "🔤")]),
+      docLink("fixed:galerie", "🖼️"),
+      group("Vidéos", "🎬", "fixed:videos", [docLink("doc:videos", "🎬")]),
+    ], addButton("Quiz", "quiz")),
     group("Voyager", "🧳", "fixed:voyager", [
       group("Expériences", "🌊", "fixed:experiences", listNodes("experience", "🌊"), addButton("Expérience", "experience")),
       group("Itinéraires", "🧭", "fixed:itineraires", listNodes("itinerary", "🧭"), addButton("Itinéraire", "itinerary")),
       group("Préparer son voyage", "🧳", "fixed:preparer", listNodes("practical", "🧳"), addButton("Info pratique", "practical")),
       group("Agenda & saisons", "📅", "fixed:agenda", [docLink("list:events", "📅")]),
-    ]),
-    group("Médiathèque et outils", "🖼️", null, [
-      docLink("fixed:galerie", "🖼️"),
-      group("Vidéos", "🎬", "fixed:videos", [docLink("doc:videos", "🎬")]),
-      group("Glossaire", "🔤", "fixed:glossaire", [docLink("list:glossary", "🔤")]),
-      group("Quiz", "❓", "fixed:quiz", [docLink("list:quiz", "❓")]),
-      docLink("list:timeline", "🕰️"),
     ]),
     group("Pages annexes", "📎", null, ["contact", "credits", "mentions", "plan", "404"].map((k) => docLink(`fixed:${k}`, "📎"))),
     docLink("doc:navigation", "🧭"),
@@ -221,6 +227,19 @@ export function editor(app, id) {
       severity = danger.length ? "danger" : "warning";
       sections.push({ heading: "Pages concernées :", items: ["Toutes les pages du site"] });
       if (danger.length) notes.unshift(`⚠ Réglages avancés modifiés (${danger.map((f) => f.label).join(", ")}) : une erreur peut rendre le site ou cette administration inaccessibles. Ne modifiez ces champs que si vous savez ce que vous faites.`);
+    } else if (id === "list:bibliography") {
+      const before = new Map((original.items || []).map((b) => [b.id, b]));
+      const after = new Set((value.items || []).map((b) => b.id));
+      const lost = [...before.keys()].filter((rid) => rid && !after.has(rid));
+      const touched = M.citingPages(data).filter((pg) => pg.refs.some((rid) => before.has(rid)));
+      sections.push({ heading: "Pages qui affichent ces références :", items: [{ text: "Sources & bibliographie", sub: "bibliographie.html" },
+        ...touched.map((pg) => ({ text: pg.title, sub: pg.path }))] });
+      const broken = lost.flatMap((rid) => M.citationsOf(data, rid).map((pg) => `${pg.title} — cite « ${rid} »`));
+      if (broken.length) {
+        severity = "danger";
+        sections.push({ heading: "⚠ Références supprimées ou renommées alors qu'elles sont citées :", items: broken });
+        notes.unshift("La publication sera bloquée tant que ces pages citeront une référence absente. Rétablissez l'identifiant ou retirez la référence des pages concernées.");
+      } else if (lost.length) severity = "warning";
     } else if (p.type === "media") {
       sections.push({ heading: "Pages où cette image apparaît :", items: M.appearsOn(data, id).map((x) => ({ text: x.title, sub: x.path })) });
     } else {
@@ -525,6 +544,14 @@ export function helpView(app) {
       h("p", {}, "Dans « Arborescence » : ↑ et ↓ changent l'ordre, « ⇄ Déplacer » rattache un lieu à une autre île ou un article à une autre rubrique, « 🔗 Adresse » change l'adresse de la page. Les liens internes sont mis à jour automatiquement."),
       h("p", {}, "Le menu principal et le pied de page se modifient dans « Menu et pied de page »."))
     ,
+    item("Comment ajouter un conte dans « Hale halele » ?",
+      h("p", {}, "« ➕ Ajouter une page » → « Conte ou récit ». Choisissez le genre (mythe, légende de lieu, récit, conte), l'île et éventuellement le lieu associé. Écrivez le récit avec vos mots ; la formule « Hale ! – Halele ! » est ajoutée automatiquement."),
+      h("p", {}, "L'encadré « Ce que l'on en sait » sert à distinguer la légende de l'histoire : variantes, origine du récit, avis des historiens. Cochez « Mettre en avant » pour l'afficher sur la page d'accueil (4 récits au maximum).")),
+    item("Comment créer ou modifier un quiz ?",
+      h("p", {}, "Dans « Arborescence » → « Loisirs », modifiez un quiz ou cliquez sur « ➕ Quiz ». Pour chaque question : la question, les réponses proposées, le numéro de la bonne réponse (1 = la première), une explication et, si vous voulez, une page du site « pour en savoir plus ». La vérification avant publication bloque une bonne réponse qui n'existe pas.")),
+    item("Comment citer une source (bibliographie) ?",
+      h("p", {}, "Ajoutez d'abord l'ouvrage dans « Bibliographie » (menu de gauche) avec un identifiant court, par exemple walker-2019, et indiquez s'il s'agit d'une voix de l'archipel ou d'un regard extérieur. Ensuite, dans un article d'histoire ou un conte, choisissez-le dans le champ « Références »."),
+      h("p", {}, "Ne changez pas l'identifiant d'un ouvrage déjà cité : la publication serait bloquée tant que les pages citeraient l'ancien identifiant.")),
     item("Masquer ou supprimer ?",
       h("p", {}, "« Masquer » retire la page du site sans perdre son contenu : c'est réversible. « Supprimer » efface la page ; seule une restauration depuis l'Historique permet de la récupérer.")),
     item("Pourquoi une fenêtre s'ouvre-t-elle à chaque action ?",

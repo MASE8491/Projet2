@@ -133,5 +133,35 @@
     "term": "Ylang-ylang",
     "definition": "Arbre dont les fleurs produisent une huile essentielle très prisée en parfumerie, emblème des « îles aux parfums ».",
     "link": "experiences/route-des-parfums.html"
+  },
+  {
+    "term": "Hale",
+    "definition": "Conte, en shingazidja. « Hale ! » – « Halele ! » est aussi la formule qui ouvre les contes à Mayotte.",
+    "link": "contes/index.html"
+  },
+  {
+    "term": "Hadithi",
+    "definition": "Récit tenu pour vrai (histoire d'un lieu, d'une famille), par opposition au conte. On dit aussi hadisi.",
+    "link": "contes/index.html"
+  },
+  {
+    "term": "Ziara",
+    "definition": "Lieu sacré associé aux esprits (lac, arbre, pierre, tombeau), où l'on vient prier ou déposer des offrandes.",
+    "link": "contes/msiru-wa-mnambani.html"
+  },
+  {
+    "term": "Fundi",
+    "definition": "Maître, spécialiste ; désigne notamment celui qui sait entrer en relation avec les djinns.",
+    "link": "contes/msiru-wa-mnambani.html"
+  },
+  {
+    "term": "Kwassa-kwassa",
+    "definition": "Barque à moteur utilisée pour les traversées clandestines entre Anjouan et Mayotte.",
+    "link": "histoire/question-de-mayotte.html"
+  },
+  {
+    "term": "Makua",
+    "definition": "Peuple du nord du Mozambique ; aux Comores, le mot a longtemps désigné les esclaves et leurs descendants.",
+    "link": "histoire/traite-et-esclavage.html"
   }
 ]

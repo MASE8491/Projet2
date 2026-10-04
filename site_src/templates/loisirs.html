@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+{{ ui.hero(pg.loisirs.hero, pg.loisirs.title, lead=pg.loisirs.lead, kicker=pg.loisirs.kicker, crumbs=[(pg.loisirs.title, None)]) }}
+
+<section class="section">
+  <div class="container">
+    <div class="prose narrow-left">
+      {{ pg.loisirs.intro | links | safe }}
+    </div>
+    {{ ui.section_head("Les quiz", quizzes | length ~ " quiz pour tester vos connaissances.") }}
+    <div class="card-grid">
+      {% for q in quizzes %}
+      {{ ui.card('loisirs/' ~ q.slug ~ '.html', q.hero, q.name, q.lead,
+                 kicker=ui.icon(q.icon) ~ " Quiz · " ~ (q.level or "Tous niveaux"),
+                 meta=q.questions | length ~ " questions") }}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-sand">
+  <div class="container">
+    {{ ui.section_head("Et aussi", "D'autres façons de découvrir l'archipel en s'amusant.") }}
+    <div class="theme-grid">
+      <a class="theme-tile" href="{{ url('contes/index.html') }}">
+        <span class="tile-media">{{ ui.picture(pg.contes.hero, sizes="(min-width: 900px) 33vw, 100vw", alt="") }}</span>
+        <span class="theme-tile-label">{{ ui.icon('moon') }} Hale halele<small>Contes et légendes à lire et à raconter</small></span>
+      </a>
+      <a class="theme-tile" href="{{ url('glossaire.html') }}">
+        <span class="tile-media">{{ ui.picture('kofia_couture', sizes="(min-width: 900px) 33vw, 100vw", alt="") }}</span>
+        <span class="theme-tile-label">{{ ui.icon('list') }} Glossaire<small>Les mots des Comores</small></span>
+      </a>
+      <a class="theme-tile" href="{{ url('galerie.html') }}">
+        <span class="tile-media">{{ ui.picture('nioumachoua_ilots', sizes="(min-width: 900px) 33vw, 100vw", alt="") }}</span>
+        <span class="theme-tile-label">{{ ui.icon('star') }} Galerie photos<small>Paysages, villes et traditions</small></span>
+      </a>
+      <a class="theme-tile" href="{{ url('videos.html') }}">
+        <span class="tile-media">{{ ui.picture('baleine', sizes="(min-width: 900px) 33vw, 100vw", alt="") }}</span>
+        <span class="theme-tile-label">{{ ui.icon('play') }} Vidéos<small>Baleines, tortues et récifs</small></span>
+      </a>
+      <a class="theme-tile" href="{{ url('histoire/index.html#frise') }}">
+        <span class="tile-media">{{ ui.picture('carte_1808', sizes="(min-width: 900px) 33vw, 100vw", alt="") }}</span>
+        <span class="theme-tile-label">{{ ui.icon('clock') }} Frise chronologique<small>Mille ans d'histoire en dates</small></span>
+      </a>
+      <a class="theme-tile" href="{{ url('iles/index.html') }}">
+        <span class="tile-media">{{ ui.picture('lagon_dembeni', sizes="(min-width: 900px) 33vw, 100vw", alt="") }}</span>
+        <span class="theme-tile-label">{{ ui.icon('pin') }} Carte des îles<small>Comparer les quatre îles</small></span>
+      </a>
+    </div>
+  </div>
+</section>
+{% endblock %}

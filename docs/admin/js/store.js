@@ -68,11 +68,12 @@ export class Store {
 
   /** Le brouillon a-t-il été préparé à partir de la version publiée actuelle ? */
   draftMatchesBase(draft) {
-    return Object.entries(draft.shas || {}).every(([f, sha]) => !draft.data[f] || this.shas[f] === sha);
+    // Les fichiers qui n'existent plus dans le site (ancienne structure) sont ignorés.
+    return Object.entries(draft.shas || {}).every(([f, sha]) => !draft.data[f] || !this.config.content_files.includes(f) || this.shas[f] === sha);
   }
 
   restoreDraft(draft) {
-    for (const [f, value] of Object.entries(draft.data)) this.data[f] = value;
+    for (const [f, value] of Object.entries(draft.data)) if (this.config.content_files.includes(f)) this.data[f] = value;
     this.log = draft.log || [];
     this.emit();
   }

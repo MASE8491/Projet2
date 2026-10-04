@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block content %}
+{{ ui.hero(pg.contes.hero, pg.contes.title, lead=pg.contes.lead, kicker=pg.contes.kicker, crumbs=[(pg.contes.title, None)]) }}
+
+<section class="section">
+  <div class="container with-aside">
+    <div class="prose">
+      <p class="hale-call hale-call-lg"><span class="hale-teller">« Hale ! »</span> <span class="hale-answer">« Halele ! »</span></p>
+      {{ pg.contes.intro | links | safe }}
+    </div>
+    <div class="aside-stack">
+      <nav class="side-nav" aria-label="Catégories de récits">
+        <h2>Dans cette zone</h2>
+        <ul>
+          {% for key, label, items in groups %}
+          <li><a href="#{{ key }}">{{ ui.icon('moon') }} {{ label }} ({{ items | length }})</a></li>
+          {% endfor %}
+          <li><a href="#art-du-conte">{{ ui.icon('chat') }} L'art du conte</a></li>
+          <li><a href="{{ url('bibliographie.html#contes') }}">{{ ui.icon('book') }} Recueils de contes</a></li>
+        </ul>
+      </nav>
+      {% set contes_quiz = quizzes | selectattr("slug", "equalto", "contes") | list %}
+      {% if contes_quiz %}
+      <aside class="didyouknow">
+        <p class="kicker">{{ ui.icon('question') }} Testez-vous</p>
+        <p>Avez-vous bien écouté les conteurs ? <a href="{{ url('loisirs/contes.html') }}">Faites le quiz {{ contes_quiz[0].name }}</a>.</p>
+      </aside>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-sand">
+  <div class="container">
+    <div class="filters" role="toolbar" aria-label="Filtrer par île" data-filters data-filter-items=".tale-item">
+      <button class="chip is-active" data-filter="all" aria-pressed="true">Toutes les îles ({{ tales | length }})</button>
+      <button class="chip" data-filter="archipel" aria-pressed="false">Tout l'archipel</button>
+      {% for i in islands %}
+      <button class="chip" data-filter="{{ i.slug }}" aria-pressed="false">{{ i.name }}</button>
+      {% endfor %}
+    </div>
+    {% for key, label, items in groups %}
+    <div class="tale-group" id="{{ key }}" data-filter-group>
+      <h2 class="group-title">{{ label }}</h2>
+      <div class="card-grid">
+        {% for t in items %}
+        <div class="tale-item" data-island="{{ t.island or 'archipel' }}">
+          {{ ui.card('contes/' ~ t.slug ~ '.html', t.hero, t.name, t.lead,
+                     kicker=(t.island | island_name) if t.island else "Tout l'archipel", meta="Lire le récit") }}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+    <p class="note" data-filter-empty hidden>Aucun récit pour cette île pour l'instant.</p>
+  </div>
+</section>
+
+<section class="section" id="art-du-conte">
+  <div class="container narrow">
+    <div class="prose">
+      {% for s in pg.contes.sections %}
+      <h2 id="{{ s.title | slugify }}">{{ s.title }}</h2>
+      {{ s.html | links | safe }}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

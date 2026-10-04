@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="page-head">
+  <div class="container">
+    {{ ui.breadcrumbs([("Histoire", "histoire/index.html"), (pg.bibliographie.title, None)]) }}
+    <p class="kicker">{{ ui.icon('book') }} {{ pg.bibliographie.kicker }}</p>
+    <h1>{{ pg.bibliographie.title }}</h1>
+    <p class="lead">{{ pg.bibliographie.lead }}</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container with-aside">
+    <div>
+      <div class="prose">
+        {{ pg.bibliographie.intro | links | safe }}
+      </div>
+      <div class="filters" role="toolbar" aria-label="Filtrer les références" data-filters data-filter-items=".biblio-entry" data-filter-attr="data-kind">
+        <button class="chip is-active" data-filter="all" aria-pressed="true">Toutes</button>
+        <button class="chip" data-filter="comorien" aria-pressed="false">Voix de l'archipel</button>
+        <button class="chip" data-filter="exterieur" aria-pressed="false">Regards extérieurs</button>
+      </div>
+      {% for g in biblio_groups %}
+      <section class="biblio-group" id="{{ g.key }}" data-filter-group>
+        <h2>{{ g.title }}</h2>
+        <ul class="biblio">
+          {% for b in g.entries %}
+          <li class="biblio-entry" id="ref-{{ b.id }}" data-kind="{{ b.kind }}">
+            <span class="source-badge source-{{ b.kind }}">{{ "Voix de l'archipel" if b.kind == "comorien" else "Regard extérieur" }}</span>
+            <p class="biblio-ref"><strong>{{ b.author }}</strong>, {% if b.url %}<a href="{{ b.url }}" rel="noopener"><em>{{ b.title }}</em></a>{% else %}<em>{{ b.title }}</em>{% endif %}{% if b.year %}, {{ b.year }}{% endif %}{% if b.publisher %}. {{ b.publisher }}{% endif %}.</p>
+            {% if b.note %}<p class="biblio-note">{{ b.note }}</p>{% endif %}
+            {% if b.cited %}
+            <p class="biblio-cited">Cité dans :
+              {% for name, href in b.cited %}<a href="{{ url(href) }}">{{ name }}</a>{% if not loop.last %}, {% endif %}{% endfor %}
+            </p>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endfor %}
+      <p class="note" data-filter-empty hidden>Aucune référence dans cette catégorie.</p>
+    </div>
+    <div class="aside-stack">
+      <nav class="side-nav" aria-label="Catégories">
+        <h2>Catégories</h2>
+        <ul>
+          {% for g in biblio_groups %}<li><a href="#{{ g.key }}">{{ g.title }} ({{ g.entries | length }})</a></li>{% endfor %}
+        </ul>
+      </nav>
+      <aside class="didyouknow">
+        <p class="kicker">{{ ui.icon('scroll') }} Méthode</p>
+        <p>Comment croiser traditions, chroniques et archéologie ? Lire <a href="{{ url('histoire/sources-et-methodes.html') }}">Écrire l'histoire des Comores</a>.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+{% endblock %}

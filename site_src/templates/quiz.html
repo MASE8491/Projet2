@@ -2,26 +2,30 @@
 {% block content %}
 <section class="page-head">
   <div class="container">
-    {{ ui.breadcrumbs([("Quiz", None)]) }}
-    <p class="kicker">{{ ui.icon('question') }} {{ pg.quiz.kicker }}</p>
-    <h1>{{ pg.quiz.title }}</h1>
-    <p class="lead">{{ pg.quiz.lead }}</p>
+    {{ ui.breadcrumbs([(pg.loisirs.title, "loisirs/index.html"), (quiz.name, None)]) }}
+    <p class="kicker">{{ ui.icon(quiz.icon) }} Quiz · {{ quiz.level or "Tous niveaux" }} · {{ quiz.questions | length }} questions</p>
+    <h1>{{ quiz.name }}</h1>
+    <p class="lead">{{ quiz.lead }}</p>
   </div>
 </section>
 <section class="section">
   <div class="container narrow">
+    <p class="quiz-progress" data-quiz-progress aria-live="polite">0 / {{ quiz.questions | length }} réponse</p>
     <ol class="quiz" data-quiz>
-      {% for item in quiz %}
+      {% for item in quiz.questions %}
+      {% set qi = loop.index0 %}
       <li class="quiz-item" data-answer="{{ item.answer }}">
         <fieldset>
           <legend><span class="quiz-num">{{ loop.index }}</span> {{ item.q }}</legend>
           <div class="quiz-choices">
-            {% set qi = loop.index0 %}
             {% for c in item.choices %}
             <label class="quiz-choice"><input type="radio" name="q{{ qi }}" value="{{ loop.index0 }}"> <span>{{ c }}</span></label>
             {% endfor %}
           </div>
-          <p class="quiz-explain" hidden>{{ item.explain }}</p>
+          <div class="quiz-explain" hidden>
+            <p>{{ item.explain }}</p>
+            {% if item.get("link") and url_ok(item.link) %}<p><a class="link-arrow" href="{{ url(item.link) }}">En savoir plus</a></p>{% endif %}
+          </div>
         </fieldset>
       </li>
       {% endfor %}
@@ -29,8 +33,12 @@
     <div class="quiz-result" data-quiz-result aria-live="polite">
       <p>Répondez aux questions pour voir votre score.</p>
     </div>
-    <button class="btn btn-outline" type="button" data-quiz-reset>Recommencer</button>
-    <noscript><p class="note">Le quiz nécessite JavaScript. Les réponses : {% for item in quiz %}{{ loop.index }}. {{ item.choices[item.answer] }}{% if not loop.last %} · {% endif %}{% endfor %}</p></noscript>
+    <div class="btn-row">
+      <button class="btn btn-outline" type="button" data-quiz-reset>Recommencer</button>
+      {% if next_quiz %}<a class="btn btn-ocean" href="{{ url('loisirs/' ~ next_quiz.slug ~ '.html') }}">Quiz suivant : {{ next_quiz.name }}</a>{% endif %}
+      <a class="btn btn-link" href="{{ url('loisirs/index.html') }}">Tous les quiz</a>
+    </div>
+    <noscript><p class="note">Le quiz nécessite JavaScript. Les réponses : {% for item in quiz.questions %}{{ loop.index }}. {{ item.choices[item.answer] }}{% if not loop.last %} · {% endif %}{% endfor %}</p></noscript>
   </div>
 </section>
 {% endblock %}

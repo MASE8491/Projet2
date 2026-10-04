@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+{% set kind_label = tale_kinds[tale.kind] %}
+{{ ui.hero(tale.hero, tale.name, lead=tale.lead, kicker=pg.contes.title ~ " · " ~ tale_kind_singular[tale.kind],
+   crumbs=[(pg.contes.title, "contes/index.html"), (tale.name, None)]) }}
+
+<section class="section">
+  <div class="container with-aside">
+    <article class="prose tale">
+      <p class="hale-call"><span class="hale-teller">« Hale ! »</span> <span class="hale-answer">« Halele ! »</span></p>
+      <div class="tale-text">
+        {{ tale.text | links | safe }}
+      </div>
+      {% if tale.moral %}
+      <p class="tale-moral">{{ tale.moral }}</p>
+      {% endif %}
+      {% if tale.about %}
+      <section class="tale-about">
+        <h2>{{ ui.icon('book') }} Ce que l'on en sait</h2>
+        {{ tale.about | links | safe }}
+      </section>
+      {% endif %}
+      {{ ui.sources(refs_of(tale), "Pour aller plus loin") }}
+
+      <nav class="pager" aria-label="Autres récits">
+        {% if prev_tale %}<a class="pager-prev" href="{{ url('contes/' ~ prev_tale.slug ~ '.html') }}"><small>Récit précédent</small>{{ prev_tale.name }}</a>{% else %}<span></span>{% endif %}
+        {% if next_tale %}<a class="pager-next" href="{{ url('contes/' ~ next_tale.slug ~ '.html') }}"><small>Récit suivant</small>{{ next_tale.name }}</a>{% endif %}
+      </nav>
+    </article>
+    <div class="aside-stack">
+      {% set facts = [("Genre", tale_kind_singular[tale.kind]), ("Île", (tale.island | island_name) if tale.island else "Tout l'archipel")] %}
+      {% if tale.get("local") %}{% set facts = facts + [("Autre nom", tale.local)] %}{% endif %}
+      {{ ui.factbox(facts, title="Le récit") }}
+      {% if tale.place %}{% set pl = places[tale.place] %}
+      <aside class="place-aside">
+        <p class="kicker">{{ ui.icon('pin') }} Le lieu</p>
+        {{ ui.card('lieux/' ~ pl.slug ~ '.html', pl.hero, pl.name, None, meta="Découvrir le lieu") }}
+      </aside>
+      {% endif %}
+      <nav class="side-nav" aria-label="{{ kind_label }}">
+        <h2>{{ kind_label }}</h2>
+        <ul>
+          {% for t in tales if t.kind == tale.kind %}
+          <li{% if t.slug == tale.slug %} class="is-active"{% endif %}><a href="{{ url('contes/' ~ t.slug ~ '.html') }}">{{ t.name }}</a></li>
+          {% endfor %}
+          <li><a href="{{ url('contes/index.html') }}">{{ ui.icon('moon') }} Tous les récits</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,8 +1,9 @@
 # Komori
 
 Site de découverte des quatre îles de l'archipel des Comores : **Grande Comore (Ngazidja)**,
-**Mohéli (Mwali)**, **Anjouan (Ndzuwani)** et **Mayotte (Maore)**. Géographie, histoire,
-culture et folklore, et un volet tourisme pour préparer son voyage.
+**Mohéli (Mwali)**, **Anjouan (Ndzuwani)** et **Mayotte (Maore)**. Géographie, histoire documentée
+et sourcée, culture, contes et légendes (**Hale halele**), quiz (**Loisirs**) et un volet tourisme
+pour préparer son voyage.
 
 Les textes sont originaux et le design est propre au site. Tout le contenu est administrable
 depuis un **back-office** intégré, sans connaissances techniques.
@@ -22,8 +23,13 @@ Adresse : **`/admin/`** du site publié, par exemple https://mase8491.github.io/
 - **Médiathèque** : téléverser une image depuis l'ordinateur (réduite automatiquement pour le web),
   ajouter un média de Wikimedia Commons, modifier légendes et crédits, voir où une image est
   utilisée, la remplacer partout.
+- **Hale halele** : contes et récits (genre, île, lieu associé, encadré « Ce que l'on en sait »,
+  références, mise en avant sur l'accueil).
+- **Loisirs** : quiz (questions, réponses, explications, lien « en savoir plus »).
+- **Bibliographie** : références citées dans les articles d'histoire et les contes, classées en
+  « voix de l'archipel » et « regards extérieurs ».
 - **Menu et pied de page**, **page d'accueil**, **pages fixes** (contact, mentions légales…),
-  **frise**, **agenda**, **glossaire**, **quiz**, **vidéos** et **réglages** du site.
+  **frise**, **agenda**, **glossaire**, **vidéos** et **réglages** du site.
 - **Publication** en un clic, **historique** des versions et **restauration** d'une version précédente.
 
 ### Garde-fous
@@ -39,7 +45,8 @@ Adresse : **`/admin/`** du site publié, par exemple https://mase8491.github.io/
 - Les nouvelles pages sont créées **masquées**. Les modifications restent en **brouillon**
   (enregistré dans le navigateur) jusqu'à la publication.
 - Avant publication, une **vérification** bloque les erreurs : image manquante, adresse en double,
-  adresse réservée. Elle signale aussi les liens vers des pages masquées.
+  adresse réservée, bonne réponse de quiz inexistante, référence bibliographique citée mais supprimée.
+  Elle signale aussi les liens vers des pages masquées.
 - Si le contenu a été modifié ailleurs en même temps, la publication est **refusée** plutôt que
   d'écraser ce travail.
 
@@ -64,18 +71,27 @@ publication crée un commit sur `main`. GitHub Actions lance alors `build.py`, q
 puis GitHub Pages met le site à jour (1 à 3 minutes). Les images téléversées sont stockées dans
 `site_src/static/uploads/`.
 
-## Contenu (76 pages)
+## Contenu (108 pages)
 
 | Rubrique | Pages |
 | --- | --- |
-| Accueil | îles, thèmes, frise, « Le saviez-vous ? », itinéraires, médiathèque |
+| Accueil | îles, thèmes, contes du soir, frise, « Le saviez-vous ? », itinéraires, médiathèque |
 | Les îles | tableau comparatif + carte, 4 pages îles par thème |
 | Lieux | 16 fiches |
 | Géographie | volcans, climat, océan et lagons, faune et flore, population |
-| Histoire | 5 périodes et portraits, frise chronologique |
+| Histoire | 11 articles sourcés (sources et méthodes, peuplement, islam, sultans, escales et pirates, traite et esclavage, colonisation, indépendance, Comores depuis 1975, Mayotte : regards croisés, portraits), frise de 47 dates, bibliographie de 36 références |
 | Culture & folklore | langues, musique, contes et légendes, coutumes, artisanat, cuisine, fêtes, littérature |
+| Hale halele | 17 contes, mythes, légendes et récits, avec leurs sources et leurs variantes |
+| Loisirs | 6 quiz, glossaire, galerie, vidéos |
 | Voyager | expériences, itinéraires, infos pratiques, agenda |
-| Médiathèque | galerie, vidéos, glossaire, quiz |
+
+### Méthode pour l'histoire et les contes
+
+Les articles d'histoire croisent les sources de l'archipel (chroniques en caractères arabes,
+traditions orales, historiens comoriens) et les regards extérieurs (voyageurs, archives, historiens,
+archéologues, généticiens). Les points débattus et sensibles (islamisation, esclavage, statut de
+Mayotte) présentent les différents points de vue. Les contes sont des réécritures originales, pas
+des traductions ; chacun indique ce que l'on sait de son origine et des ouvrages pour aller plus loin.
 
 ## Structure
 
