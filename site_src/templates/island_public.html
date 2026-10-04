@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+{{ ui.hero(island.public_hero, pg.viepublique.title ~ " : " ~ island.name, lead=island.public_lead or island.lead,
+   kicker=island.local ~ " · " ~ island.status,
+   crumbs=[("Les îles", "iles/index.html"), (island.name, "iles/" ~ island.slug ~ ".html"), (pg.viepublique.title, None)]) }}
+{{ ui.island_tabs(island, "public") }}
+
+<section class="section">
+  <div class="container with-aside">
+    <div>
+      {% if island.public_intro %}<div class="prose">{{ island.public_intro | links | safe }}</div>{% endif %}
+      <div class="filter-bar">
+        {{ ui.chips("data-status", institution_status.items(), "Filtrer par statut", ".inst-card", all_label="Tout") }}
+      </div>
+
+      {% if groups %}
+      <section class="inst-block" data-filter-group>
+        <h2>À {{ island.name }}</h2>
+        {{ ui.institution_groups(groups) }}
+      </section>
+      {% endif %}
+      {% if union_groups %}
+      <section class="inst-block" id="union" data-filter-group>
+        <h2>À l'échelle de l'Union des Comores</h2>
+        <p class="inst-block-lead">Ces institutions ont leur siège en Grande Comore mais concernent aussi Anjouan et Mohéli.</p>
+        {{ ui.institution_groups(union_groups, "union-") }}
+      </section>
+      {% endif %}
+      {% if archipel_groups %}
+      <section class="inst-block" id="archipel" data-filter-group>
+        <h2>Dans tout l'archipel</h2>
+        {{ ui.institution_groups(archipel_groups, "archipel-") }}
+      </section>
+      {% endif %}
+      <p class="note" data-filter-empty hidden>Aucune entrée ne correspond à ce filtre.</p>
+      {{ ui.sources(refs_of({"refs": page_refs}), "Pour aller plus loin") }}
+    </div>
+    <div class="aside-stack">
+      <aside class="factbox">
+        <h2>{{ island.name }} en bref</h2>
+        <dl>
+          <div><dt>Statut</dt><dd>{{ island.status }}</dd></div>
+          <div><dt>Chef-lieu</dt><dd>{{ island.chef_lieu }}</dd></div>
+          <div><dt>Nom comorien</dt><dd>{{ island.local }}</dd></div>
+        </dl>
+      </aside>
+      <nav class="side-nav" aria-label="Vie publique des autres îles">
+        <h2>{{ pg.viepublique.title }}</h2>
+        <ul>
+          {% for other in islands %}
+          <li{% if other.slug == island.slug %} class="is-active"{% endif %}><a href="{{ url('iles/' ~ other.slug ~ '/vie-publique.html') }}">{{ other.name }}</a></li>
+          {% endfor %}
+          <li><a href="{{ url('iles/vie-publique.html') }}">{{ ui.icon('globe') }} Les quatre îles</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</section>
+{% endblock %}

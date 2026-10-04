@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+{{ ui.hero(pg.viepublique.hero, pg.viepublique.title, lead=pg.viepublique.lead, kicker=pg.viepublique.kicker,
+   crumbs=[("Les îles", "iles/index.html"), (pg.viepublique.title, None)]) }}
+
+<nav class="anchor-nav" aria-label="Sommaire de la page">
+  <div class="container">
+    <ul>
+      {% if union_groups %}<li><a href="#union">Union des Comores</a></li>{% endif %}
+      {% if archipel_groups %}<li><a href="#archipel">Tout l'archipel</a></li>{% endif %}
+      {% for i, groups in island_blocks if groups %}<li><a href="#{{ i.slug }}">{{ i.name }}</a></li>{% endfor %}
+    </ul>
+  </div>
+</nav>
+
+<section class="section">
+  <div class="container with-aside">
+    <div>
+      {% if pg.viepublique.intro %}<div class="prose">{{ pg.viepublique.intro | links | safe }}</div>{% endif %}
+      <div class="filter-bar">
+        {{ ui.chips("data-status", institution_status.items(), "Filtrer par statut", ".inst-card", all_label="Tout") }}
+        {{ ui.chips("data-category", institution_categories.keys() | map("institution_choice") | list, "Filtrer par domaine", ".inst-card", all_label="Tous les domaines") }}
+      </div>
+      {% if union_groups %}
+      <section class="inst-block" id="union" data-filter-group>
+        <h2>Union des Comores</h2>
+        <p class="inst-block-lead">Grande Comore, Anjouan et Mohéli : les institutions communes, installées à Moroni.</p>
+        {{ ui.institution_groups(union_groups, "union-") }}
+      </section>
+      {% endif %}
+      {% if archipel_groups %}
+      <section class="inst-block" id="archipel" data-filter-group>
+        <h2>Dans tout l'archipel</h2>
+        {{ ui.institution_groups(archipel_groups, "archipel-") }}
+      </section>
+      {% endif %}
+      {% for i, groups in island_blocks if groups %}
+      <section class="inst-block" id="{{ i.slug }}" data-filter-group>
+        <div class="section-head">
+          <div><h2>{{ i.name }} <small class="muted">{{ i.status }}</small></h2></div>
+          <a class="link-arrow" href="{{ url('iles/' ~ i.slug ~ '/vie-publique.html') }}">La page de {{ i.name }}</a>
+        </div>
+        {{ ui.institution_groups(groups, i.slug ~ "-") }}
+      </section>
+      {% endfor %}
+      <p class="note" data-filter-empty hidden>Aucune entrée ne correspond à ces filtres.</p>
+      {{ ui.sources(refs_of({"refs": page_refs}), "Pour aller plus loin") }}
+    </div>
+    <div class="aside-stack">
+      <aside class="didyouknow">
+        <p class="kicker">{{ ui.icon('people') }} Officiel ou coutumier ?</p>
+        <p>Les badges distinguent les <strong>institutions officielles</strong>, les <strong>autorités coutumières ou religieuses</strong>, sans statut légal mais très écoutées, et les <strong>associations</strong>.</p>
+      </aside>
+      <nav class="side-nav" aria-label="Vie publique par île">
+        <h2>Par île</h2>
+        <ul>
+          {% for i in islands %}<li><a href="{{ url('iles/' ~ i.slug ~ '/vie-publique.html') }}">{{ i.name }}</a></li>{% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </div>
+</section>
+{% endblock %}

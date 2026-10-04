@@ -2,12 +2,15 @@
 {% block content %}
 {{ ui.hero(island.hero, island.name, lead=island.lead, kicker=island.local ~ " · " ~ island.tagline,
    crumbs=[("Les îles", "iles/index.html"), (island.name, None)]) }}
+{{ ui.island_tabs(island, "main") }}
 
 <nav class="anchor-nav" aria-label="Sommaire de la page">
   <div class="container">
     <ul>
       {% for t in island.themes %}<li><a href="#{{ t.key }}">{{ t.title }}</a></li>{% endfor %}
       <li><a href="#a-voir">À voir</a></li>
+      {% if island_spots %}<li><a href="#bons-plans">Bons plans</a></li>{% endif %}
+      {% if island_institutions %}<li><a href="#vie-publique">Vie publique</a></li>{% endif %}
       <li><a href="#images">En images</a></li>
     </ul>
   </div>
@@ -43,6 +46,32 @@
     </div>
   </div>
 </section>
+
+{% if island_spots %}
+{% set top = (island_spots | selectattr("fame", "equalto", "incontournable") | list)[:3] + (island_spots | selectattr("fame", "equalto", "meconnu") | list)[:3] %}
+<section class="section" id="bons-plans">
+  <div class="container">
+    {{ ui.section_head(pg.bonsplans.title, island.spots_lead or none, href="iles/" ~ island.slug ~ "/bons-plans.html", link_label="Les " ~ (island_spots | length) ~ " bons plans") }}
+    <div class="spot-grid spot-grid-3">
+      {% for s in top %}{{ ui.spot_card(s) }}{% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if island_institutions %}
+<section class="section section-sand" id="vie-publique">
+  <div class="container">
+    {{ ui.section_head(pg.viepublique.title, island.public_lead or none, href="iles/" ~ island.slug ~ "/vie-publique.html", link_label="Découvrir qui fait quoi") }}
+    <ul class="inst-teaser">
+      {% for key, (label, icon_name) in institution_categories.items() %}
+      {% set n = island_institutions | selectattr("category", "equalto", key) | list | length %}
+      {% if n %}<li><a href="{{ url('iles/' ~ island.slug ~ '/vie-publique.html') }}">{{ ui.icon(icon_name) }} <span>{{ label }}</span> <strong>{{ n }}</strong></a></li>{% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}
 
 <section class="section" id="images">
   <div class="container with-aside">

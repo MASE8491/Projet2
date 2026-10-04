@@ -14,9 +14,10 @@ Adresse : **`/admin/`** du site publié, par exemple https://mase8491.github.io/
 
 ### Ce que permet l'administration
 
-- **Arborescence** : voir toutes les pages, les modifier, les réordonner (↑ ↓), rattacher un lieu
-  à une autre île ou un article à une autre rubrique, changer l'adresse d'une page, la masquer,
-  la supprimer, ou ajouter îles, lieux, rubriques, articles, expériences, itinéraires et infos pratiques.
+- **Arborescence** : voir toutes les pages, les modifier, les réordonner (↑ ↓), rattacher un lieu,
+  un spot ou une institution à une autre île ou un article à une autre rubrique, changer l'adresse
+  d'une page, la masquer, la supprimer, ou ajouter îles, lieux, spots, institutions, rubriques,
+  articles, expériences, itinéraires et infos pratiques.
 - **Éditeur de page** : tous les champs (titre, chapeau, sections, encadrés, galerie…) avec un
   éditeur de texte simple (gras, listes, liens vers les pages du site, encadré « Bon à savoir »)
   et un **aperçu** avant enregistrement.
@@ -26,6 +27,11 @@ Adresse : **`/admin/`** du site publié, par exemple https://mase8491.github.io/
 - **Hale halele** : contes et récits (genre, île, lieu associé, encadré « Ce que l'on en sait »,
   références, mise en avant sur l'accueil).
 - **Loisirs** : quiz (questions, réponses, explications, lien « en savoir plus »).
+- **Spots & bons plans** (sous chaque île) : marchés, artisans, plages, sites connus ou méconnus,
+  avec catégorie, notoriété (incontournable / secret local), bon plan pratique, image et lieu associé.
+- **Vie publique & institutions** (sous chaque île) : institutions officielles, autorités coutumières
+  ou religieuses et associations, avec domaine, statut, portée (île, Union des Comores, tout
+  l'archipel) et sources.
 - **Bibliographie** : références citées dans les articles d'histoire et les contes, classées en
   « voix de l'archipel » et « regards extérieurs ».
 - **Menu et pied de page**, **page d'accueil**, **pages fixes** (contact, mentions légales…),
@@ -41,7 +47,7 @@ Adresse : **`/admin/`** du site publié, par exemple https://mase8491.github.io/
 - Les actions risquées demandent de **cocher une case** ou de **recopier un mot** (SUPPRIMER,
   RESTAURER, ANNULER, CONFIRMER).
 - Certaines actions sont **bloquées** quand elles casseraient le site. Par exemple, supprimer
-  une île qui contient encore des lieux, ou une image encore utilisée.
+  une île qui contient encore des lieux, des spots ou des institutions, ou une image encore utilisée.
 - Les nouvelles pages sont créées **masquées**. Les modifications restent en **brouillon**
   (enregistré dans le navigateur) jusqu'à la publication.
 - Avant publication, une **vérification** bloque les erreurs : image manquante, adresse en double,
@@ -71,19 +77,27 @@ publication crée un commit sur `main`. GitHub Actions lance alors `build.py`, q
 puis GitHub Pages met le site à jour (1 à 3 minutes). Les images téléversées sont stockées dans
 `site_src/static/uploads/`.
 
-## Contenu (129 pages)
+## Contenu (139 pages)
 
 | Rubrique | Pages |
 | --- | --- |
 | Accueil | îles, thèmes, contes du soir, frise, « Le saviez-vous ? », itinéraires, médiathèque |
-| Les îles | tableau comparatif + carte, 4 pages îles par thème |
+| Les îles | tableau comparatif + carte, 4 pages îles par thème, chacune avec ses pages « Spots & bons plans » et « Vie publique & institutions », et deux pages d'ensemble filtrables (56 spots, 39 institutions) |
 | Lieux | 16 fiches |
 | Géographie | volcans, climat, océan et lagons, faune et flore, population |
-| Histoire | 11 articles sourcés (sources et méthodes, peuplement, islam, sultans, escales et pirates, traite et esclavage, colonisation, indépendance, Comores depuis 1975, Mayotte : regards croisés, portraits), frise de 51 dates, bibliographie de 60 références |
+| Histoire | 11 articles sourcés (sources et méthodes, peuplement, islam, sultans, escales et pirates, traite et esclavage, colonisation, indépendance, Comores depuis 1975, Mayotte : regards croisés, portraits), frise de 51 dates, bibliographie de 67 références |
 | Culture & folklore | langues, musique, contes et légendes, coutumes, artisanat, cuisine, fêtes, littérature |
 | Hale halele | 38 contes, mythes, légendes et récits des quatre îles (dont 10 de Mohéli), avec leurs sources et leurs variantes |
 | Loisirs | 6 quiz (réponses mélangées à chaque partie), glossaire, galerie, vidéos |
 | Voyager | expériences, itinéraires, infos pratiques, agenda |
+
+### Navigation
+
+Le bouton **Menu**, en haut à gauche de chaque page, ouvre un **tiroir vertical** qui donne accès à
+toutes les pages du site : menus et sous-menus dépliables (îles et leurs pages, lieux, articles,
+contes par genre, quiz, expériences…), page courante mise en évidence et recherche par titre. Il est
+généré à partir du menu principal (« Menu et pied de page » dans l'administration) et du contenu.
+Sur grand écran, le menu horizontal reste disponible.
 
 ### Méthode pour l'histoire et les contes
 
@@ -92,6 +106,9 @@ traditions orales, historiens comoriens) et les regards extérieurs (voyageurs, 
 archéologues, généticiens). Les points débattus et sensibles (islamisation, esclavage, statut de
 Mayotte) présentent les différents points de vue. Les contes sont des réécritures originales, pas
 des traductions ; chacun indique ce que l'on sait de son origine et des ouvrages pour aller plus loin.
+Les pages « Vie publique » distinguent institutions officielles, autorités coutumières ou religieuses
+et associations, et décrivent des fonctions plutôt que des personnes en poste. Les bons plans
+privilégient les lieux durables (marchés, ateliers, sites) plutôt que les enseignes commerciales.
 
 ## Structure
 
