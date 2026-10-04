@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block content %}
+{{ ui.hero("tortue_pilote", "Voyager aux Comores",
+   lead="Lieux incontournables, expériences, itinéraires et informations pratiques : tout pour partir à la découverte des quatre îles.",
+   kicker="Tourisme", crumbs=[("Voyager", None)]) }}
+
+<section class="section">
+  <div class="container">
+    {{ ui.section_head("Lieux incontournables", "Nos fiches détaillées, île par île.", "iles/index.html", "Voir les îles") }}
+    {% for i in islands %}
+    <h3 class="group-title" style="--accent: {{ i.accent }}"><a href="{{ url('iles/' ~ i.slug ~ '.html') }}">{{ i.name }}</a> <small>{{ i.local }}</small></h3>
+    <div class="card-grid card-grid-tight">
+      {% for slug in i.places %}{% set p = places[slug] %}
+      {{ ui.card('lieux/' ~ slug ~ '.html', p.hero, p.name, kicker=p.kicker) }}
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section section-sand">
+  <div class="container">
+    {{ ui.section_head("Expériences", "Nature, mer, randonnée, patrimoine et parfums.", "experiences/index.html", "Toutes les expériences") }}
+    <div class="exp-grid">
+      {% for e in experiences %}
+      <a class="exp-tile" href="{{ url('experiences/' ~ e.slug ~ '.html') }}">
+        <span class="tile-media">{{ ui.picture(e.card, sizes="(min-width: 900px) 25vw, 50vw", alt="") }}</span>
+        <span class="exp-tile-label">{{ ui.icon(e.icon) }} {{ e.name }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {{ ui.section_head("Itinéraires", "Des routes de 5 à 16 jours.", "itineraires/index.html", "Tous les itinéraires") }}
+    <div class="card-grid">
+      {% for it in itineraries %}
+      {{ ui.card('itineraires/' ~ it.slug ~ '.html', it.card, it.name, it.lead, kicker=it.theme, meta=it.duration) }}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-sand">
+  <div class="container">
+    {{ ui.section_head("Préparer son voyage", "L'essentiel avant de partir.", "preparer-son-voyage/index.html", "Toutes les infos pratiques") }}
+    <div class="practical-grid">
+      {% for p in practical %}
+      <a class="practical-tile" href="{{ url('preparer-son-voyage/' ~ p.slug ~ '.html') }}">
+        {{ ui.icon(p.icon) }}
+        <strong>{{ p.name }}</strong>
+        <span>{{ p.summary }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

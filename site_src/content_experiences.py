@@ -154,90 +154,44 @@ ancienne.</p>
         gallery=["karthala", "karthala_lave", "choungui", "choungui_2", "dziani", "barriere_choungui"],
     ),
     dict(
-        slug="culture-et-patrimoine",
-        name="Culture & patrimoine",
+        slug="medinas-et-patrimoine",
+        name="Médinas & patrimoine",
         icon="dome",
         hero="moroni_ancienne_mosquee",
         card="mutsamudu_escalier",
-        lead="Médinas swahilies, cités de sultans, grands mariages, danses et chants : la culture comorienne est le fruit de mille ans d'échanges dans l'océan Indien.",
+        lead="Flâner dans les médinas, visiter mosquées anciennes, citadelles et musées : un voyage dans mille ans d'histoire swahilie.",
         sections=[
-            dict(title="Un carrefour de civilisations", html="""
-<p>Peuplées dès le premier millénaire par des populations bantoues, les îles ont accueilli des
-marins et commerçants venus d'Arabie, de Perse, d'Inde, de Madagascar et plus tard d'Europe.
-De ces rencontres est née une culture swahilie originale, profondément marquée par l'islam
-sunnite, et une langue commune, le <strong>shikomori</strong>, déclinée en variantes selon les
-îles.</p>
+            dict(title="Les médinas à parcourir à pied", html="""
+<p>Les vieilles villes de [[lieux/moroni.html|Moroni]], [[lieux/mutsamudu.html|Mutsamudu]] et
+[[lieux/domoni.html|Domoni]] se découvrent à pied, en se laissant guider par les ruelles, les
+escaliers de pierre et les passages couverts. Levez les yeux vers les portes sculptées et les
+moucharabiehs, entrez dans les cours quand on vous y invite, et prenez le temps d'un thé sur une
+place ombragée.</p>
 """),
-            dict(title="Les médinas", media="mutsamudu_rue", html="""
-<p>Les vieilles villes de [[lieux/moroni.html|Moroni]], [[lieux/mutsamudu.html|Mutsamudu]],
-[[lieux/domoni.html|Domoni]], Iconi ou Ntsaoueni conservent des mosquées anciennes, des palais
-et des maisons à portes sculptées. Plusieurs de ces sites figurent sur la liste indicative des
-Comores au patrimoine mondial de l'UNESCO, sous l'intitulé des sultanats historiques.</p>
-"""),
-            dict(title="Le grand mariage", html="""
-<p>À la Grande Comore, le <em>anda</em> ou grand mariage est bien plus qu'une noce&nbsp;: c'est
-un rite social qui fait accéder le marié au rang de notable. Cortèges en tenues d'apparat,
-danses masculines au son des tambours, chants féminins et festins rythment des journées
-entières, surtout en juillet et en août.</p>
-"""),
-            dict(title="Musique et danses", html="""
-<p>Le <strong>twarab</strong>, cousin du taarab de Zanzibar, mêle violons, ouds et percussions.
-À Mayotte, le <strong>debaa</strong> est un chant religieux dansé par les femmes, vêtues de
-couleurs vives, et le <strong>m'biwi</strong> se danse au son de baguettes de bambou. Les
-cérémonies de village sont souvent ouvertes&nbsp;: renseignez-vous auprès de vos hôtes.</p>
-"""),
-            dict(title="Le msindzano, masque de beauté", html="""
-<p>Sur de nombreux visages féminins, vous remarquerez un masque jaune pâle&nbsp;: le
-<strong>msindzano</strong>, une pâte obtenue en frottant du bois de santal sur une pierre de
-corail. Il protège la peau du soleil et sublime le teint, et se porte parfois en motifs
-délicats lors des fêtes.</p>
-"""),
-            dict(title="Artisanat", html="""
-<p>Calottes brodées (<em>kofia</em>), vanneries, bijoux en or et en argent, coffres en bois
-sculpté, tissus <em>chiromani</em> à Anjouan et <em>salouva</em> à Mayotte&nbsp;: privilégiez les
-achats directement auprès des artisans.</p>
-"""),
-        ],
-        places=["moroni", "mutsamudu", "domoni", "mamoudzou-et-tsingoni"],
-        gallery=["moroni_ancienne_mosquee", "moroni_mosquee", "moroni_medina", "mutsamudu_escalier", "mutsamudu_rue", "domoni", "mtsapere", "djoumbe_fatima"],
-    ),
-    dict(
-        slug="gastronomie",
-        name="Gastronomie",
-        icon="bowl",
-        hero="moroni_port_2",
-        card="ylang",
-        lead="Lait de coco, épices, poissons du jour et fruits tropicaux : la cuisine comorienne est généreuse, parfumée et se partage.",
-        sections=[
-            dict(title="Les plats à goûter", html="""
+            dict(title="Mosquées et lieux de mémoire", media="moroni_mosquee", html="""
 <ul>
-  <li><strong>Langouste à la vanille&nbsp;:</strong> le plat de fête par excellence, où la douceur de la vanille locale sublime le crustacé.</li>
-  <li><strong>Mataba&nbsp;:</strong> feuilles de manioc pilées et mijotées au lait de coco, souvent servies avec du poisson.</li>
-  <li><strong>Pilao&nbsp;:</strong> riz cuit avec viande et épices (cannelle, cardamome, clou de girofle), incontournable des grandes occasions.</li>
-  <li><strong>M'tsolola&nbsp;:</strong> poisson ou viande avec bananes vertes et manioc dans une sauce au coco.</li>
-  <li><strong>Mabawa&nbsp;:</strong> ailes de poulet grillées, star des étals de rue à Mayotte.</li>
-  <li><strong>Mkatra foutra&nbsp;:</strong> pain plat au lait de coco, parfait au petit-déjeuner.</li>
+  <li><strong>Ancienne mosquée du Vendredi de Moroni</strong>, fondée au XVe siècle.</li>
+  <li><strong>Mosquée de Tsingoni</strong> à Mayotte, dont le mihrab est daté de 1538.</li>
+  <li><strong>Citadelle de Mutsamudu</strong>, bâtie à la fin du XVIIIe siècle contre les razzias.</li>
+  <li><strong>Remparts de [[lieux/ntsaoueni.html|Ntsaoueni]]</strong> et falaise d'[[lieux/iconi.html|Iconi]], en Grande Comore.</li>
+  <li><strong>Rocher de Dzaoudzi</strong>, ancien siège de l'administration coloniale à Mayotte.</li>
 </ul>
+<p>Pour visiter une mosquée, demandez l'autorisation, portez une tenue couvrante et évitez les
+heures de prière.</p>
 """),
-            dict(title="Épices et douceurs", media="ylang_plantation", html="""
-<p>Vanille, girofle, cannelle et poivre parfument aussi bien les plats que les desserts. Goûtez
-les <em>ladu</em>, petites boules sucrées à base de farine de riz, les beignets de banane et
-les gâteaux de riz au coco. Côté boissons&nbsp;: jus de coco frais, jus de fruits pressés et thés
-épicés à la citronnelle ou au gingembre.</p>
+            dict(title="Musées et centres culturels", media="manzaraka", html="""
+<p>Le <strong>Centre national de documentation et de recherche scientifique</strong> (CNDRS), à
+Moroni, et le <strong>musée de Mayotte</strong>, à Dzaoudzi, présentent l'histoire, l'archéologie,
+les traditions et la nature de l'archipel. Une bonne introduction avant de partir sur le
+terrain.</p>
 """),
-            dict(title="Fruits de saison", html="""
-<p>Mangues, papayes, ananas, fruits de la passion, corossols, jacquiers et fruits à pain
-abondent sur les marchés. En fin d'année, les <strong>litchis</strong> font la joie de tous.</p>
-"""),
-            dict(title="Savoir-vivre à table", html="""
-<p>Les repas se partagent souvent en famille, parfois assis sur une natte. On mange de la main
-droite. L'alcool est peu présent dans l'Union des Comores, où il n'est servi que dans certains
-établissements&nbsp;; il est plus courant à Mayotte. Pendant le ramadan, mangez discrètement en
-journée par respect pour ceux qui jeûnent.</p>
+            dict(title="Pour aller plus loin", html="""
+<p>Découvrez notre rubrique [[histoire/index.html|Histoire]] et notre rubrique
+[[culture/index.html|Culture &amp; folklore]] pour comprendre ce que vous verrez.</p>
 """),
         ],
-        places=["moroni", "mamoudzou-et-tsingoni"],
-        gallery=["ylang", "ylang_plantation", "moroni_port_2", "mitsamiouli"],
+        places=["moroni", "mutsamudu", "domoni", "iconi", "ntsaoueni", "mamoudzou-et-tsingoni"],
+        gallery=["moroni_ancienne_mosquee", "moroni_mosquee", "moroni_medina", "mutsamudu_escalier", "mutsamudu_rue", "domoni", "ntsaoueni_rempart", "residence_gouverneur"],
     ),
     dict(
         slug="route-des-parfums",

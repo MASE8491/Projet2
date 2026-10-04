@@ -248,13 +248,13 @@ chauffeurs.</p>
 """),
             dict(title="Où séjourner sur chaque île ?", html="""
 <ul>
-  <li><strong>[[destinations/grande-comore.html|Grande Comore]]&nbsp;:</strong> Moroni pour la
+  <li><strong>[[iles/grande-comore.html|Grande Comore]]&nbsp;:</strong> Moroni pour la
   culture, le nord (Mitsamiouli) pour les plages.</li>
-  <li><strong>[[destinations/moheli.html|Mohéli]]&nbsp;:</strong> le sud de l'île, autour de
+  <li><strong>[[iles/moheli.html|Mohéli]]&nbsp;:</strong> le sud de l'île, autour de
   Nioumachoua et d'Itsamia.</li>
-  <li><strong>[[destinations/anjouan.html|Anjouan]]&nbsp;:</strong> Mutsamudu, puis une nuit dans
+  <li><strong>[[iles/anjouan.html|Anjouan]]&nbsp;:</strong> Mutsamudu, puis une nuit dans
   les hauts ou sur la côte sud.</li>
-  <li><strong>[[destinations/mayotte.html|Mayotte]]&nbsp;:</strong> Petite-Terre pour l'arrivée, le
+  <li><strong>[[iles/mayotte.html|Mayotte]]&nbsp;:</strong> Petite-Terre pour l'arrivée, le
   sud ou l'ouest de Grande-Terre pour les plages et la tranquillité.</li>
 </ul>
 """),

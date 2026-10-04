@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="page-head">
+  <div class="container">
+    {{ ui.breadcrumbs([("Quiz", None)]) }}
+    <p class="kicker">{{ ui.icon('question') }} Testez vos connaissances</p>
+    <h1>Le quiz des Comores</h1>
+    <p class="lead">Dix questions sur la géographie, l'histoire et la culture de l'archipel. Choisissez une réponse pour découvrir l'explication.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container narrow">
+    <ol class="quiz" data-quiz>
+      {% for item in quiz %}
+      <li class="quiz-item" data-answer="{{ item.answer }}">
+        <fieldset>
+          <legend><span class="quiz-num">{{ loop.index }}</span> {{ item.q }}</legend>
+          <div class="quiz-choices">
+            {% set qi = loop.index0 %}
+            {% for c in item.choices %}
+            <label class="quiz-choice"><input type="radio" name="q{{ qi }}" value="{{ loop.index0 }}"> <span>{{ c }}</span></label>
+            {% endfor %}
+          </div>
+          <p class="quiz-explain" hidden>{{ item.explain }}</p>
+        </fieldset>
+      </li>
+      {% endfor %}
+    </ol>
+    <div class="quiz-result" data-quiz-result aria-live="polite">
+      <p>Répondez aux questions pour voir votre score.</p>
+    </div>
+    <button class="btn btn-outline" type="button" data-quiz-reset>Recommencer</button>
+    <noscript><p class="note">Le quiz nécessite JavaScript. Les réponses : {% for item in quiz %}{{ loop.index }}. {{ item.choices[item.answer] }}{% if not loop.last %} · {% endif %}{% endfor %}</p></noscript>
+  </div>
+</section>
+{% endblock %}

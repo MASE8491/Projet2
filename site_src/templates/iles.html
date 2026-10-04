@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block head %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+{% endblock %}
+{% block content %}
+{{ ui.hero("lagon_dembeni", "Les quatre îles",
+   lead="Ngazidja, Mwali, Ndzuwani, Maore : quatre îles sœurs, nées du même océan, qui partagent une langue et une histoire, chacune avec son caractère.",
+   kicker="L'archipel des Comores", crumbs=[("Les îles", None)]) }}
+
+<section class="section">
+  <div class="container">
+    {{ ui.section_head("Les îles en un coup d'œil", "De la plus jeune à la plus ancienne, d'ouest en est.") }}
+    <div class="table-wrap">
+      <table class="table compare-table">
+        <thead>
+          <tr><th></th>{% for i in islands %}<th style="--accent: {{ i.accent }}"><a href="{{ url('iles/' ~ i.slug ~ '.html') }}">{{ i.name }}</a></th>{% endfor %}</tr>
+        </thead>
+        <tbody>
+          <tr><th>Nom comorien</th>{% for i in islands %}<td>{{ i.local }}</td>{% endfor %}</tr>
+          <tr><th>Surnom</th>{% for i in islands %}<td>{{ i.tagline }}</td>{% endfor %}</tr>
+          <tr><th>Statut</th>{% for i in islands %}<td>{{ i.status }}</td>{% endfor %}</tr>
+          <tr><th>Chef-lieu</th>{% for i in islands %}<td>{{ i.chef_lieu }}</td>{% endfor %}</tr>
+          <tr><th>Superficie</th>{% for i in islands %}<td>{{ i.area }}</td>{% endfor %}</tr>
+          <tr><th>Point culminant</th>{% for i in islands %}<td>{{ i.summit }}</td>{% endfor %}</tr>
+          <tr><th>Langue</th>{% for i in islands %}<td>{{ i.language }}</td>{% endfor %}</tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section section-sand">
+  <div class="container">
+    <div class="island-rows">
+      {% for i in islands %}
+      <article class="island-row" style="--accent: {{ i.accent }}">
+        <a class="island-row-media" href="{{ url('iles/' ~ i.slug ~ '.html') }}">{{ ui.picture(i.hero, sizes="(min-width: 900px) 45vw, 100vw") }}</a>
+        <div class="island-row-body">
+          <p class="card-kicker">{{ i.local }} · {{ i.status }}</p>
+          <h2><a href="{{ url('iles/' ~ i.slug ~ '.html') }}">{{ i.name }}</a></h2>
+          <p class="tagline">{{ i.tagline }}</p>
+          <p>{{ i.lead }}</p>
+          <ul class="chips">
+            {% for t in i.themes %}<li><a href="{{ url('iles/' ~ i.slug ~ '.html#' ~ t.key) }}">{{ t.title }}</a></li>{% endfor %}
+          </ul>
+          <a class="btn btn-ocean" href="{{ url('iles/' ~ i.slug ~ '.html') }}">Découvrir {{ i.name }}</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {{ ui.section_head("Carte de l'archipel", "Les lieux décrits sur Komori. Cliquez sur un repère pour ouvrir sa fiche.") }}
+    <div class="map" id="carte" data-map='{{ map_points | tojson }}' data-center="-12.25,44.2" data-zoom="8">
+      <noscript>La carte interactive nécessite JavaScript.</noscript>
+    </div>
+    <ul class="map-list">
+      {% for pt in map_points %}<li><a href="{{ url(pt.href) }}"><span class="dot" style="background: {{ pt.color }}"></span>{{ pt.name }}</a> <small>{{ pt.island }}</small></li>{% endfor %}
+    </ul>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" defer></script>
+{% endblock %}

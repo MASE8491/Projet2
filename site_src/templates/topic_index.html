@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block content %}
+{{ ui.hero(topic.hero, topic.name, lead=topic.lead, kicker="Découvrir l'archipel", crumbs=[(topic.name, None)]) }}
+
+<section class="section">
+  <div class="container with-aside">
+    <div class="prose">
+      {{ topic.intro | links | safe }}
+    </div>
+    {{ ui.factbox(topic.facts, title="Repères") }}
+  </div>
+</section>
+
+<section class="section section-sand">
+  <div class="container">
+    {{ ui.section_head("Dans cette rubrique") }}
+    <div class="card-grid">
+      {% for p in topic.pages %}
+      {{ ui.card(topic.slug ~ '/' ~ p.slug ~ '.html', p.hero, p.name, p.lead, kicker=p.get('period') or topic.name) }}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% if timeline %}
+<section class="section" id="frise">
+  <div class="container">
+    {{ ui.section_head("Frise chronologique", "Les grandes dates de l'histoire de l'archipel.") }}
+    <ol class="chrono">
+      {% for date, title, text in timeline %}
+      <li class="chrono-item">
+        <p class="chrono-date">{{ date }}</p>
+        <div class="chrono-card">
+          <h3>{{ title }}</h3>
+          <p>{{ text }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+{% endif %}
+
+<section class="section section-ocean">
+  <div class="container">
+    {{ ui.section_head("Explorer d'autres rubriques") }}
+    <div class="theme-grid">
+      {% for t in topics if t.slug != topic.slug %}
+      <a class="theme-tile" href="{{ url(t.slug ~ '/index.html') }}">
+        <span class="tile-media">{{ ui.picture(t.card, sizes="(min-width: 900px) 33vw, 100vw", alt="") }}</span>
+        <span class="theme-tile-label">{{ ui.icon(t.icon) }} {{ t.name }}</span>
+      </a>
+      {% endfor %}
+      <a class="theme-tile" href="{{ url('iles/index.html') }}">
+        <span class="tile-media">{{ ui.picture('lagon_dembeni', sizes="(min-width: 900px) 33vw, 100vw", alt="") }}</span>
+        <span class="theme-tile-label">{{ ui.icon('pin') }} Les quatre îles</span>
+      </a>
+    </div>
+  </div>
+</section>
+{% endblock %}

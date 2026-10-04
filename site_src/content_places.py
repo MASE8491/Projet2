@@ -121,6 +121,67 @@ l'ombre est rare sur certaines plages.</p>
                ("Idéal pour", "Familles, détente")],
         gallery=["mitsamiouli", "itsandra", "moroni_bord_de_mer"],
     ),
+    dict(
+        slug="iconi",
+        island="grande-comore",
+        name="Iconi",
+        kicker="Grande Comore · Ancienne capitale",
+        hero="iconi",
+        coords=(-11.74, 43.24),
+        lead="Au sud de Moroni, l'ancienne capitale de sultanat garde ses mosquées, ses ruelles et la falaise où s'est écrite l'une des pages les plus sombres de l'histoire de l'île.",
+        sections=[
+            dict(title="Une cité royale", html="""
+<p>Avant l'essor de Moroni, <strong>Iconi</strong> fut l'une des principales cités de la Grande
+Comore et le siège d'un sultanat. Ses vieux quartiers, ses mosquées et ses tombeaux rappellent ce
+passé prestigieux. La ville, adossée à une falaise de lave, n'est qu'à quelques kilomètres de la
+capitale.</p>
+"""),
+            dict(title="La falaise de la mémoire", html="""
+<p>À la fin du XVIIIe siècle, les razzias venues de Madagascar dévastent les côtes de l'archipel.
+La tradition rapporte qu'à Iconi, des femmes préférèrent se jeter du haut de la falaise plutôt que
+d'être capturées et réduites en esclavage. Ce récit, transmis de génération en génération, fait de
+la falaise un lieu de mémoire pour toute la Grande Comore.</p>
+<p>[[culture/contes-et-legendes.html|Contes et légendes de l'archipel →]]</p>
+"""),
+            dict(title="Visiter", html="""
+<p>Iconi se découvre en une demi-journée depuis Moroni. Faites-vous accompagner par un habitant
+pour accéder aux points de vue et comprendre l'histoire des lieux, et respectez le caractère
+religieux des mosquées et des tombeaux.</p>
+"""),
+        ],
+        facts=[("Île", "Grande Comore"), ("Distance de Moroni", "≈ 5 km"), ("À voir", "Vieille ville, falaise, mosquées"),
+               ("Durée", "Demi-journée")],
+        gallery=["iconi", "karthala_lave", "moroni_ancienne_mosquee"],
+    ),
+    dict(
+        slug="ntsaoueni",
+        island="grande-comore",
+        name="Ntsaoueni",
+        kicker="Grande Comore · Patrimoine",
+        hero="ntsaoueni_rempart",
+        coords=(-11.47, 43.27),
+        lead="Sur la côte nord-ouest, la cité de Ntsaoueni est associée à l'arrivée de l'islam dans l'archipel et protégée par un rempart face à l'océan.",
+        sections=[
+            dict(title="Le berceau légendaire de l'islam comorien", html="""
+<p>Selon la tradition, c'est de <strong>Ntsaoueni</strong> que serait parti
+<strong>Mtswa Mwindza</strong>, l'homme qui aurait rapporté l'islam d'Arabie dans l'archipel. Ce
+récit, plus légendaire qu'historique, fait de la ville l'un des hauts lieux de la mémoire
+religieuse des Comores. Ses mosquées comptent parmi les plus anciennes de l'île.</p>
+"""),
+            dict(title="Le rempart", media="ntsaoueni_rempart", html="""
+<p>Comme d'autres cités de la côte, Ntsaoueni s'est entourée d'un <strong>mur de pierre</strong>
+pour se protéger des razzias. Aujourd'hui, ce rempart protège surtout la ville des fortes houles
+de l'océan Indien. Il offre une belle promenade face au large.</p>
+"""),
+            dict(title="Sur la route du nord", html="""
+<p>Ntsaoueni se visite facilement en combinant la route côtière du nord-ouest avec les plages de
+[[lieux/nord-grande-comore.html|Mitsamiouli]] et le lac Salé.</p>
+"""),
+        ],
+        facts=[("Île", "Grande Comore"), ("Côte", "Nord-ouest"), ("À voir", "Rempart, mosquées anciennes"),
+               ("Légende", "Mtswa Mwindza")],
+        gallery=["ntsaoueni_rempart", "mitsamiouli", "moroni_mosquee_2"],
+    ),
     # ================================================================ Mohéli
     dict(
         slug="parc-national-moheli",

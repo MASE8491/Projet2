@@ -4,7 +4,7 @@
 {% endblock %}
 {% block content %}
 {{ ui.hero(place.hero, place.name, lead=place.lead, kicker=place.kicker,
-   crumbs=[("Destinations", "destinations/index.html"), (island.name, "destinations/" ~ island.slug ~ ".html"), (place.name, None)]) }}
+   crumbs=[("Les îles", "iles/index.html"), (island.name, "iles/" ~ island.slug ~ ".html"), (place.name, None)]) }}
 
 <section class="section">
   <div class="container with-aside">
@@ -34,7 +34,7 @@
 
 <section class="section">
   <div class="container">
-    {{ ui.section_head("Autres lieux à " ~ island.name, href="destinations/" ~ island.slug ~ ".html", link_label="Tout sur " ~ island.name) }}
+    {{ ui.section_head("Autres lieux à " ~ island.name, href="iles/" ~ island.slug ~ ".html", link_label="Tout sur " ~ island.name) }}
     <div class="card-grid">
       {% for slug in island.places if slug != place.slug %}{% set p = places[slug] %}
       {{ ui.card('lieux/' ~ slug ~ '.html', p.hero, p.name, p.lead, kicker=p.kicker) }}

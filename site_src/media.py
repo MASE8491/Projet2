@@ -272,6 +272,70 @@ MEDIA = {
         caption="Tortue verte en pleine eau (photo d'illustration)",
         island="archipel"),
 
+    # ------------------------------------------------------------------ Histoire & cartes
+    "carte_1976": dict(
+        file="Comoros_country_map_1976,_CIA.jpg",
+        caption="Carte de l'archipel des Comores publiée en 1976, un an après l'indépendance",
+        island="histoire", license="Domaine public"),
+    "carte_1808": dict(
+        file="Map_of_Africa_(1808)_-_CAMORA_excerpt.jpg",
+        caption="Extrait d'une carte de l'Afrique de 1808 où l'archipel apparaît sous le nom de « Camora »",
+        island="histoire", license="Domaine public"),
+    "carte_amiraute": dict(
+        file="Admiralty_Chart_No_2762_Comoro_Islands,_Published_1879.jpg",
+        caption="Carte marine britannique des îles Comores, publiée en 1879",
+        island="histoire", license="Domaine public"),
+    "sultan_said_ali": dict(
+        file="Sultan_Said_Ali_ben_Said_Omar_of_Bambao_with_other_important_people_in_Ngazidja_(grand_comore).jpg",
+        caption="Le sultan Saïd Ali ben Saïd Omar de Bambao entouré de notables de Ngazidja, avant 1916",
+        island="histoire", license="Domaine public"),
+    "said_ali": dict(
+        file="Said_Ali.jpg",
+        caption="Saïd Ali, dernier sultan de la Grande Comore",
+        island="histoire", license="Domaine public"),
+    "andriantsoly": dict(
+        file="Andriantsoly.jpg",
+        caption="Andriantsoly, souverain de Mayotte qui céda l'île à la France en 1841",
+        island="histoire", license="Domaine public"),
+    "ntsaoueni_rempart": dict(
+        file="Ntsaoueni_Wall_(10927095456).jpg",
+        caption="Le rempart de Ntsaoueni, bâti contre les razzias et qui protège aujourd'hui la ville des tempêtes",
+        island="gc"),
+    "iconi": dict(
+        file="Grande_Comore-Iconi-Ancienne_capitale.jpg",
+        caption="Iconi, ancienne capitale de sultanat au sud de Moroni",
+        island="gc"),
+    "residence_gouverneur": dict(
+        file="La_Résidence_du_gouverneur_(Dzaoudzi,_Mayotte)_(34824394185).jpg",
+        caption="La résidence du gouverneur à Dzaoudzi, bâtie à l'emplacement du palais du sultan Andriantsoly",
+        island="mayotte", author="Jean-Pierre Dalbéra", license="CC BY 2.0"),
+    "hopital_dzaoudzi": dict(
+        file="L'hôpital_historique_(Dzaoudzi,_Mayotte)_(34787688536).jpg",
+        caption="L'ancien hôpital colonial du rocher de Dzaoudzi",
+        island="mayotte", author="Jean-Pierre Dalbéra", license="CC BY 2.0"),
+
+    # ------------------------------------------------------------------ Culture & traditions
+    "manzaraka": dict(
+        file="Le_manzaraka,_le_grand_mariage_(musée_de_Mayotte)_(34751468196).jpg",
+        caption="La chambre nuptiale du manzaraka, le grand mariage mahorais (musée de Mayotte)",
+        island="culture", author="Jean-Pierre Dalbéra", license="CC BY 2.0"),
+    "bijoux_mariage": dict(
+        file="Bijoux_d'un_grand_mariage_Comorien.jpg",
+        caption="Parure de bijoux en or offerte lors d'un grand mariage comorien",
+        island="culture"),
+    "kofia_couture": dict(
+        file="Woman_sewing_Kofia.jpg",
+        caption="Brodeuse confectionnant une kofia, la calotte traditionnelle des hommes",
+        island="culture"),
+    "marche_tissus": dict(
+        file="Women_selling_colourful_dress_in_Comoros.jpg",
+        caption="Étal de tissus colorés sur un marché comorien",
+        island="culture"),
+    "comorienne": dict(
+        file="Comorian_Woman.jpg",
+        caption="Femme comorienne en tenue traditionnelle",
+        island="culture"),
+
     # ------------------------------------------------------------------ Vidéos
     "v_baleine": dict(
         file="032_Humpback_whale_lobtailing_in_slow_motion_Video_by_Giles_Laurent.webm",
@@ -303,6 +367,8 @@ ISLAND_LABELS = {
     "anjouan": "Anjouan",
     "mayotte": "Mayotte",
     "archipel": "Faune & flore",
+    "histoire": "Histoire",
+    "culture": "Culture",
 }
 
 for _key, _m in MEDIA.items():

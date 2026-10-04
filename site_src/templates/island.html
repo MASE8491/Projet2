@@ -1,30 +1,41 @@
 {% extends "base.html" %}
 {% block content %}
 {{ ui.hero(island.hero, island.name, lead=island.lead, kicker=island.local ~ " · " ~ island.tagline,
-   crumbs=[("Destinations", "destinations/index.html"), (island.name, None)]) }}
+   crumbs=[("Les îles", "iles/index.html"), (island.name, None)]) }}
+
+<nav class="anchor-nav" aria-label="Sommaire de la page">
+  <div class="container">
+    <ul>
+      {% for t in island.themes %}<li><a href="#{{ t.key }}">{{ t.title }}</a></li>{% endfor %}
+      <li><a href="#a-voir">À voir</a></li>
+      <li><a href="#images">En images</a></li>
+    </ul>
+  </div>
+</nav>
 
 <section class="section">
   <div class="container with-aside">
     <div class="prose">
       {{ island.intro | links | safe }}
     </div>
-    {{ ui.factbox([("Nom local", island.local), ("Statut", island.status), ("Chef-lieu", island.chef_lieu), ("Superficie", island.area), ("Point culminant", island.summit)], title=island.name ~ " en bref") }}
+    {{ ui.factbox([("Nom comorien", island.local), ("Statut", island.status), ("Chef-lieu", island.chef_lieu), ("Superficie", island.area), ("Point culminant", island.summit), ("Langue", island.language)], title=island.name ~ " en bref") }}
   </div>
 </section>
 
-{% for s in island.sections %}
-<section class="split split-compact {% if loop.index is even %}split-reverse{% endif %}">
-  <div class="split-media">{{ ui.figure(s.media, cls="figure-fill") }}</div>
+{% for t in island.themes %}
+<section class="split split-compact {% if loop.index is even %}split-reverse{% endif %}" id="{{ t.key }}">
+  <div class="split-media">{{ ui.figure(t.media, cls="figure-fill") }}</div>
   <div class="split-body prose">
-    <h2>{{ s.title }}</h2>
-    {{ s.html | links | safe }}
+    <p class="kicker">{{ island.name }}</p>
+    <h2>{{ t.title }}</h2>
+    {{ t.html | links | safe }}
   </div>
 </section>
 {% endfor %}
 
-<section class="section section-sand">
+<section class="section section-sand" id="a-voir">
   <div class="container">
-    {{ ui.section_head("À voir à " ~ island.name, "Nos fiches détaillées pour préparer vos visites.") }}
+    {{ ui.section_head("À voir à " ~ island.name, "Nos fiches détaillées sur les lieux incontournables.") }}
     <div class="card-grid">
       {% for slug in island.places %}{% set p = places[slug] %}
       {{ ui.card('lieux/' ~ slug ~ '.html', p.hero, p.name, p.lead, kicker=p.kicker) }}
@@ -33,16 +44,16 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="images">
   <div class="container with-aside">
     <div>
       {{ ui.section_head("En images") }}
       {{ ui.gallery(island.gallery) }}
     </div>
     <aside class="tips">
-      <h2>Conseils de voyage</h2>
+      <h2>Pour le voyageur</h2>
       <ul>{% for t in island.tips %}<li>{{ t }}</li>{% endfor %}</ul>
-      <a class="link-arrow" href="{{ url('preparer-son-voyage/index.html') }}">Préparer son voyage</a>
+      <a class="link-arrow" href="{{ url('voyager/index.html') }}">Préparer son voyage</a>
     </aside>
   </div>
 </section>
@@ -52,7 +63,7 @@
     {{ ui.section_head("Continuer vers les autres îles") }}
     <div class="island-mini-grid">
       {% for other in islands if other.slug != island.slug %}
-      <a class="island-mini" href="{{ url('destinations/' ~ other.slug ~ '.html') }}">
+      <a class="island-mini" href="{{ url('iles/' ~ other.slug ~ '.html') }}">
         <span class="tile-media">{{ ui.picture(other.card, sizes="(min-width: 900px) 30vw, 100vw", alt="") }}</span>
         <span><strong>{{ other.name }}</strong> {{ other.tagline }}</span>
       </a>
