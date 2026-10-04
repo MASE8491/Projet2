@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block body_class %}home{% endblock %}
 {% block content %}
-{{ ui.hero(home.hero, "Quatre îles au cœur de l'océan Indien",
-   lead="Volcans actifs, lagon turquoise, forêts de nuages et médinas parfumées d'ylang-ylang. Bienvenue dans l'archipel des Comores : Grande Comore, Mohéli, Anjouan et Mayotte.",
-   kicker="Archipel des Comores", cls="hero-xl",
-   ctas=[{"label": "Explorer les îles", "href": "destinations/index.html"}, {"label": "Voir les vidéos", "href": "videos.html", "cls": "btn-ghost"}]) }}
+{{ ui.hero(home.hero, "Découvrir les quatre îles des Comores",
+   lead="Volcans et lagons, sultans et navigateurs, contes de djinns et grands mariages : explorez la géographie, l'histoire, la culture et les trésors de Ngazidja, Mwali, Ndzuwani et Maore.",
+   kicker="Komori · Les îles de la Lune", cls="hero-xl",
+   ctas=[{"label": "Explorer les îles", "href": "iles/index.html"}, {"label": "Voyager aux Comores", "href": "voyager/index.html", "cls": "btn-ghost"}]) }}
 
 <section class="stats-band">
   <div class="container stats">
@@ -16,11 +16,11 @@
 
 <section class="section">
   <div class="container">
-    {{ ui.section_head("Choisissez votre île", "Chaque île a son caractère : le feu, la nature, les parfums, le lagon.", "destinations/index.html", "Toutes les destinations") }}
+    {{ ui.section_head("Quatre îles, quatre caractères", "Du volcan de la Grande Comore au lagon de Mayotte.", "iles/index.html", "Comparer les îles") }}
     <div class="island-grid">
       {% for i in islands %}
       <article class="island-card" style="--accent: {{ i.accent }}">
-        <a href="{{ url('destinations/' ~ i.slug ~ '.html') }}">
+        <a href="{{ url('iles/' ~ i.slug ~ '.html') }}">
           <div class="island-card-media">{{ ui.picture(i.card, sizes="(min-width: 1100px) 25vw, (min-width: 700px) 50vw, 100vw") }}</div>
           <div class="island-card-body">
             <p class="card-kicker">{{ i.local }} · {{ i.tagline }}</p>
@@ -37,14 +37,18 @@
 
 <section class="section section-sand">
   <div class="container">
-    {{ ui.section_head("Vivez l'archipel", "Des expériences à la mesure de vos envies.", "experiences/index.html", "Toutes les expériences") }}
-    <div class="exp-grid">
-      {% for e in experiences %}
-      <a class="exp-tile" href="{{ url('experiences/' ~ e.slug ~ '.html') }}">
-        <span class="tile-media">{{ ui.picture(e.card, sizes="(min-width: 900px) 25vw, 50vw", alt="") }}</span>
-        <span class="exp-tile-label">{{ ui.icon(e.icon) }} {{ e.name }}</span>
+    {{ ui.section_head("Explorer par thème", "Comprendre l'archipel sous tous ses angles.") }}
+    <div class="theme-grid theme-grid-lg">
+      {% for t in topics %}
+      <a class="theme-tile" href="{{ url(t.slug ~ '/index.html') }}">
+        <span class="tile-media">{{ ui.picture(t.card, sizes="(min-width: 900px) 33vw, 100vw", alt="") }}</span>
+        <span class="theme-tile-label">{{ ui.icon(t.icon) }} {{ t.name }}<small>{{ t.pages | length }} articles</small></span>
       </a>
       {% endfor %}
+      <a class="theme-tile" href="{{ url('voyager/index.html') }}">
+        <span class="tile-media">{{ ui.picture('tortue_pilote', sizes="(min-width: 900px) 33vw, 100vw", alt="") }}</span>
+        <span class="theme-tile-label">{{ ui.icon('compass') }} Voyager<small>Lieux, expériences, itinéraires</small></span>
+      </a>
     </div>
   </div>
 </section>
@@ -56,14 +60,42 @@
     <p class="kicker">{{ f.kicker }}</p>
     <h2>{{ f.title }}</h2>
     <p>{{ f.text }}</p>
-    <a class="btn btn-ocean" href="{{ url(f.href) }}">En savoir plus</a>
+    <a class="btn btn-ocean" href="{{ url(f.href) }}">Lire la suite</a>
   </div>
 </section>
 {% endfor %}
 
 <section class="section">
   <div class="container">
-    {{ ui.section_head("Itinéraires", "Des routes prêtes à suivre, de 5 jours à plus de deux semaines.", "itineraires/index.html", "Tous les itinéraires") }}
+    {{ ui.section_head("Mille ans d'histoire en quelques dates", "Des premiers navigateurs à l'archipel d'aujourd'hui.", "histoire/index.html#frise", "Toute la frise") }}
+    <ol class="chrono chrono-compact">
+      {% for date, title, text in timeline_highlights %}
+      <li class="chrono-item">
+        <p class="chrono-date">{{ date }}</p>
+        <div class="chrono-card"><h3>{{ title }}</h3><p>{{ text }}</p></div>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section section-ocean">
+  <div class="container facts-band">
+    <div>
+      <p class="kicker">{{ ui.icon('question') }} Le saviez-vous&nbsp;?</p>
+      <h2>Petites histoires des îles de la Lune</h2>
+      <a class="btn btn-ylang" href="{{ url('quiz.html') }}">Faire le quiz</a>
+      <a class="btn btn-ghost" href="{{ url('glossaire.html') }}">Le glossaire</a>
+    </div>
+    <ul class="facts-list">
+      {% for f in facts %}<li>{{ f }}</li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {{ ui.section_head("Voyager aux Comores", "Les lieux incontournables et nos itinéraires.", "voyager/index.html", "Tout pour préparer son voyage") }}
     <div class="card-grid">
       {% for it in itineraries[:4] %}
       {{ ui.card('itineraires/' ~ it.slug ~ '.html', it.card, it.name, it.lead, kicker=it.theme, meta=it.duration) }}
@@ -72,53 +104,16 @@
   </div>
 </section>
 
-<section class="section section-ocean">
+<section class="section section-sand">
   <div class="container video-teaser">
     <div>
-      <p class="kicker">Vidéos</p>
-      <h2>L'océan des Comores en images</h2>
-      <p>Baleines à bosse, tortues vertes, récifs coralliens : plongez dans la vie marine de l'archipel avec notre sélection de vidéos sous licence libre.</p>
-      <a class="btn btn-ylang" href="{{ url('videos.html') }}">{{ ui.icon('play') }} Voir toutes les vidéos</a>
+      <p class="kicker">Médiathèque</p>
+      <h2>L'archipel en images</h2>
+      <p>Paysages, médinas, documents historiques, faune et traditions : parcourez notre galerie et nos vidéos sous licence libre.</p>
+      <a class="btn btn-ocean" href="{{ url('galerie.html') }}">Ouvrir la galerie</a>
+      <a class="btn btn-outline" href="{{ url('videos.html') }}">{{ ui.icon('play') }} Vidéos</a>
     </div>
-    <div class="video-frame">{{ ui.video(videos[0]) }}</div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    {{ ui.section_head("Au fil des saisons", "Baleines, grands mariages, fruits : que se passe-t-il pendant votre séjour ?", "agenda.html", "Voir l'agenda") }}
-    <div class="event-grid">
-      {% for ev in events[2:6] %}
-      <article class="event">
-        <p class="event-when">{{ ui.icon('calendar') }} {{ ev.when }}</p>
-        <h3>{{ ev.title }}</h3>
-        <p>{{ ev.text }}</p>
-        <span class="tag">{{ ev.tag }}</span>
-      </article>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<section class="section section-sand">
-  <div class="container">
-    {{ ui.section_head("Préparer votre voyage", "L'essentiel avant de partir.", "preparer-son-voyage/index.html", "Toutes les infos pratiques") }}
-    <div class="practical-grid">
-      {% for p in practical %}
-      <a class="practical-tile" href="{{ url('preparer-son-voyage/' ~ p.slug ~ '.html') }}">
-        {{ ui.icon(p.icon) }}
-        <strong>{{ p.name }}</strong>
-        <span>{{ p.summary }}</span>
-      </a>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    {{ ui.section_head("Galerie", "Un aperçu des paysages de l'archipel.", "galerie.html", "Ouvrir la galerie") }}
-    {{ ui.gallery(["karthala", "nioumachoua_ilots", "mutsamudu_escalier", "dziani", "mitsamiouli", "tortue_ngouja"], cls="gallery-mosaic") }}
+    {{ ui.gallery(["karthala", "nioumachoua_ilots", "mutsamudu_escalier", "dziani", "manzaraka", "sultan_said_ali"], cls="gallery-mosaic") }}
   </div>
 </section>
 {% endblock %}

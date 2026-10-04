@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+{{ ui.hero(page.hero, page.name, lead=page.lead, kicker=topic.name ~ (" · " ~ page.period if page.get('period') else ""),
+   crumbs=[(topic.name, topic.slug ~ "/index.html"), (page.name, None)]) }}
+
+<section class="section">
+  <div class="container with-aside">
+    <article class="prose">
+      {% for s in page.sections %}
+      <h2 id="{{ s.title | slugify }}">{{ s.title }}</h2>
+      {% if s.get("media") %}{{ ui.figure(s.media, cls="figure-wide") }}{% endif %}
+      {{ s.html | links | safe }}
+      {% endfor %}
+
+      <nav class="pager" aria-label="Pages de la rubrique">
+        {% if prev_page %}<a class="pager-prev" href="{{ url(topic.slug ~ '/' ~ prev_page.slug ~ '.html') }}"><small>Précédent</small>{{ prev_page.name }}</a>{% else %}<span></span>{% endif %}
+        {% if next_page %}<a class="pager-next" href="{{ url(topic.slug ~ '/' ~ next_page.slug ~ '.html') }}"><small>Suivant</small>{{ next_page.name }}</a>{% endif %}
+      </nav>
+    </article>
+    <div class="aside-stack">
+      {% if page.get("didyouknow") %}
+      <aside class="didyouknow">
+        <p class="kicker">{{ ui.icon('question') }} Le saviez-vous&nbsp;?</p>
+        <p>{{ page.didyouknow }}</p>
+      </aside>
+      {% endif %}
+      {% if page.get("facts") %}{{ ui.factbox(page.facts) }}{% endif %}
+      <nav class="side-nav" aria-label="{{ topic.name }}">
+        <h2>{{ topic.name }}</h2>
+        <ul>
+          <li><a href="{{ url(topic.slug ~ '/index.html') }}">{{ ui.icon(topic.icon) }} Vue d'ensemble</a></li>
+          {% for p in topic.pages %}
+          <li{% if p.slug == page.slug %} class="is-active"{% endif %}><a href="{{ url(topic.slug ~ '/' ~ p.slug ~ '.html') }}">{{ ui.icon(p.icon) }} {{ p.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </div>
+</section>
+
+{% if page.get("gallery") %}
+<section class="section section-sand">
+  <div class="container">
+    {{ ui.section_head("En images") }}
+    {{ ui.gallery(page.gallery) }}
+  </div>
+</section>
+{% endif %}
+{% endblock %}

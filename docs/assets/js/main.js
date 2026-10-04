@@ -152,3 +152,76 @@
     else window.addEventListener("load", initMaps);
   }
 })();
+
+/* Quiz et glossaire */
+(function () {
+  "use strict";
+
+  var quiz = document.querySelector("[data-quiz]");
+  if (quiz) {
+    var result = document.querySelector("[data-quiz-result]");
+    var items = quiz.querySelectorAll(".quiz-item");
+    var update = function () {
+      var answered = 0, correct = 0;
+      items.forEach(function (item) {
+        if (item.dataset.done) { answered++; if (item.dataset.done === "ok") correct++; }
+      });
+      if (!answered) {
+        result.innerHTML = "<p>Répondez aux questions pour voir votre score.</p>";
+        return;
+      }
+      var msg = "Score : " + correct + " / " + answered;
+      if (answered === items.length) {
+        msg += correct === items.length ? " — parfait, vous connaissez les îles de la Lune !" :
+               correct >= items.length * 0.6 ? " — très bien, encore un petit effort !" :
+               " — continuez à explorer le site pour progresser !";
+      }
+      result.innerHTML = "<p>" + msg + "</p>";
+    };
+    quiz.addEventListener("change", function (e) {
+      var input = e.target;
+      if (input.type !== "radio") return;
+      var item = input.closest(".quiz-item");
+      if (item.dataset.done) return;
+      var answer = item.getAttribute("data-answer");
+      var ok = input.value === answer;
+      item.dataset.done = ok ? "ok" : "ko";
+      item.querySelectorAll("input").forEach(function (r) {
+        r.disabled = true;
+        var label = r.closest(".quiz-choice");
+        if (r.value === answer) label.classList.add("is-correct");
+        else if (r === input) label.classList.add("is-wrong");
+      });
+      item.querySelector(".quiz-explain").hidden = false;
+      update();
+    });
+    var reset = document.querySelector("[data-quiz-reset]");
+    if (reset) reset.addEventListener("click", function () {
+      items.forEach(function (item) {
+        delete item.dataset.done;
+        item.querySelectorAll("input").forEach(function (r) { r.disabled = false; r.checked = false; });
+        item.querySelectorAll(".quiz-choice").forEach(function (l) { l.classList.remove("is-correct", "is-wrong"); });
+        item.querySelector(".quiz-explain").hidden = true;
+      });
+      update();
+      quiz.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+
+  var search = document.querySelector("[data-glossary-search]");
+  if (search) {
+    var entries = document.querySelectorAll(".glossary-entry");
+    var empty = document.querySelector("[data-glossary-empty]");
+    var norm = function (s) { return s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase(); };
+    search.addEventListener("input", function () {
+      var q = norm(search.value.trim());
+      var shown = 0;
+      entries.forEach(function (entry) {
+        var match = !q || norm(entry.textContent).indexOf(q) !== -1;
+        entry.hidden = !match;
+        if (match) shown++;
+      });
+      empty.hidden = shown !== 0;
+    });
+  }
+})();

@@ -461,3 +461,112 @@ img.is-broken { visibility: hidden; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
 }
+
+/* ==========================================================================
+   Rubriques de découverte
+   ========================================================================== */
+
+/* Sommaire ancré des pages îles */
+.anchor-nav { position: sticky; top: var(--header-h); z-index: 50; background: var(--white); border-bottom: 1px solid var(--line); }
+.anchor-nav ul { list-style: none; margin: 0; padding: .6rem 0; display: flex; gap: .4rem; overflow-x: auto; scrollbar-width: none; }
+.anchor-nav ul::-webkit-scrollbar { display: none; }
+.anchor-nav a { display: block; white-space: nowrap; padding: .45rem .9rem; border-radius: 999px; text-decoration: none; font-weight: 500; font-size: .93rem; color: var(--ink); background: var(--sand); }
+.anchor-nav a:hover { background: var(--lagoon-soft); color: var(--ocean); }
+[id] { scroll-margin-top: calc(var(--header-h) + 64px); }
+
+/* Tableau comparatif des îles */
+.compare-table th[style] { border-top: 4px solid var(--accent); }
+.compare-table thead a { text-decoration: none; font-family: var(--font-display); font-size: 1.1rem; }
+.compare-table tbody th { width: auto; white-space: nowrap; }
+.chips a { text-decoration: none; color: inherit; }
+.chips a:hover { color: var(--ocean); }
+
+/* Tuiles thématiques */
+.theme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+.theme-grid-lg { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 1000px) { .theme-grid, .theme-grid-lg { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .theme-grid, .theme-grid-lg { grid-template-columns: 1fr; } }
+.theme-tile { position: relative; display: block; border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 4 / 3; text-decoration: none; background: var(--ocean); }
+.theme-tile img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+.theme-tile:hover img { transform: scale(1.06); }
+.theme-tile::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,30,36,.05) 30%, rgba(7,30,36,.85)); }
+.theme-tile-label { position: absolute; z-index: 1; left: 1.1rem; right: 1.1rem; bottom: 1rem; color: var(--white); font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
+.theme-tile-label .icon { color: var(--ylang); }
+.theme-tile-label small { flex-basis: 100%; font-family: var(--font-body); font-size: .85rem; font-weight: 500; color: #d7f0ee; }
+
+/* Frise chronologique */
+.chrono { list-style: none; margin: 0; padding: 0; position: relative; display: grid; gap: 1rem; }
+.chrono::before { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: var(--sand-deep); transform: translateX(-1px); }
+.chrono-item { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; position: relative; }
+.chrono-item::before { content: ""; position: absolute; left: 50%; top: 1.1rem; width: 14px; height: 14px; border-radius: 50%; background: var(--ylang); border: 3px solid var(--white); box-shadow: 0 0 0 2px var(--ylang); transform: translateX(-50%); }
+.chrono-date { text-align: right; font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; color: var(--coral); margin: .55rem 0 0; }
+.chrono-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem 1.2rem; }
+.chrono-card h3 { font-size: 1.1rem; margin-bottom: .3rem; }
+.chrono-card p { margin: 0; color: var(--muted); font-size: .95rem; }
+.chrono-item:nth-child(even) .chrono-date { order: 2; text-align: left; }
+.chrono-compact { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.chrono-compact::before, .chrono-compact .chrono-item::before { display: none; }
+.chrono-compact .chrono-item { grid-template-columns: 1fr; gap: .3rem; }
+.chrono-compact .chrono-date, .chrono-compact .chrono-item:nth-child(even) .chrono-date { order: 0; text-align: left; margin: 0; }
+@media (max-width: 760px) {
+  .chrono::before { left: 7px; }
+  .chrono-item { grid-template-columns: 1fr; gap: .3rem; padding-left: 1.8rem; }
+  .chrono-item::before { left: 7px; }
+  .chrono-date, .chrono-item:nth-child(even) .chrono-date { order: 0; text-align: left; margin: 0; }
+  .chrono-compact { grid-template-columns: 1fr; }
+  .chrono-compact .chrono-item { padding-left: 0; }
+}
+@media (min-width: 761px) and (max-width: 1000px) { .chrono-compact { grid-template-columns: repeat(2, 1fr); } }
+
+/* Pages thématiques */
+.didyouknow { background: linear-gradient(150deg, var(--ocean-deep), var(--ocean)); color: #e6f3f2; border-radius: var(--radius-lg); padding: 1.4rem 1.5rem; }
+.didyouknow .kicker { color: var(--ylang); }
+.didyouknow p:last-child { margin: 0; font-size: 1.02rem; }
+.pager { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 3rem; border-top: 1px solid var(--line); padding-top: 1.5rem; }
+.pager a { display: flex; flex-direction: column; gap: .2rem; text-decoration: none; padding: 1rem 1.2rem; border-radius: var(--radius); border: 1px solid var(--line); font-weight: 600; }
+.pager a:hover { border-color: var(--lagoon); }
+.pager small { color: var(--muted); font-weight: 500; text-transform: uppercase; letter-spacing: .08em; font-size: .75rem; }
+.pager-next { text-align: right; grid-column: 2; }
+
+/* Bandeau « Le saviez-vous ? » */
+.facts-band { display: grid; grid-template-columns: 1fr 1.4fr; gap: 3rem; align-items: center; }
+.facts-band .btn { margin: .4rem .4rem 0 0; }
+.facts-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.facts-list li { background: rgba(255,255,255,.08); border-left: 3px solid var(--ylang); border-radius: 10px; padding: 1rem 1.1rem; font-size: .97rem; }
+@media (max-width: 860px) { .facts-band { grid-template-columns: 1fr; } }
+@media (max-width: 560px) { .facts-list { grid-template-columns: 1fr; } }
+
+/* Voyager */
+.group-title { font-size: 1.4rem; margin: 2rem 0 1rem; padding-left: .8rem; border-left: 5px solid var(--accent); }
+.group-title:first-of-type { margin-top: 0; }
+.group-title a { text-decoration: none; color: inherit; }
+.group-title small { font-family: var(--font-body); font-size: .9rem; color: var(--muted); font-weight: 500; }
+.card-grid-tight { grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 1rem; }
+
+/* Glossaire */
+.search-field input { width: 100%; max-width: 480px; font: inherit; padding: .8rem 1rem; border: 1px solid var(--line); border-radius: 999px; }
+.search-field input:focus { outline: none; border-color: var(--lagoon); box-shadow: 0 0 0 3px var(--lagoon-soft); }
+.letters { display: flex; flex-wrap: wrap; gap: .3rem; margin: 1.2rem 0 2rem; }
+.letters a { width: 2.2rem; height: 2.2rem; display: inline-flex; align-items: center; justify-content: center; border-radius: 8px; background: var(--sand); text-decoration: none; font-weight: 600; }
+.letters a:hover { background: var(--ocean); color: var(--white); }
+.glossary { margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; }
+.glossary-entry { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.1rem 1.2rem; }
+.glossary-entry[hidden] { display: none; }
+.glossary dt { font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; color: var(--ocean-deep); }
+.glossary dd { margin: .3rem 0 0; color: var(--muted); }
+.glossary .link-arrow { font-size: .9rem; }
+
+/* Quiz */
+.quiz { list-style: none; margin: 0 0 2rem; padding: 0; display: grid; gap: 1.2rem; }
+.quiz fieldset { border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 1.2rem 1.4rem; margin: 0; }
+.quiz legend { font-weight: 600; font-size: 1.08rem; padding: 0 .4rem; display: flex; gap: .6rem; align-items: center; }
+.quiz-num { display: inline-flex; width: 1.9rem; height: 1.9rem; align-items: center; justify-content: center; border-radius: 50%; background: var(--ocean); color: var(--white); font-size: .9rem; flex: none; }
+.quiz-choices { display: grid; grid-template-columns: repeat(2, 1fr); gap: .6rem; margin-top: .8rem; }
+@media (max-width: 560px) { .quiz-choices { grid-template-columns: 1fr; } }
+.quiz-choice { display: flex; align-items: center; gap: .6rem; border: 1px solid var(--line); border-radius: 10px; padding: .7rem .9rem; cursor: pointer; }
+.quiz-choice:hover { border-color: var(--lagoon); }
+.quiz-choice.is-correct { border-color: #2f7d55; background: #e5f4ea; }
+.quiz-choice.is-wrong { border-color: var(--coral); background: #fbe9e5; }
+.quiz-explain { margin: .9rem 0 0; padding: .8rem 1rem; background: var(--sand); border-radius: 10px; font-size: .95rem; }
+.quiz-result { background: var(--lagoon-soft); border-radius: var(--radius-lg); padding: 1.2rem 1.4rem; margin-bottom: 1rem; font-weight: 600; }
+.quiz-result p { margin: 0; }

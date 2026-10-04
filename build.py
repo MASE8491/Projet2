@@ -25,7 +25,13 @@ from site_src.content_places import PLACES, PLACES_BY_SLUG
 from site_src.content_experiences import EXPERIENCES, EXPERIENCES_BY_SLUG
 from site_src.content_itineraries import ITINERARIES
 from site_src.content_practical import PRACTICAL
-from site_src.content_misc import ARCHIPEL, EVENTS, VIDEOS, HOME
+from site_src.content_misc import EVENTS, VIDEOS, HOME
+from site_src.content_geographie import GEOGRAPHIE
+from site_src.content_histoire import HISTOIRE, TIMELINE
+from site_src.content_culture import CULTURE
+from site_src.content_extras import GLOSSARY, QUIZ, FACTS
+
+TOPICS = [GEOGRAPHIE, HISTOIRE, CULTURE]
 
 ROOT = Path(__file__).resolve().parent
 SRC = ROOT / "site_src"
@@ -40,33 +46,47 @@ THUMB_WIDTHS = (500, 960, 1280, 1920)
 # --------------------------------------------------------------------------- Navigation
 
 NAV = [
-    dict(key="destinations", label="Destinations", href="destinations/index.html", children=[
-        dict(label=i["name"], note=i["local"] + " · " + i["tagline"], href=f"destinations/{i['slug']}.html")
+    dict(key="iles", label="Les îles", href="iles/index.html", children=[
+        dict(label=i["name"], note=i["local"] + " · " + i["tagline"], href=f"iles/{i['slug']}.html")
         for i in ISLANDS
-    ] + [dict(label="Découvrir l'archipel", note="Géographie & histoire", href="archipel.html")]),
-    dict(key="experiences", label="Expériences", href="experiences/index.html", children=[
-        dict(label=e["name"], href=f"experiences/{e['slug']}.html") for e in EXPERIENCES
+    ] + [dict(label="Comparer les îles", note="Tableau et carte", href="iles/index.html")]),
+] + [
+    dict(key=t["slug"], label=t["name"], href=f"{t['slug']}/index.html", children=[
+        dict(label="Vue d'ensemble", href=f"{t['slug']}/index.html")
+    ] + [
+        dict(label=pg["name"], note=pg.get("period"), href=f"{t['slug']}/{pg['slug']}.html") for pg in t["pages"]
+    ])
+    for t in TOPICS
+] + [
+    dict(key="voyager", label="Voyager", href="voyager/index.html", children=[
+        dict(label="Lieux incontournables", href="voyager/index.html"),
+        dict(label="Expériences", href="experiences/index.html"),
+        dict(label="Itinéraires", href="itineraires/index.html"),
+        dict(label="Préparer son voyage", href="preparer-son-voyage/index.html"),
+        dict(label="Agenda & saisons", href="agenda.html"),
     ]),
-    dict(key="itineraires", label="Itinéraires", href="itineraires/index.html", children=[
-        dict(label=i["name"], note=i["duration"], href=f"itineraires/{i['slug']}.html") for i in ITINERARIES
-    ]),
-    dict(key="preparer", label="Préparer", href="preparer-son-voyage/index.html", children=[
-        dict(label=p["name"], href=f"preparer-son-voyage/{p['slug']}.html") for p in PRACTICAL
-    ]),
-    dict(key="medias", label="Galerie & vidéos", href="galerie.html", children=[
+    dict(key="medias", label="Médiathèque", href="galerie.html", children=[
         dict(label="Galerie photos", href="galerie.html"),
         dict(label="Vidéos", href="videos.html"),
+        dict(label="Glossaire", href="glossaire.html"),
+        dict(label="Quiz", href="quiz.html"),
     ]),
-    dict(key="agenda", label="Agenda", href="agenda.html", children=None),
 ]
 
 FOOTER = [
-    dict(title="Destinations", links=[dict(label=i["name"], href=f"destinations/{i['slug']}.html") for i in ISLANDS]
-         + [dict(label="Découvrir l'archipel", href="archipel.html")]),
-    dict(title="Expériences", links=[dict(label=e["name"], href=f"experiences/{e['slug']}.html") for e in EXPERIENCES[:5]]
-         + [dict(label="Itinéraires", href="itineraires/index.html")]),
-    dict(title="Préparer", links=[dict(label=p["name"], href=f"preparer-son-voyage/{p['slug']}.html") for p in PRACTICAL[:5]]
-         + [dict(label="Agenda", href="agenda.html")]),
+    dict(title="Les îles", links=[dict(label=i["name"], href=f"iles/{i['slug']}.html") for i in ISLANDS]
+         + [dict(label="Comparer les îles", href="iles/index.html")]),
+    dict(title="Découvrir", links=[dict(label=t["name"], href=f"{t['slug']}/index.html") for t in TOPICS]
+         + [dict(label="Frise chronologique", href="histoire/index.html#frise"),
+            dict(label="Glossaire", href="glossaire.html"),
+            dict(label="Quiz", href="quiz.html")]),
+    dict(title="Voyager", links=[
+        dict(label="Lieux incontournables", href="voyager/index.html"),
+        dict(label="Expériences", href="experiences/index.html"),
+        dict(label="Itinéraires", href="itineraires/index.html"),
+        dict(label="Préparer son voyage", href="preparer-son-voyage/index.html"),
+        dict(label="Agenda & saisons", href="agenda.html"),
+    ]),
     dict(title="Komori", links=[
         dict(label="Galerie photos", href="galerie.html"),
         dict(label="Vidéos", href="videos.html"),
@@ -158,8 +178,9 @@ env.globals.update(
     year=datetime.date.today().year, updated=UPDATED,
     islands=ISLANDS, islands_by_slug=ISLANDS_BY_SLUG, places=PLACES_BY_SLUG,
     experiences=EXPERIENCES, itineraries=ITINERARIES, practical=PRACTICAL,
-    archipel=ARCHIPEL, events=EVENTS, videos=VIDEOS, home=HOME,
-    island_labels=ISLAND_LABELS,
+    events=EVENTS, videos=VIDEOS, home=HOME, island_labels=ISLAND_LABELS,
+    topics=TOPICS, geographie=GEOGRAPHIE, histoire=HISTOIRE, culture=CULTURE,
+    timeline=None, facts=FACTS,
 )
 env.filters["links"] = links_filter
 env.filters["slugify"] = slugify
@@ -181,59 +202,77 @@ def map_point(place):
 
 def collect_pages():
     add("index.html", "index.html", None,
-        "Komori, le guide de voyage de l'archipel des Comores : Grande Comore, Mohéli, Anjouan et Mayotte. "
-        "Volcans, lagons, plages, culture et infos pratiques.", og_image=HOME["hero"])
+        "Komori, le site de découverte des quatre îles des Comores : Grande Comore, Mohéli, Anjouan et Mayotte. "
+        "Géographie, histoire, culture, folklore et tourisme.", og_image=HOME["hero"],
+        timeline_highlights=[TIMELINE[i] for i in (0, 3, 7, 10, 15, 19)])
 
-    # Destinations
-    add("destinations/index.html", "destinations.html", "Destinations",
-        "Les quatre îles de l'archipel des Comores : Grande Comore, Mohéli, Anjouan et Mayotte, avec une carte interactive.",
-        og_image="lagon_dembeni", section="destinations", map_points=[map_point(p) for p in PLACES])
+    # Les îles et les lieux
+    add("iles/index.html", "iles.html", "Les quatre îles",
+        "Grande Comore, Mohéli, Anjouan et Mayotte : tableau comparatif, présentation et carte interactive des quatre îles.",
+        og_image="lagon_dembeni", section="iles", map_points=[map_point(p) for p in PLACES])
     for island in ISLANDS:
-        add(f"destinations/{island['slug']}.html", "island.html", f"{island['name']} ({island['local']})",
-            island["lead"], og_image=island["hero"], section="destinations", island=island)
+        add(f"iles/{island['slug']}.html", "island.html", f"{island['name']} ({island['local']})",
+            island["lead"], og_image=island["hero"], section="iles", island=island)
     for place in PLACES:
         island = ISLANDS_BY_SLUG[place["island"]]
         add(f"lieux/{place['slug']}.html", "place.html", f"{place['name']} — {island['name']}", place["lead"],
-            og_image=place["hero"], section="destinations", place=place, island=island,
+            og_image=place["hero"], section="iles", place=place, island=island,
             map_point=map_point(place))
-    add("archipel.html", "archipel.html", "Découvrir l'archipel", ARCHIPEL["lead"],
-        og_image=ARCHIPEL["hero"], section="destinations")
 
-    # Expériences
+    # Rubriques de découverte
+    for topic in TOPICS:
+        extra = dict(timeline=TIMELINE) if topic is HISTOIRE else {}
+        add(f"{topic['slug']}/index.html", "topic_index.html", topic["name"], topic["lead"],
+            og_image=topic["hero"], section=topic["slug"], topic=topic, **extra)
+        pages = topic["pages"]
+        for idx, page in enumerate(pages):
+            add(f"{topic['slug']}/{page['slug']}.html", "topic_page.html", f"{page['name']} — {topic['name']}",
+                page["lead"], og_image=page["hero"], section=topic["slug"], topic=topic, page=page,
+                prev_page=pages[idx - 1] if idx > 0 else None,
+                next_page=pages[idx + 1] if idx + 1 < len(pages) else None)
+
+    # Voyager
+    add("voyager/index.html", "voyager.html", "Voyager aux Comores",
+        "Lieux incontournables, expériences, itinéraires et informations pratiques pour découvrir les quatre îles.",
+        og_image="tortue_pilote", section="voyager")
     add("experiences/index.html", "experiences.html", "Expériences",
-        "Nature, plages, plongée, randonnées, culture, gastronomie et parfums : les expériences à vivre aux Comores.",
-        og_image="tortue_pilote", section="experiences")
+        "Nature, plages, plongée, randonnées, patrimoine et parfums : les expériences à vivre aux Comores.",
+        og_image="tortue_pilote", section="voyager")
     for exp in EXPERIENCES:
         add(f"experiences/{exp['slug']}.html", "experience.html", exp["name"], exp["lead"],
-            og_image=exp["hero"], section="experiences", exp=exp)
-
-    # Itinéraires
+            og_image=exp["hero"], section="voyager", exp=exp)
     add("itineraires/index.html", "itineraries.html", "Itinéraires",
         "Itinéraires de 5 à 16 jours à travers l'archipel des Comores.", og_image="moroni_panorama",
-        section="itineraires")
+        section="voyager")
     for it in ITINERARIES:
         add(f"itineraires/{it['slug']}.html", "itinerary.html", it["name"], it["lead"],
-            og_image=it["hero"], section="itineraires", it=it)
-
-    # Préparer son voyage
+            og_image=it["hero"], section="voyager", it=it)
     add("preparer-son-voyage/index.html", "practical_index.html", "Préparer son voyage",
         "Formalités, climat, transports, santé, budget, hébergement et savoir-vivre aux Comores et à Mayotte.",
-        og_image="barge", section="preparer")
+        og_image="barge", section="voyager")
     for p in PRACTICAL:
         add(f"preparer-son-voyage/{p['slug']}.html", "practical.html", p["name"], p["summary"],
-            og_image=p["hero"], section="preparer", page=p)
+            og_image=p["hero"], section="voyager", page=p)
+    add("agenda.html", "agenda.html", "Agenda & saisons",
+        "Fêtes, traditions et saisons de la nature dans l'archipel des Comores.", og_image="moroni_mosquee",
+        section="voyager")
 
-    # Médias, agenda, pages annexes
+    # Médiathèque et outils
     gallery_keys = [k for k, m in MEDIA.items() if m["gallery"]]
     add("galerie.html", "gallery.html", "Galerie photos",
-        "Photos sous licence libre des quatre îles de l'archipel des Comores.", og_image="nioumachoua_ilots",
-        section="medias", gallery_keys=gallery_keys)
+        "Photos sous licence libre des quatre îles de l'archipel des Comores : paysages, histoire, culture, faune.",
+        og_image="nioumachoua_ilots", section="medias", gallery_keys=gallery_keys)
     add("videos.html", "videos.html", "Vidéos",
         "Vidéos sous licence libre de la vie marine de l'archipel des Comores : baleines, tortues, récifs.",
         og_image="baleine", section="medias")
-    add("agenda.html", "agenda.html", "Agenda & saisons",
-        "Fêtes, traditions et saisons de la nature dans l'archipel des Comores.", og_image="moroni_mosquee",
-        section="agenda")
+    glossary = sorted(GLOSSARY, key=lambda g: slugify(g[0]))
+    add("glossaire.html", "glossaire.html", "Glossaire",
+        "Les mots comoriens et les notions utiles pour comprendre l'archipel des Comores.", section="medias",
+        glossary=glossary, glossary_letters=sorted({slugify(g[0])[0].upper() for g in glossary}))
+    add("quiz.html", "quiz.html", "Quiz", "Testez vos connaissances sur la géographie, l'histoire et la culture des Comores.",
+        section="medias", quiz=QUIZ)
+
+    # Pages annexes
     add("credits.html", "credits.html", "Crédits photos & vidéos",
         "Auteurs et licences des photos et vidéos utilisées sur Komori.")
     add("mentions-legales.html", "legal.html", "Mentions légales", "Mentions légales du site komori.com.")
@@ -244,21 +283,29 @@ def collect_pages():
 
 
 def sitemap_groups():
-    return [
-        dict(title="Destinations", links=[("Toutes les destinations", "destinations/index.html"),
-                                          ("Découvrir l'archipel", "archipel.html")]
-             + [(i["name"], f"destinations/{i['slug']}.html") for i in ISLANDS]),
+    groups = [
+        dict(title="Les îles", links=[("Les quatre îles", "iles/index.html")]
+             + [(i["name"], f"iles/{i['slug']}.html") for i in ISLANDS]),
         dict(title="Lieux", links=[(p["name"], f"lieux/{p['slug']}.html") for p in PLACES]),
-        dict(title="Expériences", links=[("Toutes les expériences", "experiences/index.html")]
+    ]
+    for t in TOPICS:
+        groups.append(dict(title=t["name"], links=[("Vue d'ensemble", f"{t['slug']}/index.html")]
+                           + [(pg["name"], f"{t['slug']}/{pg['slug']}.html") for pg in t["pages"]]))
+    groups += [
+        dict(title="Voyager", links=[("Voyager aux Comores", "voyager/index.html"),
+                                     ("Expériences", "experiences/index.html")]
              + [(e["name"], f"experiences/{e['slug']}.html") for e in EXPERIENCES]),
         dict(title="Itinéraires", links=[("Tous les itinéraires", "itineraires/index.html")]
              + [(i["name"], f"itineraires/{i['slug']}.html") for i in ITINERARIES]),
         dict(title="Préparer son voyage", links=[("Vue d'ensemble", "preparer-son-voyage/index.html")]
-             + [(p["name"], f"preparer-son-voyage/{p['slug']}.html") for p in PRACTICAL]),
+             + [(p["name"], f"preparer-son-voyage/{p['slug']}.html") for p in PRACTICAL]
+             + [("Agenda & saisons", "agenda.html")]),
         dict(title="Komori", links=[("Galerie", "galerie.html"), ("Vidéos", "videos.html"),
-                                    ("Agenda", "agenda.html"), ("Contact", "contact.html"),
-                                    ("Crédits", "credits.html"), ("Mentions légales", "mentions-legales.html")]),
+                                    ("Glossaire", "glossaire.html"), ("Quiz", "quiz.html"),
+                                    ("Contact", "contact.html"), ("Crédits", "credits.html"),
+                                    ("Mentions légales", "mentions-legales.html")]),
     ]
+    return groups
 
 
 def validate():
@@ -270,7 +317,7 @@ def validate():
             errors.append(f"{where} : média inconnu « {key} »")
 
     for i in ISLANDS:
-        for k in [i["hero"], i["card"], *i["gallery"], *(s["media"] for s in i["sections"])]:
+        for k in [i["hero"], i["card"], *i["gallery"], *(t["media"] for t in i["themes"])]:
             need_media(k, f"île {i['slug']}")
         errors += [f"île {i['slug']} : lieu inconnu « {p} »" for p in i["places"] if p not in PLACES_BY_SLUG]
     for p in PLACES:
@@ -287,6 +334,12 @@ def validate():
                    if d[3] and d[3] not in PLACES_BY_SLUG]
     for p in PRACTICAL:
         need_media(p["hero"], f"pratique {p['slug']}")
+    for t in TOPICS:
+        need_media(t["hero"], f"rubrique {t['slug']}")
+        need_media(t["card"], f"rubrique {t['slug']}")
+        for pg in t["pages"]:
+            for k in [pg["hero"], *pg.get("gallery", []), *(s.get("media") for s in pg["sections"])]:
+                need_media(k, f"page {t['slug']}/{pg['slug']}")
     for k in VIDEOS:
         need_media(k, "vidéos")
         need_media(MEDIA[k].get("poster"), f"poster {k}")
@@ -299,13 +352,15 @@ def check_internal_links():
     href_re = re.compile(r'(?:href|src)="([^"]+)"')
     broken = []
     for html_file in OUT.rglob("*.html"):
-        if html_file.name == "404.html":
-            continue
-        for target in href_re.findall(html_file.read_text(encoding="utf-8")):
+        text = html_file.read_text(encoding="utf-8")
+        if "[[" in text:
+            broken.append(f"{html_file.relative_to(OUT)} → syntaxe [[lien]] non convertie")
+        for target in href_re.findall(text):
             if target.startswith(("http://", "https://", "mailto:", "#", "data:")):
                 continue
             path = target.split("#", 1)[0]
-            if not (html_file.parent / path).resolve().exists():
+            base = OUT if path.startswith("/") else html_file.parent
+            if not (base / path.lstrip("/")).resolve().exists():
                 broken.append(f"{html_file.relative_to(OUT)} → {target}")
     if broken:
         raise SystemExit("Liens internes cassés :\n  " + "\n  ".join(sorted(set(broken))))

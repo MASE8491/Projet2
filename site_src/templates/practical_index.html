@@ -29,9 +29,11 @@
       <p>Les distances sont courtes mais les liaisons parfois capricieuses. Le secret d'un voyage
       réussi&nbsp;: réserver tôt les vols inter-îles, garder des journées de marge et se laisser porter
       par le rythme tranquille des îles.</p>
-      <p>Pour aller plus loin, découvrez l'[[archipel.html|histoire et la géographie de l'archipel]].</p>
+      <p>Pour aller plus loin, découvrez la <a href="{{ url('geographie/index.html') }}">géographie</a>,
+      l'<a href="{{ url('histoire/index.html') }}">histoire</a> et la
+      <a href="{{ url('culture/index.html') }}">culture</a> de l'archipel.</p>
     </div>
-    {{ ui.factbox(archipel.facts) }}
+    {{ ui.factbox(geographie.facts) }}
   </div>
 </section>
 {% endblock %}
