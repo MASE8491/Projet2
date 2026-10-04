@@ -135,7 +135,8 @@ for _t in TALES:
         _t["kind"] = "conte"
 TALES_BY_KIND = [(k, label, [t for t in TALES if t["kind"] == k]) for k, label in TALE_KINDS.items()]
 TALES_BY_KIND = [g for g in TALES_BY_KIND if g[2]]
-BIBLIO = {b["id"]: b for b in RAW["bibliography"] if b.get("id")}
+BIBLIO = {b["id"]: dict({"year": "", "publisher": "", "kind": "exterieur", "category": "", "note": "", "url": ""}, **b)
+          for b in RAW["bibliography"] if b.get("id")}
 REF_WARNINGS = set()
 VIDEOS = [k for k in RAW["videos"]["items"] if k in MEDIA and MEDIA[k]["kind"] == "video"]
 HOME = RAW["home"]
