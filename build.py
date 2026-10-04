@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Générateur statique de komori.com.
+"""Générateur statique du site Komori.
 
 Usage : python3 build.py        (génère le site dans docs/)
 
@@ -36,8 +36,15 @@ TOPICS = [GEOGRAPHIE, HISTOIRE, CULTURE]
 ROOT = Path(__file__).resolve().parent
 SRC = ROOT / "site_src"
 OUT = ROOT / "docs"
-SITE_URL = "https://komori.com"
-DOMAIN = "komori.com"
+# Adresse de publication. Sans domaine personnalisé, le site est servi par GitHub Pages
+# dans le sous-dossier du dépôt. Pour utiliser un domaine que vous possédez, renseignez-le
+# ici (ex. "mon-domaine.com") : un fichier CNAME sera alors généré.
+CUSTOM_DOMAIN = None
+GITHUB_PAGES_URL = "https://mase8491.github.io/Projet2"
+SITE_URL = f"https://{CUSTOM_DOMAIN}" if CUSTOM_DOMAIN else GITHUB_PAGES_URL
+BASE_PATH = "/" if CUSTOM_DOMAIN else "/Projet2/"
+# Adresse e-mail affichée sur la page Contact (None tant qu'aucune adresse n'est choisie).
+CONTACT_EMAIL = None
 UPDATED = "octobre 2026"
 
 # Largeurs de vignettes standard de Wikimedia (évite les tailles non mises en cache)
@@ -155,7 +162,7 @@ def relative(page_path, target):
 @pass_context
 def url(ctx, target):
     if ctx.get("absolute_urls"):
-        return "/" + target
+        return BASE_PATH + target
     return relative(ctx["page_path"], target)
 
 
@@ -174,7 +181,7 @@ def links_filter(ctx, html):
 env.globals.update(
     url=url, img_url=img_url, img_srcset=img_srcset, file_url=file_url,
     commons_page=commons_page, credit_text=credit_text,
-    media=MEDIA, nav=NAV, footer=FOOTER, site_url=SITE_URL,
+    media=MEDIA, nav=NAV, footer=FOOTER, site_url=SITE_URL, contact_email=CONTACT_EMAIL,
     year=datetime.date.today().year, updated=UPDATED,
     islands=ISLANDS, islands_by_slug=ISLANDS_BY_SLUG, places=PLACES_BY_SLUG,
     experiences=EXPERIENCES, itineraries=ITINERARIES, practical=PRACTICAL,
@@ -275,9 +282,9 @@ def collect_pages():
     # Pages annexes
     add("credits.html", "credits.html", "Crédits photos & vidéos",
         "Auteurs et licences des photos et vidéos utilisées sur Komori.")
-    add("mentions-legales.html", "legal.html", "Mentions légales", "Mentions légales du site komori.com.")
+    add("mentions-legales.html", "legal.html", "Mentions légales", "Mentions légales du site Komori.")
     add("contact.html", "contact.html", "Contact", "Contacter l'équipe de Komori.")
-    add("plan-du-site.html", "plan.html", "Plan du site", "Toutes les pages du site komori.com.",
+    add("plan-du-site.html", "plan.html", "Plan du site", "Toutes les pages du site Komori.",
         sitemap_groups=sitemap_groups())
     add("404.html", "404.html", "Page introuvable", "Cette page n'existe pas.", absolute_urls=True)
 
@@ -359,8 +366,14 @@ def check_internal_links():
             if target.startswith(("http://", "https://", "mailto:", "#", "data:")):
                 continue
             path = target.split("#", 1)[0]
-            base = OUT if path.startswith("/") else html_file.parent
-            if not (base / path.lstrip("/")).resolve().exists():
+            if path.startswith("/"):
+                if not path.startswith(BASE_PATH):
+                    broken.append(f"{html_file.relative_to(OUT)} → {target} (hors de {BASE_PATH})")
+                    continue
+                base, path = OUT, path[len(BASE_PATH):]
+            else:
+                base = html_file.parent
+            if not (base / path).resolve().exists():
                 broken.append(f"{html_file.relative_to(OUT)} → {target}")
     if broken:
         raise SystemExit("Liens internes cassés :\n  " + "\n  ".join(sorted(set(broken))))
@@ -389,7 +402,8 @@ def build():
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + urls + "\n</urlset>\n",
         encoding="utf-8")
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n", encoding="utf-8")
-    (OUT / "CNAME").write_text(DOMAIN + "\n", encoding="utf-8")
+    if CUSTOM_DOMAIN:
+        (OUT / "CNAME").write_text(CUSTOM_DOMAIN + "\n", encoding="utf-8")
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
 
     check_internal_links()

@@ -1,4 +1,4 @@
-# Komori — komori.com
+# Komori
 
 Site de découverte des quatre îles de l'archipel des Comores : **Grande Comore (Ngazidja)**,
 **Mohéli (Mwali)**, **Anjouan (Ndzuwani)** et **Mayotte (Maore)**. Géographie, histoire,
@@ -46,7 +46,7 @@ site_src/
   content_misc.py           accueil, agenda, vidéos
   templates/                gabarits HTML
   static/                   CSS, JS, favicon
-docs/                       site généré (GitHub Pages, CNAME = komori.com)
+docs/                       site généré (prêt pour GitHub Pages)
 ```
 
 ## Générer le site
@@ -57,7 +57,14 @@ python3 build.py          # régénère docs/ et vérifie les liens internes
 python3 -m http.server -d docs 8000
 ```
 
-Pour publier : *Settings → Pages → Branch : main, dossier `/docs`* (dépôt public ou offre
-payante requise), puis faire pointer le DNS de komori.com vers GitHub Pages.
+## Publier
+
+1. *Settings → Pages → Branch : main, dossier `/docs`* (dépôt public ou offre payante requise).
+2. Le site est alors en ligne à l'adresse **https://mase8491.github.io/Projet2/**.
+
+Le domaine komori.com appartient à une autre organisation (Komori Corporation) et ne peut pas
+être utilisé. Pour publier sous votre propre domaine, achetez-en un, renseignez-le dans
+`CUSTOM_DOMAIN` (en haut de `build.py`), relancez `python3 build.py`, puis configurez son DNS
+vers GitHub Pages. L'adresse e-mail de la page Contact se règle de même avec `CONTACT_EMAIL`.
 
 Les informations pratiques (visas, santé, transports) sont indicatives et datées d'octobre 2026.
