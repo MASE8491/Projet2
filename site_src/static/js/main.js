@@ -10,29 +10,103 @@
     onScroll();
   }
 
-  /* ---------------------------------------------------------- Menu mobile */
-  var toggle = document.querySelector("[data-nav-toggle]");
-  var nav = document.querySelector("[data-nav]");
-  if (toggle && nav) {
-    toggle.addEventListener("click", function () {
-      var open = nav.classList.toggle("is-open");
-      toggle.setAttribute("aria-expanded", String(open));
-      document.body.classList.toggle("nav-open", open);
-    });
-    nav.querySelectorAll(".sub-toggle").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        var sub = btn.nextElementSibling;
-        var open = sub.classList.toggle("is-open");
-        btn.setAttribute("aria-expanded", String(open));
-      });
-    });
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && nav.classList.contains("is-open")) {
-        nav.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded", "false");
-        document.body.classList.remove("nav-open");
-        toggle.focus();
+  /* ---------------------------------------------------------- Menu tiroir (toutes les pages)
+     Un <dialog> modal, hors de l'en-tête : il s'affiche au premier plan sur toutes les pages,
+     quelle que soit la largeur de l'écran. */
+  var drawer = document.querySelector("[data-drawer]");
+  var openers = document.querySelectorAll("[data-drawer-open]");
+  if (drawer && openers.length) {
+    var drawerSearch = drawer.querySelector("[data-drawer-search]");
+    var drawerItems = Array.prototype.slice.call(drawer.querySelectorAll("[data-drawer-item]"));
+    var drawerEmpty = drawer.querySelector("[data-drawer-empty]");
+    var drawerOpener = null;
+    var setBranch = function (li, open) {
+      var btn = li.querySelector(":scope > .drawer-row > .drawer-toggle");
+      var sub = li.querySelector(":scope > .drawer-sub");
+      if (!btn || !sub) return;
+      sub.hidden = !open;
+      btn.setAttribute("aria-expanded", String(open));
+    };
+    var openDrawer = function (opener) {
+      drawerOpener = opener;
+      if (typeof drawer.showModal === "function") drawer.showModal(); else drawer.setAttribute("open", "");
+      document.body.classList.add("drawer-open");
+      openers.forEach(function (b) { b.setAttribute("aria-expanded", "true"); });
+      var current = drawer.querySelector('[aria-current="page"]');
+      if (current) {
+        current.scrollIntoView({ block: "center" });
+        current.focus({ preventScroll: true });
       }
+    };
+    var onClosed = function () {
+      document.body.classList.remove("drawer-open");
+      openers.forEach(function (b) { b.setAttribute("aria-expanded", "false"); });
+      if (drawerOpener) drawerOpener.focus();
+    };
+    var closeDrawer = function () {
+      if (typeof drawer.close === "function" && drawer.open) drawer.close(); else { drawer.removeAttribute("open"); onClosed(); }
+    };
+    openers.forEach(function (b) { b.addEventListener("click", function () { openDrawer(b); }); });
+    drawer.addEventListener("close", onClosed);
+    drawer.querySelector("[data-drawer-close]").addEventListener("click", closeDrawer);
+    // Clic sur le voile sombre (à côté du panneau)
+    drawer.addEventListener("click", function (e) {
+      if (e.target !== drawer) return;
+      var r = drawer.getBoundingClientRect();
+      if (e.clientX > r.right || e.clientX < r.left || e.clientY < r.top || e.clientY > r.bottom) closeDrawer();
+    });
+    drawer.addEventListener("click", function (e) {
+      var btn = e.target.closest(".drawer-toggle");
+      if (btn) { setBranch(btn.closest("[data-drawer-item]"), btn.getAttribute("aria-expanded") !== "true"); return; }
+      var link = e.target.closest("a[href]");
+      // Un lien vers une ancre de la page courante : on referme le tiroir pour laisser voir la cible
+      if (link && link.hash && link.pathname === window.location.pathname) closeDrawer();
+    });
+
+    // Recherche : n'affiche que les pages dont le titre correspond, avec leurs rubriques parentes
+    var drawerNorm = function (str) { return str.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase(); };
+    var drawerLabel = function (li) {
+      var el = li.querySelector(":scope > .drawer-row > a, :scope > .drawer-row > .drawer-label");
+      return el ? el : null;
+    };
+    // Libellé principal (sans la petite note éventuelle) et contenu d'origine, pour pouvoir le restaurer
+    drawerItems.forEach(function (li) {
+      var el = drawerLabel(li);
+      if (!el) return;
+      var first = el.firstChild;
+      el.setAttribute("data-text", first && first.nodeType === 3 ? first.nodeValue : el.textContent);
+      el._original = el.innerHTML;
+    });
+    if (drawerSearch) drawerSearch.addEventListener("input", function () {
+      var q = drawerNorm(drawerSearch.value.trim());
+      var shown = 0;
+      // Du plus profond au plus haut, pour savoir si un descendant correspond
+      drawerItems.slice().reverse().forEach(function (li) {
+        var el = drawerLabel(li);
+        var text = el ? el.getAttribute("data-text") : "";
+        var own = !q || drawerNorm(text).indexOf(q) !== -1;
+        var childShown = Array.prototype.some.call(li.querySelectorAll(":scope > .drawer-sub > [data-drawer-item]"),
+          function (c) { return !c.hidden; });
+        li.hidden = !(own || childShown);
+        if (q) setBranch(li, childShown);
+        else setBranch(li, li.hasAttribute("data-open-default"));
+        if (el) {
+          if (el.querySelector("mark")) el.innerHTML = el._original;
+          if (q && own) {
+            var i = drawerNorm(text).indexOf(q);
+            var frag = document.createDocumentFragment();
+            frag.appendChild(document.createTextNode(text.slice(0, i)));
+            var mark = document.createElement("mark");
+            mark.textContent = text.slice(i, i + q.length);
+            frag.appendChild(mark);
+            frag.appendChild(document.createTextNode(text.slice(i + q.length)));
+            var first = el.firstChild;
+            if (first && first.nodeType === 3) el.replaceChild(frag, first); else { el.textContent = ""; el.appendChild(frag); }
+          }
+        }
+        if (!li.hidden && own && q) shown++;
+      });
+      if (drawerEmpty) drawerEmpty.hidden = !q || shown > 0;
     });
   }
 
@@ -93,31 +167,41 @@
     });
   }
 
-  /* ---------------------------------------------------------- Filtres de galerie */
-  var filters = document.querySelector("[data-filters]");
-  if (filters) {
-    filters.addEventListener("click", function (e) {
-      var btn = e.target.closest("[data-filter]");
-      if (!btn) return;
-      var value = btn.getAttribute("data-filter");
-      filters.querySelectorAll("[data-filter]").forEach(function (b) {
-        var active = b === btn;
-        b.classList.toggle("is-active", active);
-        b.setAttribute("aria-pressed", String(active));
+  /* ---------------------------------------------------------- Filtres (galerie, contes, spots, institutions…)
+     Chaque barre [data-filters] filtre les éléments [data-filter-items] selon un attribut ;
+     plusieurs barres se combinent (île + catégorie, par exemple). */
+  var bars = Array.prototype.slice.call(document.querySelectorAll("[data-filters]"));
+  if (bars.length) {
+    var applyFilters = function () {
+      var selector = bars[0].getAttribute("data-filter-items") || ".gallery-item";
+      var active = bars.map(function (bar) {
+        var on = bar.querySelector("[data-filter].is-active");
+        return { attr: bar.getAttribute("data-filter-attr") || "data-island", value: on ? on.getAttribute("data-filter") : "all" };
       });
-      var attr = filters.getAttribute("data-filter-attr") || "data-island";
       var shown = 0;
-      document.querySelectorAll(filters.getAttribute("data-filter-items") || ".gallery-item").forEach(function (item) {
-        item.hidden = value !== "all" && item.getAttribute(attr) !== value;
+      document.querySelectorAll(selector).forEach(function (item) {
+        item.hidden = !active.every(function (f) { return f.value === "all" || item.getAttribute(f.attr) === f.value; });
         if (!item.hidden) shown++;
       });
-      // Masque les groupes devenus vides (contes, bibliographie)
+      // Masque les groupes devenus vides (contes, bibliographie, spots, institutions)
       document.querySelectorAll("[data-filter-group]").forEach(function (group) {
-        var items = group.querySelectorAll(filters.getAttribute("data-filter-items"));
-        group.hidden = items.length > 0 && Array.prototype.every.call(items, function (i) { return i.hidden; });
+        var inside = group.querySelectorAll(selector);
+        group.hidden = inside.length > 0 && Array.prototype.every.call(inside, function (i) { return i.hidden; });
       });
       var empty = document.querySelector("[data-filter-empty]");
       if (empty) empty.hidden = shown !== 0;
+    };
+    bars.forEach(function (bar) {
+      bar.addEventListener("click", function (e) {
+        var btn = e.target.closest("[data-filter]");
+        if (!btn) return;
+        bar.querySelectorAll("[data-filter]").forEach(function (b) {
+          var on = b === btn;
+          b.classList.toggle("is-active", on);
+          b.setAttribute("aria-pressed", String(on));
+        });
+        applyFilters();
+      });
     });
   }
 

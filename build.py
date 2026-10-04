@@ -11,6 +11,7 @@ quel hébergement statique.
 """
 
 import datetime
+import itertools
 import json
 import posixpath
 import re
@@ -21,6 +22,7 @@ from pathlib import Path
 from urllib.parse import quote
 
 from jinja2 import Environment, FileSystemLoader, StrictUndefined, pass_context
+from markupsafe import Markup, escape
 
 ROOT = Path(__file__).resolve().parent
 SRC = ROOT / "site_src"
@@ -40,13 +42,30 @@ RESERVED_SLUGS = {"iles", "lieux", "experiences", "itineraires", "preparer-son-v
 
 CONTENT_FILES = ["settings", "navigation", "media", "home", "pages", "islands", "places", "topics",
                  "timeline", "experiences", "itineraries", "practical", "events", "glossary", "quizzes",
-                 "videos", "tales", "bibliography"]
+                 "videos", "tales", "bibliography", "spots", "institutions"]
+
+# Adresses occupées dans le dossier iles/ : une île ne peut pas porter ces noms.
+RESERVED_ISLAND_SLUGS = {"index", "bons-plans", "vie-publique"}
 
 # Catégories des récits de la zone « Hale halele », dans l'ordre d'affichage
 TALE_KINDS = {"mythe": "Mythes des origines", "legende": "Légendes de lieux",
               "recit": "Récits d'hier et d'aujourd'hui", "conte": "Contes du soir"}
 TALE_KIND_SINGULAR = {"mythe": "Mythe des origines", "legende": "Légende de lieu",
                       "recit": "Récit", "conte": "Conte"}
+# Spots & bons plans : catégories (avec leur icône) et notoriété
+SPOT_CATEGORIES = {"marche": ("Marchés & commerces", "basket"), "artisanat": ("Artisanat & savoir-faire", "needle"),
+                   "saveurs": ("Saveurs & tables", "bowl"), "plage": ("Plages & îlots", "wave"),
+                   "nature": ("Nature & randonnée", "leaf"), "patrimoine": ("Patrimoine & histoire", "dome"),
+                   "culture": ("Culture & sorties", "drum")}
+SPOT_FAME = {"incontournable": "Incontournable", "meconnu": "Secret local"}
+# Vie publique & institutions : catégories (avec leur icône), statuts et portée
+INSTITUTION_CATEGORIES = {"politique": ("Pouvoirs publics", "building"), "justice": ("Justice", "scale"),
+                          "religion": ("Autorités religieuses", "dome"), "coutume": ("Coutume & notabilité", "people"),
+                          "environnement": ("Environnement", "leaf"), "culture": ("Savoir, culture & médias", "book"),
+                          "sport": ("Sport", "ball"), "societe": ("Associations & société civile", "chat")}
+INSTITUTION_STATUS = {"officiel": "Institution officielle", "coutume": "Autorité coutumière ou religieuse",
+                      "associatif": "Association"}
+INSTITUTION_SCOPES = {"ile": "Propre à l'île", "union": "Union des Comores", "archipel": "Tout l'archipel"}
 # Catégories de la bibliographie, dans l'ordre d'affichage
 BIBLIO_CATEGORIES = {"chronique": "Chroniques et manuscrits", "tradition": "Traditions orales et littérature",
                      "histoire": "Études historiques", "anthropologie": "Anthropologie et société",
@@ -135,6 +154,36 @@ for _t in TALES:
         _t["kind"] = "conte"
 TALES_BY_KIND = [(k, label, [t for t in TALES if t["kind"] == k]) for k, label in TALE_KINDS.items()]
 TALES_BY_KIND = [g for g in TALES_BY_KIND if g[2]]
+SPOTS = [dict({"where": "", "tip": "", "media": "", "place": ""}, **s)
+         for s in RAW["spots"] if is_published(s) and s.get("island") in ISLANDS_BY_SLUG]
+for _s in SPOTS:
+    if _s.get("category") not in SPOT_CATEGORIES:
+        _s["category"] = "culture"
+    if _s.get("fame") not in SPOT_FAME:
+        _s["fame"] = "incontournable"
+    if _s["place"] not in PLACES_BY_SLUG:
+        _s["place"] = ""
+INSTITUTIONS = []
+for _inst in RAW["institutions"]:
+    _inst = dict({"seat": "", "media": "", "refs": [], "scope": "ile"}, **_inst)
+    if not is_published(_inst) or (_inst["scope"] == "ile" and _inst.get("island") not in ISLANDS_BY_SLUG):
+        continue
+    if _inst["scope"] not in INSTITUTION_SCOPES:
+        _inst["scope"] = "ile"
+    if _inst.get("island") not in ISLANDS_BY_SLUG:
+        _inst["island"] = ""
+    if _inst.get("category") not in INSTITUTION_CATEGORIES:
+        _inst["category"] = "societe"
+    if _inst.get("status") not in INSTITUTION_STATUS:
+        _inst["status"] = "officiel"
+    INSTITUTIONS.append(_inst)
+for _island in ISLANDS:
+    _island.setdefault("union_member", False)
+    for _k in ("spots_lead", "spots_intro", "public_lead", "public_intro"):
+        _island.setdefault(_k, "")
+    _island.setdefault("spots_tips", [])
+    _island["spots_hero"] = _island.get("spots_hero") or _island["hero"]
+    _island["public_hero"] = _island.get("public_hero") or _island["hero"]
 BIBLIO = {b["id"]: dict({"year": "", "publisher": "", "kind": "exterieur", "category": "", "note": "", "url": ""}, **b)
           for b in RAW["bibliography"] if b.get("id")}
 REF_WARNINGS = set()
@@ -246,6 +295,12 @@ def links_filter(ctx, html):
 
 
 @pass_context
+def textlinks_filter(ctx, text):
+    """Texte simple (échappé) dans lequel la syntaxe [[chemin|libellé]] devient un lien."""
+    return Markup(links_filter(ctx, str(escape(text or ""))))
+
+
+@pass_context
 def refs_of(ctx, item):
     """Références bibliographiques d'un élément (les identifiants inconnus sont ignorés)."""
     out = []
@@ -268,8 +323,15 @@ env.globals.update(
     experiences=EXPERIENCES, itineraries=ITINERARIES, practical=PRACTICAL,
     events=EVENTS, videos=VIDEOS, home=HOME, island_labels=MEDIA_LABELS, pg=PG,
     topics=TOPICS, timeline=None, facts=HOME.get("facts", []),
+    spot_categories=SPOT_CATEGORIES, spot_fame=SPOT_FAME, institution_categories=INSTITUTION_CATEGORIES,
+    institution_status=INSTITUTION_STATUS, institution_scopes=INSTITUTION_SCOPES,
 )
 env.filters["links"] = links_filter
+env.filters["textlinks"] = textlinks_filter
+# Choix des filtres (valeur, libellé) pour les pastilles des pages de spots et d'institutions
+env.filters["spot_choice"] = lambda key: (key, SPOT_CATEGORIES[key][0])
+env.filters["institution_choice"] = lambda key: (key, INSTITUTION_CATEGORIES[key][0])
+env.filters["island_choice"] = lambda slug: (slug, ISLANDS_BY_SLUG[slug]["name"])
 env.filters["slugify"] = slugify
 env.filters["island_name"] = lambda slug: ISLANDS_BY_SLUG[slug]["name"]
 
@@ -297,7 +359,33 @@ def collect_pages():
         og_image=PG["iles"]["hero"], section="iles", map_points=[map_point(p) for p in PLACES])
     for island in ISLANDS:
         add(f"iles/{island['slug']}.html", "island.html", f"{island['name']} ({island['local']})",
-            island["lead"], og_image=island["hero"], section="iles", island=island)
+            island["lead"], og_image=island["hero"], section="iles", island=island,
+            island_spots=spots_of(island), island_institutions=institutions_of(island))
+
+    # Spots & bons plans, vie publique & institutions : pages d'ensemble et pages par île
+    add("iles/bons-plans.html", "spots_hub.html", PG["bonsplans"]["title"], PG["bonsplans"]["description"],
+        og_image=PG["bonsplans"]["hero"], section="iles",
+        spot_islands=[(i, spots_of(i)) for i in ISLANDS if spots_of(i)])
+    add("iles/vie-publique.html", "public_hub.html", PG["viepublique"]["title"], PG["viepublique"]["description"],
+        og_image=PG["viepublique"]["hero"], section="iles",
+        union_groups=institution_groups([x for x in INSTITUTIONS if x["scope"] == "union"]),
+        archipel_groups=institution_groups([x for x in INSTITUTIONS if x["scope"] == "archipel"]),
+        island_blocks=[(i, institution_groups([x for x in INSTITUTIONS if x["scope"] == "ile" and x["island"] == i["slug"]]))
+                       for i in ISLANDS],
+        page_refs=refs_ids(INSTITUTIONS))
+    for island in ISLANDS:
+        own = spots_of(island)
+        add(f"iles/{island['slug']}/bons-plans.html", "island_spots.html", f"Spots & bons plans — {island['name']}",
+            island["spots_lead"] or island["lead"], og_image=island["spots_hero"], section="iles", island=island,
+            groups=spot_groups(own), spot_count=len(own))
+        own_inst = [x for x in INSTITUTIONS if x["scope"] == "ile" and x["island"] == island["slug"]]
+        union = [x for x in INSTITUTIONS if x["scope"] == "union"] if island["union_member"] else []
+        archipel = [x for x in INSTITUTIONS if x["scope"] == "archipel"]
+        add(f"iles/{island['slug']}/vie-publique.html", "island_public.html",
+            f"Vie publique & institutions — {island['name']}", island["public_lead"] or island["lead"],
+            og_image=island["public_hero"], section="iles", island=island,
+            groups=institution_groups(own_inst), union_groups=institution_groups(union),
+            archipel_groups=institution_groups(archipel), page_refs=refs_ids(own_inst + union + archipel))
     for place in PLACES:
         island = ISLANDS_BY_SLUG[place["island"]]
         add(f"lieux/{place['slug']}.html", "place.html", f"{place['name']} — {island['name']}", place["lead"],
@@ -378,6 +466,32 @@ def collect_pages():
     add("404.html", "404.html", "Page introuvable", PG["404"]["description"], absolute_urls=True)
 
 
+def spots_of(island):
+    return [s for s in SPOTS if s["island"] == island["slug"]]
+
+
+def institutions_of(island):
+    """Institutions affichées pour une île : les siennes, celles de l'Union (si elle en fait partie) et de l'archipel."""
+    return [x for x in INSTITUTIONS
+            if (x["scope"] == "ile" and x["island"] == island["slug"])
+            or (x["scope"] == "union" and island["union_member"]) or x["scope"] == "archipel"]
+
+
+def spot_groups(items):
+    return [dict(key=k, label=label, icon=icon, entries=[s for s in items if s["category"] == k])
+            for k, (label, icon) in SPOT_CATEGORIES.items() if any(s["category"] == k for s in items)]
+
+
+def institution_groups(items):
+    return [dict(key=k, label=label, icon=icon, entries=[x for x in items if x["category"] == k])
+            for k, (label, icon) in INSTITUTION_CATEGORIES.items() if any(x["category"] == k for x in items)]
+
+
+def refs_ids(items):
+    """Identifiants bibliographiques cités par une liste d'éléments, sans doublon et dans l'ordre."""
+    return list(dict.fromkeys(rid for x in items for rid in (x.get("refs") or [])))
+
+
 def biblio_groups():
     """Références groupées par catégorie, avec le nombre de pages qui les citent."""
     cited = {}
@@ -388,6 +502,13 @@ def biblio_groups():
     for tale in TALES:
         for rid in tale.get("refs") or []:
             cited.setdefault(rid, []).append((tale["name"], f"contes/{tale['slug']}.html"))
+    for inst in INSTITUTIONS:
+        page = (f"iles/{inst['island']}/vie-publique.html" if inst["scope"] == "ile" else "iles/vie-publique.html")
+        for rid in inst.get("refs") or []:
+            entry = (PG["viepublique"]["title"] if inst["scope"] != "ile"
+                     else f"{PG['viepublique']['title']} — {ISLANDS_BY_SLUG[inst['island']]['name']}", page)
+            if entry not in cited.setdefault(rid, []):
+                cited[rid].append(entry)
     groups = []
     known = list(BIBLIO_CATEGORIES)
     for cat in known + sorted({b.get("category") for b in BIBLIO.values()} - set(known)):
@@ -401,6 +522,10 @@ def sitemap_groups():
     groups = [
         dict(title="Les îles", links=[(PG["iles"]["title"], "iles/index.html")]
              + [(i["name"], f"iles/{i['slug']}.html") for i in ISLANDS]),
+        dict(title=PG["bonsplans"]["title"], links=[("Les quatre îles", "iles/bons-plans.html")]
+             + [(i["name"], f"iles/{i['slug']}/bons-plans.html") for i in ISLANDS]),
+        dict(title=PG["viepublique"]["title"], links=[("Les quatre îles", "iles/vie-publique.html")]
+             + [(i["name"], f"iles/{i['slug']}/vie-publique.html") for i in ISLANDS]),
         dict(title="Lieux", links=[(p["name"], f"lieux/{p['slug']}.html") for p in PLACES]),
     ]
     for t in TOPICS:
@@ -497,6 +622,80 @@ def resolve_navigation():
     return menu, (cta if link_ok(cta.get("link")) else None), footer
 
 
+# --------------------------------------------------------------------------- Menu tiroir (toutes les pages)
+
+def island_branch(island):
+    slug = island["slug"]
+    return ([dict(label="Présentation", href=f"iles/{slug}.html"),
+             dict(label=PG["bonsplans"]["title"], href=f"iles/{slug}/bons-plans.html"),
+             dict(label=PG["viepublique"]["title"], href=f"iles/{slug}/vie-publique.html")]
+            + [dict(label=PLACES_BY_SLUG[s]["name"], note="Lieu", href=f"lieux/{s}.html") for s in island["places"]])
+
+
+def deep_children(kind):
+    """Branches du tiroir : comme les sous-menus automatiques, mais sur plusieurs niveaux."""
+    if kind == "iles":
+        return [dict(label=PG["iles"]["title"], href="iles/index.html")] + [
+            dict(label=i["name"], href=f"iles/{i['slug']}.html", children=island_branch(i)) for i in ISLANDS]
+    if kind == "contes":
+        return [dict(label="Tous les récits", href="contes/index.html")] + [
+            dict(label=label, href=f"contes/index.html#{key}",
+                 children=[dict(label=t["name"], href=f"contes/{t['slug']}.html") for t in items])
+            for key, label, items in TALES_BY_KIND]
+    return [dict(label=c["label"], href=c["href"]) for c in auto_children(kind)]
+
+
+def link_children(href):
+    """Pages filles d'une page d'ensemble ajoutée à la main dans le menu."""
+    lists = {
+        "experiences/index.html": [(e["name"], f"experiences/{e['slug']}.html") for e in EXPERIENCES],
+        "itineraires/index.html": [(i["name"], f"itineraires/{i['slug']}.html") for i in ITINERARIES],
+        "preparer-son-voyage/index.html": [(p["name"], f"preparer-son-voyage/{p['slug']}.html") for p in PRACTICAL],
+        "iles/bons-plans.html": [(i["name"], f"iles/{i['slug']}/bons-plans.html") for i in ISLANDS],
+        "iles/vie-publique.html": [(i["name"], f"iles/{i['slug']}/vie-publique.html") for i in ISLANDS],
+    }
+    return [dict(label=label, href=h) for label, h in lists.get(href, [])] or None
+
+
+def drawer_tree():
+    """Arborescence complète du site pour le menu tiroir, dans l'ordre du menu principal."""
+    counter = itertools.count(1)
+
+    def finish(node):
+        children = [finish(c) for c in node.get("children") or [] if link_ok(c.get("href"))]
+        own = node["href"].split("#", 1)[0] if node.get("href") else None
+        paths = {own} if own else set()
+        for c in children:
+            paths |= c["paths"]
+        # La page courante n'est signalée qu'une fois : pas sur un parent dont un enfant mène à la même page
+        current = bool(own) and "#" not in node["href"] and not any(c.get("href") == node["href"] for c in children)
+        return dict(label=node["label"], href=node.get("href"), note=node.get("note"), children=children or None,
+                    paths=paths, own=own if current else None, id=next(counter))
+
+    roots = [dict(label="Accueil", href="index.html")]
+    for item in NAVIGATION["menu"]:
+        if not link_ok(item.get("link")):
+            continue
+        children = deep_children(item.get("auto_children") or "")
+        seen = {c["href"] for c in children}
+        for c in item.get("children", []):
+            if link_ok(c.get("link")) and c["link"] not in seen:
+                children.append(dict(label=c["label"], href=c["link"], children=link_children(c["link"])))
+                seen.add(c["link"])
+        roots.append(dict(label=item["label"], href=item["link"], children=children))
+    nodes = [finish(n) for n in roots]
+    present = set().union(*(n["paths"] for n in nodes))
+    extra = []
+    for col in NAVIGATION.get("footer", []):
+        for link in col["links"]:
+            href = link.get("link")
+            if link_ok(href) and href.split("#", 1)[0] not in present and all(e["href"] != href for e in extra):
+                extra.append(dict(label=link["label"], href=href))
+    if extra:
+        nodes.append(finish(dict(label="À propos", href=None, children=extra)))
+    return nodes
+
+
 # --------------------------------------------------------------------------- Vérifications
 
 def validate():
@@ -524,6 +723,18 @@ def validate():
     unique(RAW["practical"], "Infos pratiques")
     unique(RAW["tales"], "Contes et récits")
     unique(RAW["quizzes"], "Quiz")
+    unique(RAW["spots"], "Spots & bons plans")
+    unique(RAW["institutions"], "Institutions")
+    for i in RAW["islands"]:
+        if i.get("slug") in RESERVED_ISLAND_SLUGS:
+            errors.append(f"Île : l'adresse « {i['slug']} » est réservée par le site")
+    for s in RAW["spots"]:
+        if is_published(s) and s.get("island") not in ISLANDS_BY_SLUG:
+            errors.append(f"spot {s.get('slug')} : île inconnue ou masquée « {s.get('island')} »")
+    for s in SPOTS:
+        need_media(s["media"], f"spot {s['slug']}")
+    for x in INSTITUTIONS:
+        need_media(x["media"], f"institution {x['slug']}")
     ids = [b.get("id") for b in RAW["bibliography"]]
     for rid in {i for i in ids if ids.count(i) > 1}:
         errors.append(f"Bibliographie : l'identifiant « {rid} » est utilisé deux fois")
@@ -546,7 +757,8 @@ def validate():
             errors.append(f"Rubrique : l'adresse « {t['slug']} » est réservée par le site")
 
     for i in ISLANDS:
-        for k in [i["hero"], i["card"], *i.get("gallery", []), *(t.get("media") for t in i["themes"])]:
+        for k in [i["hero"], i["card"], i["spots_hero"], i["public_hero"], *i.get("gallery", []),
+                  *(t.get("media") for t in i["themes"])]:
             need_media(k, f"île {i['slug']}")
     for p in PLACES:
         for k in [p["hero"], *p.get("gallery", []), *(s.get("media") for s in p["sections"])]:
@@ -614,7 +826,7 @@ def build():
     collect_pages()
     PATHS.update(path for path, _, _ in PAGES)
     menu, cta, footer = resolve_navigation()
-    env.globals.update(nav=menu, nav_cta=cta, footer=footer, url_ok=link_ok)
+    env.globals.update(nav=menu, nav_cta=cta, footer=footer, url_ok=link_ok, drawer=drawer_tree())
 
     if OUT.exists():
         shutil.rmtree(OUT)

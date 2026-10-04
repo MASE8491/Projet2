@@ -17,7 +17,10 @@ export async function togglePublished(app, id) {
     sections.push({ heading: "Cette page disparaîtra de :", items: M.appearsOn(data, id).map((x) => pageItem(data, x)) });
     const menu = M.menuMentions(data, id);
     if (menu.length) sections.push({ heading: "Menus concernés (l'entrée sera retirée) :", items: menu });
-    if (p.type === "island") sections.push({ heading: "Lieux masqués avec l'île :", items: data.places.filter((pl) => pl.island === p.slug).map((pl) => pl.name), empty: "Aucun lieu" });
+    if (p.type === "island") {
+      sections.push({ heading: "Lieux masqués avec l'île :", items: data.places.filter((pl) => pl.island === p.slug).map((pl) => pl.name), empty: "Aucun lieu" });
+      sections.push({ heading: "Pages de l'île masquées avec elle :", items: M.islandSubPaths(p.slug).map((path) => ({ text: M.pageTitleByPath(data, path) || path, sub: path })) });
+    }
     if (p.type === "topic") sections.push({ heading: "Articles masqués avec la rubrique :", items: e.pages.map((pg) => pg.name), empty: "Aucun article" });
     const links = M.inboundLinks(data, M.pathOf(data, id));
     if (links.length) sections.push({ heading: "Liens vers cette page (ils s'afficheront comme du texte simple) :", items: links.map((l) => `${l.title} (${l.count})`) });
@@ -142,6 +145,37 @@ export async function relocate(app, id) {
     toast("Lieu déplacé (en attente de publication)");
     return id;
   }
+  if (p.type === "spot" || p.type === "institution") {
+    const e = M.getEntity(data, id);
+    const options = data.islands.filter((i) => i.slug !== e.island);
+    const sel = h("select", { class: "input" }, options.map((i) => h("option", { value: i.slug }, i.name)));
+    const target = await openModal({
+      title: `Rattacher « ${title} » à une autre île`,
+      body: h("label", { class: "field-label" }, p.type === "spot" ? "Nouvelle île" : "Île du siège", sel),
+      actions: [{ label: "Annuler", value: null }, { label: "Voir l'impact", kind: "btn-primary", value: () => sel.value }],
+    });
+    if (!target) return false;
+    const to = data.islands.find((i) => i.slug === target);
+    const from = data.islands.find((i) => i.slug === e.island);
+    const oldPath = M.pathOf(data, id);
+    const links = M.inboundLinks(data, oldPath);
+    const pageLabel = p.type === "spot" ? "Spots & bons plans" : "Vie publique";
+    const moves = (e.scope || "ile") === "ile" || p.type === "spot";
+    const ok = await confirmImpact({
+      title: `Déplacer « ${title} » vers ${to.name} ?`, severity: "warning",
+      intro: moves ? `La fiche quitte la page « ${pageLabel} » de ${from ? from.name : "?"} pour celle de ${to.name}.`
+        : "Seule l'île du siège change : la fiche reste sur les pages où elle s'affiche déjà.",
+      sections: [
+        { heading: "Pages modifiées :", items: moves ? [`${from ? from.name : "?"} — page « ${pageLabel} » et aperçu de l'île`, `${to.name} — page « ${pageLabel} » et aperçu de l'île`] : ["Arborescence de l'administration uniquement"] },
+        { heading: "Liens du site mis à jour automatiquement :", items: links.map((l) => `${l.title} (${l.count})`), empty: "Aucun" },
+      ],
+      confirmLabel: "Déplacer",
+    });
+    if (!ok) return false;
+    app.store.apply(`« ${title} » rattaché à ${to.name}`, (d) => M.moveToIsland(d, id, target));
+    toast("Fiche déplacée (en attente de publication)");
+    return id;
+  }
   if (p.type === "topicpage") {
     const options = data.topics.filter((t) => t.slug !== p.topic);
     if (!options.length) { toast("Il n'existe pas d'autre rubrique.", "info"); return false; }
@@ -181,7 +215,13 @@ export async function remove(app, id) {
   const sections = [{ heading: "La page sera retirée de :", items: M.appearsOn(data, id).map((x) => pageItem(data, x)) }];
   if (p.type === "island") {
     const places = data.places.filter((pl) => pl.island === p.slug);
-    if (places.length) blocked = `Cette île contient encore ${places.length} lieu(x) : ${places.map((pl) => pl.name).join(", ")}. Déplacez-les vers une autre île ou supprimez-les d'abord.`;
+    const spots = data.spots.filter((x) => x.island === p.slug);
+    const insts = data.institutions.filter((x) => x.island === p.slug);
+    const parts = [];
+    if (places.length) parts.push(`${places.length} lieu(x) : ${places.map((pl) => pl.name).join(", ")}`);
+    if (spots.length) parts.push(`${spots.length} spot(s) ou bon(s) plan(s)`);
+    if (insts.length) parts.push(`${insts.length} institution(s)`);
+    if (parts.length) blocked = `Cette île contient encore ${parts.join(" ; ")}. Déplacez-les vers une autre île ou supprimez-les d'abord.`;
   }
   if (p.type === "topic" && e.pages.length) sections.push({ heading: "⚠ Articles supprimés avec la rubrique :", items: e.pages.map((pg) => pg.name) });
   const refs = M.slugReferences(data, id);
@@ -206,7 +246,7 @@ export async function remove(app, id) {
 export async function create(app, type, parentSlug) {
   const data = app.store.data;
   const def = M.TYPES[type];
-  const parentLabel = type === "place" ? data.islands.find((i) => i.slug === parentSlug)?.name
+  const parentLabel = ["place", "spot", "institution"].includes(type) ? data.islands.find((i) => i.slug === parentSlug)?.name
     : type === "topicpage" ? data.topics.find((t) => t.slug === parentSlug)?.name : null;
   const title = await prompt(`Ajouter : ${def.label.toLowerCase()}`, {
     label: "Titre", help: parentLabel ? `Dans : ${parentLabel}` : null, confirmLabel: "Voir l'impact",
@@ -217,9 +257,11 @@ export async function create(app, type, parentSlug) {
   const path = type === "topicpage" ? `${parentSlug}/${entity.slug}.html` : def.path(entity);
   const ok = await confirmImpact({
     title: `Créer « ${title} » ?`, severity: "info",
-    intro: `Une nouvelle page sera créée à l'adresse ${path}.`,
+    intro: ["spot", "institution"].includes(type)
+      ? `Une nouvelle fiche sera ajoutée à la page ${path.split("#")[0]}.`
+      : `Une nouvelle page sera créée à l'adresse ${path}.`,
     sections: [{ heading: "Ce qui va se passer :", items: [
-      "La page est créée MASQUÉE : les visiteurs ne la verront pas.",
+      ["spot", "institution"].includes(type) ? "La fiche est créée MASQUÉE : les visiteurs ne la verront pas." : "La page est créée MASQUÉE : les visiteurs ne la verront pas.",
       "Complétez ensuite son contenu dans l'éditeur (une image par défaut est proposée).",
       "Quand elle est prête, cliquez sur « Remettre en ligne », puis publiez.",
       ...(type === "topic" ? ["Pour l'afficher dans le menu, ajoutez-la dans « Menu et pied de page »."] : []),

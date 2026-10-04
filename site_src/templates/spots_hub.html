@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+{{ ui.hero(pg.bonsplans.hero, pg.bonsplans.title, lead=pg.bonsplans.lead, kicker=pg.bonsplans.kicker,
+   crumbs=[("Les îles", "iles/index.html"), (pg.bonsplans.title, None)]) }}
+
+<section class="section">
+  <div class="container">
+    {% if pg.bonsplans.intro %}<div class="prose">{{ pg.bonsplans.intro | links | safe }}</div>{% endif %}
+    <div class="island-mini-grid hub-islands">
+      {% for i, entries in spot_islands %}
+      <a class="island-mini" href="{{ url('iles/' ~ i.slug ~ '/bons-plans.html') }}">
+        <span class="tile-media">{{ ui.picture(i.spots_hero, sizes="(min-width: 900px) 25vw, 100vw", alt="") }}</span>
+        <span><strong>{{ i.name }}</strong> {{ entries | length }} adresses</span>
+      </a>
+      {% endfor %}
+    </div>
+    <div class="filter-bar">
+      {{ ui.chips("data-island", spot_islands | map("first") | map(attribute="slug") | map("island_choice") | list, "Filtrer par île", ".spot-card", all_label="Toutes les îles") }}
+      {{ ui.chips("data-fame", spot_fame.items(), "Filtrer par notoriété", ".spot-card", all_label="Tous les spots") }}
+      {{ ui.chips("data-category", spot_categories.keys() | map("spot_choice") | list, "Filtrer par catégorie", ".spot-card", all_label="Toutes les catégories") }}
+    </div>
+    {% for i, entries in spot_islands %}
+    <section class="spot-group" id="{{ i.slug }}" data-filter-group>
+      <div class="section-head">
+        <div><h2>{{ i.name }} <small class="muted">{{ i.local }}</small></h2></div>
+        <a class="link-arrow" href="{{ url('iles/' ~ i.slug ~ '/bons-plans.html') }}">Tous les bons plans de {{ i.name }}</a>
+      </div>
+      <div class="spot-grid">
+        {% for s in entries %}{{ ui.spot_card(s) }}{% endfor %}
+      </div>
+    </section>
+    {% endfor %}
+    <p class="note" data-filter-empty hidden>Aucun spot ne correspond à ces filtres.</p>
+  </div>
+</section>
+{% endblock %}

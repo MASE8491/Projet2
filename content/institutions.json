@@ -1,0 +1,502 @@
+[
+  {
+    "slug": "president-de-l-union",
+    "name": "Le président de l'Union",
+    "island": "grande-comore",
+    "scope": "union",
+    "category": "politique",
+    "status": "officiel",
+    "seat": "Palais de Beit-Salam, Moroni",
+    "text": "Élu au suffrage universel pour cinq ans, il est à la fois chef de l'État et chef du gouvernement. La révision constitutionnelle approuvée par référendum le 30 juillet 2018 (92,7 % de « oui ») a supprimé les trois vice-présidences, une par île, et aménagé la présidence tournante instaurée en 2001 : le président peut désormais exercer deux mandats consécutifs.",
+    "media": "",
+    "refs": [
+      "constitution-2018"
+    ]
+  },
+  {
+    "slug": "assemblee-de-l-union",
+    "name": "L'Assemblée de l'Union",
+    "island": "grande-comore",
+    "scope": "union",
+    "category": "politique",
+    "status": "officiel",
+    "seat": "Moroni",
+    "text": "Le Parlement des Comores compte une seule chambre. Ses députés sont élus dans des circonscriptions des trois îles ; la Constitution de 2018 prévoit aussi une représentation des Comoriens établis à l'étranger. Elle vote les lois et le budget de l'Union.",
+    "media": "",
+    "refs": [
+      "constitution-2018"
+    ]
+  },
+  {
+    "slug": "cour-supreme",
+    "name": "La Cour suprême",
+    "island": "grande-comore",
+    "scope": "union",
+    "category": "justice",
+    "status": "officiel",
+    "seat": "Moroni",
+    "text": "Plus haute juridiction de l'Union. Depuis 2018, une section constitutionnelle et électorale y a repris les attributions de l'ancienne Cour constitutionnelle : elle proclame les résultats des élections et juge de la conformité des lois à la Constitution.",
+    "media": "",
+    "refs": [
+      "constitution-2018"
+    ]
+  },
+  {
+    "slug": "banque-centrale-des-comores",
+    "name": "La Banque centrale des Comores",
+    "island": "grande-comore",
+    "scope": "union",
+    "category": "politique",
+    "status": "officiel",
+    "seat": "Moroni",
+    "text": "Elle émet le franc comorien, dont la parité avec l'euro est fixe (1 € = 491,96775 KMF) grâce à un accord de coopération monétaire avec la France. Une stabilité appréciable pour les voyageurs comme pour les familles qui reçoivent de l'argent de la diaspora.",
+    "media": "",
+    "refs": []
+  },
+  {
+    "slug": "grand-mufti-et-oulemas",
+    "name": "Le Grand Mufti et le Conseil des oulémas",
+    "island": "grande-comore",
+    "scope": "union",
+    "category": "religion",
+    "status": "officiel",
+    "seat": "Moroni",
+    "text": "L'islam sunnite, de rite chaféite, est la religion de l'État. Nommé par le président, le Grand Mufti est la plus haute autorité religieuse : il conseille le gouvernement sur la pratique de l'islam. Avec le Conseil des oulémas, il publie notamment chaque année les consignes du mois de ramadan.",
+    "media": "",
+    "refs": []
+  },
+  {
+    "slug": "federation-de-football-et-coelacanthes",
+    "name": "La Fédération de football et les Cœlacanthes",
+    "island": "grande-comore",
+    "scope": "union",
+    "category": "sport",
+    "status": "officiel",
+    "seat": "Stade omnisports de Malouzini, près d'Iconi",
+    "text": "L'équipe nationale, surnommée les Cœlacanthes, a créé l'exploit à la CAN 2021 au Cameroun : victoire 3-2 contre le Ghana et qualification pour les huitièmes de finale, perdus 2-1 face au pays hôte avec un joueur de champ dans les buts. Elle s'est ensuite qualifiée invaincue pour la CAN 2025 au Maroc. Chaque île a son championnat ; les meilleurs clubs se retrouvent en phase finale nationale. Les matchs internationaux se jouent au stade de Malouzini (environ 10 700 places), ouvert en 2019.",
+    "media": "malouzini",
+    "refs": []
+  },
+  {
+    "slug": "universite-des-comores",
+    "name": "L'Université des Comores",
+    "island": "grande-comore",
+    "scope": "union",
+    "category": "culture",
+    "status": "officiel",
+    "seat": "Mvouni, près de Moroni",
+    "text": "Créée en 2003, elle a son siège à Mvouni et des centres universitaires à Patsy, à Anjouan (ouvert en 2009), et à Mohéli (Fomboni et Wanani). Beaucoup d'étudiants comoriens poursuivent aussi leurs études à l'étranger.",
+    "media": "",
+    "refs": []
+  },
+  {
+    "slug": "cndrs",
+    "name": "Le CNDRS",
+    "island": "grande-comore",
+    "scope": "union",
+    "category": "culture",
+    "status": "officiel",
+    "seat": "Moroni",
+    "text": "Le Centre national de documentation et de recherche scientifique, créé en 1979, réunit le Musée national, les Archives et la Bibliothèque nationales, l'observatoire volcanologique du Karthala et des laboratoires de recherche (traditions orales, archéologie, civilisation arabo-musulmane). C'est la mémoire savante du pays.",
+    "media": "musee_comores",
+    "refs": []
+  },
+  {
+    "slug": "medias-publics",
+    "name": "Al-Watwan et l'ORTC",
+    "island": "grande-comore",
+    "scope": "union",
+    "category": "culture",
+    "status": "officiel",
+    "seat": "Moroni",
+    "text": "Fondé en 1985, Al-Watwan est le journal de l'État ; l'Office de radio et télévision des Comores (ORTC) diffuse en comorien, en français et en arabe. Journaux, radios privées et médias en ligne, souvent animés depuis la diaspora, complètent le paysage.",
+    "media": "",
+    "refs": []
+  },
+  {
+    "slug": "associations-villageoises-et-diaspora",
+    "name": "Associations villageoises et diaspora",
+    "island": "grande-comore",
+    "scope": "union",
+    "category": "societe",
+    "status": "associatif",
+    "seat": "Dans chaque village, et en France",
+    "text": "Chaque village ou presque a son association, aux Comores et en France, où vivent de nombreux Comoriens, notamment à Marseille et en région parisienne. Elles financent écoles, mosquées, adductions d'eau, routes et dispensaires, et pèsent dans les décisions du village. Les associations sportives et culturelles de village animent aussi tournois et fêtes.",
+    "media": "",
+    "refs": [
+      "forim-diaspora"
+    ]
+  },
+  {
+    "slug": "confreries-soufies",
+    "name": "Les confréries soufies",
+    "island": "grande-comore",
+    "scope": "archipel",
+    "category": "religion",
+    "status": "coutume",
+    "seat": "Zawiyas des villes et des villages",
+    "text": "Implantées surtout aux XIXe et XXe siècles — Shadhiliyya, la plus répandue, marquée par la figure de Cheikh Saïd Mohamed al-Maarouf, Qadiriyya, Rifa'iyya, puis d'autres —, les confréries rythment la vie religieuse : dhikr, maoulida, réunions dans les zawiyas, souvent bâties autour du tombeau d'un maître. Leurs cheikhs sont écoutés bien au-delà du cercle des adeptes.",
+    "media": "",
+    "refs": [
+      "ben-ali-islam"
+    ]
+  },
+  {
+    "slug": "fundi-et-ecoles-coraniques",
+    "name": "Fundi, imams et écoles coraniques",
+    "island": "grande-comore",
+    "scope": "archipel",
+    "category": "religion",
+    "status": "coutume",
+    "seat": "Dans chaque village",
+    "text": "Le fundi enseigne le Coran aux enfants dès le plus jeune âge, avant ou à côté de l'école publique. Imams et lettrés, consultés pour les mariages, les successions et les différends, sont des figures très respectées des quatre îles.",
+    "media": "",
+    "refs": []
+  },
+  {
+    "slug": "gouvernorat-de-ngazidja",
+    "name": "Le gouvernorat de Ngazidja",
+    "island": "grande-comore",
+    "scope": "ile",
+    "category": "politique",
+    "status": "officiel",
+    "seat": "Moroni",
+    "text": "Chaque île de l'Union est dirigée par un gouverneur élu, chargé des affaires propres à l'île en lien avec le gouvernement de l'Union. Les conseils des îles ont été supprimés par la révision constitutionnelle de 2018.",
+    "media": "",
+    "refs": [
+      "constitution-2018"
+    ]
+  },
+  {
+    "slug": "communes-de-ngazidja",
+    "name": "Les 28 communes et la mairie de Moroni",
+    "island": "grande-comore",
+    "scope": "ile",
+    "category": "politique",
+    "status": "officiel",
+    "seat": "Moroni et chefs-lieux de commune",
+    "text": "Prévues depuis l'indépendance, les communes n'ont élu leurs premiers conseils municipaux que le 22 février 2015. La Grande Comore en compte 28 ; les maires ont été élus par les conseillers, avec le concours des chefs de quartier et de village.",
+    "media": "",
+    "refs": []
+  },
+  {
+    "slug": "bangwe-et-wandruwadzima",
+    "name": "Le bangwe et les wandruwadzima",
+    "island": "grande-comore",
+    "scope": "ile",
+    "category": "coutume",
+    "status": "coutume",
+    "seat": "Place publique de chaque cité",
+    "text": "Chaque cité a sa place publique, le bangwe, lieu du pouvoir coutumier. Les décisions y reviennent aux wandruwadzima, les « hommes accomplis » qui ont célébré le grand mariage (anda) : ils forment le conseil des notables, choisissent les imams et arbitrent la vie de la cité. Leur autorité n'est inscrite dans aucune loi, mais elle reste très respectée.",
+    "media": "bijoux_mariage",
+    "refs": [
+      "walker-autrepart-2002",
+      "ben-ali-mgomri",
+      "chouzour"
+    ]
+  },
+  {
+    "slug": "hirimu-classes-d-age",
+    "name": "Les classes d'âge (hirimu)",
+    "island": "grande-comore",
+    "scope": "ile",
+    "category": "coutume",
+    "status": "coutume",
+    "seat": "Dans chaque cité",
+    "text": "Les hommes sont rangés par générations : plusieurs classes d'âge chez les jeunes (wanamdji), puis chez les hommes accomplis. Elles organisent les travaux collectifs, les fêtes et l'entretien de la cité, et chacune tient à son rang.",
+    "media": "",
+    "refs": [
+      "blanchy-hirimu"
+    ]
+  },
+  {
+    "slug": "clubs-de-ngazidja",
+    "name": "Les clubs de Ngazidja",
+    "island": "grande-comore",
+    "scope": "ile",
+    "category": "sport",
+    "status": "associatif",
+    "seat": "Toute l'île",
+    "text": "Coin Nord de Mitsamiouli (fondé en 1960, club le plus titré du pays avec sept championnats), Volcan Club de Moroni, Élan Club de Mitsoudjé, Ngaya Club de Mdé ou Djabal Club d'Iconi : chaque ville soutient son équipe avec ferveur.",
+    "media": "stade_moroni",
+    "refs": []
+  },
+  {
+    "slug": "gouvernorat-de-ndzuwani",
+    "name": "Le gouvernorat de Ndzuwani",
+    "island": "anjouan",
+    "scope": "ile",
+    "category": "politique",
+    "status": "officiel",
+    "seat": "Mutsamudu",
+    "text": "L'île la plus densément peuplée de l'archipel est dirigée par un gouverneur élu, installé à Mutsamudu. Elle compte 20 communes, dotées de conseils municipaux élus depuis 2015.",
+    "media": "",
+    "refs": []
+  },
+  {
+    "slug": "notables-et-grandes-familles-d-anjouan",
+    "name": "Notables et grandes familles",
+    "island": "anjouan",
+    "scope": "ile",
+    "category": "coutume",
+    "status": "coutume",
+    "seat": "Médinas et villages",
+    "text": "Le grand mariage existe aussi à Anjouan, mais il y structure moins rigidement la société qu'en Grande Comore. Dans les médinas de Mutsamudu et de Domoni, de vieilles familles lettrées et marchandes ont longtemps formé l'élite urbaine ; dans les villages, les anciens gardent un rôle d'arbitres respecté.",
+    "media": "",
+    "refs": [
+      "walker"
+    ]
+  },
+  {
+    "slug": "confreries-d-anjouan",
+    "name": "Rifa'iyya et Qadiriyya",
+    "island": "anjouan",
+    "scope": "ile",
+    "category": "religion",
+    "status": "coutume",
+    "seat": "Mutsamudu, Domoni",
+    "text": "Deux confréries ont des racines anjouanaises : la Rifa'iyya, introduite au XIXe siècle par Salim ibn Ahmed al-Himidi, de Mutsamudu, et la Qadiriyya, portée notamment par Muhammad ibn Ahmed, originaire de Domoni. Leurs cérémonies rassemblent toujours de nombreux fidèles.",
+    "media": "",
+    "refs": [
+      "ben-ali-islam"
+    ]
+  },
+  {
+    "slug": "gardiens-des-fetes-agraires",
+    "name": "Les gardiens des fêtes agraires",
+    "island": "anjouan",
+    "scope": "ile",
+    "category": "coutume",
+    "status": "coutume",
+    "seat": "Ouani, Nyumakele",
+    "text": "Nkoma à Ouani, trimba dans le Nyumakele : ces fêtes héritées d'avant l'islam sont organisées par les familles fondatrices et les anciens, qui en gardent les règles et les secrets. Lire : [[contes/le-pacte-de-basra.html|Le pacte de Basra]] et [[contes/le-trimba-du-nyumakele.html|Le Trimba]].",
+    "media": "",
+    "refs": [
+      "bourhane-2017"
+    ]
+  },
+  {
+    "slug": "clubs-d-anjouan",
+    "name": "Les clubs d'Anjouan",
+    "island": "anjouan",
+    "scope": "ile",
+    "category": "sport",
+    "status": "associatif",
+    "seat": "Domoni, Sima…",
+    "text": "Chirazienne de Domoni (fondée en 1950), Komorozine de Domoni, Steal Nouvel de Sima : Domoni et Sima sont des places fortes du football anjouanais.",
+    "media": "",
+    "refs": []
+  },
+  {
+    "slug": "mrengue-anjouan",
+    "name": "Le mrengué",
+    "island": "anjouan",
+    "scope": "ile",
+    "category": "sport",
+    "status": "coutume",
+    "seat": "Villages, surtout pendant le ramadan",
+    "text": "Boxe traditionnelle pratiquée au son des tambours, le mrengué anime les soirées, surtout pendant le ramadan. Plusieurs préfectures l'ont interdit pour éviter les débordements.",
+    "media": "",
+    "refs": []
+  },
+  {
+    "slug": "gouvernorat-de-mwali",
+    "name": "Le gouvernorat de Mwali",
+    "island": "moheli",
+    "scope": "ile",
+    "category": "politique",
+    "status": "officiel",
+    "seat": "Fomboni",
+    "text": "La plus petite île de l'Union est dirigée par un gouverneur élu, installé à Fomboni. Elle compte six communes.",
+    "media": "",
+    "refs": []
+  },
+  {
+    "slug": "parc-national-de-moheli",
+    "name": "Le parc national de Mohéli",
+    "island": "moheli",
+    "scope": "ile",
+    "category": "environnement",
+    "status": "officiel",
+    "seat": "Nioumachoua",
+    "text": "Créé le 19 avril 2001, premier espace protégé des Comores, le parc a été négocié avec les villages : dix réserves marines y sont gérées avec les communautés. Étendu en 2015 aux trois quarts des terres de l'île, il a valu à Mohéli d'être reconnue réserve de biosphère par l'UNESCO en 2020.",
+    "media": "nioumachoua_mangrove",
+    "refs": [
+      "unesco-mwali"
+    ]
+  },
+  {
+    "slug": "adsei-itsamia",
+    "name": "L'ADSEI d'Itsamia",
+    "island": "moheli",
+    "scope": "ile",
+    "category": "environnement",
+    "status": "associatif",
+    "seat": "Itsamia",
+    "text": "Fondée en 1991 par les villageois, l'Association pour le développement socio-économique d'Itsamia protège les plages de ponte des tortues, forme des guides et gère des bungalows : un modèle d'écotourisme communautaire.",
+    "media": "tortue_verte",
+    "refs": []
+  },
+  {
+    "slug": "moities-et-maisons-de-mwali",
+    "name": "Moitiés de l'île et maisons matrilinéaires",
+    "island": "moheli",
+    "scope": "ile",
+    "category": "coutume",
+    "status": "coutume",
+    "seat": "Toute l'île",
+    "text": "La société mohélienne se partage entre deux moitiés, mdjaume et mdjawashe, et des « maisons » (madzuwe) matrilinéaires, qui se mesurent lors des échanges cérémoniels : repas, dons, grands mariages. Les notables qui en ont accompli les étapes sont très écoutés. Lire : [[contes/les-sentinelles-du-djando.html|Les sentinelles du Djando]].",
+    "media": "",
+    "refs": [
+      "blanchy-djabir-2021"
+    ]
+  },
+  {
+    "slug": "fomboni-club",
+    "name": "Fomboni Club",
+    "island": "moheli",
+    "scope": "ile",
+    "category": "sport",
+    "status": "associatif",
+    "seat": "Fomboni",
+    "text": "Plusieurs fois champion des Comores, Fomboni Club porte les couleurs de Mwali dans la phase finale nationale, face aux clubs des deux grandes îles.",
+    "media": "",
+    "refs": []
+  },
+  {
+    "slug": "prefecture-de-mayotte",
+    "name": "La préfecture de Mayotte",
+    "island": "mayotte",
+    "scope": "ile",
+    "category": "politique",
+    "status": "officiel",
+    "seat": "Mamoudzou",
+    "text": "Le préfet représente l'État : sécurité, immigration, services de l'État. Française depuis 1841, Mayotte est devenue un département le 31 mars 2011 ; elle élit deux députés et deux sénateurs au Parlement.",
+    "media": "",
+    "refs": []
+  },
+  {
+    "slug": "conseil-departemental-de-mayotte",
+    "name": "Le conseil départemental",
+    "island": "mayotte",
+    "scope": "ile",
+    "category": "politique",
+    "status": "officiel",
+    "seat": "Mamoudzou",
+    "text": "Mayotte est une collectivité unique, qui exerce les compétences d'un département et d'une région. Depuis 2015, 26 conseillers y siègent, élus en binômes dans 13 cantons. La loi de programmation pour la refondation de Mayotte du 11 août 2025 prévoit sa transformation en « Département-Région de Mayotte », doté d'une assemblée de 52 élus.",
+    "media": "conseil_departemental",
+    "refs": [
+      "loi-refondation-mayotte-2025"
+    ]
+  },
+  {
+    "slug": "communes-de-mayotte",
+    "name": "Les 17 communes",
+    "island": "mayotte",
+    "scope": "ile",
+    "category": "politique",
+    "status": "officiel",
+    "seat": "De Mamoudzou à Mtsamboro",
+    "text": "Mamoudzou, la plus peuplée, Dzaoudzi-Labattoir et Pamandzi en Petite-Terre, Koungou, Bandrélé, Sada… Les communes, regroupées en intercommunalités, gèrent écoles, voirie et services de proximité.",
+    "media": "mairie_mamoudzou",
+    "refs": []
+  },
+  {
+    "slug": "tribunal-de-mamoudzou",
+    "name": "Le tribunal judiciaire de Mamoudzou",
+    "island": "mayotte",
+    "scope": "ile",
+    "category": "justice",
+    "status": "officiel",
+    "seat": "Mamoudzou",
+    "text": "La justice est rendue au nom du peuple français par le tribunal judiciaire de Mamoudzou ; les appels sont jugés par une chambre d'appel rattachée à la cour d'appel de Saint-Denis de La Réunion.",
+    "media": "",
+    "refs": []
+  },
+  {
+    "slug": "cadis-de-mayotte",
+    "name": "Les cadis",
+    "island": "mayotte",
+    "scope": "ile",
+    "category": "religion",
+    "status": "coutume",
+    "seat": "Un par commune, Grand cadi à Mamoudzou",
+    "text": "Juges musulmans pendant des siècles, les cadis ont perdu leurs compétences judiciaires et notariales en 2010 (ordonnance du 3 juin 2010). Toujours rémunérés par le Département, ils sont une vingtaine — un par commune et un Grand cadi à Mamoudzou — et jouent un rôle de médiateurs, sollicités pour apaiser les conflits familiaux et de voisinage.",
+    "media": "",
+    "refs": [
+      "senat-2012"
+    ]
+  },
+  {
+    "slug": "associations-de-femmes",
+    "name": "Associations de femmes et shikowa",
+    "island": "mayotte",
+    "scope": "ile",
+    "category": "societe",
+    "status": "associatif",
+    "seat": "Dans chaque village",
+    "text": "Les mères de famille se regroupent en associations qui mobilisent aide et argent lors des mariages ; les shikowa, tontines de femmes, financent projets familiaux et professionnels. Héritières des Chatouilleuses, figures du combat politique mahorais des années 1960 et 1970, les femmes tiennent une place centrale dans la vie publique.",
+    "media": "",
+    "refs": []
+  },
+  {
+    "slug": "manzaraka-et-shungu",
+    "name": "Manzaraka et shungu",
+    "island": "mayotte",
+    "scope": "ile",
+    "category": "coutume",
+    "status": "coutume",
+    "seat": "Dans chaque village",
+    "text": "Le manzaraka, dernière étape du mariage traditionnel, réunit parfois des centaines d'invités qui apportent dons et argent ; le shungu est un repas offert par les mariés à leur classe d'âge et au village, selon une règle d'égalité stricte. Ces obligations tissent la solidarité — et la hiérarchie — des villages.",
+    "media": "manzaraka",
+    "refs": []
+  },
+  {
+    "slug": "universite-de-mayotte",
+    "name": "L'université de Mayotte",
+    "island": "mayotte",
+    "scope": "ile",
+    "category": "culture",
+    "status": "officiel",
+    "seat": "Dembéni",
+    "text": "L'ancien centre universitaire de formation et de recherche est devenu une université de plein exercice le 1er janvier 2024. Il accueille environ 2 000 étudiants.",
+    "media": "",
+    "refs": []
+  },
+  {
+    "slug": "parc-naturel-marin-de-mayotte",
+    "name": "Le parc naturel marin de Mayotte",
+    "island": "mayotte",
+    "scope": "ile",
+    "category": "environnement",
+    "status": "officiel",
+    "seat": "Mayotte",
+    "text": "Créé le 18 janvier 2010, premier parc naturel marin d'outre-mer, il couvre 69 000 km² — le lagon, les eaux territoriales et toute la zone économique exclusive —, dont un lagon de 1 300 km² entouré d'une double barrière de corail, phénomène très rare.",
+    "media": "dugong",
+    "refs": []
+  },
+  {
+    "slug": "ligue-mahoraise-et-basket",
+    "name": "Ligue mahoraise de football et basket",
+    "island": "mayotte",
+    "scope": "ile",
+    "category": "sport",
+    "status": "officiel",
+    "seat": "Mamoudzou",
+    "text": "Créée en 1979 et rattachée à la Fédération française de football, la Ligue mahoraise organise le championnat et la Coupe de Mayotte ; chaque saison, des clubs mahorais disputent la Coupe de France. Le basket est l'autre passion de l'île : le Basket Club de M'tsapéré (BCM) en est l'un des clubs phares.",
+    "media": "",
+    "refs": []
+  },
+  {
+    "slug": "mrengue-et-pirogues",
+    "name": "Mrengué et courses de pirogues",
+    "island": "mayotte",
+    "scope": "ile",
+    "category": "sport",
+    "status": "coutume",
+    "seat": "Villages et front de mer",
+    "text": "Le mrengué, boxe traditionnelle au son des tambours, anime les soirées du ramadan ; certaines communes l'ont interdit à cause des débordements. Les courses de pirogues (laka) mobilisent des centaines de rameurs.",
+    "media": "",
+    "refs": []
+  }
+]

@@ -470,5 +470,125 @@
     "caption": "La mosquée de Tsingoni, ancienne mosquée royale de Mayotte (mihrab de 1538)",
     "author": null,
     "license": null
+  },
+  "volo_volo": {
+    "file": "Volo_Volo_Market_(10912886835).jpg",
+    "caption": "Le marché de Volo Volo, à Moroni",
+    "island": "gc"
+  },
+  "mitsamiouli_plage": {
+    "file": "Mitsamiouli_beach_4.jpg",
+    "caption": "Plage de sable blanc au nord de Mitsamiouli",
+    "island": "gc"
+  },
+  "bangoi_kouni_plage": {
+    "file": "PLAGE_BANGOI-KOUNI_COMORES.jpg",
+    "caption": "La plage de Bangoi-Kouni, au nord-est de la Grande Comore",
+    "island": "gc"
+  },
+  "musee_comores": {
+    "file": "Musee_des_Comores_(10842842534).jpg",
+    "caption": "Le Musée national des Comores, à Moroni",
+    "island": "gc"
+  },
+  "fete_independance": {
+    "file": "Independence_day_Moroni_Comoros_4.jpg",
+    "caption": "Fête de l'indépendance à Moroni",
+    "island": "gc"
+  },
+  "malouzini": {
+    "file": "Tribune_Ouest_Malouzini.jpg",
+    "caption": "La tribune ouest du stade omnisports de Malouzini",
+    "island": "gc"
+  },
+  "stade_moroni": {
+    "file": "Stadion_Moroni.JPG",
+    "caption": "Le stade de Moroni",
+    "island": "gc"
+  },
+  "anjouan_vue": {
+    "file": "Anjouan.jpg",
+    "caption": "Paysage de l'île d'Anjouan",
+    "island": "anjouan"
+  },
+  "moheli_plage": {
+    "file": "Mohéli-Beach.jpg",
+    "caption": "Une plage de Mohéli",
+    "island": "moheli"
+  },
+  "moheli_cascade": {
+    "file": "Waterfalls_in_the_rainforest_of_Moheli.jpg",
+    "caption": "Cascade dans la forêt de Mohéli",
+    "island": "moheli"
+  },
+  "turtle_moheli": {
+    "file": "Turtle-Moheli.jpg",
+    "caption": "Tortue marine à Mohéli",
+    "island": "moheli"
+  },
+  "marche_mamoudzou": {
+    "file": "Marche_couvert_(3672190363).jpg",
+    "caption": "Le marché couvert de Mamoudzou",
+    "island": "mayotte"
+  },
+  "ecomusee_sel": {
+    "file": "Éco_musée_du_sel.JPG",
+    "caption": "L'écomusée du sel de Bandrélé",
+    "island": "mayotte"
+  },
+  "ilot_bandrele": {
+    "file": "Îlot_Bandrélé.jpg",
+    "caption": "L'îlot Bandrélé, dans le lagon de Mayotte",
+    "island": "mayotte"
+  },
+  "ilot_sable_blanc": {
+    "file": "Îlot_de_Sable_Blanc_2.jpg",
+    "caption": "L'îlot de Sable Blanc, banc de sable du lagon de Mayotte",
+    "island": "mayotte"
+  },
+  "moya_falaises": {
+    "file": "Palagonite_cliffs_at_Moya_beach_(Mayotte).JPG",
+    "caption": "Les falaises volcaniques de la plage de Moya, en Petite-Terre",
+    "island": "mayotte"
+  },
+  "moya_tortue": {
+    "file": "Plage_de_Moya,_bébé_tortue.jpg",
+    "caption": "Bébé tortue sur la plage de Moya, en Petite-Terre",
+    "island": "mayotte"
+  },
+  "mtsamboro_ilot": {
+    "file": "Mtsamboro_islet_(Mayotte).JPG",
+    "caption": "L'îlot de Mtsamboro, au nord-ouest de Mayotte",
+    "island": "mayotte"
+  },
+  "chissioua_mtsamboro": {
+    "file": "Chissioua_Mtsamboro_–_Mayotte_2.jpg",
+    "caption": "Chissioua Mtsamboro, l'îlot des pêcheurs",
+    "island": "mayotte"
+  },
+  "conseil_departemental": {
+    "file": "Le_conseil_départemental_(Mamoudzou,_Mayotte)_(34746660561).jpg",
+    "caption": "Le conseil départemental de Mayotte, à Mamoudzou",
+    "island": "mayotte"
+  },
+  "mairie_mamoudzou": {
+    "file": "Mamoudzou_City_Hall_(10030018363).jpg",
+    "caption": "La mairie de Mamoudzou",
+    "island": "mayotte"
+  },
+  "grande_terre": {
+    "file": "Mayotte,_Grande_Terre_(2850834274).jpg",
+    "caption": "Paysage de Grande-Terre, à Mayotte",
+    "island": "mayotte"
+  },
+  "padza": {
+    "file": "Padza_érodé.jpg",
+    "caption": "Un padza, terre rouge érodée du sud de Mayotte",
+    "island": "mayotte"
+  },
+  "saziley": {
+    "file": "Plages_de_Saziley.jpg",
+    "caption": "Les plages sauvages de Saziley, à Mayotte",
+    "island": "mayotte"
   }
 }

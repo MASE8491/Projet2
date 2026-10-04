@@ -109,7 +109,7 @@ export function tree(app) {
       h("a", { class: "tree-btn tree-edit", href: `#/edit/${id}` }, "✏️ Modifier"),
       canMove ? btn("↑", "Monter", run(() => A.move(app, id, -1))) : null,
       canMove ? btn("↓", "Descendre", run(() => A.move(app, id, +1))) : null,
-      relocate ? btn("⇄ Déplacer", p.type === "place" ? "Rattacher à une autre île" : "Déplacer dans une autre rubrique", run(() => A.relocate(app, id))) : null,
+      relocate ? btn("⇄ Déplacer", p.type === "topicpage" ? "Déplacer dans une autre rubrique" : "Rattacher à une autre île", run(() => A.relocate(app, id))) : null,
       btn(M.isPublished(e) ? "🙈 Masquer" : "👁️ Remettre en ligne", M.isPublished(e) ? "Masquer la page" : "Remettre la page en ligne", run(() => A.togglePublished(app, id))),
       btn("🔗 Adresse", "Changer l'adresse de la page", async () => { const r = await A.changeSlug(app, id); if (r) app.render(); }),
       btn("🗑️", "Supprimer", run(() => A.remove(app, id)), "tree-danger"),
@@ -143,12 +143,28 @@ export function tree(app) {
     if (nid) app.go(`#/edit/${nid}`);
   } }, `➕ ${label}`);
 
+  // Groupe sans page propre (spots, institutions d'une île) : chemin affiché et bouton d'ajout
+  const subGroup = (label, emoji, path, editId, children, addBtn) => h("li", { class: "tree-node tree-group" },
+    h("div", { class: "tree-row" },
+      h("span", { class: "tree-title" }, `${emoji} `, h("a", { href: `#/edit/${editId}` }, label)),
+      h("code", { class: "tree-path" }, path),
+      h("div", { class: "tree-actions" }, h("a", { class: "tree-btn tree-edit", href: `#/edit/${editId}` }, "✏️ Textes de la page"), addBtn)),
+    children.length ? h("ul", { class: "tree-children" }, children) : null);
+  const scopeBadge = (x) => (x.scope && x.scope !== "ile" ? h("span", { class: "badge" }, x.scope === "union" ? "Union" : "Archipel") : null);
   const islandNodes = data.islands.map((island) => {
     const placeSlugs = [...(island.places || []), ...data.places.filter((p) => p.island === island.slug && !(island.places || []).includes(p.slug)).map((p) => p.slug)];
+    const spots = data.spots.filter((x) => x.island === island.slug);
+    const insts = data.institutions.filter((x) => x.island === island.slug);
     return node(`island:${island.slug}`, {
       emoji: "🏝️",
       opts: { add: { label: "Lieu", type: "place", parent: island.slug } },
-      children: placeSlugs.filter((s) => data.places.some((p) => p.slug === s)).map((s) => node(`place:${s}`, { emoji: "📍", opts: { relocate: true } })),
+      children: [
+        ...placeSlugs.filter((s) => data.places.some((p) => p.slug === s)).map((s) => node(`place:${s}`, { emoji: "📍", opts: { relocate: true } })),
+        subGroup(`Spots & bons plans (${spots.length})`, "⭐", `iles/${island.slug}/bons-plans.html`, `island:${island.slug}`,
+          spots.map((x) => node(`spot:${x.slug}`, { emoji: "⭐", opts: { relocate: true } })), addButton("Spot", "spot", island.slug)),
+        subGroup(`Vie publique & institutions (${insts.length})`, "🏛️", `iles/${island.slug}/vie-publique.html`, `island:${island.slug}`,
+          insts.map((x) => node(`institution:${x.slug}`, { emoji: "🏛️", extra: scopeBadge(x), opts: { relocate: true } })), addButton("Institution", "institution", island.slug)),
+      ],
     });
   });
   const topicNodes = data.topics.map((t) => node(`topic:${t.slug}`, {
@@ -161,7 +177,7 @@ export function tree(app) {
 
   root.append(h("ul", { class: "tree" },
     docLink("doc:home", "🏠"),
-    group("Les îles", "🗺️", "fixed:iles", islandNodes, addButton("Île", "island")),
+    group("Les îles", "🗺️", "fixed:iles", [...islandNodes, docLink("fixed:bonsplans", "⭐"), docLink("fixed:viepublique", "🏛️")], addButton("Île", "island")),
     group("Rubriques de découverte", "📚", null, [
       ...topicNodes,
       group("Sources & bibliographie", "📖", "fixed:bibliographie", [docLink("list:bibliography", "📖"), docLink("list:timeline", "🕰️")]),
@@ -243,7 +259,13 @@ export function editor(app, id) {
     } else if (p.type === "media") {
       sections.push({ heading: "Pages où cette image apparaît :", items: M.appearsOn(data, id).map((x) => ({ text: x.title, sub: x.path })) });
     } else {
-      const pages = path ? M.appearsOn(data, id) : [];
+      let pages = path ? M.appearsOn(data, id) : [];
+      // Une institution ou un spot peut changer de portée : on ajoute les pages touchées après la modification
+      if (p.type === "institution" || p.type === "spot") {
+        const after = JSON.parse(JSON.stringify(data));
+        M.setEntity(after, id, value);
+        M.appearsOn(after, id).forEach((x) => { if (!pages.some((y) => y.path === x.path)) pages = [...pages, x]; });
+      }
       sections.push({ heading: "Pages mises à jour :", items: pages.map((x) => ({ text: x.title, sub: `${x.path} — ${x.why}` })), empty: path ? "Uniquement cette page" : "—" });
       if (isType && changes.some((c) => c.startsWith("Titre") || c.startsWith("Nom"))) {
         const menu = M.menuMentions(data, id);
@@ -280,7 +302,7 @@ export function editor(app, id) {
         h("button", { type: "button", class: "btn btn-secondary btn-small", onclick: async () => { if (await app.guardLeave() && await A.togglePublished(app, id)) app.render(); } },
           M.isPublished(entity) ? "🙈 Masquer la page" : "👁️ Remettre en ligne"),
         h("button", { type: "button", class: "btn btn-secondary btn-small", onclick: async () => { if (!(await app.guardLeave())) return; const r = await A.changeSlug(app, id); if (r) app.go(`#/edit/${r}`); } }, "🔗 Changer l'adresse"),
-        (p.type === "place" || p.type === "topicpage") ? h("button", { type: "button", class: "btn btn-secondary btn-small", onclick: async () => { if (!(await app.guardLeave())) return; const r = await A.relocate(app, id); if (r) app.go(`#/edit/${r}`); } }, "⇄ Déplacer") : null,
+        ["place", "topicpage", "spot", "institution"].includes(p.type) ? h("button", { type: "button", class: "btn btn-secondary btn-small", onclick: async () => { if (!(await app.guardLeave())) return; const r = await A.relocate(app, id); if (r) app.go(`#/edit/${r}`); } }, "⇄ Déplacer") : null,
         h("button", { type: "button", class: "btn btn-danger btn-small", onclick: async () => { if (!(await app.guardLeave())) return; if (await A.remove(app, id)) app.go("#/arborescence"); } }, "🗑️ Supprimer"))),
     h("div", { class: "panel" },
       h("h2", {}, "Où apparaît cette page ?"),
@@ -363,7 +385,7 @@ export function mediaEditor(app, key) {
     store.apply(`Image « ${m.caption} » remplacée par « ${data.media[other].caption} »`, (d) => {
       const rec = (v, k2) => {
         if (Array.isArray(v)) return v.map((x) => (x === key && (k2 === "gallery" || k2 === "items") ? other : rec(x, k2)));
-        if (v && typeof v === "object") { for (const kk of Object.keys(v)) v[kk] = (["hero", "card", "media", "poster"].includes(kk) && v[kk] === key) ? other : rec(v[kk], kk); return v; }
+        if (v && typeof v === "object") { for (const kk of Object.keys(v)) v[kk] = (["hero", "card", "media", "poster", "spots_hero", "public_hero"].includes(kk) && v[kk] === key) ? other : rec(v[kk], kk); return v; }
         return v;
       };
       for (const f of Object.keys(d)) if (f !== "media") d[f] = rec(d[f], null);
@@ -411,9 +433,11 @@ export function publishView(app) {
   message.value = store.log.length ? `Administration : ${store.log.slice(-3).map((l) => l.text).join(" ; ")}`.slice(0, 300) : "Administration : mise à jour du contenu";
   const publish = async () => {
     const affected = new Map();
-    pending.forEach(({ id, status }) => {
-      const data = status === "supprimé" ? store.base : store.data;
-      try { M.appearsOn(data, id).forEach((x) => affected.set(x.path, x.title)); } catch { /* document sans page */ }
+    pending.forEach(({ id }) => {
+      // Pages concernées avant ET après la modification (déplacement, changement de portée, suppression…)
+      [store.base, store.data].forEach((data) => {
+        try { if (M.getEntity(data, id)) M.appearsOn(data, id).forEach((x) => affected.set(x.path, x.title)); } catch { /* document sans page */ }
+      });
       if (id === "doc:navigation" || id === "doc:settings") affected.set("*", "Toutes les pages du site");
     });
     const ok = await confirmImpact({
@@ -541,7 +565,7 @@ export function helpView(app) {
     item("Comment ajouter une page ?",
       h("p", {}, "Cliquez sur « ➕ Ajouter une page », choisissez son type et son emplacement. Elle est créée masquée : complétez-la, vérifiez l'aperçu, puis cliquez sur « Remettre en ligne » et publiez.")),
     item("Comment réorganiser le site (arborescence) ?",
-      h("p", {}, "Dans « Arborescence » : ↑ et ↓ changent l'ordre, « ⇄ Déplacer » rattache un lieu à une autre île ou un article à une autre rubrique, « 🔗 Adresse » change l'adresse de la page. Les liens internes sont mis à jour automatiquement."),
+      h("p", {}, "Dans « Arborescence » : ↑ et ↓ changent l'ordre, « ⇄ Déplacer » rattache un lieu, un spot ou une institution à une autre île, ou un article à une autre rubrique, « 🔗 Adresse » change l'adresse de la page. Les liens internes sont mis à jour automatiquement."),
       h("p", {}, "Le menu principal et le pied de page se modifient dans « Menu et pied de page »."))
     ,
     item("Comment ajouter un conte dans « Hale halele » ?",
@@ -549,6 +573,15 @@ export function helpView(app) {
       h("p", {}, "L'encadré « Ce que l'on en sait » sert à distinguer la légende de l'histoire : variantes, origine du récit, avis des historiens. Cochez « Mettre en avant » pour l'afficher sur la page d'accueil (4 récits au maximum).")),
     item("Comment créer ou modifier un quiz ?",
       h("p", {}, "Dans « Arborescence » → « Loisirs », modifiez un quiz ou cliquez sur « ➕ Quiz ». Pour chaque question : la question, les réponses proposées, le numéro de la bonne réponse (1 = la première), une explication et, si vous voulez, une page du site « pour en savoir plus ». La vérification avant publication bloque une bonne réponse qui n'existe pas.")),
+    item("Comment ajouter un spot ou un bon plan ?",
+      h("p", {}, "Dans « Arborescence » → « Les îles », dépliez l'île puis cliquez sur « ➕ Spot » dans le groupe « ⭐ Spots & bons plans ». Choisissez la catégorie (marché, artisanat, saveurs, plage, nature, patrimoine, culture) et la notoriété : « Incontournable » pour un lieu connu, « Secret local » pour un lieu méconnu. Ajoutez un bon plan pratique et, si possible, une image ou un lieu associé."),
+      h("p", {}, "Le texte de présentation et les « bons plans pratiques » de la page de l'île se modifient dans la fiche de l'île (« ✏️ Textes de la page »). Les spots apparaissent aussi sur la page des quatre îles, avec des filtres par île, catégorie et notoriété.")),
+    item("Comment présenter une institution ou une autorité coutumière ?",
+      h("p", {}, "Même principe, dans le groupe « 🏛️ Vie publique & institutions » de l'île : « ➕ Institution ». Choisissez le domaine (pouvoirs publics, justice, religion, coutume, environnement, culture, sport, associations) et le statut : institution officielle, autorité coutumière ou religieuse (non officielle) ou association."),
+      h("p", {}, "La portée « Union des Comores » affiche la fiche sur les pages des trois îles de l'Union (cochez « fait partie de l'Union » dans la fiche de ces îles) ; « Tout l'archipel » l'affiche pour les quatre îles. Restez factuel et citez vos sources dans le champ « Sources »."),
+      h("p", {}, "Les noms de responsables changent souvent : décrivez plutôt les fonctions que les personnes en poste.")),
+    item("Le menu tiroir du site, comment est-il construit ?",
+      h("p", {}, "Le bouton « Menu », en haut à gauche de chaque page, ouvre un tiroir qui donne accès à toutes les pages, rangées comme le menu principal (« Menu et pied de page ») et complétées automatiquement : îles et leurs pages, lieux, articles, contes par genre, quiz, expériences, itinéraires… Il contient aussi une recherche. Rien à faire de votre côté : il se met à jour à chaque publication.")),
     item("Comment citer une source (bibliographie) ?",
       h("p", {}, "Ajoutez d'abord l'ouvrage dans « Bibliographie » (menu de gauche) avec un identifiant court, par exemple walker-2019, et indiquez s'il s'agit d'une voix de l'archipel ou d'un regard extérieur. Ensuite, dans un article d'histoire ou un conte, choisissez-le dans le champ « Références »."),
       h("p", {}, "Ne changez pas l'identifiant d'un ouvrage déjà cité : la publication serait bloquée tant que les pages citeraient l'ancien identifiant.")),

@@ -658,5 +658,82 @@
     "category": "tradition",
     "note": "Hypothèse d'un médecin comorien sur la lèpre et les récits de djinns ; évoque les lieux d'isolement des malades, dont l'îlot des wenefu à Mohéli.",
     "url": "https://masiwa-comores.com/culture/mythes-et-realites-aux-comores-et-si-nos-ancetres-les-djinns-etaient-des-lepreux/"
+  },
+  {
+    "id": "constitution-2018",
+    "author": "Union des Comores",
+    "title": "Constitution de l'Union des Comores, révisée par le référendum du 30 juillet 2018",
+    "year": "2018",
+    "publisher": "",
+    "kind": "comorien",
+    "category": "documents",
+    "note": "Texte de référence sur les institutions de l'Union : président, Assemblée, Cour suprême, îles.",
+    "url": "https://www.constituteproject.org/constitution/Comoros_2018"
+  },
+  {
+    "id": "loi-refondation-mayotte-2025",
+    "author": "République française",
+    "title": "Loi n° 2025-797 du 11 août 2025 de programmation pour la refondation de Mayotte",
+    "year": "2025",
+    "publisher": "",
+    "kind": "exterieur",
+    "category": "documents",
+    "note": "Programme de reconstruction après le cyclone Chido et réforme institutionnelle (Département-Région).",
+    "url": ""
+  },
+  {
+    "id": "blanchy-hirimu",
+    "author": "Sophie Blanchy",
+    "title": "Seul ou tous ensemble ? Dynamique des classes d'âge dans les cités de l'île de Ngazidja (Comores)",
+    "year": "2003",
+    "publisher": "L'Homme, n° 167-168, p. 153 – 186",
+    "kind": "exterieur",
+    "category": "anthropologie",
+    "note": "Le système des classes d'âge (hirimu) et son évolution vers la compétition individuelle.",
+    "url": "https://journals.openedition.org/lhomme/21511"
+  },
+  {
+    "id": "walker-autrepart-2002",
+    "author": "Iain Walker",
+    "title": "Les aspects économiques du grand mariage de Ngazidja (Comores)",
+    "year": "2002",
+    "publisher": "Autrepart, n° 23, p. 157 – 171",
+    "kind": "exterieur",
+    "category": "anthropologie",
+    "note": "Ce que coûte et ce que rapporte le grand mariage, et son rôle dans la hiérarchie des cités.",
+    "url": "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/pleins_textes_7/autrepart1/010030248.pdf"
+  },
+  {
+    "id": "ben-ali-mgomri",
+    "author": "Damir Ben Ali et Hassane Mgomri",
+    "title": "Le grand mariage et ses implications",
+    "year": "2013",
+    "publisher": "",
+    "kind": "comorien",
+    "category": "anthropologie",
+    "note": "Analyse comorienne du grand mariage (anda) et du statut d'homme accompli.",
+    "url": "http://www.damirbenali.com/wp-content/doc/G.M..10.07.13.pdf"
+  },
+  {
+    "id": "forim-diaspora",
+    "author": "CAGF et FORIM",
+    "title": "Étude sur la diaspora comorienne en France",
+    "year": "",
+    "publisher": "",
+    "kind": "exterieur",
+    "category": "documents",
+    "note": "Associations villageoises, transferts et projets de développement portés par la diaspora.",
+    "url": "https://forim.net/wp-content/uploads/Etude-sur-la-diaspora-des-Comores-en-France-par-CAGF-FORIM-1.pdf"
+  },
+  {
+    "id": "unesco-mwali",
+    "author": "UNESCO",
+    "title": "Réserve de biosphère de Mwali (programme MAB)",
+    "year": "2020",
+    "publisher": "",
+    "kind": "exterieur",
+    "category": "documents",
+    "note": "Fiche de la réserve de biosphère couvrant l'île de Mohéli.",
+    "url": "https://www.unesco.org/en/mab/mwali"
   }
 ]

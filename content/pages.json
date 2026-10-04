@@ -139,5 +139,21 @@
     "lead": "Chroniques de l'archipel, traditions orales, récits de voyageurs, travaux d'historiens, d'archéologues et de généticiens, recueils de contes : les références utilisées sur ce site.",
     "description": "Bibliographie sur l'histoire, les traditions et les contes des Comores et de Mayotte : sources comoriennes et regards extérieurs.",
     "intro": "<p>Pour écrire l'histoire de l'archipel, il faut croiser des sources de nature très\ndifférente. Nous distinguons ici les <strong>voix de l'archipel</strong> (chroniques et manuscrits des\nîles, traditions orales recueillies, travaux de chercheurs et d'écrivains comoriens) et les\n<strong>regards extérieurs</strong> (voyageurs, administrateurs, historiens, archéologues et scientifiques\nétrangers). Les uns et les autres sont indispensables, et aucun n'est neutre : chaque référence est\naccompagnée d'une courte note qui en précise la portée.</p>\n<p>Lire aussi : [[histoire/sources-et-methodes.html|Écrire l'histoire des Comores]].</p>"
+  },
+  "bonsplans": {
+    "title": "Spots & bons plans",
+    "kicker": "Les quatre îles",
+    "hero": "mitsamiouli_plage",
+    "lead": "Marchés, artisans, plages secrètes et grands classiques : nos adresses et nos conseils pour vivre les îles comme leurs habitants.",
+    "description": "Spots et bons plans aux Comores et à Mayotte : marchés, artisanat, plages, randonnées, lieux connus et méconnus de la Grande Comore, d'Anjouan, de Mohéli et de Mayotte.",
+    "intro": "<p>Chaque fiche indique s'il s'agit d'un <strong>incontournable</strong> ou d'un <strong>secret local</strong>, et donne un bon plan pratique. Les commerces ouvrent et ferment vite : nous privilégions les lieux durables — marchés, ateliers, sites et villages — plutôt que les enseignes. Vérifiez toujours horaires et conditions sur place.</p>"
+  },
+  "viepublique": {
+    "title": "Vie publique & institutions",
+    "kicker": "Les quatre îles",
+    "hero": "fete_independance",
+    "lead": "Qui décide de quoi dans l'archipel ? Institutions de l'Union des Comores et de Mayotte, autorités religieuses et coutumières, sport et associations : ceux que l'on écoute vraiment.",
+    "description": "Institutions politiques, justice, autorités religieuses et coutumières, sport et associations de la Grande Comore, d'Anjouan, de Mohéli et de Mayotte.",
+    "intro": "<p>L'archipel vit sous deux cadres : l'<strong>Union des Comores</strong> (Grande Comore, Anjouan, Mohéli), État indépendant depuis 1975, et <strong>Mayotte</strong>, département français depuis 2011, un statut que l'Union conteste. À côté des institutions officielles, des autorités sans statut légal — notables du grand mariage, cadis, fundi, confréries, associations villageoises — comptent souvent autant dans la vie quotidienne. Lire aussi : [[histoire/question-de-mayotte.html|Mayotte : regards croisés]].</p>"
   }
 }

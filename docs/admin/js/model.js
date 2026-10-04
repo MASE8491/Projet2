@@ -19,6 +19,26 @@ export const BIBLIO_CATEGORIES = {
   contes: "Recueils de contes", documents: "Textes officiels et rapports",
 };
 
+export const SPOT_CATEGORIES = {
+  marche: "Marchés & commerces", artisanat: "Artisanat & savoir-faire", saveurs: "Saveurs & tables",
+  plage: "Plages & îlots", nature: "Nature & randonnée", patrimoine: "Patrimoine & histoire", culture: "Culture & sorties",
+};
+export const SPOT_FAME = { incontournable: "Incontournable (lieu connu)", meconnu: "Secret local (lieu méconnu)" };
+export const INSTITUTION_CATEGORIES = {
+  politique: "Pouvoirs publics", justice: "Justice", religion: "Autorités religieuses", coutume: "Coutume & notabilité",
+  environnement: "Environnement", culture: "Savoir, culture & médias", sport: "Sport", societe: "Associations & société civile",
+};
+export const INSTITUTION_STATUS = {
+  officiel: "Institution officielle", coutume: "Autorité coutumière ou religieuse (non officielle)", associatif: "Association",
+};
+export const INSTITUTION_SCOPES = {
+  ile: "Propre à l'île (page « Vie publique » de l'île)",
+  union: "Union des Comores (affichée pour Grande Comore, Anjouan et Mohéli)",
+  archipel: "Tout l'archipel (affichée pour les quatre îles)",
+};
+/** Pages d'une île générées automatiquement à partir de ses spots et de ses institutions. */
+export const islandSubPaths = (slug) => [`iles/${slug}/bons-plans.html`, `iles/${slug}/vie-publique.html`];
+
 const iconField = { key: "icon", label: "Icône", type: "icon" };
 const refsField = { key: "refs", label: "Références bibliographiques", type: "reflist", ref: "source",
   help: "Ouvrages cités en bas de la page. Pour en ajouter un nouveau, complétez d'abord la liste « Bibliographie »." };
@@ -73,6 +93,17 @@ export const TYPES = {
       galleryField,
       { key: "tips", label: "Conseils pour le voyageur", type: "stringlist", addLabel: "Ajouter un conseil" },
       { key: "map", label: "Centre de la carte", type: "coords", zoom: true },
+      { key: "union_member", label: "Cette île fait partie de l'Union des Comores", type: "checkbox",
+        help: "Sa page « Vie publique » affiche alors aussi les institutions communes à l'Union." },
+      { key: "spots_hero", label: "Page « Spots & bons plans » : image du bandeau", type: "media", optional: true,
+        help: "Les spots eux-mêmes se gèrent dans l'arborescence, sous l'île (⭐ Spots & bons plans)." },
+      { key: "spots_lead", label: "Page « Spots & bons plans » : chapeau", type: "textarea" },
+      { key: "spots_intro", label: "Page « Spots & bons plans » : introduction", type: "richtext" },
+      { key: "spots_tips", label: "Page « Spots & bons plans » : bons plans pratiques", type: "stringlist", addLabel: "Ajouter un bon plan" },
+      { key: "public_hero", label: "Page « Vie publique » : image du bandeau", type: "media", optional: true,
+        help: "Les institutions elles-mêmes se gèrent dans l'arborescence, sous l'île (🏛️ Vie publique)." },
+      { key: "public_lead", label: "Page « Vie publique » : chapeau", type: "textarea" },
+      { key: "public_intro", label: "Page « Vie publique » : introduction", type: "richtext" },
     ],
   },
   place: {
@@ -190,6 +221,44 @@ TYPES.quiz = {
   ],
 };
 
+TYPES.spot = {
+  label: "Spot ou bon plan", plural: "Spots & bons plans", file: "spots", emoji: "⭐", parentType: "island", parentKey: "island",
+  path: (e) => `iles/${e.island}/bons-plans.html#${e.slug}`,
+  fields: [
+    { key: "name", label: "Nom du spot", type: "text", required: true },
+    { key: "category", label: "Catégorie", type: "select", options: SPOT_CATEGORIES },
+    { key: "fame", label: "Notoriété", type: "select", options: SPOT_FAME,
+      help: "Les visiteurs peuvent filtrer les incontournables et les secrets locaux." },
+    { key: "where", label: "Où ? (village, quartier, côte…)", type: "text" },
+    { key: "text", label: "Description", type: "textarea", required: true,
+      help: "Quelques phrases. Pour un lien vers une page du site : [[chemin/de/la/page.html|texte du lien]]." },
+    { key: "tip", label: "Bon plan (conseil pratique)", type: "textarea" },
+    { key: "media", label: "Image (facultative)", type: "media", optional: true,
+      help: "Sans image, celle du lieu associé est utilisée." },
+    { key: "place", label: "Lieu associé (facultatif)", type: "ref", ref: "place", optional: true,
+      help: "Ajoute un lien « Voir la fiche du lieu »." },
+  ],
+};
+
+TYPES.institution = {
+  label: "Institution ou autorité", plural: "Vie publique & institutions", file: "institutions", emoji: "🏛️",
+  parentType: "island", parentKey: "island",
+  path: (e) => (e.scope && e.scope !== "ile" ? `iles/vie-publique.html#${e.slug}` : `iles/${e.island}/vie-publique.html#${e.slug}`),
+  fields: [
+    { key: "name", label: "Nom", type: "text", required: true },
+    { key: "scope", label: "Portée", type: "select", options: INSTITUTION_SCOPES,
+      help: "L'île choisie dans l'arborescence est celle du siège. Une institution de l'Union s'affiche sur les pages des trois îles de l'Union." },
+    { key: "category", label: "Domaine", type: "select", options: INSTITUTION_CATEGORIES },
+    { key: "status", label: "Statut", type: "select", options: INSTITUTION_STATUS,
+      help: "Distingue les institutions officielles des autorités coutumières ou religieuses et des associations." },
+    { key: "seat", label: "Siège ou lieu", type: "text" },
+    { key: "text", label: "Présentation", type: "textarea", required: true,
+      help: "Rôle, histoire, poids réel dans la vie des habitants. Liens : [[chemin/de/la/page.html|texte du lien]]." },
+    { key: "media", label: "Image (facultative)", type: "media", optional: true },
+    { ...refsField, label: "Sources (bibliographie)" },
+  ],
+};
+
 // ------------------------------------------------------------------ Pages fixes (content/pages.json)
 
 const fixedBase = [
@@ -203,6 +272,10 @@ const pick = (...keys) => fixedBase.filter((f) => keys.includes(f.key));
 
 export const FIXED = {
   iles: { label: "Les îles (page d'ensemble)", path: "iles/index.html", fields: fixedBase },
+  bonsplans: { label: "Spots & bons plans (page des quatre îles)", path: "iles/bons-plans.html", fields: [...fixedBase,
+    { key: "intro", label: "Introduction", type: "richtext" }] },
+  viepublique: { label: "Vie publique & institutions (page des quatre îles)", path: "iles/vie-publique.html", fields: [...fixedBase,
+    { key: "intro", label: "Introduction", type: "richtext" }] },
   voyager: { label: "Voyager (page d'ensemble)", path: "voyager/index.html", fields: fixedBase },
   experiences: { label: "Expériences (page d'ensemble)", path: "experiences/index.html", fields: fixedBase },
   itineraires: { label: "Itinéraires (page d'ensemble)", path: "itineraires/index.html", fields: fixedBase },
@@ -459,7 +532,7 @@ export function allEntityIds(data) {
     ids.push(`topic:${t.slug}`);
     t.pages.forEach((pg) => ids.push(`topicpage:${t.slug}/${pg.slug}`));
   });
-  ["experiences", "itineraries", "practical", "tales", "quizzes"].forEach((file) => {
+  ["experiences", "itineraries", "practical", "tales", "quizzes", "spots", "institutions"].forEach((file) => {
     const type = Object.keys(TYPES).find((k) => TYPES[k].file === file);
     data[file].forEach((e) => ids.push(`${type}:${e.slug}`));
   });
@@ -471,7 +544,8 @@ export function isOnline(data, id) {
   const p = parseId(id);
   const e = getEntity(data, id);
   if (!e || !isPublished(e)) return false;
-  if (p.type === "place") return isOnline(data, `island:${e.island}`);
+  if (p.type === "place" || p.type === "spot") return isOnline(data, `island:${e.island}`);
+  if (p.type === "institution" && (e.scope || "ile") === "ile") return isOnline(data, `island:${e.island}`);
   if (p.type === "topicpage") return isOnline(data, `topic:${p.topic}`);
   return true;
 }
@@ -480,7 +554,13 @@ export function isOnline(data, id) {
 export function sitePages(data) {
   const pages = [{ path: "index.html", title: "Accueil", group: "Général" }];
   pages.push({ path: "iles/index.html", title: data.pages.iles.title, group: "Les îles" });
-  data.islands.forEach((i) => pages.push({ path: `iles/${i.slug}.html`, title: i.name, group: "Les îles", hidden: !isPublished(i) }));
+  data.islands.forEach((i) => {
+    pages.push({ path: `iles/${i.slug}.html`, title: i.name, group: "Les îles", hidden: !isPublished(i) });
+    pages.push({ path: `iles/${i.slug}/bons-plans.html`, title: `${i.name} : spots & bons plans`, group: "Les îles", hidden: !isPublished(i) });
+    pages.push({ path: `iles/${i.slug}/vie-publique.html`, title: `${i.name} : vie publique & institutions`, group: "Les îles", hidden: !isPublished(i) });
+  });
+  pages.push({ path: "iles/bons-plans.html", title: data.pages.bonsplans.title + " (les quatre îles)", group: "Les îles" });
+  pages.push({ path: "iles/vie-publique.html", title: data.pages.viepublique.title + " (les quatre îles)", group: "Les îles" });
   data.places.forEach((p) => pages.push({ path: `lieux/${p.slug}.html`, title: p.name, group: "Lieux", hidden: !isOnline(data, `place:${p.slug}`) }));
   data.topics.forEach((t) => {
     pages.push({ path: `${t.slug}/index.html`, title: `${t.name} (vue d'ensemble)`, group: t.name, hidden: !isPublished(t) });
@@ -513,7 +593,7 @@ export function pageTitleByPath(data, path) {
 
 // ------------------------------------------------------------------ Parcours génériques
 
-const MEDIA_KEYS = new Set(["hero", "card", "media", "poster"]);
+const MEDIA_KEYS = new Set(["hero", "card", "media", "poster", "spots_hero", "public_hero"]);
 const MEDIA_LIST_KEYS = new Set(["gallery"]);
 
 /** Documents et éléments à parcourir pour trouver des références, avec un identifiant lisible. */
@@ -576,11 +656,14 @@ export function slugReferences(data, id) {
     data.experiences.forEach((e) => { if ((e.places || []).includes(p.slug)) out.push({ id: `experience:${e.slug}`, title: e.name, how: "lieux de l'expérience" }); });
     data.itineraries.forEach((it) => { if (it.days.some((d) => d.place === p.slug)) out.push({ id: `itinerary:${it.slug}`, title: it.name, how: "étape de l'itinéraire" }); });
     data.tales.forEach((t) => { if (t.place === p.slug) out.push({ id: `tale:${t.slug}`, title: t.name, how: "lieu associé au récit" }); });
+    data.spots.forEach((x) => { if (x.place === p.slug) out.push({ id: `spot:${x.slug}`, title: x.name, how: "lieu associé au spot" }); });
   }
   if (p.type === "island") {
     data.places.forEach((pl) => { if (pl.island === p.slug) out.push({ id: `place:${pl.slug}`, title: pl.name, how: "lieu de cette île" }); });
     data.itineraries.forEach((it) => { if ((it.islands || []).includes(p.slug)) out.push({ id: `itinerary:${it.slug}`, title: it.name, how: "île traversée" }); });
     data.tales.forEach((t) => { if (t.island === p.slug) out.push({ id: `tale:${t.slug}`, title: t.name, how: "île du récit" }); });
+    data.spots.forEach((x) => { if (x.island === p.slug) out.push({ id: `spot:${x.slug}`, title: x.name, how: "spot de cette île" }); });
+    data.institutions.forEach((x) => { if (x.island === p.slug) out.push({ id: `institution:${x.slug}`, title: x.name, how: "institution dont le siège est sur cette île" }); });
   }
   return out;
 }
@@ -599,6 +682,21 @@ export function appearsOn(data, id) {
       add("voyager/index.html", "liste des lieux par île");
       data.islands.filter((i) => i.slug !== p.slug).forEach((i) => add(`iles/${i.slug}.html`, "« Continuer vers les autres îles »"));
       data.places.filter((pl) => pl.island === p.slug).forEach((pl) => add(`lieux/${pl.slug}.html`, "fil d'Ariane du lieu"));
+      islandSubPaths(p.slug).forEach((path) => add(path, "page de l'île (onglets, fil d'Ariane)"));
+      add("iles/bons-plans.html", "page des bons plans des quatre îles"); add("iles/vie-publique.html", "page de la vie publique des quatre îles");
+      data.islands.filter((i) => i.slug !== p.slug).forEach((i) => islandSubPaths(i.slug).forEach((path) => add(path, "menu latéral « autres îles »")));
+      break;
+    case "spot":
+      add(`iles/${e.island}.html`, "aperçu « Spots & bons plans » de l'île (6 premiers)"); add("iles/bons-plans.html", "page des bons plans des quatre îles");
+      break;
+    case "institution":
+      add(`iles/${e.island}.html`, "compteurs « Vie publique » de l'île"); add("iles/vie-publique.html", "page de la vie publique des quatre îles");
+      if ((e.scope || "ile") !== "ile") {
+        data.islands.filter((i) => e.scope === "archipel" || i.union_member).forEach((i) => {
+          add(`iles/${i.slug}/vie-publique.html`, e.scope === "union" ? "bloc « Union des Comores »" : "bloc « Tout l'archipel »");
+          add(`iles/${i.slug}.html`, "compteurs « Vie publique » de l'île");
+        });
+      }
       break;
     case "place":
       add(`iles/${e.island}.html`, "« À voir » de l'île"); add("iles/index.html", "carte des îles"); add("voyager/index.html", "lieux incontournables");
@@ -748,9 +846,13 @@ export function renameSlug(data, id, newSlug) {
     data.experiences.forEach((x) => { x.places = (x.places || []).map((s) => (s === oldSlug ? newSlug : s)); });
     data.itineraries.forEach((it) => it.days.forEach((d) => { if (d.place === oldSlug) d.place = newSlug; }));
     data.tales.forEach((t) => { if (t.place === oldSlug) t.place = newSlug; });
+    data.spots.forEach((x) => { if (x.place === oldSlug) x.place = newSlug; });
   }
   if (p.type === "island") {
+    replacePaths(data, `iles/${oldSlug}/`, `iles/${newSlug}/`, { prefix: true });
     data.places.forEach((pl) => { if (pl.island === oldSlug) pl.island = newSlug; });
+    data.spots.forEach((x) => { if (x.island === oldSlug) x.island = newSlug; });
+    data.institutions.forEach((x) => { if (x.island === oldSlug) x.island = newSlug; });
     data.itineraries.forEach((it) => { it.islands = (it.islands || []).map((s) => (s === oldSlug ? newSlug : s)); });
     data.tales.forEach((t) => { if (t.island === oldSlug) t.island = newSlug; });
   }
@@ -772,6 +874,7 @@ export function deleteEntity(data, id) {
     data.experiences.forEach((x) => { x.places = (x.places || []).filter((s) => s !== p.slug); });
     data.itineraries.forEach((it) => it.days.forEach((d) => { if (d.place === p.slug) d.place = ""; }));
     data.tales.forEach((t) => { if (t.place === p.slug) t.place = ""; });
+    data.spots.forEach((x) => { if (x.place === p.slug) x.place = ""; });
   }
   if (p.type === "island") {
     data.itineraries.forEach((it) => { it.islands = (it.islands || []).filter((s) => s !== p.slug); });
@@ -796,6 +899,15 @@ export function moveInList(data, id, dir) {
     if (idx < 0 || to < 0 || to >= arr.length) return false;
     [arr[idx], arr[to]] = [arr[to], arr[idx]];
     return true;
+  } else if (p.type === "spot" || p.type === "institution") {
+    arr = data[TYPES[p.type].file];
+    const idx = arr.findIndex((e) => e.slug === p.slug);
+    const island = arr[idx] && arr[idx].island;
+    let to = idx + dir;
+    while (to >= 0 && to < arr.length && arr[to].island !== island) to += dir;
+    if (idx < 0 || to < 0 || to >= arr.length) return false;
+    [arr[idx], arr[to]] = [arr[to], arr[idx]];
+    return true;
   } else arr = data[TYPES[p.type].file];
   const idx = arr.findIndex((e) => e.slug === p.slug);
   const to = idx + dir;
@@ -812,6 +924,15 @@ export function movePlace(data, placeSlug, islandSlug) {
   if (from) from.places = (from.places || []).filter((s) => s !== placeSlug);
   to.places = [...(to.places || []), placeSlug];
   place.island = islandSlug;
+}
+
+/** Rattache un spot ou une institution à une autre île (son ancre change de page). Renvoie le nombre de liens mis à jour. */
+export function moveToIsland(data, id, islandSlug) {
+  const e = getEntity(data, id);
+  const oldPath = pathOf(data, id);
+  e.island = islandSlug;
+  const newPath = pathOf(data, id);
+  return oldPath === newPath ? 0 : replacePaths(data, oldPath, newPath);
 }
 
 /** Déplace un article vers une autre rubrique (son adresse change). Renvoie le nouvel identifiant. */
@@ -863,6 +984,12 @@ export function blankEntity(data, type, title, parentSlug) {
       return { ...base, kind: "conte", local: "", island: "", place: "", hero: firstMedia, lead: "Résumé du récit.",
         text: "<p>Il était une fois…</p>", moral: "", about: "<p>Origine du récit, variantes, ce qu'en disent les historiens.</p>",
         refs: [], featured: false };
+    case "spot":
+      return { ...base, island: parentSlug, category: "marche", fame: "incontournable", where: "",
+        text: "Décrivez le lieu en quelques phrases.", tip: "", media: "", place: "" };
+    case "institution":
+      return { ...base, island: parentSlug, scope: "ile", category: "politique", status: "officiel", seat: "",
+        text: "Présentez son rôle et son poids dans la vie des habitants.", media: "", refs: [] };
     case "quiz":
       return { ...base, icon: "question", hero: firstMedia, level: "Facile", lead: "Présentation du quiz.",
         questions: [{ q: "Première question ?", choices: ["Réponse A", "Réponse B"], answer: 0, explain: "", link: "" }] };
@@ -886,8 +1013,10 @@ export function insertEntity(data, type, entity, parentSlug) {
 export function diffFields(fields, before, after) {
   const changes = [];
   for (const f of fields) {
-    const a = JSON.stringify(before ? before[f.key] : undefined);
-    const b = JSON.stringify(after ? after[f.key] : undefined);
+    // Un champ facultatif vide peut valoir "", null ou être absent : ce n'est pas une modification
+    const empty = (v) => (v === "" || v === null || v === undefined ? undefined : v);
+    const a = JSON.stringify(empty(before ? before[f.key] : undefined));
+    const b = JSON.stringify(empty(after ? after[f.key] : undefined));
     if (a === b) continue;
     if (f.type === "list" && Array.isArray(before && before[f.key]) && Array.isArray(after[f.key])) {
       const n0 = before[f.key].length;
@@ -909,6 +1038,9 @@ export function citingPages(data) {
   }));
   data.tales.forEach((t) => {
     if ((t.refs || []).length) out.push({ id: `tale:${t.slug}`, title: t.name, path: `contes/${t.slug}.html`, refs: t.refs });
+  });
+  data.institutions.forEach((x) => {
+    if ((x.refs || []).length) out.push({ id: `institution:${x.slug}`, title: x.name, path: TYPES.institution.path(x).split("#")[0], refs: x.refs });
   });
   return out;
 }
@@ -939,6 +1071,24 @@ export function validate(data, reserved = []) {
   unique(data.islands, "Îles"); unique(data.places, "Lieux"); unique(data.topics, "Rubriques");
   unique(data.experiences, "Expériences"); unique(data.itineraries, "Itinéraires"); unique(data.practical, "Infos pratiques");
   unique(data.tales, "Contes et récits"); unique(data.quizzes, "Quiz");
+  unique(data.spots, "Spots & bons plans"); unique(data.institutions, "Institutions");
+  data.islands.forEach((i) => {
+    if (["index", "bons-plans", "vie-publique"].includes(i.slug)) errors.push(`Île « ${i.name} » : l'adresse « ${i.slug} » est réservée par le site`);
+  });
+  data.spots.forEach((x) => {
+    if (!data.islands.some((i) => i.slug === x.island)) errors.push(`Spot « ${x.name} » : île inconnue`);
+    if (!SPOT_CATEGORIES[x.category]) errors.push(`Spot « ${x.name} » : catégorie inconnue`);
+    if (!SPOT_FAME[x.fame]) errors.push(`Spot « ${x.name} » : notoriété inconnue`);
+    if (x.place && !data.places.some((pl) => pl.slug === x.place)) warnings.push(`Spot « ${x.name} » : le lieu associé n'existe plus (le lien sera retiré)`);
+  });
+  data.institutions.forEach((x) => {
+    if ((x.scope || "ile") === "ile" && !data.islands.some((i) => i.slug === x.island)) errors.push(`Institution « ${x.name} » : île inconnue`);
+    if (x.scope && !INSTITUTION_SCOPES[x.scope]) errors.push(`Institution « ${x.name} » : portée inconnue`);
+    if (!INSTITUTION_CATEGORIES[x.category]) errors.push(`Institution « ${x.name} » : domaine inconnu`);
+    if (!INSTITUTION_STATUS[x.status]) errors.push(`Institution « ${x.name} » : statut inconnu`);
+  });
+  if (data.institutions.some((x) => x.scope === "union") && !data.islands.some((i) => i.union_member))
+    warnings.push("Des institutions sont rattachées à l'Union des Comores, mais aucune île n'est cochée « fait partie de l'Union » : elles n'apparaîtront que sur la page des quatre îles.");
   data.topics.forEach((t) => {
     unique(t.pages, `Rubrique « ${t.name} »`);
     if (reserved.includes(t.slug)) errors.push(`Rubrique « ${t.name} » : l'adresse « ${t.slug} » est réservée par le site`);

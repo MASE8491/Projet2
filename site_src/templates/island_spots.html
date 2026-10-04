@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+{{ ui.hero(island.spots_hero, pg.bonsplans.title ~ " : " ~ island.name, lead=island.spots_lead or island.lead,
+   kicker=island.local ~ " · " ~ spot_count ~ " adresses",
+   crumbs=[("Les îles", "iles/index.html"), (island.name, "iles/" ~ island.slug ~ ".html"), (pg.bonsplans.title, None)]) }}
+{{ ui.island_tabs(island, "spots") }}
+
+<section class="section">
+  <div class="container with-aside">
+    <div>
+      {% if island.spots_intro %}<div class="prose">{{ island.spots_intro | links | safe }}</div>{% endif %}
+      {% if groups %}
+      <div class="filter-bar">
+        {{ ui.chips("data-fame", spot_fame.items(), "Filtrer par notoriété", ".spot-card", all_label="Tous les spots") }}
+        {{ ui.chips("data-category", groups | map(attribute="key") | map("spot_choice") | list, "Filtrer par catégorie", ".spot-card", all_label="Toutes les catégories") }}
+      </div>
+      {% for g in groups %}
+      <section class="spot-group" id="{{ g.key }}" data-filter-group>
+        <h2>{{ ui.icon(g.icon) }} {{ g.label }}</h2>
+        <div class="spot-grid">
+          {% for s in g.entries %}{{ ui.spot_card(s) }}{% endfor %}
+        </div>
+      </section>
+      {% endfor %}
+      <p class="note" data-filter-empty hidden>Aucun spot ne correspond à ces filtres.</p>
+      {% else %}
+      <p class="note">Les bons plans de {{ island.name }} arrivent bientôt.</p>
+      {% endif %}
+    </div>
+    <div class="aside-stack">
+      {% if island.spots_tips %}
+      <aside class="tips">
+        <h2>{{ ui.icon('tag') }} Bons plans pratiques</h2>
+        <ul>{% for t in island.spots_tips %}<li>{{ t | textlinks }}</li>{% endfor %}</ul>
+        <a class="link-arrow" href="{{ url('preparer-son-voyage/index.html') }}">Préparer son voyage</a>
+      </aside>
+      {% endif %}
+      <nav class="side-nav" aria-label="Spots des autres îles">
+        <h2>{{ pg.bonsplans.title }}</h2>
+        <ul>
+          {% for other in islands %}
+          <li{% if other.slug == island.slug %} class="is-active"{% endif %}><a href="{{ url('iles/' ~ other.slug ~ '/bons-plans.html') }}">{{ other.name }}</a></li>
+          {% endfor %}
+          <li><a href="{{ url('iles/bons-plans.html') }}">{{ ui.icon('globe') }} Les quatre îles</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</section>
+{% endblock %}

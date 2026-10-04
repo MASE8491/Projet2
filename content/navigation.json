@@ -9,6 +9,16 @@
           "label": "Comparer les îles",
           "note": "",
           "link": "iles/index.html"
+        },
+        {
+          "label": "Spots & bons plans",
+          "note": "Les 4 îles",
+          "link": "iles/bons-plans.html"
+        },
+        {
+          "label": "Vie publique & institutions",
+          "note": "Les 4 îles",
+          "link": "iles/vie-publique.html"
         }
       ]
     },
@@ -80,6 +90,11 @@
           "link": "voyager/index.html"
         },
         {
+          "label": "Spots & bons plans",
+          "note": "",
+          "link": "iles/bons-plans.html"
+        },
+        {
           "label": "Expériences",
           "note": "",
           "link": "experiences/index.html"
@@ -129,6 +144,14 @@
         {
           "label": "Comparer les îles",
           "link": "iles/index.html"
+        },
+        {
+          "label": "Spots & bons plans",
+          "link": "iles/bons-plans.html"
+        },
+        {
+          "label": "Vie publique & institutions",
+          "link": "iles/vie-publique.html"
         }
       ]
     },

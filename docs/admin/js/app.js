@@ -153,6 +153,8 @@ class App {
           link("#/edit/topic:histoire", "📜 Histoire"),
           link("#/edit/fixed:contes", "🌙 Hale halele (contes)"),
           link("#/edit/fixed:loisirs", "🎲 Loisirs & quiz"),
+          link("#/edit/fixed:bonsplans", "⭐ Spots & bons plans"),
+          link("#/edit/fixed:viepublique", "🏛️ Vie publique"),
           h("p", { class: "nav-group" }, "Listes"),
           link("#/edit/list:timeline", "🕰️ Frise chronologique"),
           link("#/edit/list:events", "📅 Agenda"),
@@ -297,6 +299,17 @@ class App {
       if (value.moral) body += `<p class="tale-moral">${esc(value.moral)}</p>`;
       if (value.about) body += `<section class="tale-about"><h2>Ce que l'on en sait</h2>${html(value.about)}</section>`;
     }
+    if (p.type === "spot" || p.type === "institution") {
+      const meta = p.type === "spot" ? `${M.SPOT_FAME[value.fame] || ""} · ${M.SPOT_CATEGORIES[value.category] || ""}`
+        : `${M.INSTITUTION_STATUS[value.status] || ""} · ${M.INSTITUTION_CATEGORIES[value.category] || ""}`;
+      const place = value.place && this.store.data.places.find((pl) => pl.slug === value.place);
+      const key = value.media || (place && place.hero);
+      body += `<article class="${p.type === "spot" ? "spot-card" : "inst-card"}" style="max-width:420px">
+        ${key ? `<div class="spot-media">${img(key)}</div>` : ""}
+        <div class="spot-body"><p class="spot-meta">${esc(meta)}</p><h3>${esc(value.name)}</h3>
+        <p class="spot-where">${esc(value.where || value.seat || "")}</p><p>${esc(value.text)}</p>
+        ${value.tip ? `<p class="spot-tip"><strong>Bon plan :</strong> ${esc(value.tip)}</p>` : ""}</div></article>`;
+    }
     if (p.type === "quiz") {
       body += `<ol class="quiz">${(value.questions || []).map((q) => `<li class="quiz-item"><fieldset><legend>${esc(q.q)}</legend>
         <div class="quiz-choices">${(q.choices || []).map((c, i) => `<label class="quiz-choice${i === q.answer ? " is-correct" : ""}">${esc(c)}</label>`).join("")}</div>
@@ -322,6 +335,8 @@ class App {
     const type = h("select", { class: "input" },
       h("option", { value: "topicpage" }, "Article dans une rubrique (géographie, histoire, culture…)"),
       h("option", { value: "place" }, "Lieu à visiter, rattaché à une île"),
+      h("option", { value: "spot" }, "Spot ou bon plan (marché, plage, artisan…), rattaché à une île"),
+      h("option", { value: "institution" }, "Institution ou autorité (vie publique), rattachée à une île"),
       h("option", { value: "experience" }, "Expérience"),
       h("option", { value: "itinerary" }, "Itinéraire"),
       h("option", { value: "practical" }, "Info pratique"),
@@ -333,9 +348,10 @@ class App {
     const parentIsland = h("select", { class: "input" }, data.islands.map((i) => h("option", { value: i.slug }, i.name)));
     const topicRow = h("label", { class: "field-label" }, "Dans la rubrique", parentTopic);
     const islandRow = h("label", { class: "field-label", hidden: true }, "Sur l'île", parentIsland);
-    type.addEventListener("change", () => { topicRow.hidden = type.value !== "topicpage"; islandRow.hidden = type.value !== "place"; });
+    const needsIsland = () => ["place", "spot", "institution"].includes(type.value);
+    type.addEventListener("change", () => { topicRow.hidden = type.value !== "topicpage"; islandRow.hidden = !needsIsland(); });
     const choice = await openModal({ title: "Ajouter une page", body: h("div", {}, h("label", { class: "field-label" }, "Type de page", type), topicRow, islandRow),
-      actions: [{ label: "Annuler", value: null }, { label: "Continuer", kind: "btn-primary", value: () => ({ type: type.value, parent: type.value === "topicpage" ? parentTopic.value : type.value === "place" ? parentIsland.value : null }) }] });
+      actions: [{ label: "Annuler", value: null }, { label: "Continuer", kind: "btn-primary", value: () => ({ type: type.value, parent: type.value === "topicpage" ? parentTopic.value : needsIsland() ? parentIsland.value : null }) }] });
     if (!choice) return;
     const id = await A.create(this, choice.type, choice.parent);
     if (id) this.go(`#/edit/${id}`);

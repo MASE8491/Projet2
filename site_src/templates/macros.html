@@ -158,7 +158,72 @@
 {%- elif name == "book" %}<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M8 7h7"/>
 {%- elif name == "compass" %}<circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/>
 {%- elif name == "question" %}<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14"/><circle cx="12" cy="17" r=".6" fill="currentColor"/>
+{%- elif name == "basket" %}<path d="M3 10h18l-2 10H5z"/><path d="m8 10 4-6 4 6M9 14v3M12 14v3M15 14v3"/>
+{%- elif name == "building" %}<path d="M3 21h18M5 21V10M19 21V10M9 21v-7M15 21v-7M12 3 3 8h18z"/>
+{%- elif name == "scale" %}<path d="M12 3v18M7 21h10M5 7h14M5 7l-3 7a3 3 0 0 0 6 0zM19 7l-3 7a3 3 0 0 0 6 0z"/>
+{%- elif name == "ball" %}<circle cx="12" cy="12" r="9"/><path d="m12 7 4 3-1.5 4.5h-5L8 10z"/><path d="M12 3v4M16 10l4.5-1.5M14.5 14.5l2.5 4M9.5 14.5 7 18.5M8 10 3.5 8.5"/>
+{%- elif name == "tag" %}<path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/>
+{%- elif name == "menu" %}<path d="M4 7h16M4 12h16M4 17h16"/>
+{%- elif name == "search" %}<circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/>
 {%- elif name == "list" %}<path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/>
 {%- else %}<circle cx="12" cy="12" r="8"/>{% endif -%}
 </svg>
+{%- endmacro %}
+
+{% macro island_tabs(island, active) -%}
+<nav class="island-tabs" aria-label="Pages de {{ island.name }}">
+  <div class="container">
+    <ul>
+      <li><a href="{{ url('iles/' ~ island.slug ~ '.html') }}"{% if active == "main" %} aria-current="page"{% endif %}>{{ icon('globe') }} Présentation</a></li>
+      <li><a href="{{ url('iles/' ~ island.slug ~ '/bons-plans.html') }}"{% if active == "spots" %} aria-current="page"{% endif %}>{{ icon('tag') }} {{ pg.bonsplans.title }}</a></li>
+      <li><a href="{{ url('iles/' ~ island.slug ~ '/vie-publique.html') }}"{% if active == "public" %} aria-current="page"{% endif %}>{{ icon('building') }} {{ pg.viepublique.title }}</a></li>
+    </ul>
+  </div>
+</nav>
+{%- endmacro %}
+
+{% macro spot_card(s, show_island=False) -%}
+{%- set key = s.media or (places[s.place].hero if s.place else "") -%}
+<article class="spot-card" id="{{ s.slug }}" data-fame="{{ s.fame }}" data-category="{{ s.category }}" data-island="{{ s.island }}">
+  {% if key %}<div class="spot-media">{{ picture(key, sizes="(min-width: 1100px) 22vw, (min-width: 700px) 45vw, 100vw") }}</div>{% endif %}
+  <div class="spot-body">
+    <p class="spot-meta"><span class="badge badge-{{ s.fame }}">{{ spot_fame[s.fame] }}</span>
+      <span class="spot-cat">{{ icon(spot_categories[s.category][1]) }} {{ spot_categories[s.category][0] }}</span></p>
+    <h3>{{ s.name }}</h3>
+    <p class="spot-where">{{ icon('pin') }} {% if show_island %}<a href="{{ url('iles/' ~ s.island ~ '/bons-plans.html') }}">{{ s.island | island_name }}</a>{% if s.where %} · {% endif %}{% endif %}{{ s.where }}</p>
+    <p>{{ s.text | textlinks }}</p>
+    {% if s.tip %}<p class="spot-tip"><strong>Bon plan :</strong> {{ s.tip | textlinks }}</p>{% endif %}
+    {% if s.place %}<a class="link-arrow" href="{{ url('lieux/' ~ s.place ~ '.html') }}">Voir la fiche du lieu</a>{% endif %}
+  </div>
+</article>
+{%- endmacro %}
+
+{% macro institution_card(x) -%}
+<article class="inst-card inst-{{ x.status }}" id="{{ x.slug }}" data-status="{{ x.status }}" data-category="{{ x.category }}">
+  {% if x.media %}<div class="inst-media">{{ picture(x.media, sizes="(min-width: 900px) 20vw, 100vw") }}</div>{% endif %}
+  <div class="inst-body">
+    <p class="inst-meta"><span class="badge badge-{{ x.status }}">{{ institution_status[x.status] }}</span></p>
+    <h3>{{ x.name }}</h3>
+    {% if x.seat %}<p class="spot-where">{{ icon('pin') }} {{ x.seat }}</p>{% endif %}
+    <p>{{ x.text | textlinks }}</p>
+  </div>
+</article>
+{%- endmacro %}
+
+{% macro institution_groups(groups, prefix="") -%}
+{% for g in groups %}
+<section class="inst-group" id="{{ prefix }}{{ g.key }}" data-filter-group>
+  <h3 class="inst-group-title">{{ icon(g.icon) }} {{ g.label }}</h3>
+  <div class="inst-grid">
+    {% for x in g.entries %}{{ institution_card(x) }}{% endfor %}
+  </div>
+</section>
+{% endfor %}
+{%- endmacro %}
+
+{% macro chips(attr, choices, label, target, all_label="Tout") -%}
+<div class="filters" role="toolbar" aria-label="{{ label }}" data-filters data-filter-attr="{{ attr }}" data-filter-items="{{ target }}">
+  <button class="chip is-active" type="button" data-filter="all" aria-pressed="true">{{ all_label }}</button>
+  {% for value, text in choices %}<button class="chip" type="button" data-filter="{{ value }}" aria-pressed="false">{{ text }}</button>{% endfor %}
+</div>
 {%- endmacro %}

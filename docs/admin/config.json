@@ -21,7 +21,9 @@
     "quizzes",
     "videos",
     "tales",
-    "bibliography"
+    "bibliography",
+    "spots",
+    "institutions"
   ],
   "uploads_dir": "site_src/static/uploads",
   "reserved_slugs": [

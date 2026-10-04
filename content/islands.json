@@ -64,13 +64,31 @@
       "moroni_medina",
       "ntsaoueni_rempart",
       "iconi",
-      "sultan_said_ali"
+      "sultan_said_ali",
+      "mitsamiouli_plage",
+      "bangoi_kouni_plage",
+      "volo_volo",
+      "fete_independance"
     ],
     "tips": [
       "L'aéroport international Prince Saïd Ibrahim se trouve à Hahaya, à une vingtaine de kilomètres au nord de Moroni.",
       "L'été (juillet-août) est la saison des grands mariages : ambiance festive, mais hébergements plus chers.",
       "Prévoyez de bonnes chaussures : les sentiers volcaniques sont abrasifs."
-    ]
+    ],
+    "spots_hero": "mitsamiouli_plage",
+    "spots_lead": "Marché de Volo Volo, plages de lave et de sable blanc, cités de sultans et villages méconnus : nos adresses pour vivre Ngazidja comme ses habitants.",
+    "spots_intro": "<p>La Grande Comore se découvre en voiture ou en taxi collectif, en rayonnant depuis Moroni : la côte nord et ses plages, le sud et ses cités anciennes, le Karthala au centre. Les habitants vous orienteront volontiers : n'hésitez pas à demander.</p>",
+    "spots_tips": [
+      "La monnaie est le franc comorien (KMF), à parité fixe avec l'euro (1 € = 491,96775 KMF) : prévoyez des espèces, la carte bancaire n'est acceptée que dans quelques hôtels et commerces.",
+      "Les taxis collectifs relient Moroni aux villages : demandez le prix avant de monter.",
+      "Au marché, le marchandage est d'usage, toujours avec le sourire.",
+      "Le vendredi, la vie s'arrête pendant la grande prière de midi.",
+      "En juillet et en août, saison des grands mariages, les hébergements se remplissent : réservez tôt."
+    ],
+    "union_member": true,
+    "public_hero": "fete_independance",
+    "public_lead": "Capitale de l'Union, Moroni concentre les grandes institutions. Mais dans chaque cité, le pouvoir se partage aussi sur la place publique, entre notables du grand mariage, classes d'âge et religieux.",
+    "public_intro": "<p>La Grande Comore abrite la présidence, l'Assemblée, la Cour suprême et la plupart des administrations de l'Union. Pourtant, pour comprendre qui décide vraiment dans une cité, il faut regarder aussi le <em>bangwe</em>, la place publique où siègent les notables. Lire aussi : [[culture/coutumes-et-rites.html|Coutumes et rites]].</p>"
   },
   {
     "slug": "moheli",
@@ -131,13 +149,29 @@
       "djoumbe_fatima",
       "roussette",
       "lemur_mongoz",
-      "tortue_verte"
+      "tortue_verte",
+      "moheli_plage",
+      "moheli_cascade",
+      "turtle_moheli"
     ],
     "tips": [
       "Les distributeurs automatiques sont très rares : emportez suffisamment d'espèces.",
       "L'observation des tortues se fait uniquement avec les écoguides des villages.",
       "La meilleure saison pour les baleines s'étend de juillet à octobre."
-    ]
+    ],
+    "spots_hero": "nioumachoua_ilots",
+    "spots_lead": "Îlots déserts, plages de ponte des tortues, forêts des roussettes et baleines du parc marin : Mohéli, l'île nature, et ses adresses secrètes.",
+    "spots_intro": "<p>La plus petite des îles est aussi la plus sauvage. Ici, on dort volontiers chez l'habitant ou dans les bungalows villageois, et l'argent du visiteur finance directement la protection des tortues et des récifs.</p>",
+    "spots_tips": [
+      "L'île compte peu de distributeurs et le réseau téléphonique est parfois faible : emportez des espèces.",
+      "Logez dans les bungalows villageois (Itsamia, Nioumachoua…) : c'est le meilleur moyen de soutenir l'écotourisme communautaire.",
+      "Les sorties en mer se négocient au village : demandez les guides du parc national.",
+      "Saison des baleines : de la mi-août au début d'octobre."
+    ],
+    "union_member": true,
+    "public_hero": "nioumachoua_mangrove",
+    "public_lead": "La plus petite île de l'Union a fait de la protection de la nature une affaire collective : parc national cogéré avec les villages, associations d'écotourisme et notables écoutés.",
+    "public_intro": "<p>À Mohéli, institutions officielles et organisation coutumière se croisent sans cesse : les réserves marines du parc national sont gérées avec les villages, et les « maisons » matrilinéaires structurent la vie sociale.</p>"
   },
   {
     "slug": "anjouan",
@@ -201,13 +235,27 @@
       "ylang_plantation",
       "lemur_mongoz",
       "roussette_2",
-      "carte_amiraute"
+      "carte_amiraute",
+      "anjouan_vue"
     ],
     "tips": [
       "Les routes de montagne sont étroites et sinueuses : préférez un chauffeur local.",
       "Pour visiter une distillerie d'ylang-ylang, demandez à votre hébergeur.",
       "La randonnée vers le lac Dzialandzé se fait idéalement avec un guide."
-    ]
+    ],
+    "spots_hero": "mutsamudu_vue",
+    "spots_lead": "Médinas de pierre, marchés aux épices, distilleries d'ylang-ylang, cascades et plages du sud : les bonnes adresses de l'île aux parfums.",
+    "spots_intro": "<p>Anjouan est l'île des rivières et des pentes vertigineuses. Mutsamudu, sa capitale, est le point de départ idéal ; Domoni et le sud se gagnent par une route sinueuse, et les sommets à pied, avec un guide.</p>",
+    "spots_tips": [
+      "Pour les randonnées (lac Dzialandzé, Ntingui, cascades), un guide local est indispensable : les sentiers sont peu balisés.",
+      "La saison sèche, de mai à octobre, est la meilleure pour marcher.",
+      "Achetez ylang-ylang, girofle et vanille auprès des producteurs : c'est meilleur et cela profite directement aux familles.",
+      "Les liaisons maritimes vers les autres îles partent de Mutsamudu : renseignez-vous sur la météo de mer."
+    ],
+    "union_member": true,
+    "public_hero": "mutsamudu_port",
+    "public_lead": "Île la plus densément peuplée de l'archipel, Anjouan a son gouverneur à Mutsamudu, ses confréries anciennes, ses fêtes agraires et ses clubs de football passionnés.",
+    "public_intro": "<p>Anjouan a une histoire politique mouvementée : sultanat puissant, révolte de 1940, crise séparatiste de 1997 à 2008. Aujourd'hui île de l'Union, elle garde de fortes identités locales, entre médinas lettrées et villages des hauts. Lire : [[histoire/independance-et-epoque-contemporaine.html|Les Comores depuis 1975]].</p>"
   },
   {
     "slug": "mayotte",
@@ -285,12 +333,33 @@
       "manzaraka",
       "tahiti_plage",
       "soulou",
-      "coucher_mamoudzou"
+      "coucher_mamoudzou",
+      "ilot_sable_blanc",
+      "moya_falaises",
+      "moya_tortue",
+      "mtsamboro_ilot",
+      "ecomusee_sel",
+      "padza",
+      "saziley",
+      "marche_mamoudzou"
     ],
     "tips": [
       "La monnaie est l'euro ; les cartes bancaires sont largement acceptées.",
       "La barge relie Mamoudzou à Dzaoudzi en une vingtaine de minutes.",
       "Mayotte ne fait pas partie de l'espace Schengen : vérifiez vos formalités."
-    ]
+    ],
+    "spots_hero": "ilot_sable_blanc",
+    "spots_lead": "Marché couvert de Mamoudzou, sel de Bandrélé, padzas rouges, îlots du lagon et mabawa du soir : nos coups de cœur à Mayotte, des incontournables aux secrets locaux.",
+    "spots_intro": "<p>Mayotte se vit d'abord par son lagon, l'un des plus grands du monde, mais aussi par ses villages, ses marchés et ses savoir-faire. Grande-Terre et Petite-Terre sont reliées par la barge, au départ de Mamoudzou.</p>",
+    "spots_tips": [
+      "La monnaie est l'euro. La carte bancaire est acceptée en ville, mais doukas et taxis préfèrent les espèces.",
+      "Les taxis collectifs sont le moyen de transport local ; la barge relie Grande-Terre et Petite-Terre.",
+      "Avant de partir, renseignez-vous sur la situation (sécurité, eau, transports) : l'île se reconstruit après le cyclone Chido de décembre 2024.",
+      "Pour le lagon, choisissez des prestataires qui respectent les règles du parc naturel marin."
+    ],
+    "union_member": false,
+    "public_hero": "conseil_departemental",
+    "public_lead": "Département français depuis 2011, Mayotte vit sous le droit de la République, mais cadis, associations de femmes et traditions villageoises y gardent une place centrale.",
+    "public_intro": "<p>Mayotte a choisi de rester française lors des consultations de 1974 et de 1976 ; l'Union des Comores continue de revendiquer l'île. Lire : [[histoire/question-de-mayotte.html|Mayotte : regards croisés]].</p>"
   }
 ]
