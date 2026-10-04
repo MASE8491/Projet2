@@ -12,6 +12,8 @@
       {{ s.html | links | safe }}
       {% endfor %}
 
+      {{ ui.sources(refs_of(page)) }}
+
       <nav class="pager" aria-label="Pages de la rubrique">
         {% if prev_page %}<a class="pager-prev" href="{{ url(topic.slug ~ '/' ~ prev_page.slug ~ '.html') }}"><small>Précédent</small>{{ prev_page.name }}</a>{% else %}<span></span>{% endif %}
         {% if next_page %}<a class="pager-next" href="{{ url(topic.slug ~ '/' ~ next_page.slug ~ '.html') }}"><small>Suivant</small>{{ next_page.name }}</a>{% endif %}

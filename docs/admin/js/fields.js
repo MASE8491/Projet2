@@ -82,6 +82,14 @@ const WIDGETS = {
     const sel = h("select", { class: "input" }, Object.entries(cats).map(([k, label]) => h("option", { value: k, selected: k === value }, label)));
     return { node: sel, get: () => sel.value };
   },
+  select(f, value) {
+    const entries = Object.entries(f.options || {});
+    const known = entries.some(([k]) => k === value);
+    const sel = h("select", { class: "input" },
+      !known && value ? h("option", { value, selected: true }, `${value} (valeur actuelle)`) : null,
+      entries.map(([k, label]) => h("option", { value: k, selected: k === value }, label)));
+    return { node: sel, get: () => sel.value };
+  },
   answer(f, value) {
     const input = h("input", { type: "number", class: "input input-small", min: 1, value: (value ?? 0) + 1 });
     return { node: input, get: () => Math.max(0, Number(input.value || 1) - 1) };
@@ -89,6 +97,7 @@ const WIDGETS = {
   autochildren(f, value, ctx) {
     const opts = [["", "Aucun (seulement le sous-menu manuel)"], ["iles", "Les îles"],
       ...ctx.data.topics.map((t) => [`rubrique:${t.slug}`, `Articles de la rubrique « ${t.name} »`]),
+      ["contes", "Hale halele : catégories de contes"], ["loisirs", "Loisirs : liste des quiz"],
       ["experiences", "Expériences"], ["itineraires", "Itinéraires"], ["pratique", "Infos pratiques"]];
     const sel = h("select", { class: "input" }, opts.map(([k, label]) => h("option", { value: k, selected: k === (value || "") }, label)));
     return { node: sel, get: () => sel.value };
@@ -170,7 +179,7 @@ const WIDGETS = {
   ref(f, value, ctx) {
     const items = refItems(f.ref, ctx.data);
     const sel = h("select", { class: "input" },
-      f.optional ? h("option", { value: "" }, "— Aucun —") : null,
+      f.optional ? h("option", { value: "" }, f.emptyLabel || "— Aucun —") : null,
       items.map((it) => h("option", { value: it.slug, selected: it.slug === value }, it.label)));
     return { node: sel, get: () => sel.value };
   },
@@ -311,5 +320,10 @@ function refItems(ref, data) {
     });
   }
   if (ref === "island") return data.islands.map((i) => ({ slug: i.slug, label: i.name }));
+  if (ref === "source") {
+    return (data.bibliography || []).filter((b) => b.id).map((b) => ({
+      slug: b.id, label: `${b.author} — ${b.title}${b.year ? ` (${b.year})` : ""}${b.kind === "comorien" ? " · voix de l'archipel" : ""}`,
+    }));
+  }
   return [];
 }

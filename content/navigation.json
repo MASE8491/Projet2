@@ -7,7 +7,7 @@
       "children": [
         {
           "label": "Comparer les îles",
-          "note": "Tableau et carte",
+          "note": "",
           "link": "iles/index.html"
         }
       ]
@@ -22,13 +22,52 @@
       "label": "Histoire",
       "link": "histoire/index.html",
       "auto_children": "rubrique:histoire",
-      "children": []
+      "children": [
+        {
+          "label": "Frise chronologique",
+          "note": "",
+          "link": "histoire/index.html#frise"
+        },
+        {
+          "label": "Sources & bibliographie",
+          "note": "",
+          "link": "bibliographie.html"
+        }
+      ]
     },
     {
-      "label": "Culture & folklore",
+      "label": "Culture",
       "link": "culture/index.html",
       "auto_children": "rubrique:culture",
       "children": []
+    },
+    {
+      "label": "Hale halele",
+      "link": "contes/index.html",
+      "auto_children": "contes",
+      "children": []
+    },
+    {
+      "label": "Loisirs",
+      "link": "loisirs/index.html",
+      "auto_children": "loisirs",
+      "children": [
+        {
+          "label": "Glossaire",
+          "note": "",
+          "link": "glossaire.html"
+        },
+        {
+          "label": "Galerie photos",
+          "note": "",
+          "link": "galerie.html"
+        },
+        {
+          "label": "Vidéos",
+          "note": "",
+          "link": "videos.html"
+        }
+      ]
     },
     {
       "label": "Voyager",
@@ -59,33 +98,6 @@
           "label": "Agenda & saisons",
           "note": "",
           "link": "agenda.html"
-        }
-      ]
-    },
-    {
-      "label": "Médiathèque",
-      "link": "galerie.html",
-      "auto_children": "",
-      "children": [
-        {
-          "label": "Galerie photos",
-          "note": "",
-          "link": "galerie.html"
-        },
-        {
-          "label": "Vidéos",
-          "note": "",
-          "link": "videos.html"
-        },
-        {
-          "label": "Glossaire",
-          "note": "",
-          "link": "glossaire.html"
-        },
-        {
-          "label": "Quiz",
-          "note": "",
-          "link": "quiz.html"
         }
       ]
     }
@@ -136,16 +148,16 @@
           "link": "culture/index.html"
         },
         {
+          "label": "Hale halele : contes",
+          "link": "contes/index.html"
+        },
+        {
           "label": "Frise chronologique",
           "link": "histoire/index.html#frise"
         },
         {
-          "label": "Glossaire",
-          "link": "glossaire.html"
-        },
-        {
-          "label": "Quiz",
-          "link": "quiz.html"
+          "label": "Sources & bibliographie",
+          "link": "bibliographie.html"
         }
       ]
     },
@@ -177,6 +189,14 @@
     {
       "title": "Komori",
       "links": [
+        {
+          "label": "Loisirs & quiz",
+          "link": "loisirs/index.html"
+        },
+        {
+          "label": "Glossaire",
+          "link": "glossaire.html"
+        },
         {
           "label": "Galerie photos",
           "link": "galerie.html"

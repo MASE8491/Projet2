@@ -321,24 +321,28 @@
     "icon": "scroll",
     "hero": "moroni_ancienne_mosquee",
     "card": "sultan_said_ali",
-    "lead": "Des premiers navigateurs bantous aux sultans swahilis, de la colonisation à l'indépendance : mille ans d'histoire au carrefour de l'Afrique, de l'Arabie, de la Perse et de Madagascar.",
-    "intro": "<p>Longtemps escale sur les routes maritimes de l'océan Indien, l'archipel a vu passer marins,\nmarchands, prédicateurs, pirates et colons. De ces rencontres est née une civilisation originale,\nà la fois africaine, musulmane et maritime, dont les médinas, les mosquées et les traditions\norales gardent la trace. Cette rubrique retrace les grandes étapes de cette histoire, que les\nquatre îles ont longtemps partagée avant que leurs destins politiques ne divergent en 1975.</p>",
+    "lead": "Des premiers navigateurs aux sultans, de la traite à la colonisation, de l'indépendance à la question de Mayotte : plus de mille ans d'histoire, racontés à partir des sources de l'archipel et des regards extérieurs.",
+    "intro": "<p>Longtemps escale sur les routes maritimes de l'océan Indien, l'archipel a vu passer\nmarins, marchands, lettrés, pirates, esclaves et colons. De ces rencontres est née une civilisation\noriginale, à la fois africaine, musulmane et maritime. Les quatre îles ont partagé cette histoire avant\nque leurs destins politiques ne divergent en 1975.</p>\n<p>Cette rubrique s'appuie sur des sources de nature différente : chroniques et traditions orales de\nl'archipel, récits de voyageurs, archives coloniales, travaux d'historiens comoriens et étrangers,\narchéologie et génétique. Nous indiquons ce qui est établi, ce qui reste discuté et, sur les sujets\nsensibles, les différents points de vue. Chaque article renvoie à ses principales références, réunies\ndans la [[bibliographie.html|bibliographie]].</p>",
     "facts": [
       {
-        "label": "Premiers peuplements",
-        "value": "Ier millénaire"
+        "label": "Plus anciens villages",
+        "value": "VIIIe – Xe siècle"
       },
       {
-        "label": "Islamisation",
-        "value": "À partir du Xe siècle environ"
+        "label": "Plus anciennes mosquées fouillées",
+        "value": "XIe – XIIe siècle"
       },
       {
-        "label": "Mayotte française",
-        "value": "1841"
+        "label": "Cession de Mayotte",
+        "value": "25 avril 1841"
       },
       {
-        "label": "Protectorat sur les trois autres îles",
+        "label": "Protectorats",
         "value": "1886"
+      },
+      {
+        "label": "Annexion et rattachement à Madagascar",
+        "value": "1912"
       },
       {
         "label": "Indépendance des Comores",
@@ -351,37 +355,218 @@
     ],
     "pages": [
       {
-        "slug": "premiers-peuplements",
-        "name": "Premiers peuplements & monde swahili",
-        "period": "VIIIe – XVe siècle",
-        "icon": "boat",
-        "hero": "moroni_port",
-        "lead": "Navigateurs bantous, marchands arabes et persans, influences malgaches : la naissance d'une civilisation de l'océan Indien.",
+        "slug": "sources-et-methodes",
+        "name": "Écrire l'histoire des Comores",
+        "period": "Sources et méthodes",
+        "icon": "book",
+        "hero": "carte_amiraute",
+        "lead": "Traditions orales, manuscrits en caractères arabes, récits de marins, archives coloniales, fouilles et génétique : d'où vient ce que l'on sait du passé de l'archipel, et comment croiser ces regards.",
         "sections": [
           {
-            "title": "Les premiers habitants",
-            "html": "<p>Les fouilles archéologiques indiquent une occupation des îles au cours du <strong>premier\nmillénaire</strong> de notre ère. Les premiers habitants venaient vraisemblablement de la côte\norientale de l'Afrique et parlaient des langues bantoues, ancêtres du comorien actuel. Ils\ncultivaient, pêchaient et commerçaient déjà avec les rivages voisins.</p>"
+            "title": "Une histoire d'abord transmise par la parole",
+            "html": "<p>L'essentiel de la mémoire comorienne s'est transmis <strong>oralement</strong> : généalogies des\nlignages et des familles royales, récits de fondation des villages, chants et poèmes, contes. Ces\ntraditions disent comment les Comoriens se représentent eux-mêmes leur passé. Elles servent aussi à\njustifier des droits : titres, préséances, terres, rang dans la coutume.</p>\n<p>Pour l'historien, ce sont des sources à part entière, mais qui se lisent avec précaution. Une\ntradition peut ramasser plusieurs siècles en quelques générations, rattacher une famille à un ancêtre\nprestigieux ou garder la version des vainqueurs. Depuis 1979, le <strong>Centre national de\ndocumentation et de recherche scientifique</strong> (CNDRS), fondé à Moroni sous l'impulsion de\nl'anthropologue <strong>Damir Ben Ali</strong>, recueille et conserve ces paroles.</p>"
           },
           {
-            "title": "Un carrefour commercial",
-            "html": "<p>À partir du IXe siècle, l'archipel s'insère dans les grands réseaux du commerce de l'océan\nIndien. À Mayotte, le site archéologique de <strong>Dembéni</strong> a livré des céramiques venues\ndu golfe Persique, de Chine et de l'Inde, témoignant d'échanges lointains. Les îles exportent\nriz, bétail, ambre gris et cauris, et servent d'escale entre la côte africaine et Madagascar.</p>"
+            "title": "Les écrits de l'archipel",
+            "html": "<p>Dès le XVIe siècle, des lettrés notent en <strong>caractères arabes</strong> des textes en arabe, en\nswahili ou en comorien. Ces manuscrits conservent surtout des <strong>généalogies</strong> de clans et\nde sultans, très complexes. À la fin du XIXe et au début du XXe siècle, plusieurs auteurs de l'archipel\nrédigent de véritables chroniques :</p>\n<ul>\n  <li>la <strong>chronique swahilie de Saïd Bakari</strong> (1898) ;</li>\n  <li>la <strong>chronique d'Anjouan</strong> de Saïd Ahmed Zaki, ancien cadi de l'île (1927) ;</li>\n  <li>l'<strong>histoire de Ngazidja</strong> du prince Saïd Hussein (1934).</li>\n</ul>\n<p>Ces textes mêlent mémoire écrite, traditions orales et point de vue de leurs auteurs, souvent issus\ndes lignages nobles. Plusieurs ont été édités et traduits par des chercheurs comoriens et étrangers :\nMohamed Ahmed-Chamanga, Noël J. Gueunier, Claude Allibert, Damir Ben Ali.</p>"
           },
           {
-            "title": "L'arrivée de l'islam",
-            "media": "moroni_ancienne_mosquee",
-            "html": "<p>L'islam s'implante progressivement, sans doute dès le Xe siècle, porté par les marchands et\nles lettrés de la côte swahilie. La tradition attribue à un certain <strong>Mtswa Mwindza</strong>,\noriginaire de Ntsaoueni en Grande Comore, l'introduction de la nouvelle religion après un voyage en\nArabie&nbsp;: un récit fondateur plus légendaire qu'historique, mais très vivant dans la mémoire\ncollective. Les plus anciennes mosquées de l'archipel, à Sima (Anjouan), Ntsaoueni ou Domoni,\nremontent à cette époque ou aux siècles suivants.</p>"
+            "title": "Des regards venus d'ailleurs",
+            "html": "<p>Les sources extérieures donnent des dates et des détails introuvables ailleurs : traités du\npilote arabe <strong>Ibn Mâjid</strong> (fin du XVe siècle), <strong>chronique de Kilwa</strong> sur la côte\nswahilie, journaux de bord portugais, anglais, hollandais ou français, récits d'officiers et de\nfonctionnaires comme l'<em>Essai sur les Comores</em> d'Alfred Gevrey (1870), puis archives de\nl'administration coloniale.</p>\n<p>Mais chacun regarde avec ses intérêts. Les marins qui restent quelques jours ne voient que la côte,\nl'eau et les vivres. Les administrateurs justifient la conquête. Presque tous ignorent les femmes, les\npaysans et les esclaves. Ces textes doivent donc être confrontés aux traditions et aux écrits locaux.</p>"
           },
           {
-            "title": "Les « Shirazi »",
-            "html": "<p>Comme sur toute la côte swahilie, de nombreuses familles nobles des Comores se disent\ndescendantes de princes venus de <strong>Shiraz</strong>, en Perse. Les historiens y voient\nsurtout un mythe d'origine prestigieux, adopté par les élites marchandes, mais il témoigne des\nliens réels entre l'archipel, le golfe Persique et l'Arabie du Sud. Ces élites fondent les\npremières cités de pierre et les dynasties qui deviendront les sultanats.</p>"
+            "title": "Ce que disent le sol et les gènes",
+            "media": "lagon_dembeni",
+            "html": "<p>L'<strong>archéologie</strong> apporte des dates indépendantes des récits. Dans une étude publiée en\n1984, l'équipe de l'Américain <strong>Henry T. Wright</strong> décrit les premiers villages de l'archipel\net définit la « phase Dembéni » (IXe – Xe siècle). À Mayotte, les sites de Dembéni, de la nécropole de\nBagamoyo et d'Acoua sont étudiés depuis quarante ans.</p>\n<p>Des méthodes plus récentes complètent ce tableau. En 2016, l'étude des graines carbonisées de Sima,\nà Anjouan, révèle du riz, du haricot mungo et du coton venus d'Asie dès les VIIIe – Xe siècles. En\n2018, une étude génétique montre que les Comores sont le plus ancien lieu de rencontre connu entre\npopulations africaines et austronésiennes sur toute la côte swahilie.</p>"
+          },
+          {
+            "title": "Croiser les sources : l'exemple de l'islamisation",
+            "media": "ntsaoueni_rempart",
+            "html": "<p>Selon la tradition, l'islam est arrivé à Ntsaweni du vivant du Prophète, grâce à\n<strong>Mtswa Mwindza</strong>, parti en Arabie puis revenu convertir son peuple. En 2010, un sondage\narchéologique mené dans la mosquée de Ntsaweni par Ibrahim Moustakim et Félix Chami a d'abord été\nprésenté comme la découverte d'une mosquée du VIIe siècle. Les datations au carbone 14 ont finalement\nsitué les niveaux fouillés aux <strong>XIe – XIIe siècles</strong>, comme les plus anciennes mosquées\nfouillées de Sima et de Domoni.</p>\n<div class=\"notice\"><p><strong>Deux vérités qui ne se contredisent pas.</strong> La tradition exprime\nl'ancienneté de l'islam aux Comores, son rôle dans l'identité de l'archipel et le prestige de Ntsaweni.\nL'archéologie date les bâtiments conservés. Les deux répondent à des questions différentes.</p></div>"
+          },
+          {
+            "title": "Une histoire à plusieurs voix",
+            "html": "<p>Depuis l'indépendance, des historiens et anthropologues comoriens (Damir Ben Ali, Sultan Chouzour,\nMahmoud Ibrahime, Moussa Saïd Ahmed, Ali Madi Djoumoi…) écrivent l'histoire de l'intérieur, aux côtés\nde chercheurs étrangers comme Jean Martin, Malyn Newitt, Pierre Vérin, Claude Allibert ou Iain Walker.\nCertains sujets restent débattus ou sensibles : l'esclavage et sa mémoire, la violence coloniale, la\nséparation de Mayotte, les coups d'État.</p>\n<p>Dans cette rubrique, nous présentons les faits établis par les sources, nous signalons les\nincertitudes et nous donnons la parole aux différents points de vue. Chaque article indique ses\nprincipales références, rassemblées dans la [[bibliographie.html|bibliographie]].</p>"
           }
         ],
-        "didyouknow": "Les céramiques chinoises retrouvées sur le site de Dembéni, à Mayotte, prouvent que l'archipel participait au commerce mondial de l'époque il y a plus de mille ans.",
+        "facts": [
+          {
+            "label": "Collecte de la mémoire orale",
+            "value": "CNDRS, depuis 1979"
+          },
+          {
+            "label": "Plus anciens manuscrits connus",
+            "value": "XVIe siècle"
+          },
+          {
+            "label": "Chroniques locales",
+            "value": "1898, 1927, 1934"
+          },
+          {
+            "label": "Première synthèse archéologique",
+            "value": "Wright et al., 1984"
+          }
+        ],
+        "didyouknow": "Les datations au carbone 14 obtenues en 2010 dans la mosquée de Ntsaweni la situent aux XIe – XIIe siècles, alors que la tradition fait remonter l'islam de la ville au temps du Prophète.",
         "gallery": [
-          "moroni_port",
+          "carte_1808",
+          "carte_amiraute",
+          "carte_1976",
+          "ntsaoueni_rempart"
+        ],
+        "refs": [
+          "said-bakari",
+          "said-ahmed-zaki",
+          "said-hussein",
+          "ben-ali-inya-fwambaya",
+          "gevrey",
+          "ibn-majid",
+          "chronique-kilwa",
+          "wright",
+          "crowther",
+          "brucato",
+          "walker"
+        ]
+      },
+      {
+        "slug": "premiers-peuplements",
+        "name": "Premiers peuplements",
+        "period": "VIIIe – XIIe siècle",
+        "icon": "boat",
+        "hero": "lagon_dembeni",
+        "lead": "Africains bantouphones et navigateurs venus d'Asie du Sud-Est se rencontrent dans l'archipel dès la fin du Ier millénaire : ce que l'archéologie, la linguistique et la génétique nous apprennent.",
+        "sections": [
+          {
+            "title": "Des îles longtemps inhabitées",
+            "html": "<p>Les quatre îles sont des volcans sortis de l'océan bien avant l'arrivée des hommes. Aucune trace\nd'occupation humaine n'est connue avant la seconde moitié du Ier millénaire de notre ère. Les plus\nanciens sites datés, comme <strong>Sima</strong> à Anjouan, remontent aux <strong>VIIIe – Xe\nsiècles</strong> ; à Mayotte, le site de <strong>Dembéni</strong> est occupé du IXe au XIIe siècle.</p>\n<p>Le peuplement s'est donc fait relativement tard, à l'échelle de l'océan Indien, par des marins\ncapables de traverser le canal du Mozambique ou de longer les côtes depuis l'Afrique de l'Est.</p>"
+          },
+          {
+            "title": "Une langue africaine",
+            "html": "<p>La langue comorienne, sous ses quatre formes (shingazidja, shimwali, shindzuani, shimaore), est\nune <strong>langue bantoue</strong> du groupe sabaki, très proche du swahili. Cette parenté indique que\nles premiers habitants, ou du moins ceux dont la langue s'est imposée, venaient de la côte orientale de\nl'Afrique. La poterie des premiers villages, apparentée à celle de cette côte, va dans le même sens.</p>\n<p>Ces communautés cultivent, élèvent, pêchent et naviguent. Leurs villages sont faits de bois et de\ntorchis : la pierre de corail n'apparaîtra que plus tard.</p>"
+          },
+          {
+            "title": "Une présence austronésienne très ancienne",
+            "html": "<p>Les fouilles de Sima ont livré des grains de <strong>riz</strong> de deux variétés asiatiques\n(indica et japonica), du <strong>haricot mungo</strong> et du <strong>coton</strong>, datés des VIIIe – Xe\nsiècles. Pour l'équipe d'Alison Crowther (2016), ces plantes sont la première trace archéologique de\nl'expansion des <strong>Austronésiens</strong>, ces navigateurs d'Asie du Sud-Est qui ont aussi peuplé\nMadagascar.</p>\n<p>La génétique confirme ce métissage : selon l'étude de Nicolas Brucato (2018), les Comores sont le\nplus ancien lieu connu de rencontre entre populations africaines et austronésiennes sur la côte\nswahilie. L'influence malgache, renforcée aux siècles suivants, reste visible aujourd'hui : à\nMayotte, plusieurs villages parlent le <strong>kibushi</strong>, une langue malgache.</p>"
+          },
+          {
+            "title": "Dembéni, Sima et Bagamoyo",
+            "html": "<p>L'archéologue Henry T. Wright a donné le nom de <strong>phase Dembéni</strong> à cette première\npériode (IXe – Xe siècle), connue à Mayotte comme dans les autres îles. À Dembéni, un véritable\n<strong>comptoir</strong> livre des céramiques importées du golfe Persique et de Chine : l'archipel est\ndéjà relié aux grandes routes maritimes.</p>\n<p>Sur Petite-Terre, la nécropole de <strong>Bagamoyo</strong> conserve des tombes de tradition\nmusulmane parmi les plus anciennes de l'archipel. À Acoua, au nord-ouest de Mayotte, des sépultures du\nsite d'Antsiraka Boira ont été datées des Xe – XIe siècles.</p>"
+          },
+          {
+            "title": "Une escale entre trois mondes",
+            "html": "<p>Placées entre l'Afrique, Madagascar et les routes qui mènent au golfe Persique et à l'Inde, les\nîles deviennent une <strong>escale</strong> naturelle. Les marchands y trouvent de l'eau, des vivres et\ndes produits locaux, qu'ils échangent contre des céramiques et d'autres objets venus de loin. Ce rôle\nd'intermédiaire, qui fera la prospérité puis le malheur de l'archipel, est donc très ancien.</p>"
+          },
+          {
+            "title": "Ce que l'on ignore encore",
+            "html": "<p>Bien des questions restent ouvertes. On ne sait pas précisément quand les premiers hommes ont\ndébarqué, ni comment Africains et Austronésiens se sont rencontrés et mêlés. Peu de sites ont été\nfouillés, surtout en Grande Comore et à Mohéli.</p>\n<p>Les traditions, elles, racontent autre chose : les premiers habitants auraient été des\n<strong>djinns</strong>, puis des chefs que les récits appellent <em>fani</em> ou <em>bedja</em>\nauraient gouverné les villages avant les sultans. Ces récits ne sont pas des chroniques, mais ils\ndisent l'ancienneté du peuplement et la place du monde invisible dans l'imaginaire comorien. Lire :\n[[contes/le-temps-des-djinns.html|Le temps des djinns]].</p>"
+          }
+        ],
+        "facts": [
+          {
+            "label": "Plus ancien site daté",
+            "value": "Sima (Anjouan), VIIIe – Xe s."
+          },
+          {
+            "label": "Phase Dembéni",
+            "value": "IXe – Xe siècle"
+          },
+          {
+            "label": "Langue",
+            "value": "bantoue, groupe sabaki"
+          },
+          {
+            "label": "Plantes venues d'Asie",
+            "value": "riz, haricot mungo, coton"
+          }
+        ],
+        "didyouknow": "Les grains de riz trouvés à Sima appartiennent aux deux grandes variétés asiatiques, indica et japonica : une preuve que des navigateurs d'Asie du Sud-Est ont touché l'archipel il y a plus de mille ans.",
+        "gallery": [
+          "lagon_dembeni",
+          "domoni",
+          "dziani_aerien",
+          "carte_1808"
+        ],
+        "refs": [
+          "wright",
+          "crowther",
+          "brucato",
+          "allibert",
+          "dac-mayotte-archeo",
+          "walker",
+          "verin"
+        ]
+      },
+      {
+        "slug": "islam-et-monde-swahili",
+        "name": "L'islam et le monde swahili",
+        "period": "Xe – XVe siècle",
+        "icon": "dome",
+        "hero": "moroni_ancienne_mosquee",
+        "lead": "Marchands, lettrés et lignées « chiraziennes » : comment l'islam s'est enraciné et comment les îles sont devenues une part du monde swahili, entre tradition et archéologie.",
+        "sections": [
+          {
+            "title": "Une islamisation progressive",
+            "html": "<p>L'islam arrive avec les marchands et les lettrés de la côte swahilie et du golfe Persique. Les plus\nanciennes tombes musulmanes (Bagamoyo, Acoua) et les premières mosquées fouillées, à <strong>Sima</strong>\net à <strong>Domoni</strong> (Anjouan), datent des <strong>XIe – XIIe siècles</strong>. La conversion se\nfait progressivement : à Acoua, les archéologues observent au XIIe siècle un mélange de pratiques\nfunéraires musulmanes et plus anciennes.</p>\n<p>Au XVe siècle, l'islam sunnite de rite <strong>chaféite</strong>, le même que sur la côte swahilie,\nest devenu la religion de tout l'archipel. Il le reste aujourd'hui, dans les quatre îles.</p>"
+          },
+          {
+            "title": "Mtswa Mwindza, la mémoire d'un commencement",
+            "media": "ntsaoueni_rempart",
+            "html": "<p>La tradition de la Grande Comore raconte qu'un notable du Mbude, <strong>Mtswa Mwindza</strong>,\npartit en Arabie avec des marchands, y apprit la nouvelle religion et revint l'enseigner à\n<strong>Ntsaweni</strong>, où l'on montre son tombeau. Le récit le fait vivre au VIIe siècle, du temps\ndu Prophète ou de ses compagnons.</p>\n<p>Un sondage dans la mosquée de Ntsaweni (2010) a donné des datations des XIe – XIIe siècles, sans\nconfirmer l'hypothèse d'un édifice du VIIe siècle. Le récit reste néanmoins essentiel : il fait de\nNtsaweni le berceau de l'islam comorien et rattache directement l'archipel aux origines de la\nreligion. Lire le récit : [[contes/mtswa-mwindza.html|Mtswa Mwindza]].</p>"
+          },
+          {
+            "title": "Les « Chiraziens » : mythe et histoire",
+            "html": "<p>Comme sur toute la côte swahilie, de nombreuses familles nobles des Comores se disent\ndescendantes de princes venus de <strong>Chiraz</strong>, en Perse. La <strong>chronique de Kilwa</strong>\nraconte que sept navires partirent de Chiraz ; six fils fondèrent des cités sur la côte, et le père\naborda à <strong>« Hanzuan »</strong>, c'est-à-dire Anjouan.</p>\n<p>La plupart des historiens y voient un <strong>mythe d'origine prestigieux</strong>, adopté par des\nélites marchandes en partie africaines, plutôt que le souvenir d'une migration massive. Il traduit\nnéanmoins des liens bien réels avec le golfe Persique. Aux Comores, des lignées dites chiraziennes\ns'allient aux chefs locaux par le mariage et fondent, à partir des XIIIe – XVe siècles, les premières\ndynasties de sultans.</p>"
+          },
+          {
+            "title": "Des cités de pierre",
+            "media": "domoni",
+            "html": "<p>Avec l'islam et le commerce apparaît une architecture de <strong>pierre de corail</strong> :\nmosquées, maisons à cour intérieure, remparts. <strong>Domoni</strong>, fondée au XIIe siècle d'après\nl'archéologie, est longtemps la capitale d'Anjouan. La tradition attribue la fondation de\n<strong>Mutsamudu</strong> à la fin du XVe siècle.</p>\n<p>À Mayotte, le sultanat s'organise vers 1460 – 1470 autour de <strong>Tsingoni</strong>. Deux\ninscriptions en arabe, découvertes en 2006 sur des plaques de corail, datent le mihrab de la mosquée\nroyale de l'an 944 de l'Hégire, soit <strong>1538</strong>. C'est la plus ancienne mosquée encore en\nactivité sur le territoire français.</p>"
+          },
+          {
+            "title": "Les îles sur les cartes arabes",
+            "html": "<p>À la fin du XVe siècle, le grand pilote <strong>Ahmad Ibn Mâjid</strong>, dont les traités guident\nles marins de l'océan Indien, décrit Anjouan et le port de Domoni, et mentionne <strong>Mayotte</strong>\npour la première fois vers 1490. Le nom même de l'archipel viendrait de l'arabe\n<em>Djazaïr al-Qamar</em>, « les îles de la Lune ».</p>\n<p>Ces textes montrent des îles bien intégrées aux routes de la mousson, où l'on fait escale entre la\ncôte africaine, Madagascar, l'Arabie et l'Inde.</p>"
+          },
+          {
+            "title": "Une société lettrée et métissée",
+            "html": "<p>Les écoles coraniques, les mosquées et les liens avec Zanzibar, l'Hadramaout ou Oman forment des\ngénérations de lettrés. L'écriture arabe sert aussi à noter le comorien et le swahili.</p>\n<p>La civilisation qui naît alors est profondément <strong>métissée</strong> : africaine par la langue\net une partie de la coutume (en Grande Comore, la maison et une partie des biens se transmettent par les\nfemmes), arabe et musulmane par la religion et l'écriture, ouverte à la Perse, à l'Inde et à Madagascar\npar le commerce.</p>"
+          }
+        ],
+        "facts": [
+          {
+            "label": "Plus anciennes mosquées fouillées",
+            "value": "Sima et Domoni, XIe – XIIe s."
+          },
+          {
+            "label": "Rite religieux",
+            "value": "sunnite chaféite"
+          },
+          {
+            "label": "Mihrab de Tsingoni",
+            "value": "944 de l'Hégire (1538)"
+          },
+          {
+            "label": "Première mention de Mayotte",
+            "value": "Ibn Mâjid, vers 1490"
+          }
+        ],
+        "didyouknow": "Les deux inscriptions qui datent le mihrab de Tsingoni n'ont été découvertes qu'en 2006, lors de travaux dans la mosquée.",
+        "gallery": [
           "moroni_ancienne_mosquee",
           "domoni",
-          "carte_1808"
+          "tsingoni_mosquee",
+          "ntsaoueni_rempart",
+          "mutsamudu_rue"
+        ],
+        "refs": [
+          "wright",
+          "chronique-kilwa",
+          "ibn-majid",
+          "ben-ali-islam",
+          "said-ahmed-zaki",
+          "said-hussein",
+          "allibert",
+          "dac-mayotte-archeo",
+          "walker"
         ]
       },
       {
@@ -390,117 +575,493 @@
         "period": "XVe – XIXe siècle",
         "icon": "dome",
         "hero": "mutsamudu_escalier",
-        "lead": "Cités de pierre, rivalités princières, escales européennes et razzias venues de Madagascar : l'âge d'or et les tourments des sultanats.",
+        "lead": "Une dizaine de sultanats en Grande Comore, un sultanat puissant à Anjouan, des capitales qui se déplacent et des rivalités sans fin : l'organisation politique de l'archipel avant la colonisation.",
         "sections": [
           {
-            "title": "Des îles morcelées en sultanats",
-            "html": "<p>Du XVe au XIXe siècle, l'archipel est divisé en plusieurs <strong>sultanats</strong>. La\nGrande Comore en compte jusqu'à une dizaine, comme le Bambao, l'Itsandra, le Mitsamiouli ou le\nBadjini, dont les souverains se disputent le titre de <em>sultan tibe</em>, le suzerain de l'île.\nAnjouan, Mohéli et Mayotte forment chacune un sultanat, Anjouan exerçant longtemps une influence\nsur ses voisines.</p>"
+            "title": "Des chefferies aux sultanats",
+            "html": "<p>Avant les sultans, les villages étaient dirigés par des chefs dont les traditions conservent les\ntitres. À partir des XIIIe – XVe siècles, des alliances matrimoniales entre lignées locales et nouveaux\nvenus « chiraziens » ou arabes donnent naissance à des <strong>dynasties</strong>. Leur légitimité\nrepose sur la généalogie, la religion, la richesse tirée du commerce et le contrôle des terres.</p>\n<p>Les sultans ne sont pas des monarques absolus : ils gouvernent avec les notables, les conseils de\nlignages et les cadis, et leur pouvoir dépend de l'équilibre entre les grandes familles.</p>"
           },
           {
-            "title": "Médinas, mosquées et palais",
-            "media": "mutsamudu_rue",
-            "html": "<p>Les sultans et les familles marchandes bâtissent des villes de pierre à l'architecture\nswahilie&nbsp;: maisons à cour intérieure, portes sculptées, ruelles étroites, mosquées du\nvendredi. <strong>Domoni</strong> et <strong>Mutsamudu</strong> à Anjouan, <strong>Iconi</strong>,\n<strong>Itsandra</strong> et <strong>Moroni</strong> en Grande Comore, <strong>Tsingoni</strong> à\nMayotte, dont la mosquée porte un mihrab daté de 1538, en sont les plus beaux exemples.</p>"
+            "title": "Ngazidja, l'île aux nombreux sultanats",
+            "media": "iconi",
+            "html": "<p>La Grande Comore est divisée en une dizaine de <strong>sultanats</strong> (onze ou douze selon les\népoques) : Bambao, Itsandra, Mitsamihuli, Mbude, Hamahame, Hambuu, Mbadjini, Washili, Dimani, Hamanvu,\nMbwankuu, Domba… Le plus prestigieux des sultans porte le titre de <strong><em>ntibe</em></strong>\n(sultan suzerain), que se disputent surtout les souverains de <strong>Bambao</strong> et\nd'<strong>Itsandra</strong>.</p>\n<p>Ces rivalités s'inscrivent dans l'histoire de grands lignages royaux, comme l'<strong>Inya\nFwambaya</strong>, dont les traditions ont été recueillies par Damir Ben Ali. Elles durent jusqu'à la fin\ndu XIXe siècle, quand Saïd Ali de Bambao unifie l'île avec l'appui de la France.</p>"
           },
           {
-            "title": "Les Européens à l'escale",
-            "media": "carte_amiraute",
-            "html": "<p>Les navigateurs portugais signalent l'archipel dès le début du XVIe siècle. Aux XVIIe et\nXVIIIe siècles, Anjouan, que les marins anglais appellent <em>Johanna</em>, devient une escale\nappréciée des navires de la Compagnie anglaise des Indes orientales, qui y font provision d'eau\net de vivres. Des <strong>pirates</strong> célèbres croisent aussi dans ces eaux à la fin du\nXVIIe siècle.</p>"
+            "title": "Anjouan, puissance de l'archipel",
+            "media": "mutsamudu_vue",
+            "html": "<p>À Anjouan, un sultanat unifie l'île à la fin du XVe siècle, lorsque des familles arabes venues de\nl'Hadramaout s'allient par mariage à la lignée régnante. La capitale est d'abord\n<strong>Domoni</strong>, sur la côte est, puis <strong>Mutsamudu</strong>, où le sultan\n<strong>Abdallah Ier</strong> la transfère à la fin du XVIIIe siècle. Une citadelle domine la ville,\nface aux menaces venues de la mer.</p>\n<p>Riche de son port et de ses relations avec les navires européens, Anjouan revendique à plusieurs\nreprises une autorité sur Mohéli et Mayotte, ce qui nourrit des guerres répétées entre les îles.</p>"
           },
           {
-            "title": "Le temps des razzias",
-            "media": "ntsaoueni_rempart",
-            "html": "<p>À la fin du XVIIIe et au début du XIXe siècle, des flottes venues de Madagascar mènent des\n<strong>razzias</strong> meurtrières sur les côtes comoriennes, capturant hommes et femmes pour\nles réduire en esclavage. Les cités se protègent par des <strong>remparts</strong> et des\n<strong>citadelles</strong>, comme à Mutsamudu ou à Ntsaoueni. À Iconi, la tradition rapporte que\ndes femmes préférèrent se jeter du haut de la falaise plutôt que d'être capturées.</p>"
+            "title": "Mayotte et Mohéli",
+            "media": "residence_gouverneur",
+            "html": "<p>À <strong>Mayotte</strong>, les sultans chiraziens règnent depuis Tsingoni, puis s'installent sur le\nrocher de <strong>Dzaoudzi</strong>, plus facile à défendre. Au XIXe siècle, l'île passe aux mains de\nprinces d'origine malgache.</p>\n<p>À <strong>Mohéli</strong>, l'île est longtemps partagée en grandes régions avant de se rassembler sous un\nsultan, souvent sous l'influence d'Anjouan. Au XIXe siècle, Fomboni devient le siège d'une dynastie\nfondée par le prince merina Ramanetaka, dont la fille, Djoumbé Fatima, sera la reine la plus célèbre de\nl'archipel.</p>"
           },
           {
-            "title": "Princes malgaches et intrigues",
-            "media": "djoumbe_fatima",
-            "html": "<p>Au XIXe siècle, des princes malgaches chassés par l'expansion du royaume merina s'installent\ndans l'archipel. <strong>Andriantsoly</strong>, ancien roi sakalava, prend le pouvoir à Mayotte.\n<strong>Ramanetaka</strong>, prince merina, s'empare de Mohéli, où sa fille\n<strong>Djoumbé Fatima</strong> régnera ensuite. Dans le même temps, la France, la\nGrande-Bretagne et le sultanat de Zanzibar cherchent à étendre leur influence dans la région.</p>"
+            "title": "Une société hiérarchisée",
+            "html": "<p>La société des sultanats distingue les lignages nobles, les hommes libres et les\n<strong>esclaves</strong>. En Grande Comore, l'accès au rang de notable passe par le <strong>grand\nmariage</strong> (<em>anda</em>), qui demeure aujourd'hui au cœur de la coutume. Les classes d'âge\norganisent la vie des hommes du village.</p>\n<p>L'anthropologue comorien Sultan Chouzour a montré comment ce système fondé sur l'honneur, les dons et\nle prestige a traversé la colonisation et continue de structurer le pouvoir local.</p>"
+          },
+          {
+            "title": "Guerres et alliances",
+            "html": "<p>Les conflits sont permanents : entre sultanats d'une même île, entre Anjouan et ses voisines,\npuis contre les razzias venues de Madagascar. Pour l'emporter, les souverains cherchent des alliés\nextérieurs : marins anglais, sultans de Zanzibar, princes malgaches, puis la France.</p>\n<p>C'est ainsi qu'au XIXe siècle les sultans eux-mêmes ouvrent la porte aux puissances coloniales :\nAndriantsoly à Mayotte en 1841, Saïd Ali en Grande Comore en 1885 – 1886. Lire la suite :\n[[histoire/periode-coloniale.html|La période coloniale]].</p>"
+          }
+        ],
+        "facts": [
+          {
+            "label": "Sultanats de Ngazidja",
+            "value": "une dizaine (11 ou 12)"
+          },
+          {
+            "label": "Titre suprême à Ngazidja",
+            "value": "ntibe"
+          },
+          {
+            "label": "Capitales d'Anjouan",
+            "value": "Domoni, puis Mutsamudu"
+          },
+          {
+            "label": "Capitales de Mayotte",
+            "value": "Tsingoni, puis Dzaoudzi"
           }
         ],
         "didyouknow": "Les marins anglais du XVIIIe siècle appelaient Anjouan « Johanna » et la Grande Comore « Angazija », des noms que l'on retrouve sur les cartes anciennes.",
         "gallery": [
           "mutsamudu_escalier",
           "mutsamudu_rue",
+          "iconi",
+          "domoni",
+          "said_ali",
+          "residence_gouverneur"
+        ],
+        "refs": [
+          "ben-ali-inya-fwambaya",
+          "said-hussein",
+          "said-ahmed-zaki",
+          "chouzour",
+          "moussa-said-ahmed",
+          "allibert",
+          "martin",
+          "walker"
+        ]
+      },
+      {
+        "slug": "escales-et-pirates",
+        "name": "Escales, marchands et pirates",
+        "period": "XVIe – XVIIIe siècle",
+        "icon": "boat",
+        "hero": "carte_amiraute",
+        "lead": "Portugais, Anglais, Hollandais, Français, pirates de la « Pirate Round » : pendant trois siècles, l'archipel ravitaille les navires de la route des Indes.",
+        "sections": [
+          {
+            "title": "Les Portugais à l'horizon",
+            "html": "<p>Au début du XVIe siècle, les navires portugais qui contournent l'Afrique pour gagner l'Inde\natteignent l'archipel. Ils le signalent sur leurs cartes, mais ne s'y installent pas : les îles n'ont ni\nor ni épices, et le Portugal concentre ses forces sur la côte du Mozambique et sur l'Inde.</p>"
+          },
+          {
+            "title": "Johanna, l'escale des Indes",
+            "media": "mutsamudu_port",
+            "html": "<p>Aux XVIIe et XVIIIe siècles, Anjouan, que les Anglais appellent <strong>Johanna</strong>, devient\nl'une des escales favorites des navires de la <strong>Compagnie anglaise des Indes orientales</strong>.\nOn y fait provision d'eau douce, de bétail, de fruits et de riz. De 1601 à 1834, plusieurs centaines de\nnavires de la Compagnie y font halte.</p>\n<p>Les sultans d'Anjouan entretiennent ces relations, qui leur apportent marchandises, armes et\nparfois des alliés contre leurs rivaux.</p>"
+          },
+          {
+            "title": "Le temps des pirates",
+            "html": "<p>À la fin du XVIIe siècle, des pirates venus de l'Atlantique empruntent la « Pirate Round » :\nMadagascar, puis la mer Rouge et la côte de l'Inde. Les Comores leur servent d'escale.</p>\n<p>En février 1695, le célèbre <strong>Henry Every</strong> passe à Anjouan et y laisse une lettre\ndestinée aux capitaines anglais, dans laquelle il assure n'avoir jamais attaqué de navire anglais ou\nhollandais. Quelques semaines plus tard, des navires de la Compagnie tentent en vain de le capturer\nprès de l'île. Selon l'historien Jean Martin, l'archipel devient au début du XVIIIe siècle un repaire\npour les flibustiers chassés des Caraïbes.</p>"
+          },
+          {
+            "title": "Ce que l'on échange",
+            "html": "<p>Les insulaires vendent des vivres, du bétail, des noix de coco et de l'eau ; ils reçoivent des\ntissus, du fer, des armes, de la monnaie. Le commerce avec l'Arabie, l'Inde et la côte africaine se\npoursuit en parallèle, porté par les boutres.</p>\n<p>Ce commerce comprend aussi des <strong>captifs</strong> : l'archipel sert de relais dans la traite\nentre l'Afrique, Madagascar et le Moyen-Orient. Lire : [[histoire/traite-et-esclavage.html|Traite,\nesclavage et razzias]].</p>"
+          },
+          {
+            "title": "Des témoignages à interpréter",
+            "html": "<p>Les journaux de bord et récits de voyageurs sont précieux : ils donnent des dates, des noms de\nsultans, des prix, des descriptions de villes. Mais ils sont écrits par des hommes qui restent quelques\njours sur la côte, souvent sans parler la langue, et qui voient les îles comme un magasin de vivres.\nPour comprendre ce que ces rencontres signifiaient pour les Comoriens, il faut les confronter aux\nchroniques et aux traditions de l'archipel.</p>"
+          }
+        ],
+        "facts": [
+          {
+            "label": "Nom anglais d'Anjouan",
+            "value": "Johanna"
+          },
+          {
+            "label": "Nom anglais de la Grande Comore",
+            "value": "Angazija"
+          },
+          {
+            "label": "Henry Every à Anjouan",
+            "value": "février 1695"
+          },
+          {
+            "label": "Escales de la Compagnie des Indes",
+            "value": "plusieurs centaines (1601 – 1834)"
+          }
+        ],
+        "didyouknow": "Dans sa lettre laissée à Anjouan en 1695, le pirate Henry Every affirme n'avoir « jamais fait de tort » à un navire anglais ou hollandais… quelques mois avant de piller un navire de l'empereur moghol.",
+        "gallery": [
+          "carte_amiraute",
+          "mutsamudu_port",
+          "mutsamudu",
+          "carte_1808"
+        ],
+        "refs": [
+          "martin",
+          "newitt",
+          "walker",
+          "gevrey"
+        ]
+      },
+      {
+        "slug": "traite-et-esclavage",
+        "name": "Traite, esclavage et razzias",
+        "period": "XVIIIe – début XXe siècle",
+        "icon": "people",
+        "hero": "ntsaoueni_rempart",
+        "lead": "Lieu de passage et lieu d'exploitation, l'archipel a été au cœur des réseaux de traite de l'océan Indien, puis la cible des razzias malgaches. Une histoire longtemps tue, que les chercheurs remettent au jour.",
+        "sections": [
+          {
+            "title": "Un archipel au cœur des réseaux de traite",
+            "html": "<p>Les Comores ont la particularité d'avoir été à la fois un <strong>lieu de transit</strong> et un\n<strong>lieu d'exploitation</strong> des esclaves. Des captifs venus d'Afrique de l'Est, notamment du nord\ndu Mozambique, et de Madagascar y sont achetés, revendus vers l'Arabie, Zanzibar ou les îles françaises\n(Bourbon, l'actuelle Réunion, et l'île de France, l'actuelle Maurice), ou employés sur place.</p>\n<p>Au XIXe siècle, quand la Grande-Bretagne lutte contre la traite, le cabotage entre les îles et le\nport de Mayotte permettent encore aux boutres d'échapper à la surveillance.</p>"
+          },
+          {
+            "title": "L'esclavage dans la société comorienne",
+            "html": "<p>Dans les sultanats, les esclaves travaillent aux champs, dans les maisons et sur les ports. Leur\nstatut se transmet à leurs enfants. Dans les îles, le mot <strong><em>makua</em></strong>, nom d'un\npeuple du nord du Mozambique, finit par désigner les esclaves et leurs descendants.</p>\n<p>Après les abolitions, cette origine reste longtemps un stigmate, et la question demeure délicate\ndans l'archipel. Des chercheurs comoriens et étrangers l'étudient aujourd'hui, et les Archives\ndépartementales de Mayotte recueillent des témoignages oraux sur cette mémoire.</p>"
+          },
+          {
+            "title": "Le temps des razzias (vers 1790 – 1820)",
+            "media": "ntsaoueni_rempart",
+            "html": "<p>À la fin du XVIIIe siècle, des flottes de plusieurs dizaines de pirogues parties de la côte est et\nnord-ouest de Madagascar, montées par des <strong>Betsimisaraka</strong> et des <strong>Sakalava</strong>,\nattaquent régulièrement l'archipel. Elles capturent surtout des femmes et des enfants, vendus comme\nesclaves, notamment vers les plantations des Mascareignes.</p>\n<p>Anjouan, la plus riche, est la première visée, mais aucune île n'est épargnée : Mohéli et Mayotte\nsont en partie dépeuplées. Les villes s'entourent de <strong>remparts</strong>, comme à Ntsaweni ou\nIconi, et de <strong>citadelles</strong>, comme à Mutsamudu. Jean Martin parle d'une crise économique et\npolitique profonde, qui affaiblit durablement les sultanats.</p>"
+          },
+          {
+            "title": "Des abolitions décalées",
+            "html": "<p>L'esclavage prend fin à des dates très différentes selon les îles :</p>\n<ul>\n  <li><strong>Mayotte</strong>, devenue française, l'abolit par ordonnance royale du <strong>9 décembre\n  1846</strong>, appliquée en 1847, un an avant les autres colonies françaises.</li>\n  <li>À <strong>Anjouan</strong>, un traité de 1882 interdit la traite et fixe à 1889 la libération des\n  esclaves ; les propriétaires se révoltent dès 1884. En <strong>1891</strong>, à la mort du sultan\n  Abdallah III, esclaves et paysans des hauts de l'île se soulèvent et l'abolition est proclamée.</li>\n  <li>À <strong>Mohéli</strong>, une révolte d'esclaves makua aboutit à l'abolition en <strong>1902</strong>.</li>\n  <li>En <strong>Grande Comore</strong>, l'esclavage est aboli le <strong>29 février 1904</strong>.</li>\n</ul>"
+          },
+          {
+            "title": "Après l'esclavage, l'engagisme",
+            "html": "<p>Les abolitions ne mettent pas fin au travail forcé. Pour fournir de la main-d'œuvre aux\nplantations, des recruteurs pratiquent le « rachat préalable » : des captifs achetés en Afrique sont\ndéclarés libres sur le papier, puis transportés comme <strong>engagés</strong> sous contrat. Pendant la\npériode coloniale, l'impôt de capitation et les réquisitions de travail prolongent cette contrainte.</p>"
+          },
+          {
+            "title": "Une mémoire à reconstruire",
+            "html": "<p>L'histoire de l'esclavage aux Comores a longtemps été peu racontée, aussi bien par les traditions\nnobles que par l'histoire coloniale. Elle touche à des questions encore sensibles : origine des\nfamilles, rangs dans la coutume, accès à la terre. La recherche, les archives orales et les débats\npublics contribuent aujourd'hui à la faire sortir du silence.</p>\n<div class=\"notice\"><p>Pour comprendre les razzias du point de vue des habitants, lire le récit\n[[contes/les-femmes-d-iconi.html|Les femmes d'Iconi]].</p></div>"
+          }
+        ],
+        "facts": [
+          {
+            "label": "Abolition à Mayotte",
+            "value": "9 décembre 1846 (appliquée en 1847)"
+          },
+          {
+            "label": "Abolition à Anjouan",
+            "value": "1891"
+          },
+          {
+            "label": "Abolition à Mohéli",
+            "value": "1902"
+          },
+          {
+            "label": "Abolition en Grande Comore",
+            "value": "29 février 1904"
+          }
+        ],
+        "didyouknow": "Mayotte a aboli l'esclavage en 1846, deux ans avant le décret d'abolition de 1848 qui s'applique aux autres colonies françaises.",
+        "gallery": [
           "ntsaoueni_rempart",
           "iconi",
-          "carte_amiraute",
-          "djoumbe_fatima"
+          "mutsamudu_escalier",
+          "dzaoudzi"
+        ],
+        "refs": [
+          "martin",
+          "walker",
+          "allibert",
+          "newitt",
+          "gevrey"
         ]
       },
       {
         "slug": "periode-coloniale",
         "name": "La période coloniale",
-        "period": "1841 – 1975",
+        "period": "1841 – 1946",
         "icon": "flag",
         "hero": "residence_gouverneur",
-        "lead": "De la cession de Mayotte en 1841 à l'autonomie interne : plus d'un siècle de présence française dans l'archipel.",
+        "lead": "Princes malgaches, cession de Mayotte, protectorats, annexion et rattachement à Madagascar : un siècle de domination française, de plantations et de résistances.",
         "sections": [
           {
-            "title": "1841 : Mayotte devient française",
+            "title": "Des princes malgaches dans l'archipel",
             "media": "andriantsoly",
-            "html": "<p>Menacé par ses rivaux, le sultan <strong>Andriantsoly</strong> cède Mayotte à la France par un\ntraité signé en <strong>1841</strong>. La France cherche alors un point d'appui dans l'océan Indien\naprès la perte de l'île Maurice. Dzaoudzi, sur son rocher de Petite-Terre, devient le siège de\nl'administration. L'esclavage y est aboli en <strong>1846</strong>, deux ans avant le reste des\ncolonies françaises, et des plantations de canne à sucre se développent.</p>"
+            "html": "<p>Au début du XIXe siècle, l'expansion du royaume <strong>merina</strong> bouleverse Madagascar et ses\nvoisins. <strong>Ramanetaka</strong>, général merina, s'installe à Mohéli vers 1830 et y prend le pouvoir\nsous le nom d'Abderemane. <strong>Andriantsoly</strong>, ancien roi sakalava du Boina vaincu par les\nMerina, se réfugie en 1831 à Nosy Be puis à Mayotte, dont il devient sultan en 1832.</p>\n<p>Les deux princes s'affrontent, tandis qu'Anjouan revendique Mayotte. Menacé de toutes parts,\nAndriantsoly cherche un protecteur.</p>"
           },
           {
-            "title": "1886 : le protectorat",
+            "title": "1841 – 1843 : Mayotte devient française",
+            "html": "<p>Le <strong>25 avril 1841</strong>, Andriantsoly cède Mayotte à la France par un traité signé avec le\ncommandant Pierre Passot. La France, qui a perdu l'île de France (Maurice) au profit des Britanniques,\ncherche un point d'appui dans l'océan Indien. Le traité est ratifié en 1843 et la prise de possession a\nlieu le <strong>13 juin 1843</strong>.</p>\n<p>Dzaoudzi devient le siège de l'administration. L'esclavage est aboli en 1846 et des plantations de\ncanne à sucre se développent, cultivées par des travailleurs engagés.</p>"
+          },
+          {
+            "title": "Mohéli, une reine entre les puissances",
+            "media": "djoumbe_fatima",
+            "html": "<p>À Mohéli, <strong>Djoumbé Fatima</strong>, fille de Ramanetaka, règne de 1842 à 1865, puis de 1874 à\nsa mort en 1878. Son règne est marqué par les rivalités entre la France, la Grande-Bretagne et\nZanzibar, et par l'influence de l'aventurier français <strong>Joseph Lambert</strong>, qui obtient de\nvastes concessions et assure un temps la régence.</p>\n<p>Sa fille <strong>Salima Machamba</strong>, née de son union avec l'officier français Émile Fleuriot de\nLangle, devient reine en 1888. Elle règne sous protectorat jusqu'en 1909, puis s'installe en France.</p>"
+          },
+          {
+            "title": "1885 – 1886 : les protectorats",
             "media": "sultan_said_ali",
-            "html": "<p>En <strong>1886</strong>, la France impose son protectorat aux sultanats de la Grande Comore,\nd'Anjouan et de Mohéli. En Grande Comore, le sultan <strong>Saïd Ali</strong> du Bambao, qui a\nunifié l'île avec l'appui français, signe le traité. Des sociétés coloniales obtiennent de vastes\nconcessions de terres, au détriment des paysans, ce qui provoque des révoltes, notamment en Grande\nComore en 1915.</p>"
+            "html": "<p>En Grande Comore, le naturaliste <strong>Léon Humblot</strong> arrive en 1884. Le 5 novembre 1885, le\nsultan <strong>Saïd Ali</strong> de Bambao, qui cherche un appui contre ses rivaux, lui accorde le droit\nd'exploiter les terres de l'île. Le <strong>6 janvier 1886</strong>, un traité place la Grande Comore sous\n<strong>protectorat</strong> français. Humblot, à la fois résident et grand propriétaire, contrôle bientôt\nla plus grande partie des terres cultivables.</p>\n<p>Anjouan (avril 1886) et Mohéli (1886) passent elles aussi sous protectorat. À Anjouan, la révolte de\n1891 qui suit la mort du sultan Abdallah III conduit la France à intervenir militairement et à installer\nun nouveau sultan.</p>"
           },
           {
-            "title": "1912 : rattachement à Madagascar",
-            "html": "<p>En <strong>1912</strong>, l'archipel devient une colonie rattachée administrativement à\nMadagascar. Les Comores sont alors une périphérie lointaine de la Grande Île&nbsp;: peu\nd'infrastructures, peu d'écoles, une économie tournée vers l'exportation de vanille, de girofle,\nde coprah et d'essences à parfum comme l'ylang-ylang.</p>"
+            "title": "1908 – 1912 : annexion et rattachement à Madagascar",
+            "html": "<p>Un décret de 1908 rattache l'archipel au gouvernement général de <strong>Madagascar</strong>. La loi du\n<strong>25 juillet 1912</strong> annexe les trois protectorats : les quatre îles deviennent une province de\nla colonie « Madagascar et dépendances ». Les sultanats disparaissent.</p>\n<p>Lointaine périphérie d'une colonie elle-même pauvre, l'archipel reçoit peu d'écoles, de routes et\nd'hôpitaux. L'historien comorien Mahmoud Ibrahime a montré l'alliance étroite entre l'administration et\nles colons pendant ces décennies.</p>"
           },
           {
-            "title": "1946 – 1975 : vers l'autonomie",
-            "media": "hopital_dzaoudzi",
-            "html": "<p>Après la Seconde Guerre mondiale, les Comores sont séparées de Madagascar et deviennent un\n<strong>territoire d'outre-mer</strong> (1946). Elles obtiennent l'autonomie interne en\n<strong>1961</strong>, avec à leur tête <strong>Saïd Mohamed Cheikh</strong>, président du\nconseil de gouvernement. Le transfert de la capitale de Dzaoudzi à Moroni, décidé à la fin des\nannées 1950 et achevé dans les années 1960, nourrit à Mayotte un mouvement favorable au maintien\ndans la France, porté notamment par des femmes surnommées les «&nbsp;chatouilleuses&nbsp;».</p>"
+            "title": "Une économie de plantation",
+            "media": "ylang_plantation",
+            "html": "<p>De grandes sociétés obtiennent d'immenses concessions, au détriment des villages. On y cultive la\nvanille, le girofle, le coprah, le sisal et les plantes à parfum, dont l'<strong>ylang-ylang</strong>.\nLes paysans, à l'étroit sur leurs terres, doivent payer un impôt de capitation et fournir des journées\nde travail.</p>"
+          },
+          {
+            "title": "Des résistances",
+            "html": "<ul>\n  <li><strong>1891, Anjouan</strong> : soulèvement des esclaves et des paysans du Nyumakele et du Koni.</li>\n  <li><strong>Juillet 1915, Grande Comore</strong> : près de 1 200 paysans, notamment du Mbude et du Dimani,\n  se révoltent contre l'impôt et la confiscation des terres. La répression est dure, mais l'impôt est\n  suspendu.</li>\n  <li><strong>Mars – avril 1940, Anjouan</strong> : dans le Nyumakele, où trente villages n'ont plus que\n  200 hectares pour vivre au milieu des plantations, les villageois se soulèvent contre le travail forcé.\n  La négociation révèle un jeune médecin, <strong>Saïd Mohamed Cheikh</strong>.</li>\n</ul>"
           }
         ],
-        "didyouknow": "L'esclavage fut aboli à Mayotte dès 1846, deux ans avant l'abolition générale dans les colonies françaises. L'anniversaire est commémoré chaque 27 avril à Mayotte.",
+        "facts": [
+          {
+            "label": "Cession de Mayotte",
+            "value": "25 avril 1841"
+          },
+          {
+            "label": "Protectorat sur la Grande Comore",
+            "value": "6 janvier 1886"
+          },
+          {
+            "label": "Annexion",
+            "value": "loi du 25 juillet 1912"
+          },
+          {
+            "label": "Révolte de Ngazidja",
+            "value": "juillet 1915"
+          },
+          {
+            "label": "Révolte du Nyumakele",
+            "value": "mars – avril 1940"
+          }
+        ],
+        "didyouknow": "Pendant trente-quatre ans, de 1912 à 1946, les Comores ont été administrées comme une simple province de Madagascar.",
         "gallery": [
           "residence_gouverneur",
-          "hopital_dzaoudzi",
-          "dzaoudzi",
           "andriantsoly",
+          "djoumbe_fatima",
           "sultan_said_ali",
-          "said_ali"
+          "hopital_dzaoudzi",
+          "ylang_plantation"
+        ],
+        "refs": [
+          "martin",
+          "djoumoi-humblot",
+          "ibrahime-colons",
+          "gevrey",
+          "allibert",
+          "newitt",
+          "walker"
+        ]
+      },
+      {
+        "slug": "vers-l-independance",
+        "name": "Vers l'indépendance",
+        "period": "1946 – 1975",
+        "icon": "flag",
+        "hero": "moroni_centre",
+        "lead": "Territoire d'outre-mer, autonomie interne, naissance du nationalisme comorien et du mouvement mahorais : trente ans qui mènent à l'indépendance et à la séparation de Mayotte.",
+        "sections": [
+          {
+            "title": "1946 : un territoire d'outre-mer",
+            "html": "<p>La loi du <strong>9 mai 1946</strong> détache les Comores de Madagascar et leur donne l'autonomie\nadministrative et financière : l'archipel devient un <strong>territoire d'outre-mer</strong>, avec sa\npropre assemblée. Le docteur <strong>Saïd Mohamed Cheikh</strong> est élu député à l'Assemblée\nnationale, à Paris. Une élite politique comorienne se forme, que l'historien Mahmoud Ibrahime a\nétudiée.</p>"
+          },
+          {
+            "title": "Dzaoudzi ou Moroni ?",
+            "media": "dzaoudzi",
+            "html": "<p>Le <strong>14 mai 1958</strong>, l'Assemblée territoriale vote le transfert de la capitale de\n<strong>Dzaoudzi</strong>, à Mayotte, vers <strong>Moroni</strong>, en Grande Comore : les 26 élus des trois\nautres îles votent pour, les quatre élus mahorais contre. Le déménagement des services s'étale\njusqu'en 1966. À Mayotte, beaucoup le vivent comme un déclassement.</p>"
+          },
+          {
+            "title": "La naissance du mouvement mahorais",
+            "html": "<p>Le <strong>2 novembre 1958</strong>, des notables mahorais réunis à <strong>Tsoundzou</strong>, à\nl'initiative de Georges Nahouda, réclament la départementalisation de l'île. De ce « congrès des\nnotables » naît un mouvement qui deviendra le <strong>Mouvement populaire mahorais</strong> (MPM),\nanimé notamment par Marcel Henry et Younoussa Bamana.</p>\n<p>Dans les années 1960 et 1970, des femmes, les « <strong>chatouilleuses</strong> », parmi lesquelles\nZéna M'Déré, mènent des actions spectaculaires contre les partisans de l'indépendance venus des autres\nîles.</p>"
+          },
+          {
+            "title": "L'autonomie interne",
+            "media": "moroni_centre",
+            "html": "<p>En 1961, les Comores obtiennent l'<strong>autonomie interne</strong>. Saïd Mohamed Cheikh préside le\nconseil de gouvernement de 1962 à sa mort, le <strong>16 mars 1970</strong>. Lui succèdent le\n<strong>prince Saïd Ibrahim</strong>, puis <strong>Ahmed Abdallah</strong>. Les gouvernements de cette\npériode défendent d'abord une autonomie au sein de la République française.</p>"
+          },
+          {
+            "title": "Le nationalisme comorien",
+            "html": "<p>À la fin de 1962, des Comoriens installés en Afrique de l'Est fondent à Dar es Salaam le\n<strong>MOLINACO</strong> (Mouvement de libération nationale des Comores). Depuis la Tanzanie, il\nporte la revendication d'indépendance auprès de l'Organisation de l'unité africaine et de l'ONU.</p>\n<p>En <strong>janvier 1968</strong>, une grève des lycéens de Moroni ouvre le débat politique dans\nl'archipel. Les partis indépendantistes sont légalisés et le mouvement s'accélère après la mort de Saïd\nMohamed Cheikh.</p>"
+          },
+          {
+            "title": "1973 – 1975 : de la consultation à la proclamation",
+            "html": "<p>Des accords signés le 15 juin 1973 prévoient l'accession à l'indépendance. Lors de la consultation\ndu <strong>22 décembre 1974</strong>, 94,6 % des votants de l'archipel choisissent l'indépendance ; à\n<strong>Mayotte</strong>, 63,8 % votent pour le maintien dans la France.</p>\n<p>Le Parlement français adopte alors la <strong>loi du 3 juillet 1975</strong>, qui prévoit l'adoption de\nla future constitution <strong>île par île</strong>. Y voyant une manœuvre pour détacher Mayotte, la\nChambre des députés des Comores proclame l'<strong>indépendance</strong> le <strong>6 juillet 1975</strong> ;\nAhmed Abdallah devient chef de l'État. Mayotte, elle, reste sous administration française. Lire :\n[[histoire/question-de-mayotte.html|Mayotte : regards croisés]].</p>"
+          }
+        ],
+        "facts": [
+          {
+            "label": "Territoire d'outre-mer",
+            "value": "9 mai 1946"
+          },
+          {
+            "label": "Vote du transfert de la capitale",
+            "value": "14 mai 1958"
+          },
+          {
+            "label": "Congrès de Tsoundzou",
+            "value": "2 novembre 1958"
+          },
+          {
+            "label": "Consultation",
+            "value": "22 décembre 1974"
+          },
+          {
+            "label": "Indépendance",
+            "value": "6 juillet 1975"
+          }
+        ],
+        "didyouknow": "Le lycée de Moroni, où éclate la grève de 1968, porte aujourd'hui le nom de Saïd Mohamed Cheikh.",
+        "gallery": [
+          "moroni_centre",
+          "dzaoudzi",
+          "residence_gouverneur",
+          "carte_1976"
+        ],
+        "refs": [
+          "ibrahime-elite",
+          "roberts-molinaco",
+          "loi-1975",
+          "newitt",
+          "walker"
         ]
       },
       {
         "slug": "independance-et-epoque-contemporaine",
-        "name": "Indépendance & époque contemporaine",
+        "name": "Les Comores depuis l'indépendance",
         "period": "1975 – aujourd'hui",
-        "icon": "star",
-        "hero": "carte_1976",
-        "lead": "L'indépendance proclamée en 1975, le choix de Mayotte, les crises politiques et la naissance de l'Union des Comores.",
+        "icon": "flag",
+        "hero": "moroni_panorama",
+        "lead": "Coups d'État et mercenaires, révolution d'Ali Soilih, crise séparatiste, naissance de l'Union des Comores : un demi-siècle d'histoire politique mouvementée.",
         "sections": [
           {
-            "title": "Le référendum de 1974",
-            "html": "<p>Le <strong>22 décembre 1974</strong>, les habitants de l'archipel votent sur l'indépendance.\nUne très large majorité se prononce pour, mais à Mayotte, une majorité choisit le maintien dans\nla France. Paris décide alors de prendre en compte les résultats île par île, ce que contestent\nles autorités comoriennes.</p>"
+            "title": "Un départ sous tension",
+            "html": "<p>Moins d'un mois après la proclamation, le <strong>3 août 1975</strong>, Ahmed Abdallah est renversé\npar <strong>Ali Soilih</strong> et Saïd Mohamed Jaffar, avec l'aide du mercenaire français\n<strong>Bob Denard</strong>. Le <strong>12 novembre 1975</strong>, les Comores sont admises à l'ONU avec\nleurs quatre îles.</p>"
           },
           {
-            "title": "6 juillet 1975 : l'indépendance",
-            "html": "<p>Le <strong>6 juillet 1975</strong>, <strong>Ahmed Abdallah</strong>, président du conseil de\ngouvernement, proclame unilatéralement l'indépendance des Comores. Le nouvel État est admis à\nl'ONU en novembre 1975 avec ses quatre îles. Mayotte, elle, reste française et confirme ce choix\nlors d'une consultation en <strong>1976</strong>.</p>"
+            "title": "La révolution d'Ali Soilih (1975 – 1978)",
+            "html": "<p>Devenu chef de l'État en janvier 1976, Ali Soilih lance une révolution radicale : il veut\nmoderniser le pays, réduire le poids des notables, s'attaque au grand mariage et à certaines coutumes,\nmobilise la jeunesse et réorganise l'administration au plus près des villages.</p>\n<p>Ses partisans y voient une tentative sincère de libérer la société ; ses adversaires dénoncent\nl'autoritarisme, les violences des milices et la désorganisation économique. Il est renversé le\n<strong>13 mai 1978</strong> par les mercenaires de Bob Denard et tué quelques jours plus tard.</p>"
           },
           {
-            "title": "Des années agitées",
-            "html": "<p>Les premières décennies de l'indépendance sont marquées par une forte instabilité&nbsp;:\ncoups d'État, régime révolutionnaire d'<strong>Ali Soilih</strong> (1975-1978), retour au pouvoir\nd'Ahmed Abdallah, interventions de mercenaires étrangers. En 1997, Anjouan et Mohéli font\nsécession. La crise se dénoue avec l'accord de <strong>Fomboni</strong> en 2001 et une nouvelle\nconstitution qui crée l'<strong>Union des Comores</strong>, où chaque île dispose d'une large\nautonomie et où la présidence tourne entre les îles.</p>"
+            "title": "Les années Abdallah (1978 – 1989)",
+            "html": "<p>Revenu au pouvoir, Ahmed Abdallah fait adopter en 1978 la constitution de la <strong>République\nfédérale islamique des Comores</strong>. Le régime devient un régime de parti unique, tandis que la\ngarde présidentielle commandée par Bob Denard pèse sur la vie politique. Le\n<strong>26 novembre 1989</strong>, Ahmed Abdallah est assassiné dans son bureau.</p>"
           },
           {
-            "title": "Mayotte, 101e département",
-            "media": "mamoudzou",
-            "html": "<p>Après un référendum en 2009, Mayotte devient le <strong>101e département français</strong> le\n31 mars 2011, puis une <strong>région ultrapériphérique</strong> de l'Union européenne en 2014.\nL'île connaît une croissance démographique rapide et des défis importants&nbsp;: logement, accès à\nl'eau, immigration, inégalités. Depuis 2018, elle est aussi au cœur d'une crise sismique liée à la\nnaissance du volcan sous-marin Fani Maoré, et elle a été dévastée par le cyclone Chido en\ndécembre 2024.</p>"
+            "title": "Démocratisation et crises (1990 – 1999)",
+            "html": "<ul>\n  <li><strong>1990</strong> : Saïd Mohamed Djohar est élu président lors d'une élection contestée.</li>\n  <li><strong>28 septembre 1995</strong> : Bob Denard le renverse ; l'armée française intervient début\n  octobre (opération Azalée) et arrête le mercenaire.</li>\n  <li><strong>1996</strong> : Mohamed Taki Abdoulkarim est élu ; il meurt en fonction en 1998.</li>\n  <li><strong>Août 1997</strong> : Anjouan, puis Mohéli, proclament leur sécession ; une tentative de\n  débarquement à Anjouan échoue.</li>\n  <li><strong>30 avril 1999</strong> : coup d'État du colonel Azali Assoumani.</li>\n</ul>"
           },
           {
-            "title": "L'archipel aujourd'hui",
-            "html": "<p>L'Union des Comores a adopté une nouvelle constitution en 2018 et poursuit ses efforts de\ndéveloppement. Malgré la frontière politique, les liens familiaux, culturels et économiques entre\nles quatre îles restent très étroits. La question du statut de Mayotte demeure un sujet de\ndésaccord entre la France et l'Union des Comores.</p>"
+            "title": "L'Union des Comores",
+            "media": "fomboni",
+            "html": "<p>L'accord de <strong>Fomboni</strong>, signé le 17 février 2001, met fin à la crise séparatiste. La\nconstitution adoptée par référendum le <strong>23 décembre 2001</strong> crée l'<strong>Union des\nComores</strong> : chaque île a son président et une large autonomie, et la présidence de l'Union\ntourne entre les îles.</p>\n<p>Ahmed Abdallah Sambi (2006 – 2011) puis Ikililou Dhoinine (2011 – 2016) se succèdent. En 2007 – 2008,\nle colonel Mohamed Bacar refuse de quitter la présidence d'Anjouan ; le <strong>25 mars 2008</strong>,\nun débarquement comorien soutenu par l'Union africaine rétablit l'autorité de l'Union.</p>"
+          },
+          {
+            "title": "Depuis 2016",
+            "html": "<p>Élu en 2016, <strong>Azali Assoumani</strong> fait approuver par référendum, le <strong>30 juillet\n2018</strong>, une réforme qui modifie la présidence tournante et permet deux mandats consécutifs. Il est\nréélu en 2019 puis en janvier 2024, lors d'élections contestées par l'opposition, qui dénonce des\nfraudes, et suivies de manifestations à Moroni. En 2023, il préside l'<strong>Union africaine</strong>.</p>\n<p>Au-delà de la politique, la société comorienne vit au rythme de sa diaspora, nombreuse en France,\nnotamment à Marseille, et des liens familiaux qui unissent les quatre îles.</p>"
           }
         ],
-        "didyouknow": "Les Comores ont été admises à l'ONU le 12 novembre 1975, quelques mois seulement après la proclamation de leur indépendance.",
+        "facts": [
+          {
+            "label": "Admission à l'ONU",
+            "value": "12 novembre 1975"
+          },
+          {
+            "label": "Constitution de l'Union",
+            "value": "23 décembre 2001"
+          },
+          {
+            "label": "Accord de Fomboni",
+            "value": "17 février 2001"
+          },
+          {
+            "label": "Réforme constitutionnelle",
+            "value": "30 juillet 2018"
+          }
+        ],
+        "didyouknow": "Depuis l'indépendance, les Comores ont connu plus d'une vingtaine de coups d'État ou de tentatives, ce qui leur a valu le surnom d'« archipel aux coups d'État ».",
         "gallery": [
-          "carte_1976",
           "moroni_panorama",
+          "moroni_mosquee",
+          "fomboni",
+          "mutsamudu_vue"
+        ],
+        "refs": [
+          "walker",
+          "newitt",
+          "loi-1975",
+          "onu-31-4"
+        ]
+      },
+      {
+        "slug": "question-de-mayotte",
+        "name": "Mayotte : regards croisés",
+        "period": "1974 – aujourd'hui",
+        "icon": "globe",
+        "hero": "dzaoudzi",
+        "lead": "Département français pour Paris et pour la grande majorité des Mahorais, île comorienne occupée pour Moroni et l'ONU : comprendre les arguments de chacun, les votes et leurs conséquences humaines.",
+        "sections": [
+          {
+            "title": "Deux lectures d'un même vote",
+            "html": "<p>Tout part de la consultation du <strong>22 décembre 1974</strong>. Comptés à l'échelle de\nl'archipel, les résultats donnent une très large majorité pour l'indépendance. Comptés île par île, ils\nmontrent que Mayotte a voté à 63,8 % pour rester française.</p>\n<div class=\"notice\">\n<p><strong>Position comorienne.</strong> L'archipel formait un seul territoire colonial ; selon le principe\nde l'intangibilité des frontières héritées de la colonisation, il devait accéder à l'indépendance dans\nson ensemble. En séparant Mayotte, la France a violé l'intégrité territoriale du nouvel État. La\nconstitution de l'Union des Comores revendique les quatre îles.</p>\n<p><strong>Position française.</strong> Le droit des peuples à disposer d'eux-mêmes s'applique aux\npopulations : les Mahorais ont exprimé à plusieurs reprises leur volonté de rester français. La\nConstitution française dispose que nulle cession de territoire n'est valable sans le consentement des\npopulations intéressées.</p>\n</div>"
+          },
+          {
+            "title": "Les étapes du choix mahorais",
+            "html": "<ul>\n  <li><strong>8 février 1976</strong> : 99,4 % des votants choisissent de rester dans la République ; une\n  seconde consultation, le 11 avril, porte sur le statut.</li>\n  <li><strong>24 décembre 1976</strong> : Mayotte devient une collectivité territoriale au statut particulier.</li>\n  <li><strong>2000 – 2001</strong> : un accord sur l'avenir de Mayotte, approuvé par 72,9 % des votants le\n  2 juillet 2000, en fait une collectivité départementale.</li>\n  <li><strong>29 mars 2009</strong> : 95,2 % des votants (participation de 61 %) approuvent la départementalisation.</li>\n  <li><strong>31 mars 2011</strong> : Mayotte devient le 101e département français, puis une région\n  ultrapériphérique de l'Union européenne le 1er janvier 2014.</li>\n</ul>"
+          },
+          {
+            "title": "Le droit international et la diplomatie",
+            "html": "<p>Le <strong>6 février 1976</strong>, la France oppose son veto à un projet de résolution du Conseil de\nsécurité qui demandait l'annulation de la consultation prévue à Mayotte. Le <strong>21 octobre\n1976</strong>, l'Assemblée générale de l'ONU adopte la <strong>résolution 31/4</strong>, par 102 voix contre\n1 (la France) et 28 abstentions : elle déclare nulles les consultations de 1976 et demande à la France\nde négocier avec les Comores. D'autres résolutions suivent jusqu'au milieu des années 1990.</p>\n<p>L'Organisation de l'unité africaine, puis l'Union africaine, soutiennent la position comorienne. La\nFrance considère que ces résolutions, non contraignantes, ne peuvent s'imposer au choix exprimé par\nles Mahorais.</p>"
+          },
+          {
+            "title": "Comment expliquer le choix mahorais ?",
+            "html": "<p>Les historiens avancent plusieurs explications, qui ne s'excluent pas : une présence française\nplus ancienne (depuis 1841) qu'ailleurs dans l'archipel ; la crainte d'être dominés par les élites de\nla Grande Comore et d'Anjouan, nourrie par le transfert de la capitale à Moroni ; l'espoir d'une\nprotection et d'un développement plus rapides au sein de la France ; le rôle du Mouvement populaire\nmahorais et des chatouilleuses.</p>\n<p>D'autres insistent sur l'intérêt stratégique de la France pour une base dans le canal du Mozambique\net sur la manière dont Paris a organisé les votes. Les mémoires de ces événements restent très\ndifférentes d'une rive à l'autre.</p>"
+          },
+          {
+            "title": "Une frontière au milieu d'une même société",
+            "media": "barge",
+            "html": "<p>Mahorais et Comoriens partagent les langues, la religion, les coutumes et souvent les familles. En\njanvier <strong>1995</strong>, l'instauration du « <strong>visa Balladur</strong> » met fin à la libre\ncirculation entre Mayotte et les autres îles. Depuis, des milliers de personnes tentent la traversée\ndepuis Anjouan à bord de <strong>kwassa-kwassa</strong>, des barques surchargées.</p>\n<p>Un rapport du Sénat français de 2012 estimait qu'entre 7 000 et 10 000 personnes étaient mortes en mer\ndepuis 1995 ; les autorités comoriennes avancent des chiffres bien plus élevés. Aucun décompte officiel\nn'existe. Cette réalité humaine est au cœur des relations entre les îles.</p>"
+          },
+          {
+            "title": "Mayotte aujourd'hui",
+            "media": "mamoudzou",
+            "html": "<p>Département le plus jeune et le plus pauvre de France, Mayotte connaît une croissance démographique\ntrès rapide, des difficultés de logement et d'accès à l'eau, et des tensions autour de l'immigration et\nde la sécurité. Elle a été frappée par la crise sismique liée à la naissance du volcan sous-marin Fani\nMaoré (2018 – 2019), puis dévastée par le <strong>cyclone Chido</strong>, le 14 décembre 2024.</p>\n<p>Entre Paris et Moroni, la question du statut demeure un sujet de désaccord, même si les deux États\ncoopèrent sur de nombreux sujets.</p>"
+          }
+        ],
+        "facts": [
+          {
+            "label": "Vote de Mayotte en 1974",
+            "value": "63,8 % pour le maintien dans la France"
+          },
+          {
+            "label": "Consultation du 8 février 1976",
+            "value": "99,4 % pour rester français"
+          },
+          {
+            "label": "Résolution ONU 31/4",
+            "value": "21 octobre 1976"
+          },
+          {
+            "label": "Référendum de 2009",
+            "value": "95,2 % pour la départementalisation"
+          },
+          {
+            "label": "Département",
+            "value": "31 mars 2011"
+          }
+        ],
+        "didyouknow": "Le drapeau de l'Union des Comores compte quatre bandes et quatre étoiles : une pour chaque île, Mayotte comprise.",
+        "gallery": [
+          "dzaoudzi",
+          "barge",
           "mamoudzou",
-          "fomboni"
+          "carte_1976"
+        ],
+        "refs": [
+          "onu-31-4",
+          "loi-1975",
+          "senat-2012",
+          "walker",
+          "newitt"
         ]
       },
       {
@@ -508,43 +1069,67 @@
         "name": "Grandes figures",
         "period": "Portraits",
         "icon": "people",
-        "hero": "djoumbe_fatima",
-        "lead": "Reines et sultans, hommes politiques, militantes, écrivains et musiciens : quelques personnalités qui ont marqué l'histoire de l'archipel.",
+        "hero": "sultan_said_ali",
+        "lead": "Fondateurs légendaires, reines et sultans, militantes, hommes politiques, écrivains et chercheurs : quelques personnalités qui ont marqué l'histoire de l'archipel.",
         "sections": [
           {
-            "title": "Djoumbé Fatima (1836 – 1878)",
-            "media": "djoumbe_fatima",
-            "html": "<p>Reine de Mohéli, fille du prince merina Ramanetaka, elle accède au trône encore enfant. Son\nrègne est marqué par les rivalités entre puissances européennes et par sa volonté de préserver\nl'indépendance de son île, qui la conduit jusqu'à Paris. Elle reste l'une des figures féminines\nles plus célèbres de l'histoire comorienne.</p>"
+            "title": "Mtswa Mwindza (tradition)",
+            "html": "<p>Notable du Mbude, en Grande Comore, il aurait selon la tradition rapporté l'islam d'Arabie à\nNtsaweni. Figure fondatrice plus légendaire qu'historique, il incarne l'ancienneté de l'islam dans\nl'archipel. Lire [[contes/mtswa-mwindza.html|son histoire]].</p>"
           },
           {
-            "title": "Andriantsoly (première moitié du XIXe siècle)",
+            "title": "Andriantsoly (mort en 1847)",
             "media": "andriantsoly",
-            "html": "<p>Ancien roi sakalava du Boina, à Madagascar, il se réfugie à Mayotte et en devient le\nsouverain. Menacé par ses voisins, il cède l'île à la France en 1841, ouvrant une nouvelle page de\nl'histoire de l'archipel.</p>"
+            "html": "<p>Ancien roi sakalava du Boina, chassé de Madagascar par les Merina, il devient sultan de Mayotte en\n1832. Menacé par ses voisins, il cède l'île à la France par le traité du 25 avril 1841.</p>"
+          },
+          {
+            "title": "Djoumbé Fatima (vers 1836 – 1878)",
+            "media": "djoumbe_fatima",
+            "html": "<p>Reine de Mohéli de 1842 à 1865 et de 1874 à 1878, fille du prince merina Ramanetaka, elle tente de\npréserver l'indépendance de son île au milieu des rivalités entre puissances européennes et Zanzibar.\nElle reste l'une des figures féminines les plus célèbres de l'histoire comorienne.</p>"
+          },
+          {
+            "title": "Salima Machamba (1874 – 1964)",
+            "html": "<p>Fille de Djoumbé Fatima et d'un officier français, dernière reine de Mohéli (1888 – 1909), elle\nrègne sous protectorat, puis renonce à son trône et s'installe en France, où elle meurt en 1964.</p>"
+          },
+          {
+            "title": "Abdallah III (mort en 1891)",
+            "html": "<p>Sultan d'Anjouan, il signe en 1882 un traité qui interdit la traite et prévoit la libération des\nesclaves, puis accepte le protectorat français en 1886. Sa mort, en février 1891, déclenche la grande révolte des\nesclaves et des paysans d'Anjouan.</p>"
           },
           {
             "title": "Saïd Ali ben Saïd Omar (mort en 1916)",
             "media": "said_ali",
-            "html": "<p>Sultan du Bambao, il parvient à dominer l'ensemble de la Grande Comore avec l'appui de la\nFrance et signe le traité de protectorat de 1886. Il est souvent présenté comme le dernier grand\nsultan de l'île.</p>"
+            "html": "<p>Sultan de Bambao, il parvient à dominer toute la Grande Comore avec l'appui de la France. En\néchange, il accorde à Léon Humblot l'exploitation des terres (1885) et signe le traité de protectorat\nde 1886. Il est souvent présenté comme le dernier grand sultan de l'île.</p>"
           },
           {
-            "title": "Hommes politiques de l'indépendance",
-            "html": "<ul>\n  <li><strong>Saïd Mohamed Cheikh</strong>, médecin, préside le conseil de gouvernement de l'autonomie interne dans les années 1960.</li>\n  <li><strong>Prince Saïd Ibrahim</strong>, qui lui succède, a donné son nom à l'aéroport international de Moroni.</li>\n  <li><strong>Ahmed Abdallah</strong> proclame l'indépendance le 6 juillet 1975.</li>\n  <li><strong>Ali Soilih</strong> conduit de 1975 à 1978 un régime révolutionnaire qui bouscule les traditions.</li>\n</ul>"
+            "title": "Saïd Mohamed Cheikh (1904 – 1970)",
+            "html": "<p>Médecin, il se fait connaître en négociant la fin de la révolte du Nyumakele en 1940. Député à\nParis après 1946, il préside le conseil de gouvernement de l'autonomie interne de 1962 à sa mort.\nPartisan d'une évolution progressive, il est considéré comme l'un des bâtisseurs des Comores\nmodernes.</p>"
           },
           {
-            "title": "Les chatouilleuses de Mayotte",
-            "html": "<p>Dans les années 1960, des femmes mahoraises, parmi lesquelles <strong>Zéna M'Déré</strong>,\nmènent une campagne active pour le maintien de Mayotte dans la France. Leur surnom vient de leur\nméthode&nbsp;: «&nbsp;chatouiller&nbsp;» les responsables politiques venus défendre l'option\ncontraire jusqu'à les faire renoncer. Elles sont devenues des figures de l'histoire mahoraise.</p>"
+            "title": "Les militants de Mayotte",
+            "html": "<p><strong>Georges Nahouda</strong> organise en 1958 le congrès de Tsoundzou. <strong>Marcel Henry</strong>\net <strong>Younoussa Bamana</strong> conduisent ensuite le Mouvement populaire mahorais.\n<strong>Zéna M'Déré</strong> et les « chatouilleuses » mènent des actions spectaculaires pour le maintien\nde Mayotte dans la France. Tous sont des figures de l'histoire mahoraise ; ils sont vus de façon très\ncritique dans les autres îles.</p>"
           },
           {
-            "title": "Écrivains et artistes",
-            "html": "<ul>\n  <li><strong>Mohamed Toihiri</strong>, auteur de <em>La République des Imberbes</em> (1985), souvent présenté comme le premier roman comorien en français.</li>\n  <li><strong>Salim Hatubou</strong>, conteur et écrivain, a recueilli et transmis de nombreux contes de l'archipel.</li>\n  <li><strong>Ali Zamir</strong>, romancier, auteur d'<em>Anguille sous roche</em> (2016), salué par la critique.</li>\n  <li><strong>Nassur Attoumani</strong>, écrivain et dramaturge mahorais.</li>\n  <li><strong>Maalesh</strong>, <strong>Nawal</strong> ou <strong>Salim Ali Amir</strong>, musiciens qui ont fait connaître les sonorités comoriennes au-delà de l'archipel.</li>\n</ul>\n<p>Voir aussi [[culture/litterature-et-arts.html|Littérature &amp; arts]].</p>"
+            "title": "Ahmed Abdallah et Ali Soilih",
+            "html": "<p><strong>Ahmed Abdallah</strong> (1919 – 1989), originaire de Domoni, proclame l'indépendance le 6\njuillet 1975, revient au pouvoir en 1978 et meurt assassiné en 1989. <strong>Ali Soilih</strong> (1937 –\n1978) conduit de 1975 à 1978 une révolution qui bouscule les traditions ; il est tué après sa chute. Les\ndeux hommes, et leur dépendance à l'égard du mercenaire Bob Denard, résument les contradictions des\npremières années de l'indépendance.</p>"
+          },
+          {
+            "title": "Écrivains, chercheurs et artistes",
+            "html": "<ul>\n  <li><strong>Damir Ben Ali</strong>, anthropologue et historien, fondateur du CNDRS et spécialiste de la\n  tradition orale.</li>\n  <li><strong>Mohamed Ahmed-Chamanga</strong>, linguiste, qui a recueilli et traduit de nombreux contes.</li>\n  <li><strong>Mohamed Toihiri</strong>, auteur de <em>La République des imberbes</em> (1985), souvent présenté\n  comme le premier roman comorien en français.</li>\n  <li><strong>Salim Hatubou</strong> (1972 – 2015), conteur et écrivain, grand passeur des contes de\n  l'archipel.</li>\n  <li><strong>Ali Zamir</strong>, romancier, auteur d'<em>Anguille sous roche</em> (2016).</li>\n  <li><strong>Nassur Attoumani</strong>, écrivain et dramaturge mahorais.</li>\n  <li><strong>Maalesh</strong>, <strong>Nawal</strong> ou <strong>Salim Ali Amir</strong>, musiciens qui ont fait\n  connaître les sonorités comoriennes au-delà de l'archipel.</li>\n</ul>\n<p>Voir aussi [[culture/litterature-et-arts.html|Littérature &amp; arts]] et\n[[contes/index.html|Hale halele, contes et récits]].</p>"
           }
         ],
-        "didyouknow": "L'aéroport international de Moroni porte le nom du prince Saïd Ibrahim, l'un des dirigeants de l'archipel pendant l'autonomie interne.",
+        "facts": [],
+        "didyouknow": "L'aéroport international de Moroni porte le nom du prince Saïd Ibrahim, qui présida le conseil de gouvernement après la mort de Saïd Mohamed Cheikh.",
         "gallery": [
-          "djoumbe_fatima",
-          "andriantsoly",
+          "sultan_said_ali",
           "said_ali",
-          "sultan_said_ali"
+          "djoumbe_fatima",
+          "andriantsoly"
+        ],
+        "refs": [
+          "martin",
+          "ibrahime-elite",
+          "ben-ali-inya-fwambaya",
+          "walker",
+          "hatubou-legendes"
         ]
       }
     ],
@@ -653,31 +1238,31 @@
         "name": "Contes & légendes",
         "icon": "moon",
         "hero": "dziani",
-        "lead": "Djinns, lacs engloutis, prophètes et rusés animaux : le folklore comorien se transmet le soir, à la lueur des lampes, de génération en génération.",
+        "lead": "Djinns, lacs engloutis, prophètes et héros rusés : le folklore comorien se transmet le soir, de génération en génération. Une introduction, avant de plonger dans les récits de la zone Hale halele.",
         "sections": [
           {
             "title": "La tradition orale",
-            "html": "<p>Aux Comores, les contes se disent le soir, quand le travail est fini. Une conteuse ou un\nconteur commence par une formule rituelle à laquelle l'auditoire répond, et le récit peut\ncommencer. Ces histoires amusent, mais elles enseignent aussi&nbsp;: respect des aînés, hospitalité,\nméfiance envers les orgueilleux, ruse des faibles face aux puissants. Plusieurs auteurs, comme\nSalim Hatubou, ont recueilli ces contes pour les transmettre par écrit.</p>"
+            "html": "<p>Aux Comores, les contes se disent le soir, quand le travail est fini. À Mayotte, le conteur lance\n« Hale ! » et l'auditoire répond « Halele ! » : l'histoire peut commencer. Ces récits amusent, mais ils\nenseignent aussi : respect des aînés, hospitalité, méfiance envers les orgueilleux, ruse des faibles face\naux puissants.</p>\n<div class=\"notice\"><p>Retrouvez près d'une vingtaine de mythes, légendes et contes, réécrits avec leurs sources, dans\nla zone [[contes/index.html|Hale halele, contes et récits des Comores]].</p></div>"
           },
           {
             "title": "Les djinns et les esprits",
-            "html": "<p>Les <strong>djinns</strong>, êtres invisibles mentionnés dans le Coran, peuplent les récits et\nles croyances populaires. On dit qu'ils habitent certains arbres, rochers, grottes ou sources, et\nqu'il faut savoir s'en protéger ou se concilier leurs faveurs. À Mayotte et dans certaines\nrégions de l'archipel, des cultes de possession d'origine malgache (<em>trumba</em>) ou locale\n(<em>patros</em>) font encore appel aux esprits lors de cérémonies accompagnées de chants et de\ntambours.</p>"
+            "html": "<p>Les <strong>djinns</strong>, êtres invisibles mentionnés dans le Coran, peuplent les récits et les\ncroyances populaires. On dit qu'ils habitent certains cratères, lacs, arbres, rochers ou places, appelés\n<em>ziara</em>, et qu'il faut savoir s'en protéger ou se concilier leurs faveurs. À Mayotte et dans\ncertaines régions de l'archipel, des cultes de possession d'origine malgache (<em>trumba</em>) ou locale\n(<em>patros</em>) font encore appel aux esprits lors de cérémonies accompagnées de chants et de tambours.</p>"
           },
           {
             "title": "Légendes de lieux",
             "media": "dziani",
-            "html": "<ul>\n  <li><strong>Le lac Salé</strong> (Grande Comore)&nbsp;: on raconte qu'un village aurait été englouti à cet endroit pour avoir refusé l'hospitalité à un étranger de passage.</li>\n  <li><strong>Le Trou du Prophète</strong>&nbsp;: cette anse du nord de la Grande Comore devrait son nom au souvenir d'un saint homme qui y aurait accosté.</li>\n  <li><strong>La falaise d'Iconi</strong>&nbsp;: la tradition rapporte que des femmes s'en seraient jetées pour échapper aux razzias venues de Madagascar.</li>\n  <li><strong>Mtswa Mwindza</strong>&nbsp;: le récit de cet habitant de Ntsaoueni, parti en Arabie et revenu porteur de l'islam, est l'une des légendes fondatrices de l'archipel.</li>\n</ul>\n<p>Ces récits, transmis de bouche à oreille, existent en plusieurs versions selon les villages et\nles conteurs.</p>"
+            "html": "<ul>\n  <li>[[contes/le-lac-sale.html|Le lac Salé]] (Grande Comore), englouti pour avoir refusé de l'eau à un étranger.</li>\n  <li>[[contes/l-anneau-de-la-reine-de-saba.html|L'anneau de la reine de Saba]], qui aurait creusé le cratère du Karthala.</li>\n  <li>[[contes/la-fille-du-roi-et-le-lac-dziani.html|La fille du roi et le lac Dziani]] (Mayotte).</li>\n  <li>[[contes/mtsanga-tsohole.html|Mtsanga Tsoholé]], l'îlot de sable blanc né du riz d'un mariage royal.</li>\n  <li>[[contes/les-femmes-d-iconi.html|Les femmes d'Iconi]], au temps des razzias.</li>\n  <li>[[contes/mtswa-mwindza.html|Mtswa Mwindza]], le récit fondateur de l'islam comorien.</li>\n</ul>\n<p>Ces récits, transmis de bouche à oreille, existent en plusieurs versions selon les villages et les conteurs.</p>"
           },
           {
             "title": "Personnages de contes",
-            "html": "<p>On retrouve dans les contes comoriens des figures communes à toute la côte swahilie&nbsp;: le\nlièvre rusé qui triomphe des plus forts, l'ogre ou le monstre dévoreur, l'enfant orphelin\nmaltraité qui finit récompensé, le sultan injuste puni par plus malin que lui. Les animaux parlent,\nles esprits se mêlent aux humains et la morale tombe toujours à la fin.</p>"
+            "html": "<p>On retrouve dans les contes comoriens des figures communes à toute la côte swahilie et à\nMadagascar : le héros rusé qui se joue des puissants, comme [[contes/la-marmite-qui-avait-accouche.html|Ibnasya]],\nle djinn dévoreur déguisé en bel étranger, la jeune fille trop fière, l'enfant méprisé qui finit par\nsauver les siens. Les animaux parlent, les esprits se mêlent aux humains et la morale tombe souvent à\nla fin.</p>"
           },
           {
             "title": "Proverbes et devinettes",
-            "html": "<p>Les <strong>proverbes</strong> ponctuent les conversations et les discours des notables&nbsp;:\nsavoir les placer au bon moment est un signe de sagesse. Les <strong>devinettes</strong>,\néchangées en jeu entre enfants ou en ouverture des veillées de contes, aiguisent l'esprit et\nl'art de la parole.</p>"
+            "html": "<p>Les <strong>proverbes</strong> ponctuent les conversations et les discours des notables : savoir les\nplacer au bon moment est un signe de sagesse. Les <strong>devinettes</strong>, échangées en jeu entre enfants\nou en ouverture des veillées de contes, aiguisent l'esprit et l'art de la parole.</p>"
           }
         ],
-        "didyouknow": "Dans de nombreuses familles, on ne raconte traditionnellement pas les contes en plein jour : c'est une activité réservée à la soirée.",
+        "didyouknow": "À Mayotte, un podcast lancé en 2022 porte le nom de la formule d'ouverture des contes : « Halé Halélé ».",
         "gallery": [
           "dziani",
           "iconi",

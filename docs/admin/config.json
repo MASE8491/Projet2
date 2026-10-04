@@ -18,8 +18,10 @@
     "practical",
     "events",
     "glossary",
-    "quiz",
-    "videos"
+    "quizzes",
+    "videos",
+    "tales",
+    "bibliography"
   ],
   "uploads_dir": "site_src/static/uploads",
   "reserved_slugs": [
@@ -27,7 +29,9 @@
     "admin",
     "agenda",
     "assets",
+    "bibliographie",
     "contact",
+    "contes",
     "credits",
     "experiences",
     "galerie",
@@ -36,6 +40,7 @@
     "index",
     "itineraires",
     "lieux",
+    "loisirs",
     "mentions-legales",
     "plan-du-site",
     "preparer-son-voyage",

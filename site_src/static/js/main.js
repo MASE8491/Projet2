@@ -105,9 +105,19 @@
         b.classList.toggle("is-active", active);
         b.setAttribute("aria-pressed", String(active));
       });
-      document.querySelectorAll(".gallery-item").forEach(function (item) {
-        item.hidden = value !== "all" && item.getAttribute("data-island") !== value;
+      var attr = filters.getAttribute("data-filter-attr") || "data-island";
+      var shown = 0;
+      document.querySelectorAll(filters.getAttribute("data-filter-items") || ".gallery-item").forEach(function (item) {
+        item.hidden = value !== "all" && item.getAttribute(attr) !== value;
+        if (!item.hidden) shown++;
       });
+      // Masque les groupes devenus vides (contes, bibliographie)
+      document.querySelectorAll("[data-filter-group]").forEach(function (group) {
+        var items = group.querySelectorAll(filters.getAttribute("data-filter-items"));
+        group.hidden = items.length > 0 && Array.prototype.every.call(items, function (i) { return i.hidden; });
+      });
+      var empty = document.querySelector("[data-filter-empty]");
+      if (empty) empty.hidden = shown !== 0;
     });
   }
 
@@ -161,15 +171,18 @@
   if (quiz) {
     var result = document.querySelector("[data-quiz-result]");
     var items = quiz.querySelectorAll(".quiz-item");
+    var progress = document.querySelector("[data-quiz-progress]");
     var update = function () {
       var answered = 0, correct = 0;
       items.forEach(function (item) {
         if (item.dataset.done) { answered++; if (item.dataset.done === "ok") correct++; }
       });
       if (!answered) {
+        if (progress) progress.textContent = "0 / " + items.length + " réponse";
         result.innerHTML = "<p>Répondez aux questions pour voir votre score.</p>";
         return;
       }
+      if (progress) progress.textContent = answered + " / " + items.length + (answered > 1 ? " réponses" : " réponse");
       var msg = "Score : " + correct + " / " + answered;
       if (answered === items.length) {
         msg += correct === items.length ? " — parfait, vous connaissez les îles de la Lune !" :

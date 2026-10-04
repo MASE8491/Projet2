@@ -10,7 +10,18 @@ export const ICONS = {
   compass: "Boussole", question: "Question", list: "Liste",
 };
 
+export const TALE_KINDS = { mythe: "Mythe des origines", legende: "Légende de lieu", recit: "Récit d'hier et d'aujourd'hui", conte: "Conte du soir" };
+export const QUIZ_LEVELS = { Facile: "Facile", Moyen: "Moyen", Difficile: "Difficile" };
+export const BIBLIO_KINDS = { comorien: "Voix de l'archipel (source ou auteur comorien)", exterieur: "Regard extérieur" };
+export const BIBLIO_CATEGORIES = {
+  chronique: "Chroniques et manuscrits", tradition: "Traditions orales et littérature", histoire: "Études historiques",
+  anthropologie: "Anthropologie et société", archeologie: "Archéologie et sciences", temoins: "Voyageurs et témoins",
+  contes: "Recueils de contes", documents: "Textes officiels et rapports",
+};
+
 const iconField = { key: "icon", label: "Icône", type: "icon" };
+const refsField = { key: "refs", label: "Références bibliographiques", type: "reflist", ref: "source",
+  help: "Ouvrages cités en bas de la page. Pour en ajouter un nouveau, complétez d'abord la liste « Bibliographie »." };
 const heroField = { key: "hero", label: "Image principale (bandeau)", type: "media", required: true,
   help: "Grande image affichée en haut de la page." };
 const cardField = { key: "card", label: "Image de vignette", type: "media", required: true,
@@ -94,7 +105,7 @@ export const TYPES = {
       { key: "period", label: "Période ou sous-titre (facultatif)", type: "text", help: "Exemple : XVe – XIXe siècle" },
       iconField, heroField, leadField, sectionsField, factsField,
       { key: "didyouknow", label: "Encadré « Le saviez-vous ? »", type: "textarea" },
-      galleryField,
+      galleryField, refsField,
     ],
   },
   experience: {
@@ -137,6 +148,47 @@ export const TYPES = {
   },
 };
 
+TYPES.tale = {
+  label: "Conte ou récit", plural: "Contes et récits (Hale halele)", file: "tales", emoji: "🌙",
+  path: (e) => `contes/${e.slug}.html`,
+  fields: [
+    { key: "name", label: "Titre du récit", type: "text", required: true },
+    { key: "kind", label: "Genre", type: "select", options: TALE_KINDS,
+      help: "Détermine la catégorie dans laquelle le récit est rangé sur la page « Hale halele »." },
+    { key: "local", label: "Autre nom (facultatif)", type: "text", help: "Nom comorien du lieu ou du récit, par exemple « Niamawi »." },
+    { key: "island", label: "Île", type: "ref", ref: "island", optional: true, emptyLabel: "— Tout l'archipel —" },
+    { key: "place", label: "Lieu associé (facultatif)", type: "ref", ref: "place", optional: true,
+      help: "Une carte vers la page du lieu s'affiche à côté du récit." },
+    heroField, leadField,
+    { key: "text", label: "Le récit", type: "richtext", required: true,
+      help: "Racontez avec vos mots. La formule « Hale ! – Halele ! » est ajoutée automatiquement en tête." },
+    { key: "moral", label: "Morale (facultatif)", type: "textarea" },
+    { key: "about", label: "Encadré « Ce que l'on en sait »", type: "richtext",
+      help: "Variantes, origine du récit, ce qu'en disent historiens ou scientifiques." },
+    { ...refsField, label: "Pour aller plus loin (références)" },
+    { key: "featured", label: "Mettre en avant sur la page d'accueil (4 récits au maximum)", type: "checkbox" },
+  ],
+};
+
+TYPES.quiz = {
+  label: "Quiz", plural: "Quiz (Loisirs)", file: "quizzes", emoji: "❓",
+  path: (e) => `loisirs/${e.slug}.html`,
+  fields: [
+    { key: "name", label: "Titre du quiz", type: "text", required: true },
+    iconField,
+    { key: "hero", label: "Image de vignette", type: "media", required: true },
+    { key: "level", label: "Niveau", type: "select", options: QUIZ_LEVELS },
+    { key: "lead", label: "Présentation", type: "textarea", required: true },
+    { key: "questions", label: "Questions", type: "list", itemLabel: "q", addLabel: "Ajouter une question", fields: [
+      { key: "q", label: "Question", type: "text", required: true },
+      { key: "choices", label: "Réponses proposées", type: "stringlist", addLabel: "Ajouter une réponse" },
+      { key: "answer", label: "Numéro de la bonne réponse (1 = la première)", type: "answer" },
+      { key: "explain", label: "Explication affichée après la réponse", type: "textarea" },
+      { key: "link", label: "Page pour en savoir plus (facultatif)", type: "link", optional: true },
+    ] },
+  ],
+};
+
 // ------------------------------------------------------------------ Pages fixes (content/pages.json)
 
 const fixedBase = [
@@ -165,7 +217,16 @@ export const FIXED = {
     { key: "feature_text", label: "Texte de la vidéo à la une", type: "richtext" },
     { key: "notice", label: "Encadré en bas de page", type: "richtext" }] },
   glossaire: { label: "Glossaire (page)", path: "glossaire.html", fields: pick("title", "kicker", "lead", "description") },
-  quiz: { label: "Quiz (page)", path: "quiz.html", fields: pick("title", "kicker", "lead", "description") },
+  contes: { label: "Hale halele (page d'ensemble des contes)", path: "contes/index.html", fields: [...fixedBase,
+    { key: "intro", label: "Introduction (formule Hale halele)", type: "richtext" },
+    { key: "sections", label: "Sections « L'art du conte » (bas de page)", type: "list", itemLabel: "title", addLabel: "Ajouter une section", fields: [
+      { key: "title", label: "Titre", type: "text", required: true },
+      { key: "html", label: "Texte", type: "richtext" }] }] },
+  loisirs: { label: "Loisirs (page d'ensemble des quiz)", path: "loisirs/index.html", fields: [...fixedBase,
+    { key: "intro", label: "Introduction", type: "richtext" }] },
+  bibliographie: { label: "Sources & bibliographie (page)", path: "bibliographie.html", fields: [
+    ...pick("title", "kicker", "lead", "description"),
+    { key: "intro", label: "Introduction", type: "richtext" }] },
   credits: { label: "Crédits", path: "credits.html", fields: [
     { key: "title", label: "Titre", type: "text", required: true },
     { key: "lead", label: "Introduction", type: "richtext" },
@@ -262,12 +323,18 @@ export const LISTS = {
       { key: "term", label: "Mot", type: "text", required: true },
       { key: "definition", label: "Définition", type: "textarea" },
       { key: "link", label: "Page à lire (facultatif)", type: "link", optional: true }] },
-  quiz: { label: "Quiz", file: "quiz", path: "quiz.html", emoji: "❓",
-    itemLabel: "q", addLabel: "Ajouter une question", fields: [
-      { key: "q", label: "Question", type: "text", required: true },
-      { key: "choices", label: "Réponses proposées", type: "stringlist", addLabel: "Ajouter une réponse" },
-      { key: "answer", label: "Numéro de la bonne réponse (1 = la première)", type: "answer" },
-      { key: "explain", label: "Explication", type: "textarea" }] },
+  bibliography: { label: "Bibliographie", file: "bibliography", path: "bibliographie.html", emoji: "📖",
+    itemLabel: "title", addLabel: "Ajouter une référence", fields: [
+      { key: "id", label: "Identifiant court (sans espace)", type: "text", required: true,
+        help: "Exemple : walker-2019. Il sert à citer l'ouvrage dans les pages : ne le modifiez pas s'il est déjà cité." },
+      { key: "author", label: "Auteur(s)", type: "text", required: true },
+      { key: "title", label: "Titre", type: "text", required: true },
+      { key: "year", label: "Année", type: "text" },
+      { key: "publisher", label: "Éditeur, revue ou précisions", type: "text" },
+      { key: "kind", label: "Point de vue", type: "select", options: BIBLIO_KINDS },
+      { key: "category", label: "Catégorie", type: "select", options: BIBLIO_CATEGORIES },
+      { key: "note", label: "Note de présentation", type: "textarea" },
+      { key: "url", label: "Lien vers le texte en ligne (facultatif)", type: "text" }] },
 };
 
 export const MEDIA_FIELDS = [
@@ -391,7 +458,7 @@ export function allEntityIds(data) {
     ids.push(`topic:${t.slug}`);
     t.pages.forEach((pg) => ids.push(`topicpage:${t.slug}/${pg.slug}`));
   });
-  ["experiences", "itineraries", "practical"].forEach((file) => {
+  ["experiences", "itineraries", "practical", "tales", "quizzes"].forEach((file) => {
     const type = Object.keys(TYPES).find((k) => TYPES[k].file === file);
     data[file].forEach((e) => ids.push(`${type}:${e.slug}`));
   });
@@ -426,8 +493,12 @@ export function sitePages(data) {
   data.itineraries.forEach((e) => pages.push({ path: `itineraires/${e.slug}.html`, title: e.name, group: "Itinéraires", hidden: !isPublished(e) }));
   pages.push({ path: "preparer-son-voyage/index.html", title: data.pages.preparer.title, group: "Voyager" });
   data.practical.forEach((e) => pages.push({ path: `preparer-son-voyage/${e.slug}.html`, title: e.name, group: "Infos pratiques", hidden: !isPublished(e) }));
+  pages.push({ path: "contes/index.html", title: data.pages.contes.title, group: "Hale halele (contes)" });
+  data.tales.forEach((e) => pages.push({ path: `contes/${e.slug}.html`, title: e.name, group: "Hale halele (contes)", hidden: !isPublished(e) }));
+  pages.push({ path: "loisirs/index.html", title: data.pages.loisirs.title, group: "Loisirs" });
+  data.quizzes.forEach((e) => pages.push({ path: `loisirs/${e.slug}.html`, title: `Quiz : ${e.name}`, group: "Loisirs", hidden: !isPublished(e) }));
   [["agenda.html", data.pages.agenda.title], ["galerie.html", data.pages.galerie.title], ["videos.html", data.pages.videos.title],
-   ["glossaire.html", data.pages.glossaire.title], ["quiz.html", "Quiz"], ["contact.html", data.pages.contact.title],
+   ["glossaire.html", data.pages.glossaire.title], ["bibliographie.html", data.pages.bibliographie.title], ["contact.html", data.pages.contact.title],
    ["credits.html", data.pages.credits.title], ["mentions-legales.html", data.pages.mentions.title],
    ["plan-du-site.html", data.pages.plan.title]].forEach(([path, title]) => pages.push({ path, title, group: "Pages annexes" }));
   return pages;
@@ -503,10 +574,12 @@ export function slugReferences(data, id) {
     data.islands.forEach((i) => { if ((i.places || []).includes(p.slug)) out.push({ id: `island:${i.slug}`, title: i.name, how: "liste des lieux de l'île" }); });
     data.experiences.forEach((e) => { if ((e.places || []).includes(p.slug)) out.push({ id: `experience:${e.slug}`, title: e.name, how: "lieux de l'expérience" }); });
     data.itineraries.forEach((it) => { if (it.days.some((d) => d.place === p.slug)) out.push({ id: `itinerary:${it.slug}`, title: it.name, how: "étape de l'itinéraire" }); });
+    data.tales.forEach((t) => { if (t.place === p.slug) out.push({ id: `tale:${t.slug}`, title: t.name, how: "lieu associé au récit" }); });
   }
   if (p.type === "island") {
     data.places.forEach((pl) => { if (pl.island === p.slug) out.push({ id: `place:${pl.slug}`, title: pl.name, how: "lieu de cette île" }); });
     data.itineraries.forEach((it) => { if ((it.islands || []).includes(p.slug)) out.push({ id: `itinerary:${it.slug}`, title: it.name, how: "île traversée" }); });
+    data.tales.forEach((t) => { if (t.island === p.slug) out.push({ id: `tale:${t.slug}`, title: t.name, how: "île du récit" }); });
   }
   return out;
 }
@@ -555,6 +628,25 @@ export function appearsOn(data, id) {
       add("preparer-son-voyage/index.html", "liste des infos pratiques"); add("voyager/index.html", "tuiles infos pratiques");
       data.practical.filter((x) => x.slug !== p.slug).forEach((x) => add(`preparer-son-voyage/${x.slug}.html`, "menu latéral"));
       break;
+    case "tale":
+      add("contes/index.html", "liste des contes et récits");
+      if (e.featured) add("index.html", "« Les contes du soir » de l'accueil");
+      data.tales.filter((x) => x.slug !== p.slug && x.kind === e.kind).forEach((x) => add(`contes/${x.slug}.html`, "menu latéral des récits du même genre"));
+      {
+        const i = data.tales.findIndex((x) => x.slug === p.slug);
+        [data.tales[i - 1], data.tales[i + 1]].filter(Boolean).forEach((x) => add(`contes/${x.slug}.html`, "« Récit précédent / suivant »"));
+      }
+      break;
+    case "quiz": {
+      add("loisirs/index.html", "liste des quiz");
+      const i = data.quizzes.findIndex((x) => x.slug === p.slug);
+      const prev = data.quizzes[(i - 1 + data.quizzes.length) % data.quizzes.length];
+      if (prev && prev.slug !== p.slug) add(`loisirs/${prev.slug}.html`, "bouton « Quiz suivant »");
+      break;
+    }
+    case "list":
+      if (p.slug === "bibliography") citingPages(data).forEach((x) => add(x.path, "références en bas de page"));
+      break;
     case "media":
       mediaUsages(data, p.slug).forEach((u) => add(pathOf(data, u.id), `utilisée par « ${u.title} »`));
       if (e && e.gallery !== false && (e.kind || "image") === "image") add("galerie.html", "galerie photos");
@@ -582,6 +674,8 @@ export function menuMentions(data, id) {
     if (p.type === "experience" && m.auto_children === "experiences") out.push(`Sous-menu automatique « ${m.label} »`);
     if (p.type === "itinerary" && m.auto_children === "itineraires") out.push(`Sous-menu automatique « ${m.label} »`);
     if (p.type === "practical" && m.auto_children === "pratique") out.push(`Sous-menu automatique « ${m.label} »`);
+    if (p.type === "tale" && m.auto_children === "contes") out.push(`Sous-menu automatique « ${m.label} » (catégories)`);
+    if (p.type === "quiz" && m.auto_children === "loisirs") out.push(`Sous-menu automatique « ${m.label} »`);
   });
   if (nav.cta && nav.cta.link === path) out.push("Bouton du menu");
   nav.footer.forEach((col) => col.links.forEach((l) => { if (l.link === path) out.push(`Pied de page « ${col.title} » : « ${l.label} »`); }));
@@ -652,10 +746,12 @@ export function renameSlug(data, id, newSlug) {
     data.islands.forEach((i) => { i.places = (i.places || []).map((s) => (s === oldSlug ? newSlug : s)); });
     data.experiences.forEach((x) => { x.places = (x.places || []).map((s) => (s === oldSlug ? newSlug : s)); });
     data.itineraries.forEach((it) => it.days.forEach((d) => { if (d.place === oldSlug) d.place = newSlug; }));
+    data.tales.forEach((t) => { if (t.place === oldSlug) t.place = newSlug; });
   }
   if (p.type === "island") {
     data.places.forEach((pl) => { if (pl.island === oldSlug) pl.island = newSlug; });
     data.itineraries.forEach((it) => { it.islands = (it.islands || []).map((s) => (s === oldSlug ? newSlug : s)); });
+    data.tales.forEach((t) => { if (t.island === oldSlug) t.island = newSlug; });
   }
   return n;
 }
@@ -674,9 +770,11 @@ export function deleteEntity(data, id) {
     data.islands.forEach((i) => { i.places = (i.places || []).filter((s) => s !== p.slug); });
     data.experiences.forEach((x) => { x.places = (x.places || []).filter((s) => s !== p.slug); });
     data.itineraries.forEach((it) => it.days.forEach((d) => { if (d.place === p.slug) d.place = ""; }));
+    data.tales.forEach((t) => { if (t.place === p.slug) t.place = ""; });
   }
   if (p.type === "island") {
     data.itineraries.forEach((it) => { it.islands = (it.islands || []).filter((s) => s !== p.slug); });
+    data.tales.forEach((t) => { if (t.island === p.slug) t.island = ""; });
   }
   if (p.type === "topic") {
     data.navigation.menu = data.navigation.menu.map((m) => (m.auto_children === `rubrique:${p.slug}` ? { ...m, auto_children: "" } : m));
@@ -760,6 +858,13 @@ export function blankEntity(data, type, title, parentSlug) {
         days: [{ when: "Jour 1", title: "Première étape", text: "", place: "" }], tips: "" };
     case "practical":
       return { ...base, icon: "list", hero: firstMedia, summary: "Résumé de la page.", sections: [section] };
+    case "tale":
+      return { ...base, kind: "conte", local: "", island: "", place: "", hero: firstMedia, lead: "Résumé du récit.",
+        text: "<p>Il était une fois…</p>", moral: "", about: "<p>Origine du récit, variantes, ce qu'en disent les historiens.</p>",
+        refs: [], featured: false };
+    case "quiz":
+      return { ...base, icon: "question", hero: firstMedia, level: "Facile", lead: "Présentation du quiz.",
+        questions: [{ q: "Première question ?", choices: ["Réponse A", "Réponse B"], answer: 0, explain: "", link: "" }] };
     default:
       return base;
   }
@@ -793,6 +898,25 @@ export function diffFields(fields, before, after) {
   return changes;
 }
 
+// ------------------------------------------------------------------ Bibliographie
+
+/** Pages qui citent des références : [{ id, title, path, refs }] */
+export function citingPages(data) {
+  const out = [];
+  data.topics.forEach((t) => t.pages.forEach((pg) => {
+    if ((pg.refs || []).length) out.push({ id: `topicpage:${t.slug}/${pg.slug}`, title: pg.name, path: `${t.slug}/${pg.slug}.html`, refs: pg.refs });
+  }));
+  data.tales.forEach((t) => {
+    if ((t.refs || []).length) out.push({ id: `tale:${t.slug}`, title: t.name, path: `contes/${t.slug}.html`, refs: t.refs });
+  });
+  return out;
+}
+
+/** Pages qui citent une référence donnée. */
+export function citationsOf(data, rid) {
+  return citingPages(data).filter((pg) => pg.refs.includes(rid));
+}
+
 // ------------------------------------------------------------------ Vérifications avant publication
 
 export function validate(data, reserved = []) {
@@ -813,6 +937,7 @@ export function validate(data, reserved = []) {
   };
   unique(data.islands, "Îles"); unique(data.places, "Lieux"); unique(data.topics, "Rubriques");
   unique(data.experiences, "Expériences"); unique(data.itineraries, "Itinéraires"); unique(data.practical, "Infos pratiques");
+  unique(data.tales, "Contes et récits"); unique(data.quizzes, "Quiz");
   data.topics.forEach((t) => {
     unique(t.pages, `Rubrique « ${t.name} »`);
     if (reserved.includes(t.slug)) errors.push(`Rubrique « ${t.name} » : l'adresse « ${t.slug} » est réservée par le site`);
@@ -835,10 +960,26 @@ export function validate(data, reserved = []) {
   (data.home.gallery || []).forEach((k) => needMedia(k, "Accueil (mosaïque)"));
   Object.entries(data.pages).forEach(([k, pg]) => { if (pg.hero) needMedia(pg.hero, `Page « ${FIXED[k] ? FIXED[k].label : k} »`); });
   Object.entries(media).forEach(([k, m]) => { if (!m.file && !m.src) errors.push(`Média « ${k} » : aucun fichier`); });
-  data.quiz.forEach((q, i) => {
-    if (!q.choices || q.choices.length < 2) errors.push(`Quiz, question ${i + 1} : il faut au moins deux réponses`);
-    else if (q.answer < 0 || q.answer >= q.choices.length) errors.push(`Quiz, question ${i + 1} : la bonne réponse n'existe pas`);
+  data.quizzes.forEach((quiz) => {
+    if (!(quiz.questions || []).length) errors.push(`Quiz « ${quiz.name} » : aucune question`);
+    (quiz.questions || []).forEach((q, i) => {
+      if (!q.choices || q.choices.length < 2) errors.push(`Quiz « ${quiz.name} », question ${i + 1} : il faut au moins deux réponses`);
+      else if (q.answer < 0 || q.answer >= q.choices.length) errors.push(`Quiz « ${quiz.name} », question ${i + 1} : la bonne réponse n'existe pas`);
+    });
   });
+  data.tales.forEach((t) => { if (!TALE_KINDS[t.kind]) errors.push(`Récit « ${t.name} » : genre inconnu`); });
+  if (data.tales.filter((t) => t.featured && isPublished(t)).length > 4) warnings.push("Plus de 4 récits sont mis en avant : seuls les 4 premiers apparaîtront sur l'accueil.");
+  // Bibliographie : identifiants uniques et références existantes
+  const ids = new Set();
+  data.bibliography.forEach((b, i) => {
+    if (!b.id) errors.push(`Bibliographie, référence ${i + 1} : identifiant manquant`);
+    else if (ids.has(b.id)) errors.push(`Bibliographie : l'identifiant « ${b.id} » est utilisé deux fois`);
+    else if (!/^[a-z0-9-]+$/.test(b.id)) errors.push(`Bibliographie : l'identifiant « ${b.id} » ne doit contenir que des minuscules, chiffres et tirets`);
+    ids.add(b.id);
+  });
+  citingPages(data).forEach((pg) => pg.refs.forEach((rid) => {
+    if (!ids.has(rid)) errors.push(`« ${pg.title} » cite la référence « ${rid} », qui n'existe plus dans la bibliographie`);
+  }));
   // Liens vers des pages masquées ou absentes (ils deviendront du texte simple)
   const online = new Set(sitePages(data).filter((p) => !p.hidden).map((p) => p.path));
   for (const [id, obj] of owners(data)) {

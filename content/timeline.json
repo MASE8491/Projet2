@@ -1,138 +1,282 @@
 [
   {
-    "date": "Ier millénaire",
-    "title": "Premiers habitants",
-    "text": "Des populations venues de la côte est-africaine s'installent dans les îles.",
+    "date": "VIIIe – Xe s.",
+    "title": "Premiers villages",
+    "text": "Les plus anciens sites connus, comme Sima à Anjouan, livrent riz et haricot mungo venus d'Asie : Africains bantouphones et navigateurs austronésiens se rencontrent dans l'archipel.",
     "highlight": true
   },
   {
     "date": "IXe – XIIe s.",
     "title": "Dembéni, comptoir marchand",
-    "text": "Mayotte participe au commerce de l'océan Indien : céramiques persanes et chinoises.",
+    "text": "À Mayotte, le site de Dembéni livre des céramiques du golfe Persique et de Chine : l'archipel participe au grand commerce de l'océan Indien.",
     "highlight": false
   },
   {
-    "date": "Xe s. environ",
-    "title": "Arrivée de l'islam",
-    "text": "La nouvelle religion se diffuse depuis la côte swahilie ; premières mosquées.",
+    "date": "Xe – XIIe s.",
+    "title": "L'islam s'enracine",
+    "text": "Premières sépultures musulmanes (Bagamoyo, Acoua) et premières mosquées fouillées (Sima, Domoni). La tradition, elle, attribue l'arrivée de l'islam à Mtswa Mwindza, au temps du Prophète.",
     "highlight": false
   },
   {
-    "date": "XVe s.",
+    "date": "XIIIe – XVe s.",
     "title": "Naissance des sultanats",
-    "text": "Les cités de pierre et les dynasties se développent dans les quatre îles.",
+    "text": "Des lignées dites « chiraziennes » s'allient aux chefs locaux et fondent des dynasties ; les cités de pierre se développent.",
     "highlight": true
   },
   {
+    "date": "v. 1490",
+    "title": "Mayotte sur les routes arabes",
+    "text": "Le pilote Ahmad Ibn Mâjid décrit Anjouan et nomme Mayotte pour la première fois.",
+    "highlight": false
+  },
+  {
+    "date": "Début du XVIe s.",
+    "title": "Les Portugais",
+    "text": "Des navires portugais en route vers l'Inde atteignent l'archipel, sans s'y installer.",
+    "highlight": false
+  },
+  {
     "date": "1538",
-    "title": "Mosquée de Tsingoni",
-    "text": "Date inscrite sur le mihrab de la mosquée de Tsingoni, à Mayotte.",
+    "title": "Le mihrab de Tsingoni",
+    "text": "Deux inscriptions en arabe datent de 944 de l'Hégire (1538) le mihrab de la mosquée royale de Tsingoni, capitale du sultanat de Mayotte.",
     "highlight": false
   },
   {
     "date": "XVIIe – XVIIIe s.",
-    "title": "Anjouan, escale des Indes",
-    "text": "Les navires anglais de la route des Indes font escale à « Johanna ».",
+    "title": "Johanna, escale des Indes",
+    "text": "Anjouan, la « Johanna » des marins anglais, ravitaille les navires de la Compagnie des Indes orientales.",
     "highlight": false
   },
   {
-    "date": "v. 1780 – 1820",
+    "date": "Février 1695",
+    "title": "Le pirate Henry Every à Anjouan",
+    "text": "Le célèbre pirate fait escale à Anjouan et y laisse une lettre adressée aux capitaines anglais.",
+    "highlight": false
+  },
+  {
+    "date": "Fin du XVIIIe s.",
+    "title": "Mutsamudu capitale",
+    "text": "Le sultan Abdallah Ier transfère la capitale d'Anjouan de Domoni à Mutsamudu.",
+    "highlight": false
+  },
+  {
+    "date": "v. 1790 – 1820",
     "title": "Le temps des razzias",
-    "text": "Raids venus de Madagascar ; construction de citadelles et de remparts.",
+    "text": "Des flottes sakalava et betsimisaraka venues de Madagascar ravagent les îles et capturent surtout des femmes et des enfants. Les villes s'entourent de remparts et de citadelles.",
     "highlight": false
   },
   {
-    "date": "1841",
-    "title": "Mayotte française",
-    "text": "Le sultan Andriantsoly cède l'île à la France.",
+    "date": "1832",
+    "title": "Andriantsoly sultan de Mayotte",
+    "text": "Ancien roi sakalava du Boina chassé par les Merina, il s'impose à Mayotte.",
+    "highlight": false
+  },
+  {
+    "date": "25 avril 1841",
+    "title": "Cession de Mayotte",
+    "text": "Andriantsoly cède Mayotte à la France ; la prise de possession a lieu le 13 juin 1843.",
     "highlight": true
   },
   {
-    "date": "1846",
+    "date": "1842",
+    "title": "Djoumbé Fatima reine de Mohéli",
+    "text": "La fille du prince merina Ramanetaka monte sur le trône encore enfant.",
+    "highlight": false
+  },
+  {
+    "date": "9 décembre 1846",
     "title": "Abolition à Mayotte",
-    "text": "L'esclavage est aboli à Mayotte, deux ans avant les autres colonies.",
+    "text": "Une ordonnance royale abolit l'esclavage à Mayotte (appliquée en 1847), avant les autres colonies françaises.",
     "highlight": false
   },
   {
-    "date": "1886",
-    "title": "Protectorat",
-    "text": "La France établit son protectorat sur la Grande Comore, Anjouan et Mohéli.",
+    "date": "1885 – 1886",
+    "title": "Les protectorats",
+    "text": "Contrat entre le sultan Saïd Ali et Léon Humblot (5 novembre 1885), puis protectorat sur la Grande Comore (6 janvier 1886), Anjouan et Mohéli (1886).",
     "highlight": false
   },
   {
-    "date": "1912",
-    "title": "Colonie de Madagascar",
-    "text": "L'archipel est rattaché administrativement à Madagascar.",
+    "date": "1891",
+    "title": "Révolte d'Anjouan",
+    "text": "À la mort du sultan Abdallah III, esclaves et paysans des hauts de l'île se soulèvent ; l'esclavage est aboli à Anjouan.",
+    "highlight": false
+  },
+  {
+    "date": "1902 – 1904",
+    "title": "Fin de l'esclavage",
+    "text": "Abolition à Mohéli (1902) puis en Grande Comore (29 février 1904).",
+    "highlight": false
+  },
+  {
+    "date": "25 juillet 1912",
+    "title": "Annexion",
+    "text": "La loi d'annexion fait des quatre îles une province de la colonie de Madagascar.",
     "highlight": true
   },
   {
-    "date": "1946",
+    "date": "Juillet 1915",
+    "title": "Révolte de Ngazidja",
+    "text": "Près de 1 200 paysans se soulèvent contre l'impôt de capitation et la confiscation des terres.",
+    "highlight": false
+  },
+  {
+    "date": "Mars – avril 1940",
+    "title": "Révolte du Nyumakele",
+    "text": "À Anjouan, les villageois enfermés dans les plantations se révoltent ; la négociation révèle le jeune médecin Saïd Mohamed Cheikh.",
+    "highlight": false
+  },
+  {
+    "date": "9 mai 1946",
     "title": "Territoire d'outre-mer",
-    "text": "Les Comores sont séparées de Madagascar.",
+    "text": "Les Comores sont détachées de Madagascar et obtiennent l'autonomie administrative et financière.",
     "highlight": false
   },
   {
     "date": "1952",
     "title": "Le cœlacanthe d'Anjouan",
-    "text": "Un cœlacanthe pêché à Anjouan confirme la survie de ce « fossile vivant ».",
+    "text": "Un cœlacanthe pêché au large d'Anjouan confirme la survie de ce « fossile vivant ».",
     "highlight": false
   },
   {
-    "date": "1961",
+    "date": "14 mai 1958",
+    "title": "Moroni capitale",
+    "text": "L'Assemblée territoriale vote le transfert de la capitale de Dzaoudzi à Moroni, contre l'avis des élus mahorais.",
+    "highlight": false
+  },
+  {
+    "date": "2 novembre 1958",
+    "title": "Congrès de Tsoundzou",
+    "text": "Des notables mahorais réclament la départementalisation de Mayotte.",
+    "highlight": false
+  },
+  {
+    "date": "1961 – 1962",
     "title": "Autonomie interne",
-    "text": "Saïd Mohamed Cheikh préside le conseil de gouvernement.",
+    "text": "Saïd Mohamed Cheikh préside le conseil de gouvernement jusqu'à sa mort, le 16 mars 1970.",
     "highlight": false
   },
   {
-    "date": "1974",
-    "title": "Référendum",
-    "text": "Large majorité pour l'indépendance, sauf à Mayotte.",
+    "date": "Fin 1962",
+    "title": "Naissance du MOLINACO",
+    "text": "Des Comoriens d'Afrique de l'Est fondent à Dar es Salaam le premier mouvement indépendantiste.",
+    "highlight": false
+  },
+  {
+    "date": "Janvier 1968",
+    "title": "Grève des lycéens",
+    "text": "La grève des élèves du lycée de Moroni ouvre le débat politique dans l'archipel.",
+    "highlight": false
+  },
+  {
+    "date": "22 décembre 1974",
+    "title": "Consultation sur l'indépendance",
+    "text": "94,6 % de « oui » sur l'ensemble de l'archipel ; à Mayotte, 63,8 % des votants choisissent le maintien dans la France.",
     "highlight": false
   },
   {
     "date": "6 juillet 1975",
     "title": "Indépendance",
-    "text": "Ahmed Abdallah proclame l'indépendance des Comores.",
+    "text": "Après la loi française du 3 juillet prévoyant une ratification île par île, la Chambre des députés proclame l'indépendance ; Ahmed Abdallah devient chef de l'État.",
     "highlight": true
   },
   {
-    "date": "1976",
+    "date": "3 août 1975",
+    "title": "Premier coup d'État",
+    "text": "Ali Soilih renverse Ahmed Abdallah avec l'aide du mercenaire Bob Denard.",
+    "highlight": false
+  },
+  {
+    "date": "12 novembre 1975",
+    "title": "Admission à l'ONU",
+    "text": "Les Comores entrent aux Nations unies avec leurs quatre îles.",
+    "highlight": false
+  },
+  {
+    "date": "8 février 1976",
     "title": "Mayotte reste française",
-    "text": "Les Mahorais confirment leur choix lors d'une consultation.",
+    "text": "99,4 % des votants mahorais choisissent de rester dans la République. Le 21 octobre, l'ONU déclare cette consultation nulle (résolution 31/4).",
     "highlight": false
   },
   {
-    "date": "1997",
+    "date": "13 mai 1978",
+    "title": "Chute d'Ali Soilih",
+    "text": "Les mercenaires de Bob Denard renversent le régime révolutionnaire ; Ahmed Abdallah revient au pouvoir.",
+    "highlight": false
+  },
+  {
+    "date": "26 novembre 1989",
+    "title": "Assassinat d'Ahmed Abdallah",
+    "text": "Le président est tué dans son bureau ; la garde présidentielle de Bob Denard est mise en cause.",
+    "highlight": false
+  },
+  {
+    "date": "Janvier 1995",
+    "title": "Le « visa Balladur »",
+    "text": "Un visa est imposé aux Comoriens pour entrer à Mayotte : les traversées clandestines en kwassa-kwassa se multiplient.",
+    "highlight": false
+  },
+  {
+    "date": "Septembre – octobre 1995",
+    "title": "Dernier coup de Bob Denard",
+    "text": "Le mercenaire renverse le président Djohar ; l'armée française l'arrête lors de l'opération Azalée.",
+    "highlight": false
+  },
+  {
+    "date": "Août 1997",
     "title": "Crise séparatiste",
-    "text": "Anjouan et Mohéli font sécession.",
+    "text": "Anjouan, puis Mohéli, proclament leur sécession.",
     "highlight": false
   },
   {
-    "date": "2001",
-    "title": "Union des Comores",
-    "text": "Accord de Fomboni et nouvelle constitution fédérale.",
+    "date": "17 février 2001",
+    "title": "Accord de Fomboni",
+    "text": "Il ouvre la voie à la constitution de l'Union des Comores, adoptée par référendum le 23 décembre 2001.",
     "highlight": false
   },
   {
-    "date": "2011",
+    "date": "25 mars 2008",
+    "title": "Débarquement à Anjouan",
+    "text": "Une opération comorienne soutenue par l'Union africaine met fin au pouvoir du colonel Mohamed Bacar.",
+    "highlight": false
+  },
+  {
+    "date": "29 mars 2009",
+    "title": "Référendum à Mayotte",
+    "text": "95,2 % des votants approuvent la départementalisation.",
+    "highlight": false
+  },
+  {
+    "date": "31 mars 2011",
     "title": "101e département",
-    "text": "Mayotte devient un département français.",
+    "text": "Mayotte devient un département français, puis une région ultrapériphérique de l'Union européenne en 2014.",
     "highlight": true
   },
   {
-    "date": "2018",
-    "title": "Fani Maoré",
-    "text": "Début de la crise sismique qui révèle un nouveau volcan sous-marin près de Mayotte.",
+    "date": "30 juillet 2018",
+    "title": "Réforme constitutionnelle",
+    "text": "Un référendum modifie la présidence tournante et permet au président de briguer un second mandat consécutif.",
+    "highlight": false
+  },
+  {
+    "date": "2018 – 2019",
+    "title": "Naissance de Fani Maoré",
+    "text": "Une crise sismique révèle la naissance d'un volcan sous-marin à l'est de Mayotte.",
     "highlight": false
   },
   {
     "date": "2020",
-    "title": "Réserve de biosphère",
-    "text": "L'UNESCO reconnaît l'île de Mohéli réserve de biosphère.",
+    "title": "Mohéli, réserve de biosphère",
+    "text": "L'UNESCO reconnaît l'île de Mohéli (Mwali) réserve de biosphère.",
     "highlight": false
   },
   {
-    "date": "2024",
+    "date": "2023",
+    "title": "Les Comores à la tête de l'Union africaine",
+    "text": "Le président Azali Assoumani préside l'Union africaine pour un an.",
+    "highlight": false
+  },
+  {
+    "date": "14 décembre 2024",
     "title": "Cyclone Chido",
     "text": "Mayotte est dévastée par un cyclone d'une rare violence.",
     "highlight": false

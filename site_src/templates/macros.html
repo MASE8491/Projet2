@@ -99,6 +99,23 @@
 </div>
 {%- endmacro %}
 
+{% macro sources(refs, title="Principales références") -%}
+{%- if refs %}
+<section class="sources">
+  <h2>{{ title }}</h2>
+  <ul class="sources-list">
+    {% for b in refs %}
+    <li class="source source-{{ b.kind }}">
+      <span class="source-badge">{{ "Voix de l'archipel" if b.kind == "comorien" else "Regard extérieur" }}</span>
+      <a href="{{ url('bibliographie.html#ref-' ~ b.id) }}"><strong>{{ b.author }}</strong>, <em>{{ b.title }}</em></a>{% if b.year %}, {{ b.year }}{% endif %}{% if b.publisher %}. {{ b.publisher }}{% endif %}.
+    </li>
+    {% endfor %}
+  </ul>
+  <p class="sources-more"><a class="link-arrow" href="{{ url('bibliographie.html') }}">Toute la bibliographie</a></p>
+</section>
+{%- endif %}
+{%- endmacro %}
+
 {% macro section_head(title, text=None, href=None, link_label="Tout voir") -%}
 <div class="section-head">
   <div>

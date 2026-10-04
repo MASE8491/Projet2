@@ -149,11 +149,15 @@ class App {
           link("#/edit/doc:home", "🏠 Page d'accueil"),
           link("#/medias", "🖼️ Médiathèque"),
           link("#/edit/doc:navigation", "🧭 Menu & pied de page"),
+          h("p", { class: "nav-group" }, "Rubriques"),
+          link("#/edit/topic:histoire", "📜 Histoire"),
+          link("#/edit/fixed:contes", "🌙 Hale halele (contes)"),
+          link("#/edit/fixed:loisirs", "🎲 Loisirs & quiz"),
           h("p", { class: "nav-group" }, "Listes"),
           link("#/edit/list:timeline", "🕰️ Frise chronologique"),
           link("#/edit/list:events", "📅 Agenda"),
           link("#/edit/list:glossary", "🔤 Glossaire"),
-          link("#/edit/list:quiz", "❓ Quiz"),
+          link("#/edit/list:bibliography", "📖 Bibliographie"),
           link("#/edit/doc:videos", "🎬 Vidéos"),
           h("p", { class: "nav-group" }, "Site"),
           link("#/edit/doc:settings", "⚙️ Réglages"),
@@ -287,6 +291,19 @@ class App {
     if (value.days) body += `<ol>${value.days.map((d) => `<li><strong>${esc(d.when)} — ${esc(d.title)}</strong><br>${esc(d.text)}</li>`).join("")}</ol>`;
     if (value.items && Array.isArray(value.items) && p.type === "list") body += `<ul>${value.items.map((it) => `<li>${esc(it.title || it.term || it.q || "")}</li>`).join("")}</ul>`;
     if (value.body) body += html(value.body);
+    if (p.type === "tale") {
+      body += `<p class="hale-call"><span class="hale-teller">« Hale ! »</span> <span class="hale-answer">« Halele ! »</span></p>`;
+      body += `<div class="tale-text">${html(value.text)}</div>`;
+      if (value.moral) body += `<p class="tale-moral">${esc(value.moral)}</p>`;
+      if (value.about) body += `<section class="tale-about"><h2>Ce que l'on en sait</h2>${html(value.about)}</section>`;
+    }
+    if (p.type === "quiz") {
+      body += `<ol class="quiz">${(value.questions || []).map((q) => `<li class="quiz-item"><fieldset><legend>${esc(q.q)}</legend>
+        <div class="quiz-choices">${(q.choices || []).map((c, i) => `<label class="quiz-choice${i === q.answer ? " is-correct" : ""}">${esc(c)}</label>`).join("")}</div>
+        <p class="quiz-explain">${esc(q.explain)}</p></fieldset></li>`).join("")}</ol>`;
+    }
+    const refs = (value.refs || []).map((rid) => (this.store.data.bibliography || []).find((b) => b.id === rid)).filter(Boolean);
+    if (refs.length) body += `<section class="sources"><h2>Références</h2><ul class="sources-list">${refs.map((b) => `<li><strong>${esc(b.author)}</strong>, <em>${esc(b.title)}</em>${b.year ? `, ${esc(b.year)}` : ""}</li>`).join("")}</ul></section>`;
     const doc = `<!doctype html><html lang="fr"><head><meta charset="utf-8"><base href="${this.siteUrl("")}">
       <link rel="stylesheet" href="${this.siteUrl("assets/css/style.css")}"></head><body>
       <section class="hero"><div class="hero-media">${img(value.hero)}</div><div class="hero-overlay"></div>
@@ -308,6 +325,8 @@ class App {
       h("option", { value: "experience" }, "Expérience"),
       h("option", { value: "itinerary" }, "Itinéraire"),
       h("option", { value: "practical" }, "Info pratique"),
+      h("option", { value: "tale" }, "Conte ou récit (Hale halele)"),
+      h("option", { value: "quiz" }, "Quiz (Loisirs)"),
       h("option", { value: "topic" }, "Nouvelle rubrique"),
       h("option", { value: "island" }, "Nouvelle île"));
     const parentTopic = h("select", { class: "input" }, data.topics.map((t) => h("option", { value: t.slug }, t.name)));

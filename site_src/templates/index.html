@@ -43,6 +43,14 @@
         <span class="theme-tile-label">{{ ui.icon(t.icon) }} {{ t.name }}<small>{{ t.pages | length }} articles</small></span>
       </a>
       {% endfor %}
+      <a class="theme-tile" href="{{ url('contes/index.html') }}">
+        <span class="tile-media">{{ ui.picture(pg.contes.hero, sizes="(min-width: 900px) 33vw, 100vw", alt="") }}</span>
+        <span class="theme-tile-label">{{ ui.icon('moon') }} {{ pg.contes.title }}<small>{{ tales | length }} contes et récits</small></span>
+      </a>
+      <a class="theme-tile" href="{{ url('loisirs/index.html') }}">
+        <span class="tile-media">{{ ui.picture(pg.loisirs.hero, sizes="(min-width: 900px) 33vw, 100vw", alt="") }}</span>
+        <span class="theme-tile-label">{{ ui.icon('question') }} {{ pg.loisirs.title }}<small>{{ quizzes | length }} quiz</small></span>
+      </a>
       <a class="theme-tile" href="{{ url('voyager/index.html') }}">
         <span class="tile-media">{{ ui.picture('tortue_pilote', sizes="(min-width: 900px) 33vw, 100vw", alt="") }}</span>
         <span class="theme-tile-label">{{ ui.icon('compass') }} Voyager<small>Lieux, expériences, itinéraires</small></span>
@@ -63,6 +71,26 @@
 </section>
 {% endfor %}
 
+{% if featured_tales %}
+<section class="section section-night">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="hale-call"><span class="hale-teller">« Hale ! »</span> <span class="hale-answer">« Halele ! »</span></p>
+        <h2>Les contes du soir</h2>
+        <p>Mythes, légendes et contes malicieux des quatre îles.</p>
+      </div>
+      <a class="link-arrow" href="{{ url('contes/index.html') }}">Tous les récits</a>
+    </div>
+    <div class="card-grid">
+      {% for t in featured_tales %}
+      {{ ui.card('contes/' ~ t.slug ~ '.html', t.hero, t.name, t.lead, kicker=tale_kinds[t.kind], meta="Lire le récit") }}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
 <section class="section">
   <div class="container">
     {{ ui.section_head("Mille ans d'histoire en quelques dates", "Des premiers navigateurs à l'archipel d'aujourd'hui.", "histoire/index.html#frise", "Toute la frise") }}
@@ -82,7 +110,7 @@
     <div>
       <p class="kicker">{{ ui.icon('question') }} Le saviez-vous&nbsp;?</p>
       <h2>Petites histoires des îles de la Lune</h2>
-      <a class="btn btn-ylang" href="{{ url('quiz.html') }}">Faire le quiz</a>
+      <a class="btn btn-ylang" href="{{ url('loisirs/index.html') }}">Jouer aux quiz</a>
       <a class="btn btn-ghost" href="{{ url('glossaire.html') }}">Le glossaire</a>
     </div>
     <ul class="facts-list">

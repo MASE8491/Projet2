@@ -55,6 +55,8 @@ export async function move(app, id, dir) {
     experience: "la liste des expériences et le sous-menu",
     itinerary: "la liste des itinéraires (les 4 premiers sont sur l'accueil)",
     practical: "la liste des infos pratiques",
+    tale: "l'ordre des récits (liste Hale halele, récit précédent / suivant)",
+    quiz: "l'ordre des quiz (page Loisirs, sous-menu, bouton « Quiz suivant »)",
   }[p.type];
   const ok = await confirmImpact({
     title: `${dir < 0 ? "Monter" : "Descendre"} « ${title} » ?`,
