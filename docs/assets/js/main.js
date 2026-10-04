@@ -172,6 +172,17 @@
     var result = document.querySelector("[data-quiz-result]");
     var items = quiz.querySelectorAll(".quiz-item");
     var progress = document.querySelector("[data-quiz-progress]");
+    // Mélange l'ordre des réponses (la valeur de chaque bouton reste l'index d'origine)
+    var shuffle = function (item) {
+      var box = item.querySelector(".quiz-choices");
+      var labels = Array.prototype.slice.call(box.children);
+      for (var i = labels.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var t = labels[i]; labels[i] = labels[j]; labels[j] = t;
+      }
+      labels.forEach(function (l) { box.appendChild(l); });
+    };
+    items.forEach(shuffle);
     var update = function () {
       var answered = 0, correct = 0;
       items.forEach(function (item) {
@@ -215,6 +226,7 @@
         item.querySelectorAll("input").forEach(function (r) { r.disabled = false; r.checked = false; });
         item.querySelectorAll(".quiz-choice").forEach(function (l) { l.classList.remove("is-correct", "is-wrong"); });
         item.querySelector(".quiz-explain").hidden = true;
+        shuffle(item);
       });
       update();
       quiz.scrollIntoView({ behavior: "smooth", block: "start" });

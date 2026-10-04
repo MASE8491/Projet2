@@ -66,9 +66,21 @@
     "highlight": false
   },
   {
+    "date": "v. 1830 – 1832",
+    "title": "Ramanetaka maître de Mohéli",
+    "text": "Réfugié à Anjouan après la mort du roi Radama Ier, le prince merina Ramanetaka s'impose à Mohéli et prend le nom d'Abderemane.",
+    "highlight": false
+  },
+  {
     "date": "1832",
     "title": "Andriantsoly sultan de Mayotte",
     "text": "Ancien roi sakalava du Boina chassé par les Merina, il s'impose à Mayotte.",
+    "highlight": false
+  },
+  {
+    "date": "1836",
+    "title": "Mort d'Abdallah II",
+    "text": "Venu reprendre Mohéli, le sultan d'Anjouan voit ses boutres jetés à la côte par la tempête ; capturé par Ramanetaka, il meurt en captivité.",
     "highlight": false
   },
   {
@@ -87,6 +99,18 @@
     "date": "9 décembre 1846",
     "title": "Abolition à Mayotte",
     "text": "Une ordonnance royale abolit l'esclavage à Mayotte (appliquée en 1847), avant les autres colonies françaises.",
+    "highlight": false
+  },
+  {
+    "date": "1868",
+    "title": "La reine de Mohéli à Paris",
+    "text": "Exilée à Zanzibar après un premier bombardement de Mohéli, Djoumbé Fatima vient demander l'arbitrage de Napoléon III contre Joseph Lambert, sans succès.",
+    "highlight": false
+  },
+  {
+    "date": "3 juin 1871",
+    "title": "Fomboni bombardée",
+    "text": "Après le retour de la reine, qui soulève l'île contre Lambert, la marine française détruit presque entièrement la vieille ville de Fomboni.",
     "highlight": false
   },
   {

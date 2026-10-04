@@ -624,6 +624,66 @@
         "answer": 0,
         "explain": "On l'atteignait depuis le Djando par la « rivière des fugitifs », Mro wa watoro.",
         "link": "contes/la-forteresse-de-bandamale.html"
+      },
+      {
+        "q": "Quel prince venu de Madagascar devint maître de Mohéli vers 1830 ?",
+        "choices": [
+          "Ramanetaka",
+          "Andriantsoly",
+          "Radama Ier",
+          "Saïd Ali"
+        ],
+        "answer": 0,
+        "explain": "Réfugié à Anjouan, il s'imposa à Mohéli, se convertit à l'islam et prit le nom d'Abderemane.",
+        "link": "contes/le-prince-venu-de-la-grande-ile.html"
+      },
+      {
+        "q": "Quel âge avait Djoumbé Fatima quand elle devint reine de Mohéli ?",
+        "choices": [
+          "Cinq ou six ans",
+          "Quinze ans",
+          "Vingt ans",
+          "Trente ans"
+        ],
+        "answer": 0,
+        "explain": "Sa mère, Ravao, exerça d'abord la régence ; la France la fit couronner en 1849.",
+        "link": "contes/la-reine-enfant-de-mwali.html"
+      },
+      {
+        "q": "Pourquoi Djoumbé Fatima se rendit-elle à Paris en 1868 ?",
+        "choices": [
+          "Pour demander à Napoléon III d'arbitrer son conflit avec Joseph Lambert",
+          "Pour y faire ses études",
+          "Pour y épouser un prince",
+          "Pour y vendre de la vanille"
+        ],
+        "answer": 0,
+        "explain": "Le voyage fit parler les journaux, mais ne changea rien : Fomboni fut bombardée en 1871.",
+        "link": "contes/le-voyage-de-la-reine-a-paris.html"
+      },
+      {
+        "q": "Que rappellent les ruines de l'îlot Ouénéfou, au large de Nioumachoua ?",
+        "choices": [
+          "L'isolement des malades de la lèpre",
+          "Un palais bâti par les djinns",
+          "Un fort portugais",
+          "Un phare colonial"
+        ],
+        "answer": 0,
+        "explain": "Le nom de l'îlot renvoie aux wenefu, les lépreux, que l'on y isolait autrefois.",
+        "link": "contes/ouenefou-l-ilot-des-lepreux.html"
+      },
+      {
+        "q": "Où Salima Machamba, la dernière reine de Mohéli, a-t-elle fini ses jours ?",
+        "choices": [
+          "À Pesmes, en Haute-Saône",
+          "À Zanzibar",
+          "À Fomboni",
+          "À Tananarive"
+        ],
+        "answer": 0,
+        "explain": "Elle avait renoncé à son trône pour épouser le gendarme Camille Paule, rencontré à La Réunion.",
+        "link": "contes/la-derniere-reine-de-mwali.html"
       }
     ]
   },

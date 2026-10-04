@@ -71,7 +71,7 @@ publication crée un commit sur `main`. GitHub Actions lance alors `build.py`, q
 puis GitHub Pages met le site à jour (1 à 3 minutes). Les images téléversées sont stockées dans
 `site_src/static/uploads/`.
 
-## Contenu (123 pages)
+## Contenu (129 pages)
 
 | Rubrique | Pages |
 | --- | --- |
@@ -79,10 +79,10 @@ puis GitHub Pages met le site à jour (1 à 3 minutes). Les images téléversée
 | Les îles | tableau comparatif + carte, 4 pages îles par thème |
 | Lieux | 16 fiches |
 | Géographie | volcans, climat, océan et lagons, faune et flore, population |
-| Histoire | 11 articles sourcés (sources et méthodes, peuplement, islam, sultans, escales et pirates, traite et esclavage, colonisation, indépendance, Comores depuis 1975, Mayotte : regards croisés, portraits), frise de 47 dates, bibliographie de 53 références |
+| Histoire | 11 articles sourcés (sources et méthodes, peuplement, islam, sultans, escales et pirates, traite et esclavage, colonisation, indépendance, Comores depuis 1975, Mayotte : regards croisés, portraits), frise de 51 dates, bibliographie de 60 références |
 | Culture & folklore | langues, musique, contes et légendes, coutumes, artisanat, cuisine, fêtes, littérature |
-| Hale halele | 32 contes, mythes, légendes et récits des quatre îles, avec leurs sources et leurs variantes |
-| Loisirs | 6 quiz, glossaire, galerie, vidéos |
+| Hale halele | 38 contes, mythes, légendes et récits des quatre îles (dont 10 de Mohéli), avec leurs sources et leurs variantes |
+| Loisirs | 6 quiz (réponses mélangées à chaque partie), glossaire, galerie, vidéos |
 | Voyager | expériences, itinéraires, infos pratiques, agenda |
 
 ### Méthode pour l'histoire et les contes
