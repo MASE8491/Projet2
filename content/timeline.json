@@ -1,0 +1,140 @@
+[
+  {
+    "date": "Ier millénaire",
+    "title": "Premiers habitants",
+    "text": "Des populations venues de la côte est-africaine s'installent dans les îles.",
+    "highlight": true
+  },
+  {
+    "date": "IXe – XIIe s.",
+    "title": "Dembéni, comptoir marchand",
+    "text": "Mayotte participe au commerce de l'océan Indien : céramiques persanes et chinoises.",
+    "highlight": false
+  },
+  {
+    "date": "Xe s. environ",
+    "title": "Arrivée de l'islam",
+    "text": "La nouvelle religion se diffuse depuis la côte swahilie ; premières mosquées.",
+    "highlight": false
+  },
+  {
+    "date": "XVe s.",
+    "title": "Naissance des sultanats",
+    "text": "Les cités de pierre et les dynasties se développent dans les quatre îles.",
+    "highlight": true
+  },
+  {
+    "date": "1538",
+    "title": "Mosquée de Tsingoni",
+    "text": "Date inscrite sur le mihrab de la mosquée de Tsingoni, à Mayotte.",
+    "highlight": false
+  },
+  {
+    "date": "XVIIe – XVIIIe s.",
+    "title": "Anjouan, escale des Indes",
+    "text": "Les navires anglais de la route des Indes font escale à « Johanna ».",
+    "highlight": false
+  },
+  {
+    "date": "v. 1780 – 1820",
+    "title": "Le temps des razzias",
+    "text": "Raids venus de Madagascar ; construction de citadelles et de remparts.",
+    "highlight": false
+  },
+  {
+    "date": "1841",
+    "title": "Mayotte française",
+    "text": "Le sultan Andriantsoly cède l'île à la France.",
+    "highlight": true
+  },
+  {
+    "date": "1846",
+    "title": "Abolition à Mayotte",
+    "text": "L'esclavage est aboli à Mayotte, deux ans avant les autres colonies.",
+    "highlight": false
+  },
+  {
+    "date": "1886",
+    "title": "Protectorat",
+    "text": "La France établit son protectorat sur la Grande Comore, Anjouan et Mohéli.",
+    "highlight": false
+  },
+  {
+    "date": "1912",
+    "title": "Colonie de Madagascar",
+    "text": "L'archipel est rattaché administrativement à Madagascar.",
+    "highlight": true
+  },
+  {
+    "date": "1946",
+    "title": "Territoire d'outre-mer",
+    "text": "Les Comores sont séparées de Madagascar.",
+    "highlight": false
+  },
+  {
+    "date": "1952",
+    "title": "Le cœlacanthe d'Anjouan",
+    "text": "Un cœlacanthe pêché à Anjouan confirme la survie de ce « fossile vivant ».",
+    "highlight": false
+  },
+  {
+    "date": "1961",
+    "title": "Autonomie interne",
+    "text": "Saïd Mohamed Cheikh préside le conseil de gouvernement.",
+    "highlight": false
+  },
+  {
+    "date": "1974",
+    "title": "Référendum",
+    "text": "Large majorité pour l'indépendance, sauf à Mayotte.",
+    "highlight": false
+  },
+  {
+    "date": "6 juillet 1975",
+    "title": "Indépendance",
+    "text": "Ahmed Abdallah proclame l'indépendance des Comores.",
+    "highlight": true
+  },
+  {
+    "date": "1976",
+    "title": "Mayotte reste française",
+    "text": "Les Mahorais confirment leur choix lors d'une consultation.",
+    "highlight": false
+  },
+  {
+    "date": "1997",
+    "title": "Crise séparatiste",
+    "text": "Anjouan et Mohéli font sécession.",
+    "highlight": false
+  },
+  {
+    "date": "2001",
+    "title": "Union des Comores",
+    "text": "Accord de Fomboni et nouvelle constitution fédérale.",
+    "highlight": false
+  },
+  {
+    "date": "2011",
+    "title": "101e département",
+    "text": "Mayotte devient un département français.",
+    "highlight": true
+  },
+  {
+    "date": "2018",
+    "title": "Fani Maoré",
+    "text": "Début de la crise sismique qui révèle un nouveau volcan sous-marin près de Mayotte.",
+    "highlight": false
+  },
+  {
+    "date": "2020",
+    "title": "Réserve de biosphère",
+    "text": "L'UNESCO reconnaît l'île de Mohéli réserve de biosphère.",
+    "highlight": false
+  },
+  {
+    "date": "2024",
+    "title": "Cyclone Chido",
+    "text": "Mayotte est dévastée par un cyclone d'une rare violence.",
+    "highlight": false
+  }
+]

@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+Disallow: /Projet2/admin/
 Sitemap: https://mase8491.github.io/Projet2/sitemap.xml

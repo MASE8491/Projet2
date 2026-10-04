@@ -3,9 +3,9 @@
 <section class="page-head">
   <div class="container">
     {{ ui.breadcrumbs([("Glossaire", None)]) }}
-    <p class="kicker">{{ ui.icon('list') }} Lexique</p>
-    <h1>Glossaire</h1>
-    <p class="lead">Les mots comoriens et les notions utiles pour comprendre l'archipel, de A à Z.</p>
+    <p class="kicker">{{ ui.icon('list') }} {{ pg.glossaire.kicker }}</p>
+    <h1>{{ pg.glossaire.title }}</h1>
+    <p class="lead">{{ pg.glossaire.lead }}</p>
   </div>
 </section>
 <section class="section">
@@ -18,10 +18,10 @@
       {% for letter in glossary_letters %}<a href="#lettre-{{ letter }}">{{ letter }}</a>{% endfor %}
     </nav>
     <dl class="glossary" data-glossary>
-      {% for term, definition, href in glossary %}
-      <div class="glossary-entry" {% if loop.first or term[0] != glossary[loop.index0 - 1][0][0] %}id="lettre-{{ term[0] | upper }}"{% endif %}>
-        <dt>{{ term }}</dt>
-        <dd>{{ definition }} <a class="link-arrow" href="{{ url(href) }}">Lire</a></dd>
+      {% for g in glossary %}{% set letter = (g.term | slugify)[0] | upper %}
+      <div class="glossary-entry" {% if loop.first or letter != ((glossary[loop.index0 - 1].term | slugify)[0] | upper) %}id="lettre-{{ letter }}"{% endif %}>
+        <dt>{{ g.term }}</dt>
+        <dd>{{ g.definition }}{% if g.link %} <a class="link-arrow" href="{{ url(g.link) }}">Lire</a>{% endif %}</dd>
       </div>
       {% endfor %}
     </dl>

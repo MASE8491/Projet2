@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-{{ ui.hero("barge", "Préparer son voyage",
-   lead="Formalités, saisons, transports, santé, budget : tout ce qu'il faut savoir avant de partir pour l'archipel.",
-   kicker="Infos pratiques", crumbs=[("Préparer son voyage", None)]) }}
+{{ ui.hero(pg.preparer.hero, pg.preparer.title, lead=pg.preparer.lead, kicker=pg.preparer.kicker, crumbs=[("Préparer son voyage", None)]) }}
 
 <section class="section">
   <div class="container">
@@ -21,19 +19,10 @@
 <section class="section section-sand">
   <div class="container with-aside">
     <div class="prose">
-      <h2>L'archipel en un coup d'œil</h2>
-      <p>L'archipel réunit deux réalités administratives&nbsp;: l'<strong>Union des Comores</strong>
-      (Grande Comore, Mohéli, Anjouan), État indépendant dont la monnaie est le franc comorien, et
-      <strong>Mayotte</strong>, département français où l'on paie en euros. Passer de l'une à l'autre,
-      c'est franchir une frontière&nbsp;: gardez toujours votre passeport sur vous.</p>
-      <p>Les distances sont courtes mais les liaisons parfois capricieuses. Le secret d'un voyage
-      réussi&nbsp;: réserver tôt les vols inter-îles, garder des journées de marge et se laisser porter
-      par le rythme tranquille des îles.</p>
-      <p>Pour aller plus loin, découvrez la <a href="{{ url('geographie/index.html') }}">géographie</a>,
-      l'<a href="{{ url('histoire/index.html') }}">histoire</a> et la
-      <a href="{{ url('culture/index.html') }}">culture</a> de l'archipel.</p>
+      <h2>{{ pg.preparer.intro_title }}</h2>
+      {{ pg.preparer.intro | links | safe }}
     </div>
-    {{ ui.factbox(geographie.facts) }}
+    {{ ui.factbox(topics[0].facts if topics else []) }}
   </div>
 </section>
 {% endblock %}

@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-{{ ui.hero("nioumachoua_ilots", "Galerie photos",
-   lead="Paysages, villes, faune et flore des quatre îles. Toutes les images sont sous licence libre.",
-   kicker="Médiathèque", crumbs=[("Galerie", None)]) }}
+{{ ui.hero(pg.galerie.hero, pg.galerie.title, lead=pg.galerie.lead, kicker=pg.galerie.kicker, crumbs=[("Galerie", None)]) }}
 
 <section class="section">
   <div class="container">

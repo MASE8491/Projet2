@@ -3,9 +3,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 {% endblock %}
 {% block content %}
-{{ ui.hero("lagon_dembeni", "Les quatre îles",
-   lead="Ngazidja, Mwali, Ndzuwani, Maore : quatre îles sœurs, nées du même océan, qui partagent une langue et une histoire, chacune avec son caractère.",
-   kicker="L'archipel des Comores", crumbs=[("Les îles", None)]) }}
+{{ ui.hero(pg.iles.hero, pg.iles.title, lead=pg.iles.lead, kicker=pg.iles.kicker, crumbs=[("Les îles", None)]) }}
 
 <section class="section">
   <div class="container">

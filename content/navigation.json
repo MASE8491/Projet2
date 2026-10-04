@@ -1,0 +1,207 @@
+{
+  "menu": [
+    {
+      "label": "Les îles",
+      "link": "iles/index.html",
+      "auto_children": "iles",
+      "children": [
+        {
+          "label": "Comparer les îles",
+          "note": "Tableau et carte",
+          "link": "iles/index.html"
+        }
+      ]
+    },
+    {
+      "label": "Géographie",
+      "link": "geographie/index.html",
+      "auto_children": "rubrique:geographie",
+      "children": []
+    },
+    {
+      "label": "Histoire",
+      "link": "histoire/index.html",
+      "auto_children": "rubrique:histoire",
+      "children": []
+    },
+    {
+      "label": "Culture & folklore",
+      "link": "culture/index.html",
+      "auto_children": "rubrique:culture",
+      "children": []
+    },
+    {
+      "label": "Voyager",
+      "link": "voyager/index.html",
+      "auto_children": "",
+      "children": [
+        {
+          "label": "Lieux incontournables",
+          "note": "",
+          "link": "voyager/index.html"
+        },
+        {
+          "label": "Expériences",
+          "note": "",
+          "link": "experiences/index.html"
+        },
+        {
+          "label": "Itinéraires",
+          "note": "",
+          "link": "itineraires/index.html"
+        },
+        {
+          "label": "Préparer son voyage",
+          "note": "",
+          "link": "preparer-son-voyage/index.html"
+        },
+        {
+          "label": "Agenda & saisons",
+          "note": "",
+          "link": "agenda.html"
+        }
+      ]
+    },
+    {
+      "label": "Médiathèque",
+      "link": "galerie.html",
+      "auto_children": "",
+      "children": [
+        {
+          "label": "Galerie photos",
+          "note": "",
+          "link": "galerie.html"
+        },
+        {
+          "label": "Vidéos",
+          "note": "",
+          "link": "videos.html"
+        },
+        {
+          "label": "Glossaire",
+          "note": "",
+          "link": "glossaire.html"
+        },
+        {
+          "label": "Quiz",
+          "note": "",
+          "link": "quiz.html"
+        }
+      ]
+    }
+  ],
+  "cta": {
+    "label": "Préparer mon voyage",
+    "link": "preparer-son-voyage/index.html"
+  },
+  "footer": [
+    {
+      "title": "Les îles",
+      "links": [
+        {
+          "label": "Grande Comore",
+          "link": "iles/grande-comore.html"
+        },
+        {
+          "label": "Mohéli",
+          "link": "iles/moheli.html"
+        },
+        {
+          "label": "Anjouan",
+          "link": "iles/anjouan.html"
+        },
+        {
+          "label": "Mayotte",
+          "link": "iles/mayotte.html"
+        },
+        {
+          "label": "Comparer les îles",
+          "link": "iles/index.html"
+        }
+      ]
+    },
+    {
+      "title": "Découvrir",
+      "links": [
+        {
+          "label": "Géographie",
+          "link": "geographie/index.html"
+        },
+        {
+          "label": "Histoire",
+          "link": "histoire/index.html"
+        },
+        {
+          "label": "Culture & folklore",
+          "link": "culture/index.html"
+        },
+        {
+          "label": "Frise chronologique",
+          "link": "histoire/index.html#frise"
+        },
+        {
+          "label": "Glossaire",
+          "link": "glossaire.html"
+        },
+        {
+          "label": "Quiz",
+          "link": "quiz.html"
+        }
+      ]
+    },
+    {
+      "title": "Voyager",
+      "links": [
+        {
+          "label": "Lieux incontournables",
+          "link": "voyager/index.html"
+        },
+        {
+          "label": "Expériences",
+          "link": "experiences/index.html"
+        },
+        {
+          "label": "Itinéraires",
+          "link": "itineraires/index.html"
+        },
+        {
+          "label": "Préparer son voyage",
+          "link": "preparer-son-voyage/index.html"
+        },
+        {
+          "label": "Agenda & saisons",
+          "link": "agenda.html"
+        }
+      ]
+    },
+    {
+      "title": "Komori",
+      "links": [
+        {
+          "label": "Galerie photos",
+          "link": "galerie.html"
+        },
+        {
+          "label": "Vidéos",
+          "link": "videos.html"
+        },
+        {
+          "label": "Contact",
+          "link": "contact.html"
+        },
+        {
+          "label": "Crédits",
+          "link": "credits.html"
+        },
+        {
+          "label": "Mentions légales",
+          "link": "mentions-legales.html"
+        },
+        {
+          "label": "Plan du site",
+          "link": "plan-du-site.html"
+        }
+      ]
+    }
+  ]
+}

@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-{{ ui.hero("moroni_mosquee", "Agenda & saisons",
-   lead="Fêtes, traditions et rendez-vous de la nature : le calendrier de l'archipel pour choisir le meilleur moment.",
-   kicker="Toute l'année", crumbs=[("Agenda", None)]) }}
+{{ ui.hero(pg.agenda.hero, pg.agenda.title, lead=pg.agenda.lead, kicker=pg.agenda.kicker, crumbs=[("Agenda", None)]) }}
 
 <section class="section">
   <div class="container">
@@ -16,8 +14,7 @@
       </article>
       {% endfor %}
     </div>
-    <div class="notice">Les dates des fêtes religieuses suivent le calendrier lunaire et sont confirmées
-    quelques jours à l'avance. Pour la météo, voir <a href="{{ url('preparer-son-voyage/quand-partir.html') }}">Quand partir&nbsp;?</a></div>
+    <div class="notice">{{ pg.agenda.notice | links | safe }}</div>
   </div>
 </section>
 {% endblock %}

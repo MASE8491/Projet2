@@ -1,0 +1,20 @@
+{
+  "site_name": "Komori",
+  "tagline": "Les îles de la Lune",
+  "description": "Komori, le site de découverte des quatre îles des Comores : Grande Comore, Mohéli, Anjouan et Mayotte. Géographie, histoire, culture, folklore et tourisme.",
+  "footer_about": "Le site de découverte des quatre îles de l'archipel des Comores : géographie, histoire, culture, folklore et voyage à la Grande Comore, Mohéli, Anjouan et Mayotte.",
+  "updated_label": "octobre 2026",
+  "contact_email": "",
+  "custom_domain": "",
+  "github_repo": "MASE8491/Projet2",
+  "github_branch": "main",
+  "media_categories": {
+    "gc": "Grande Comore",
+    "moheli": "Mohéli",
+    "anjouan": "Anjouan",
+    "mayotte": "Mayotte",
+    "archipel": "Faune & flore",
+    "histoire": "Histoire",
+    "culture": "Culture"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "hero": "lagon_choungui",
+  "stats": [
+    {
+      "value": "4",
+      "label": "îles, un même archipel"
+    },
+    {
+      "value": "2 361 m",
+      "label": "au sommet du Karthala"
+    },
+    {
+      "value": "1 000 ans",
+      "label": "d'histoire swahilie"
+    },
+    {
+      "value": "4",
+      "label": "variantes de la langue comorienne"
+    }
+  ],
+  "features": [
+    {
+      "media": "sultan_said_ali",
+      "kicker": "Histoire",
+      "title": "Au temps des sultans",
+      "text": "Cités de pierre, rivalités princières, escales des navires des Indes et razzias venues de Madagascar : plongez dans l'histoire mouvementée des sultanats de l'archipel.",
+      "href": "histoire/le-temps-des-sultans.html"
+    },
+    {
+      "media": "dziani",
+      "kicker": "Folklore",
+      "title": "Djinns, lacs engloutis et contes du soir",
+      "text": "Le folklore comorien se transmet à la veillée : légendes de lieux, esprits des arbres et des sources, lièvre rusé et sultans punis.",
+      "href": "culture/contes-et-legendes.html"
+    },
+    {
+      "media": "coelacanthe",
+      "kicker": "Nature",
+      "title": "Sur la trace du cœlacanthe",
+      "text": "Longtemps cru disparu, ce poisson apparu il y a plus de 400 millions d'années vit dans les grottes sous-marines des Comores.",
+      "href": "geographie/faune-et-flore.html"
+    }
+  ],
+  "title": "Découvrir les quatre îles des Comores",
+  "kicker": "Komori · Les îles de la Lune",
+  "lead": "Volcans et lagons, sultans et navigateurs, contes de djinns et grands mariages : explorez la géographie, l'histoire, la culture et les trésors de Ngazidja, Mwali, Ndzuwani et Maore.",
+  "facts": [
+    "Le nom des Comores viendrait de l'arabe « Djazaïr al-Qamar », les îles de la Lune.",
+    "La caldeira du Karthala est l'un des plus vastes cratères sommitaux de volcan actif au monde.",
+    "Un nouveau volcan sous-marin, Fani Maoré, est né en 2018 à 50 km de Mayotte.",
+    "Marseille est parfois surnommée la « cinquième île » des Comores.",
+    "La vanille comorienne est pollinisée à la main, fleur par fleur.",
+    "L'esclavage a été aboli à Mayotte dès 1846."
+  ],
+  "gallery": [
+    "karthala",
+    "nioumachoua_ilots",
+    "mutsamudu_escalier",
+    "dziani",
+    "manzaraka",
+    "sultan_said_ali"
+  ]
+}

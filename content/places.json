@@ -1,0 +1,841 @@
+[
+  {
+    "slug": "moroni",
+    "island": "grande-comore",
+    "name": "Moroni",
+    "kicker": "Grande Comore · Capitale",
+    "hero": "moroni_mosquee",
+    "coords": [
+      -11.7022,
+      43.2551
+    ],
+    "lead": "Médina de corail, mosquée blanche sur le port et marchés animés : la capitale de l'Union des Comores se visite à pied, au rythme de l'océan.",
+    "sections": [
+      {
+        "title": "La médina et le vieux port",
+        "html": "<p>Le cœur historique de Moroni s'organise autour du vieux port, où les boutres déchargeaient\nautrefois épices et tissus. Derrière le front de mer, la <strong>médina</strong> déroule un\ndédale de ruelles bordées de maisons en pierre volcanique et en chaux, de portes en bois sculpté\net de petites mosquées de quartier. Prenez le temps de vous perdre&nbsp;: chaque coin de rue\nrévèle une cour, un banc de pierre où l'on discute, un enfant qui joue au <em>mraha</em>.</p>"
+      },
+      {
+        "title": "Les mosquées du Vendredi",
+        "media": "moroni_ancienne_mosquee",
+        "html": "<p>L'<strong>ancienne mosquée du Vendredi</strong>, fondée au XVe siècle et dotée plus tard de\nson minaret, est l'un des monuments les plus anciens de la ville. Sur le port, la grande\nmosquée blanche à arcades est devenue l'image emblématique de Moroni. Les visiteurs sont en\ngénéral bien accueillis à l'extérieur&nbsp;; pour entrer, demandez l'autorisation, portez une\ntenue couvrante et évitez les heures de prière.</p>"
+      },
+      {
+        "title": "Marchés et artisanat",
+        "html": "<p>Le marché de <strong>Volo Volo</strong> est le plus grand de l'île&nbsp;: fruits tropicaux,\npoissons du jour, épices, savons, paniers tressés et tissus imprimés. Vous y trouverez aussi\ndes <em>kofia</em>, les calottes brodées portées par les hommes, et de l'essence d'ylang-ylang.\nNégociez avec le sourire, c'est la règle du jeu.</p>"
+      },
+      {
+        "title": "Autour de Moroni",
+        "media": "itsandra",
+        "html": "<p>À quelques minutes au nord, la plage d'<strong>Itsandra</strong>, ancienne cité royale, est le\nrendez-vous des familles le week-end. Plus au sud, <strong>Iconi</strong> et sa falaise\nrappellent les heures sombres des razzias venues de Madagascar au XVIIIe siècle. Moroni est\naussi le point de départ de l'ascension du [[lieux/karthala.html|Karthala]].</p>"
+      }
+    ],
+    "facts": [
+      {
+        "label": "Île",
+        "value": "Grande Comore (Ngazidja)"
+      },
+      {
+        "label": "À voir",
+        "value": "Médina, mosquées, Volo Volo"
+      },
+      {
+        "label": "Durée conseillée",
+        "value": "1 à 2 jours"
+      },
+      {
+        "label": "Accès",
+        "value": "≈ 30 min de l'aéroport de Hahaya"
+      }
+    ],
+    "gallery": [
+      "moroni_centre",
+      "moroni_port",
+      "moroni_port_2",
+      "moroni_medina",
+      "moroni_mosquee_2",
+      "moroni_bord_de_mer"
+    ]
+  },
+  {
+    "slug": "karthala",
+    "island": "grande-comore",
+    "name": "Le Karthala",
+    "kicker": "Grande Comore · Volcan",
+    "hero": "karthala",
+    "coords": [
+      -11.75,
+      43.38
+    ],
+    "lead": "Un des plus vastes cratères actifs du monde, au sommet d'une île entière façonnée par le feu : l'ascension du Karthala est l'aventure ultime de l'archipel.",
+    "sections": [
+      {
+        "title": "Un volcan bouclier toujours actif",
+        "html": "<p>Le Karthala domine la Grande Comore du haut de ses 2&nbsp;361&nbsp;m. C'est un volcan de type\nbouclier, comme ceux d'Hawaï ou de La Réunion, dont les pentes douces s'étendent sur des\ndizaines de kilomètres. Son sommet est occupé par une immense <strong>caldeira</strong> de\nplusieurs kilomètres de long, composée de cratères emboîtés. Il est entré en éruption à\nplusieurs reprises au cours des dernières décennies, notamment au milieu des années 2000.</p>"
+      },
+      {
+        "title": "L'ascension",
+        "media": "karthala_lave",
+        "html": "<p>La montée se fait généralement depuis le village de <strong>M'vouni</strong>, au-dessus de\nMoroni, ou par d'autres villages selon les itinéraires. Comptez entre six et huit heures de\nmarche pour atteindre le bord du cratère, avec un dénivelé de plus de 1&nbsp;800&nbsp;m. La plupart\ndes randonneurs bivouaquent près du sommet pour profiter du lever du soleil, puis redescendent\nle lendemain.</p>\n<ul>\n  <li><strong>Guide&nbsp;:</strong> fortement recommandé, les sentiers sont peu balisés et le brouillard fréquent.</li>\n  <li><strong>Eau&nbsp;:</strong> aucune source fiable en altitude, prévoyez au moins 4 litres par personne.</li>\n  <li><strong>Équipement&nbsp;:</strong> chaussures montantes, vêtements chauds et imperméables, lampe frontale, sac de couchage.</li>\n  <li><strong>Saison&nbsp;:</strong> de mai à octobre, en saison sèche.</li>\n</ul>"
+      },
+      {
+        "title": "Paysages traversés",
+        "html": "<p>L'itinéraire traverse successivement champs cultivés, forêt humide où résonnent les chants\nd'oiseaux endémiques, puis une lande de bruyères arborescentes avant d'atteindre un univers\nminéral de scories et de lave. Au sommet, la vue embrasse toute l'île et, par temps clair, la\nsilhouette de Mohéli et d'Anjouan.</p>\n<div class=\"notice\"><strong>Sécurité&nbsp;:</strong> l'activité du volcan est surveillée par\nl'Observatoire volcanologique du Karthala. Renseignez-vous sur le niveau d'alerte avant de\npartir et ne descendez jamais dans le cratère.</div>"
+      }
+    ],
+    "facts": [
+      {
+        "label": "Altitude",
+        "value": "2 361 m"
+      },
+      {
+        "label": "Durée",
+        "value": "2 jours (bivouac)"
+      },
+      {
+        "label": "Difficulté",
+        "value": "Élevée"
+      },
+      {
+        "label": "Meilleure période",
+        "value": "Mai à octobre"
+      }
+    ],
+    "gallery": [
+      "karthala",
+      "karthala_lave",
+      "moroni_panorama"
+    ]
+  },
+  {
+    "slug": "nord-grande-comore",
+    "island": "grande-comore",
+    "name": "Mitsamiouli et le Nord",
+    "kicker": "Grande Comore · Plages",
+    "hero": "mitsamiouli",
+    "coords": [
+      -11.385,
+      43.3
+    ],
+    "lead": "Sable blanc, eaux turquoise et curiosités volcaniques : le nord de la Grande Comore concentre les plus belles plages de l'île.",
+    "sections": [
+      {
+        "title": "Mitsamiouli et Maloudja",
+        "html": "<p>Ville de pêcheurs animée, <strong>Mitsamiouli</strong> est bordée d'une longue plage de sable\nblanc où s'alignent les pirogues à balancier. Un peu plus loin, <strong>Maloudja</strong> offre\nune anse plus sauvage, idéale pour la baignade et le snorkeling. Les fonds, riches en coraux,\nsont accessibles directement depuis la plage.</p>"
+      },
+      {
+        "title": "Le Trou du Prophète",
+        "html": "<p>Cette petite baie encerclée de rochers volcaniques noirs tire son nom d'une légende selon\nlaquelle un prophète y aurait accosté. Le contraste entre la roche sombre, le sable clair et l'eau\ncristalline en fait l'un des sites les plus photogéniques de l'île.</p>"
+      },
+      {
+        "title": "Le lac Salé",
+        "html": "<p>Près de Bangoi-Kouni, un ancien cratère abrite le <strong>lac Salé</strong>, dont l'eau\nsaumâtre communique avec l'océan par des failles souterraines. Le sentier qui en fait le tour\noffre une vue magnifique sur la côte. Selon les traditions locales, le lac est entouré de\nlégendes&nbsp;; respectez les lieux et les recommandations des habitants.</p>"
+      },
+      {
+        "title": "Conseils",
+        "html": "<p>Le nord se rejoint en une heure environ depuis Moroni. Pour profiter du calme, privilégiez la\nsemaine. Pensez à emporter de l'eau et de la crème solaire respectueuse des récifs&nbsp;:\nl'ombre est rare sur certaines plages.</p>"
+      }
+    ],
+    "facts": [
+      {
+        "label": "Île",
+        "value": "Grande Comore"
+      },
+      {
+        "label": "Distance de Moroni",
+        "value": "≈ 40 km"
+      },
+      {
+        "label": "À faire",
+        "value": "Baignade, snorkeling, balade"
+      },
+      {
+        "label": "Idéal pour",
+        "value": "Familles, détente"
+      }
+    ],
+    "gallery": [
+      "mitsamiouli",
+      "itsandra",
+      "moroni_bord_de_mer"
+    ]
+  },
+  {
+    "slug": "iconi",
+    "island": "grande-comore",
+    "name": "Iconi",
+    "kicker": "Grande Comore · Ancienne capitale",
+    "hero": "iconi",
+    "coords": [
+      -11.74,
+      43.24
+    ],
+    "lead": "Au sud de Moroni, l'ancienne capitale de sultanat garde ses mosquées, ses ruelles et la falaise où s'est écrite l'une des pages les plus sombres de l'histoire de l'île.",
+    "sections": [
+      {
+        "title": "Une cité royale",
+        "html": "<p>Avant l'essor de Moroni, <strong>Iconi</strong> fut l'une des principales cités de la Grande\nComore et le siège d'un sultanat. Ses vieux quartiers, ses mosquées et ses tombeaux rappellent ce\npassé prestigieux. La ville, adossée à une falaise de lave, n'est qu'à quelques kilomètres de la\ncapitale.</p>"
+      },
+      {
+        "title": "La falaise de la mémoire",
+        "html": "<p>À la fin du XVIIIe siècle, les razzias venues de Madagascar dévastent les côtes de l'archipel.\nLa tradition rapporte qu'à Iconi, des femmes préférèrent se jeter du haut de la falaise plutôt que\nd'être capturées et réduites en esclavage. Ce récit, transmis de génération en génération, fait de\nla falaise un lieu de mémoire pour toute la Grande Comore.</p>\n<p>[[culture/contes-et-legendes.html|Contes et légendes de l'archipel →]]</p>"
+      },
+      {
+        "title": "Visiter",
+        "html": "<p>Iconi se découvre en une demi-journée depuis Moroni. Faites-vous accompagner par un habitant\npour accéder aux points de vue et comprendre l'histoire des lieux, et respectez le caractère\nreligieux des mosquées et des tombeaux.</p>"
+      }
+    ],
+    "facts": [
+      {
+        "label": "Île",
+        "value": "Grande Comore"
+      },
+      {
+        "label": "Distance de Moroni",
+        "value": "≈ 5 km"
+      },
+      {
+        "label": "À voir",
+        "value": "Vieille ville, falaise, mosquées"
+      },
+      {
+        "label": "Durée",
+        "value": "Demi-journée"
+      }
+    ],
+    "gallery": [
+      "iconi",
+      "karthala_lave",
+      "moroni_ancienne_mosquee"
+    ]
+  },
+  {
+    "slug": "ntsaoueni",
+    "island": "grande-comore",
+    "name": "Ntsaoueni",
+    "kicker": "Grande Comore · Patrimoine",
+    "hero": "ntsaoueni_rempart",
+    "coords": [
+      -11.47,
+      43.27
+    ],
+    "lead": "Sur la côte nord-ouest, la cité de Ntsaoueni est associée à l'arrivée de l'islam dans l'archipel et protégée par un rempart face à l'océan.",
+    "sections": [
+      {
+        "title": "Le berceau légendaire de l'islam comorien",
+        "html": "<p>Selon la tradition, c'est de <strong>Ntsaoueni</strong> que serait parti\n<strong>Mtswa Mwindza</strong>, l'homme qui aurait rapporté l'islam d'Arabie dans l'archipel. Ce\nrécit, plus légendaire qu'historique, fait de la ville l'un des hauts lieux de la mémoire\nreligieuse des Comores. Ses mosquées comptent parmi les plus anciennes de l'île.</p>"
+      },
+      {
+        "title": "Le rempart",
+        "media": "ntsaoueni_rempart",
+        "html": "<p>Comme d'autres cités de la côte, Ntsaoueni s'est entourée d'un <strong>mur de pierre</strong>\npour se protéger des razzias. Aujourd'hui, ce rempart protège surtout la ville des fortes houles\nde l'océan Indien. Il offre une belle promenade face au large.</p>"
+      },
+      {
+        "title": "Sur la route du nord",
+        "html": "<p>Ntsaoueni se visite facilement en combinant la route côtière du nord-ouest avec les plages de\n[[lieux/nord-grande-comore.html|Mitsamiouli]] et le lac Salé.</p>"
+      }
+    ],
+    "facts": [
+      {
+        "label": "Île",
+        "value": "Grande Comore"
+      },
+      {
+        "label": "Côte",
+        "value": "Nord-ouest"
+      },
+      {
+        "label": "À voir",
+        "value": "Rempart, mosquées anciennes"
+      },
+      {
+        "label": "Légende",
+        "value": "Mtswa Mwindza"
+      }
+    ],
+    "gallery": [
+      "ntsaoueni_rempart",
+      "mitsamiouli",
+      "moroni_mosquee_2"
+    ]
+  },
+  {
+    "slug": "parc-national-moheli",
+    "island": "moheli",
+    "name": "Parc national de Mohéli",
+    "kicker": "Mohéli · Aire protégée",
+    "hero": "nioumachoua_ilots",
+    "coords": [
+      -12.36,
+      43.72
+    ],
+    "lead": "Îlots déserts, mangroves, herbiers et récifs : le premier parc marin des Comores est un modèle de conservation pilotée par les communautés.",
+    "sections": [
+      {
+        "title": "Un parc géré avec les villages",
+        "html": "<p>Créé au début des années 2000, le parc marin de Mohéli est devenu un <strong>parc\nnational</strong> qui protège une grande partie du littoral sud de l'île. Sa particularité&nbsp;:\nles villages riverains participent à sa gestion, définissent des zones de pêche et forment des\nécoguides. Votre visite contribue directement à cette économie de la conservation.</p>"
+      },
+      {
+        "title": "Les îlots de Nioumachoua",
+        "media": "nioumachoua_mangrove",
+        "html": "<p>Depuis le village de <strong>Nioumachoua</strong>, des barques rejoignent en une vingtaine de\nminutes les îlots qui ferment la baie. Snorkeling au-dessus des jardins de corail, pique-nique\nde poisson grillé sur le sable et baignade dans une eau d'une transparence rare&nbsp;: la journée\npasse trop vite. La mangrove voisine, nurserie de nombreux poissons, se découvre à marée\nhaute.</p>"
+      },
+      {
+        "title": "Baleines et dauphins",
+        "media": "baleine",
+        "html": "<p>De juillet à octobre, les <strong>baleines à bosse</strong> remontent du Grand Sud pour se\nreproduire dans les eaux chaudes de l'archipel. Les sorties en mer depuis Nioumachoua ou\nFomboni permettent de les observer, ainsi que plusieurs espèces de dauphins présentes toute\nl'année.</p>"
+      }
+    ],
+    "facts": [
+      {
+        "label": "Statut",
+        "value": "Parc national, réserve de biosphère UNESCO"
+      },
+      {
+        "label": "Village d'accès",
+        "value": "Nioumachoua"
+      },
+      {
+        "label": "À faire",
+        "value": "Îlots, snorkeling, baleines"
+      },
+      {
+        "label": "Meilleure période",
+        "value": "Mai à novembre"
+      }
+    ],
+    "gallery": [
+      "nioumachoua_ilots",
+      "nioumachoua_mangrove",
+      "baleine",
+      "tortue_verte"
+    ]
+  },
+  {
+    "slug": "itsamia",
+    "island": "moheli",
+    "name": "Itsamia, la plage des tortues",
+    "kicker": "Mohéli · Faune",
+    "hero": "tortue_verte",
+    "coords": [
+      -12.345,
+      43.875
+    ],
+    "lead": "Chaque nuit, des tortues vertes viennent pondre sur les plages d'Itsamia. Un spectacle rare, encadré par les écoguides du village.",
+    "sections": [
+      {
+        "title": "Un site de ponte majeur",
+        "html": "<p>Les plages d'<strong>Itsamia</strong>, à la pointe sud-est de Mohéli, comptent parmi les\nsites de ponte de <strong>tortues vertes</strong> les plus importants de l'océan Indien\noccidental. Les femelles, qui peuvent dépasser un mètre de long, reviennent pondre sur la plage\nqui les a vues naître, plusieurs fois par saison.</p>"
+      },
+      {
+        "title": "Comment observer la ponte",
+        "html": "<p>L'association villageoise organise des sorties nocturnes accompagnées. Le guide repère les\ntortues et vous indique quand vous approcher sans les déranger. Les règles sont simples&nbsp;:</p>\n<ul>\n  <li>pas de lampe blanche ni de flash, seulement une lumière rouge si le guide l'autorise&nbsp;;</li>\n  <li>rester derrière la tortue, à distance, et en silence&nbsp;;</li>\n  <li>ne jamais toucher les animaux ni les œufs.</li>\n</ul>"
+      },
+      {
+        "title": "Séjourner au village",
+        "media": "v_bebe_tortue",
+        "html": "<p>Quelques bungalows simples permettent de dormir sur place et de vivre au rythme du\nvillage. Les revenus de l'écotourisme financent la surveillance des plages, qui a permis de\nréduire fortement le braconnage. Si vous avez de la chance, vous assisterez à l'émergence des\nnouveau-nés, qui filent vers l'océan à la tombée de la nuit.</p>"
+      }
+    ],
+    "facts": [
+      {
+        "label": "Espèce",
+        "value": "Tortue verte (Chelonia mydas)"
+      },
+      {
+        "label": "Période",
+        "value": "Toute l'année, pics variables"
+      },
+      {
+        "label": "Encadrement",
+        "value": "Écoguides du village"
+      },
+      {
+        "label": "Conseil",
+        "value": "Prévoir 1 à 2 nuits"
+      }
+    ],
+    "gallery": [
+      "tortue_verte",
+      "tortue_ngouja",
+      "tortue_pilote"
+    ]
+  },
+  {
+    "slug": "forets-et-lacs-de-moheli",
+    "island": "moheli",
+    "name": "Forêts et lac Dziani Boundouni",
+    "kicker": "Mohéli · Randonnée",
+    "hero": "roussette",
+    "coords": [
+      -12.33,
+      43.82
+    ],
+    "lead": "Sous la canopée de Mohéli vivent des espèces que l'on ne voit nulle part ailleurs. Randonnée vers un lac de cratère, à la rencontre des roussettes géantes.",
+    "sections": [
+      {
+        "title": "La forêt des crêtes",
+        "html": "<p>La dorsale centrale de Mohéli, culminant au <strong>Mzé Koukoulé</strong> (790&nbsp;m), est\ncouverte d'une forêt humide parmi les mieux conservées de l'archipel. Elle abrite des oiseaux\nendémiques, des caméléons, des orchidées et la <strong>roussette de Livingstone</strong>, l'une\ndes plus grandes chauves-souris du monde, aujourd'hui en danger critique d'extinction.</p>"
+      },
+      {
+        "title": "Le lac Dziani Boundouni",
+        "html": "<p>Niché dans un ancien cratère au sud-est de l'île, le <strong>lac Dziani Boundouni</strong>\nattire oiseaux d'eau et randonneurs. Le sentier qui y mène traverse plantations, forêt et\npoints de vue sur la côte. Comptez une demi-journée avec un guide local.</p>"
+      },
+      {
+        "title": "Le lémur mongoz",
+        "media": "lemur_mongoz",
+        "html": "<p>Mohéli et Anjouan sont, avec Madagascar, les seuls territoires où vit naturellement le\n<strong>lémur mongoz</strong>. Discret, il est surtout actif au crépuscule. Observez-le sans le\nnourrir&nbsp;: c'est une espèce menacée.</p>"
+      }
+    ],
+    "facts": [
+      {
+        "label": "Point culminant",
+        "value": "Mzé Koukoulé, 790 m"
+      },
+      {
+        "label": "Durée",
+        "value": "Demi-journée à journée"
+      },
+      {
+        "label": "Difficulté",
+        "value": "Modérée"
+      },
+      {
+        "label": "Faune",
+        "value": "Roussettes, lémurs, oiseaux endémiques"
+      }
+    ],
+    "gallery": [
+      "roussette",
+      "roussette_2",
+      "lemur_mongoz",
+      "moheli_banner"
+    ]
+  },
+  {
+    "slug": "mutsamudu",
+    "island": "anjouan",
+    "name": "Mutsamudu",
+    "kicker": "Anjouan · Ville historique",
+    "hero": "mutsamudu_vue",
+    "coords": [
+      -12.169,
+      44.398
+    ],
+    "lead": "Une citadelle qui veille sur le port, une médina en escaliers et des palais de sultans : Mutsamudu est l'une des plus belles cités swahilies de l'océan Indien.",
+    "sections": [
+      {
+        "title": "La citadelle",
+        "html": "<p>Construite à la fin du XVIIIe siècle pour protéger la ville des raids venus de la mer, la\n<strong>citadelle</strong> domine Mutsamudu. Ses remparts et ses vieux canons offrent la plus\nbelle vue sur le port, la médina et les montagnes. Montez-y en fin d'après-midi, quand la\nlumière dore les façades.</p>"
+      },
+      {
+        "title": "La médina",
+        "media": "mutsamudu_rue",
+        "html": "<p>La vieille ville se parcourt à pied, par un réseau d'escaliers, de passages voûtés et de\nruelles si étroites que deux personnes s'y croisent à peine. On y découvre l'ancien palais des\nsultans, des mosquées anciennes et des portes sculptées de motifs floraux, héritage des\néchanges avec la côte swahilie, l'Arabie et l'Inde.</p>"
+      },
+      {
+        "title": "Le port et la ville moderne",
+        "media": "mutsamudu_port",
+        "html": "<p>Le port en eau profonde fait de Mutsamudu la porte maritime d'Anjouan. C'est d'ici que\npartent les bateaux vers Mohéli, la Grande Comore et Mayotte. L'aéroport de l'île se trouve à\nOuani, à quelques kilomètres.</p>"
+      }
+    ],
+    "facts": [
+      {
+        "label": "Île",
+        "value": "Anjouan (Ndzuwani)"
+      },
+      {
+        "label": "À voir",
+        "value": "Citadelle, médina, palais"
+      },
+      {
+        "label": "Durée conseillée",
+        "value": "1 journée"
+      },
+      {
+        "label": "Aéroport",
+        "value": "Ouani, ≈ 10 km"
+      }
+    ],
+    "gallery": [
+      "mutsamudu",
+      "mutsamudu_vue",
+      "mutsamudu_port",
+      "mutsamudu_escalier",
+      "mutsamudu_rue"
+    ]
+  },
+  {
+    "slug": "domoni",
+    "island": "anjouan",
+    "name": "Domoni",
+    "kicker": "Anjouan · Patrimoine",
+    "hero": "domoni",
+    "coords": [
+      -12.26,
+      44.53
+    ],
+    "lead": "Sur la côte est d'Anjouan, l'ancienne capitale des sultans garde sa médina, ses tombeaux et l'esprit des grandes cités marchandes.",
+    "sections": [
+      {
+        "title": "Une capitale ancienne",
+        "html": "<p><strong>Domoni</strong> fut pendant des siècles l'un des centres du pouvoir à Anjouan. Sa\nmédina, plus calme que celle de Mutsamudu, conserve mosquées anciennes, maisons de notables et\ntombeaux à coupole. La ville est intimement liée à l'histoire politique des Comores\nmodernes.</p>"
+      },
+      {
+        "title": "Le cœlacanthe, fossile vivant",
+        "media": "coelacanthe",
+        "html": "<p>En décembre 1952, un pêcheur d'Anjouan remonte un poisson étrange&nbsp;: un\n<strong>cœlacanthe</strong>, espèce que l'on croyait disparue depuis des dizaines de millions\nd'années avant la découverte d'un premier spécimen en Afrique du Sud en 1938. Ce second\nexemplaire confirma que les eaux profondes des Comores abritent une population de ce «&nbsp;fossile\nvivant&nbsp;», devenu un symbole national.</p>"
+      },
+      {
+        "title": "Alentours",
+        "html": "<p>Depuis Domoni, la route côtière mène vers des villages de pêcheurs, des plantations\nd'ylang-ylang et des vallées où coulent des cascades. Pour une immersion complète, combinez la\nvisite avec une nuit chez l'habitant.</p>"
+      }
+    ],
+    "facts": [
+      {
+        "label": "Île",
+        "value": "Anjouan"
+      },
+      {
+        "label": "Côte",
+        "value": "Est"
+      },
+      {
+        "label": "À voir",
+        "value": "Médina, tombeaux, mosquées"
+      },
+      {
+        "label": "Durée",
+        "value": "Demi-journée"
+      }
+    ],
+    "gallery": [
+      "domoni",
+      "coelacanthe",
+      "ylang_plantation"
+    ]
+  },
+  {
+    "slug": "lac-dzialandze-et-ntingui",
+    "island": "anjouan",
+    "name": "Lac Dzialandzé et mont Ntingui",
+    "kicker": "Anjouan · Randonnée",
+    "hero": "lemur_mongoz",
+    "coords": [
+      -12.21,
+      44.43
+    ],
+    "lead": "Au cœur des montagnes d'Anjouan, un lac de cratère entouré de forêt de nuages, sur les flancs du point culminant de l'île.",
+    "sections": [
+      {
+        "title": "Le lac Dzialandzé",
+        "html": "<p>Perché à environ 900&nbsp;m d'altitude, le <strong>lac Dzialandzé</strong> occupe un ancien\ncratère tapissé de forêt. L'atmosphère y est souvent brumeuse, presque mystique. Le sentier\nd'accès, au départ des villages des hauts, grimpe à travers cultures vivrières, girofliers et\nfougères arborescentes.</p>"
+      },
+      {
+        "title": "Vers le mont Ntingui",
+        "html": "<p>Les marcheurs aguerris peuvent prolonger vers le <strong>mont Ntingui</strong>, point\nculminant d'Anjouan à 1&nbsp;595&nbsp;m. La montée est exigeante et nécessite un guide, mais la\nvue sur l'île entière, et parfois sur Mohéli et Mayotte, récompense l'effort.</p>"
+      },
+      {
+        "title": "Protéger les sources d'Anjouan",
+        "media": "roussette_2",
+        "html": "<p>Les forêts du centre de l'île alimentent les rivières qui irriguent toute l'île. Plusieurs\nprogrammes de reboisement et de protection, dont le parc national du mont Ntingui, visent à\nenrayer la déforestation. Restez sur les sentiers et confiez-vous à des guides locaux.</p>"
+      }
+    ],
+    "facts": [
+      {
+        "label": "Altitude du lac",
+        "value": "≈ 900 m"
+      },
+      {
+        "label": "Sommet",
+        "value": "Mont Ntingui, 1 595 m"
+      },
+      {
+        "label": "Difficulté",
+        "value": "Modérée à élevée"
+      },
+      {
+        "label": "Guide",
+        "value": "Indispensable"
+      }
+    ],
+    "gallery": [
+      "lemur_mongoz",
+      "roussette_2",
+      "ylang_plantation"
+    ]
+  },
+  {
+    "slug": "lagon-de-mayotte",
+    "island": "mayotte",
+    "name": "Le lagon de Mayotte",
+    "kicker": "Mayotte · Parc naturel marin",
+    "hero": "lagon_choungui",
+    "coords": [
+      -12.85,
+      45.1
+    ],
+    "lead": "Plus de 1 000 km² d'eaux turquoise ceinturées par une barrière de corail : le lagon de Mayotte est l'un des plus grands lagons fermés de la planète.",
+    "sections": [
+      {
+        "title": "Une double barrière rare",
+        "html": "<p>Le lagon est fermé par une barrière récifale de plusieurs dizaines de kilomètres, percée de\npasses où l'océan s'engouffre. Dans le sud-ouest, une <strong>double barrière</strong>, phénomène\nrare à l'échelle mondiale, dessine des motifs spectaculaires visibles depuis les sommets. Tout\nl'espace marin est protégé par le <strong>parc naturel marin de Mayotte</strong>.</p>"
+      },
+      {
+        "title": "Plonger dans la passe en S",
+        "media": "v_recif",
+        "html": "<p>Site de plongée emblématique, la <strong>passe en S</strong> serpente à travers la barrière\net concentre une vie foisonnante&nbsp;: tortues, raies, bancs de carangues, requins de récif.\nPlusieurs centres de plongée proposent baptêmes et sorties pour plongeurs confirmés.</p>"
+      },
+      {
+        "title": "Baleines, dauphins et dugongs",
+        "media": "dugong",
+        "html": "<p>De juillet à octobre, les <strong>baleines à bosse</strong> viennent mettre bas et allaiter\nleurs petits à l'abri du lagon. Des dauphins sont observables toute l'année. Plus discret, le\n<strong>dugong</strong>, mammifère marin herbivore, y survit en très petit nombre&nbsp;: une\nrencontre exceptionnelle. Les sorties en mer doivent respecter la charte d'approche des\nmammifères marins.</p>"
+      },
+      {
+        "title": "Îlots et bancs de sable",
+        "media": "mbouzi",
+        "html": "<p>Le lagon est parsemé d'îlots&nbsp;: <strong>M'Bouzi</strong>, réserve naturelle nationale,\n<strong>Mtsamboro</strong> au nord, ou encore les célèbres <strong>îlots de sable blanc</strong>\nqui n'émergent qu'à marée basse. Une journée en bateau permet de combiner observation des\nmammifères marins, snorkeling et pique-nique sur un banc de sable.</p>"
+      }
+    ],
+    "facts": [
+      {
+        "label": "Superficie",
+        "value": "≈ 1 100 km²"
+      },
+      {
+        "label": "Protection",
+        "value": "Parc naturel marin (2010)"
+      },
+      {
+        "label": "Baleines",
+        "value": "Juillet à octobre"
+      },
+      {
+        "label": "À faire",
+        "value": "Plongée, kayak, sorties en mer"
+      }
+    ],
+    "gallery": [
+      "lagon_choungui",
+      "lagon_dembeni",
+      "lagon_mbouzi",
+      "mbouzi",
+      "dugong",
+      "barriere_choungui",
+      "tortue_pilote"
+    ]
+  },
+  {
+    "slug": "petite-terre-et-lac-dziani",
+    "island": "mayotte",
+    "name": "Petite-Terre et le lac Dziani",
+    "kicker": "Mayotte · Volcan",
+    "hero": "dziani",
+    "coords": [
+      -12.77,
+      45.29
+    ],
+    "lead": "Un lac émeraude au fond d'un cratère, une plage de ponte des tortues et le vieux rocher de Dzaoudzi : Petite-Terre se découvre en une journée inoubliable.",
+    "sections": [
+      {
+        "title": "Le lac Dziani",
+        "html": "<p>Le <strong>lac Dziani</strong> (ou Dziani Dzaha) occupe un cratère d'explosion de forme\npresque circulaire. Ses eaux alcalines, colorées par des micro-organismes, prennent une teinte\nvert émeraude unique. Un sentier fait le tour du cratère&nbsp;: comptez environ une heure de\nmarche, de préférence tôt le matin ou en fin de journée. La baignade y est déconseillée.</p>"
+      },
+      {
+        "title": "La plage de Moya",
+        "media": "tortue_verte",
+        "html": "<p>Nichée au pied des falaises, la plage de <strong>Moya</strong> est l'un des principaux sites\nde ponte des tortues de Mayotte. Les observations nocturnes se font uniquement dans le respect\ndes consignes des associations locales. De jour, c'est un lieu de baignade apprécié, à aborder\navec prudence selon l'état de la mer.</p>"
+      },
+      {
+        "title": "Dzaoudzi et la barge",
+        "media": "barge",
+        "html": "<p>Ancien chef-lieu de l'île, <strong>Dzaoudzi</strong> occupe un rocher relié à Pamandzi par\nune digue. On y voit des bâtiments de l'époque coloniale et le quai de la <strong>barge</strong>\nqui assure, en une vingtaine de minutes, la traversée vers Mamoudzou. L'aéroport international\nde Mayotte se trouve à Pamandzi.</p>"
+      },
+      {
+        "title": "Un volcan sous-marin tout proche",
+        "html": "<p>Depuis 2018, Mayotte est au centre d'une activité sismique et volcanique remarquable&nbsp;:\nun nouveau volcan sous-marin, baptisé <strong>Fani Maoré</strong>, est apparu à une\ncinquantaine de kilomètres à l'est de Petite-Terre. Il est étroitement surveillé par les\nscientifiques et ne présente pas de danger pour les visiteurs à terre.</p>"
+      }
+    ],
+    "facts": [
+      {
+        "label": "Accès",
+        "value": "Barge depuis Mamoudzou"
+      },
+      {
+        "label": "Tour du lac",
+        "value": "≈ 1 h de marche"
+      },
+      {
+        "label": "À voir",
+        "value": "Lac Dziani, plage de Moya, Dzaoudzi"
+      },
+      {
+        "label": "Aéroport",
+        "value": "Pamandzi (DZA)"
+      }
+    ],
+    "gallery": [
+      "dziani",
+      "dziani_aerien",
+      "dziani_2",
+      "dzaoudzi",
+      "barge"
+    ]
+  },
+  {
+    "slug": "ngouja",
+    "island": "mayotte",
+    "name": "La plage de N'Gouja",
+    "kicker": "Mayotte · Snorkeling",
+    "hero": "ngouja",
+    "coords": [
+      -12.96,
+      45.08
+    ],
+    "lead": "Nager au-dessus des herbiers aux côtés des tortues vertes : à N'Gouja, la rencontre se fait à quelques brasses du rivage.",
+    "sections": [
+      {
+        "title": "Le rendez-vous des tortues",
+        "media": "tortue_ngouja",
+        "html": "<p>Dans le sud de Grande-Terre, près de Kani-Kéli, la plage de <strong>N'Gouja</strong> est\nréputée pour ses <strong>tortues vertes</strong> qui viennent brouter les herbiers marins à\nfaible profondeur. Avec un simple masque et un tuba, il est fréquent de nager à quelques\nmètres de ces reptiles paisibles.</p>"
+      },
+      {
+        "title": "Bonnes pratiques",
+        "html": "<ul>\n  <li>Gardez une distance d'au moins trois mètres et ne coupez jamais la route d'une tortue qui remonte respirer.</li>\n  <li>Ne touchez ni les animaux ni les coraux&nbsp;; évitez de vous tenir debout sur les herbiers.</li>\n  <li>Utilisez une protection solaire respectueuse des récifs ou, mieux, un lycra.</li>\n  <li>Ramenez tous vos déchets.</li>\n</ul>"
+      },
+      {
+        "title": "Aux alentours",
+        "media": "choungui_2",
+        "html": "<p>N'Gouja se situe au pied du [[lieux/mont-choungui.html|mont Choungui]]&nbsp;: combinez\nrandonnée matinale et snorkeling l'après-midi. Plus à l'est, la pointe de\n<strong>Saziley</strong> offre sentiers côtiers, plages sauvages et sites de ponte.</p>"
+      }
+    ],
+    "facts": [
+      {
+        "label": "Localisation",
+        "value": "Sud de Grande-Terre, Kani-Kéli"
+      },
+      {
+        "label": "Équipement",
+        "value": "Masque, tuba, palmes"
+      },
+      {
+        "label": "Idéal pour",
+        "value": "Familles, snorkeling"
+      },
+      {
+        "label": "Conseil",
+        "value": "Venir à marée haute"
+      }
+    ],
+    "gallery": [
+      "ngouja",
+      "ngouja_2",
+      "tortue_ngouja",
+      "tortue_pilote"
+    ]
+  },
+  {
+    "slug": "mont-choungui",
+    "island": "mayotte",
+    "name": "Le mont Choungui",
+    "kicker": "Mayotte · Randonnée",
+    "hero": "choungui",
+    "coords": [
+      -12.947,
+      45.134
+    ],
+    "lead": "Un pain de sucre volcanique qui se dresse au-dessus du lagon : l'ascension la plus emblématique de Mayotte.",
+    "sections": [
+      {
+        "title": "L'ascension",
+        "html": "<p>Avec ses 594&nbsp;m, le <strong>mont Choungui</strong> n'est pas le plus haut sommet de l'île\n(c'est le mont Bénara, 660&nbsp;m), mais c'est de loin le plus spectaculaire. Le sentier part du\ncol au-dessus du village de Choungui&nbsp;; la montée, d'environ 1&nbsp;h&nbsp;30, devient très\nraide sur la fin. Des cordes facilitent parfois le passage des sections les plus pentues.</p>"
+      },
+      {
+        "title": "Le panorama",
+        "media": "barriere_choungui",
+        "html": "<p>Au sommet, la vue à 360° embrasse le lagon, la double barrière de corail du sud-ouest, les\nîlots et, par temps clair, les reliefs d'Anjouan. Partez tôt pour profiter de la fraîcheur et\nd'une lumière douce.</p>"
+      },
+      {
+        "title": "Conseils",
+        "html": "<ul>\n  <li>Partez au lever du jour et emportez au moins deux litres d'eau.</li>\n  <li>Évitez la randonnée par temps de pluie&nbsp;: la terre devient glissante.</li>\n  <li>Ne partez pas seul et informez votre hébergeur de votre itinéraire.</li>\n</ul>"
+      }
+    ],
+    "facts": [
+      {
+        "label": "Altitude",
+        "value": "594 m"
+      },
+      {
+        "label": "Durée",
+        "value": "≈ 3 h aller-retour"
+      },
+      {
+        "label": "Difficulté",
+        "value": "Soutenue"
+      },
+      {
+        "label": "Meilleur moment",
+        "value": "Lever du soleil"
+      }
+    ],
+    "gallery": [
+      "choungui",
+      "choungui_2",
+      "lagon_choungui",
+      "barriere_choungui"
+    ]
+  },
+  {
+    "slug": "mamoudzou-et-tsingoni",
+    "island": "mayotte",
+    "name": "Mamoudzou et Tsingoni",
+    "kicker": "Mayotte · Ville & patrimoine",
+    "hero": "mamoudzou",
+    "coords": [
+      -12.78,
+      45.23
+    ],
+    "lead": "La ville la plus animée de Mayotte et, à l'ouest, la plus ancienne mosquée en activité du territoire français.",
+    "sections": [
+      {
+        "title": "Mamoudzou",
+        "html": "<p>Principale ville et pôle économique de l'île, <strong>Mamoudzou</strong> s'étire le long du\nlagon. On y vient pour son <strong>marché couvert</strong>, ses étals d'épices, de vanille et\nde <em>salouva</em> (le pagne traditionnel des Mahoraises), et pour son front de mer d'où part\nla barge. Le soir, les brochettes et <em>mabawa</em> (ailes de poulet grillées) se dégustent\nsur le pouce.</p>"
+      },
+      {
+        "title": "La mosquée de Tsingoni",
+        "media": "mtsapere",
+        "html": "<p>Ancienne capitale des sultans de Mayotte, <strong>Tsingoni</strong> abrite une mosquée dont\nle mihrab porte une inscription de 1538. Classée monument historique, elle est considérée\ncomme la plus ancienne mosquée en activité de France. Les visites se font avec respect, en\ndehors des heures de prière et en tenue couvrante.</p>"
+      },
+      {
+        "title": "Le maki, mascotte de l'île",
+        "media": "maki",
+        "html": "<p>Partout sur l'île, des groupes de <strong>makis</strong> (lémuriens bruns) se laissent\nobserver dans les arbres, notamment autour des villages et des plages. Protégés, ils ne doivent\npas être nourris.</p>"
+      }
+    ],
+    "facts": [
+      {
+        "label": "Statut",
+        "value": "Chef-lieu de Mayotte"
+      },
+      {
+        "label": "À voir",
+        "value": "Marché, front de mer, mosquées"
+      },
+      {
+        "label": "Tsingoni",
+        "value": "≈ 30 min de Mamoudzou"
+      },
+      {
+        "label": "Mihrab",
+        "value": "Daté de 1538"
+      }
+    ],
+    "gallery": [
+      "mamoudzou",
+      "mamoudzou_2",
+      "mtsapere",
+      "coucher_mamoudzou",
+      "maki"
+    ]
+  }
+]

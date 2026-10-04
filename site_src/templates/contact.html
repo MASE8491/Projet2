@@ -3,8 +3,8 @@
 <section class="page-head">
   <div class="container">
     {{ ui.breadcrumbs([("Contact", None)]) }}
-    <h1>Contact</h1>
-    <p class="lead">Une question, une correction, des photos à partager sous licence libre&nbsp;? Écrivez-nous.</p>
+    <h1>{{ pg.contact.title }}</h1>
+    <p class="lead">{{ pg.contact.lead | safe }}</p>
   </div>
 </section>
 <section class="section">
@@ -27,17 +27,12 @@
     </form>
     {% else %}
     <div class="prose">
-      <p>L'adresse de contact de Komori sera publiée prochainement.</p>
-      <p>En attendant, vous trouverez la plupart des réponses dans nos
-      <a href="{{ url('preparer-son-voyage/index.html') }}">informations pratiques</a> et dans les rubriques
-      <a href="{{ url('geographie/index.html') }}">Géographie</a>, <a href="{{ url('histoire/index.html') }}">Histoire</a>
-      et <a href="{{ url('culture/index.html') }}">Culture &amp; folklore</a>.</p>
+      {{ pg.contact.no_email_text | links | safe }}
     </div>
     {% endif %}
     <aside class="tips">
-      <h2>Avant d'écrire</h2>
-      <p>Les réponses à la plupart des questions se trouvent dans nos <a href="{{ url('preparer-son-voyage/index.html') }}">infos pratiques</a>.
-      Komori est un site éditorial&nbsp;: nous ne vendons ni billets ni séjours.</p>
+      <h2>{{ pg.contact.aside_title }}</h2>
+      {{ pg.contact.aside | links | safe }}
     </aside>
   </div>
 </section>

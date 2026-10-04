@@ -1,0 +1,241 @@
+[
+  {
+    "slug": "grand-tour-des-quatre-iles",
+    "name": "Le grand tour des quatre îles",
+    "theme": "Découverte",
+    "duration": "14 à 16 jours",
+    "islands": [
+      "grande-comore",
+      "moheli",
+      "anjouan",
+      "mayotte"
+    ],
+    "hero": "lagon_choungui",
+    "card": "moroni_panorama",
+    "lead": "L'itinéraire complet pour comprendre l'archipel : un volcan, une réserve de biosphère, l'île aux parfums et un lagon géant.",
+    "days": [
+      {
+        "when": "Jours 1-2",
+        "title": "Moroni et la médina",
+        "text": "Arrivée à Hahaya, installation à Moroni. Visite de la médina, des mosquées du Vendredi et du marché de Volo Volo. Coucher de soleil à Itsandra.",
+        "place": "moroni"
+      },
+      {
+        "when": "Jours 3-4",
+        "title": "Ascension du Karthala",
+        "text": "Départ à l'aube avec un guide, bivouac près du cratère, lever de soleil sur la caldeira et descente.",
+        "place": "karthala"
+      },
+      {
+        "when": "Jour 5",
+        "title": "Le Nord de la Grande Comore",
+        "text": "Plages de Mitsamiouli et Maloudja, Trou du Prophète et tour du lac Salé.",
+        "place": "nord-grande-comore"
+      },
+      {
+        "when": "Jours 6-8",
+        "title": "Mohéli, l'île nature",
+        "text": "Vol ou bateau vers Fomboni. Journée aux îlots de Nioumachoua, nuit à Itsamia pour observer la ponte des tortues.",
+        "place": "parc-national-moheli"
+      },
+      {
+        "when": "Jours 9-11",
+        "title": "Anjouan, l'île aux parfums",
+        "text": "Mutsamudu et sa citadelle, Domoni, visite d'une distillerie d'ylang-ylang et randonnée au lac Dzialandzé.",
+        "place": "mutsamudu"
+      },
+      {
+        "when": "Jours 12-15",
+        "title": "Mayotte et son lagon",
+        "text": "Petite-Terre et lac Dziani, journée en mer dans le lagon, snorkeling avec les tortues à N'Gouja, ascension du mont Choungui.",
+        "place": "lagon-de-mayotte"
+      },
+      {
+        "when": "Jour 16",
+        "title": "Départ",
+        "text": "Vol retour depuis Pamandzi (Mayotte) ou retour vers Moroni selon votre billet.",
+        "place": ""
+      }
+    ],
+    "tips": "Les liaisons inter-îles (avion ou bateau) changent souvent : réservez-les en premier et gardez une journée tampon en cas d'annulation."
+  },
+  {
+    "slug": "volcans-et-sommets",
+    "name": "Volcans & sommets",
+    "theme": "Aventure",
+    "duration": "8 à 10 jours",
+    "islands": [
+      "grande-comore",
+      "anjouan",
+      "mayotte"
+    ],
+    "hero": "karthala",
+    "card": "karthala_lave",
+    "lead": "Pour les marcheurs : le cratère du Karthala, la forêt de nuages du Ntingui et le belvédère du Choungui.",
+    "days": [
+      {
+        "when": "Jour 1",
+        "title": "Arrivée à Moroni",
+        "text": "Préparation du matériel, rencontre avec le guide, balade dans la médina.",
+        "place": "moroni"
+      },
+      {
+        "when": "Jours 2-3",
+        "title": "Le Karthala",
+        "text": "Montée par la forêt et la lande de bruyères, bivouac au bord de la caldeira, descente par un autre versant.",
+        "place": "karthala"
+      },
+      {
+        "when": "Jour 4",
+        "title": "Récupération au nord",
+        "text": "Baignade et repos sur les plages du nord de la Grande Comore.",
+        "place": "nord-grande-comore"
+      },
+      {
+        "when": "Jours 5-7",
+        "title": "Anjouan, au cœur des montagnes",
+        "text": "Randonnée vers le lac Dzialandzé puis les crêtes du mont Ntingui, nuit chez l'habitant dans les hauts.",
+        "place": "lac-dzialandze-et-ntingui"
+      },
+      {
+        "when": "Jours 8-10",
+        "title": "Mayotte, entre sommets et lagon",
+        "text": "Mont Choungui au lever du soleil, tour du lac Dziani sur Petite-Terre, randonnée vers le mont Bénara.",
+        "place": "mont-choungui"
+      }
+    ],
+    "tips": "Partez en saison sèche (mai à octobre) et réservez des guides locaux expérimentés à l'avance."
+  },
+  {
+    "slug": "lagons-et-tortues",
+    "name": "Lagons & tortues",
+    "theme": "Océan",
+    "duration": "10 à 12 jours",
+    "islands": [
+      "mayotte",
+      "moheli"
+    ],
+    "hero": "tortue_ngouja",
+    "card": "ngouja",
+    "lead": "Un voyage les pieds dans l'eau, à la rencontre des tortues, des baleines et des récifs les mieux préservés de l'archipel.",
+    "days": [
+      {
+        "when": "Jours 1-2",
+        "title": "Petite-Terre",
+        "text": "Arrivée à Pamandzi, tour du lac Dziani et plage de Moya.",
+        "place": "petite-terre-et-lac-dziani"
+      },
+      {
+        "when": "Jours 3-5",
+        "title": "Le lagon de Mayotte",
+        "text": "Sortie baleines et dauphins (en saison), plongée dans la passe en S, pique-nique sur un îlot de sable blanc.",
+        "place": "lagon-de-mayotte"
+      },
+      {
+        "when": "Jours 6-7",
+        "title": "Le sud de Mayotte",
+        "text": "Snorkeling avec les tortues à N'Gouja, sentiers de Saziley.",
+        "place": "ngouja"
+      },
+      {
+        "when": "Jours 8-10",
+        "title": "Mohéli",
+        "text": "Îlots de Nioumachoua, mangrove en kayak et observation des baleines.",
+        "place": "parc-national-moheli"
+      },
+      {
+        "when": "Jours 11-12",
+        "title": "Itsamia",
+        "text": "Nuits d'observation de la ponte des tortues avec les écoguides du village.",
+        "place": "itsamia"
+      }
+    ],
+    "tips": "Pour les baleines, visez août-septembre. Emportez votre masque et un lycra anti-UV."
+  },
+  {
+    "slug": "route-des-sultans",
+    "name": "Sur la route des sultans",
+    "theme": "Culture",
+    "duration": "7 à 9 jours",
+    "islands": [
+      "grande-comore",
+      "anjouan",
+      "mayotte"
+    ],
+    "hero": "moroni_ancienne_mosquee",
+    "card": "mutsamudu_rue",
+    "lead": "Médinas, citadelles, mosquées anciennes et palais : un voyage dans l'histoire des cités marchandes de l'océan Indien.",
+    "days": [
+      {
+        "when": "Jours 1-2",
+        "title": "Moroni",
+        "text": "Médina, ancienne mosquée du Vendredi, vieux port, puis Itsandra, ancienne cité royale.",
+        "place": "moroni"
+      },
+      {
+        "when": "Jour 3",
+        "title": "Iconi et le sud",
+        "text": "La falaise d'Iconi, mémoire des razzias, et les villages du Badjini.",
+        "place": ""
+      },
+      {
+        "when": "Jours 4-6",
+        "title": "Mutsamudu et Domoni",
+        "text": "Citadelle, médina et palais de Mutsamudu, puis la vieille ville de Domoni et ses tombeaux.",
+        "place": "mutsamudu"
+      },
+      {
+        "when": "Jours 7-8",
+        "title": "Mayotte",
+        "text": "Mosquée de Tsingoni et son mihrab du XVIe siècle, marché de Mamoudzou, rocher de Dzaoudzi.",
+        "place": "mamoudzou-et-tsingoni"
+      }
+    ],
+    "tips": "Si vous voyagez en juillet ou en août, demandez s'il est possible d'assister à un grand mariage."
+  },
+  {
+    "slug": "escapade-a-deux-a-moheli",
+    "name": "Escapade à deux à Mohéli",
+    "theme": "Romantique",
+    "duration": "5 à 6 jours",
+    "islands": [
+      "moheli"
+    ],
+    "hero": "nioumachoua_ilots",
+    "card": "nioumachoua_mangrove",
+    "lead": "Un écolodge face aux îlots, des plages désertes et des nuits étoilées : la plus douce des parenthèses.",
+    "days": [
+      {
+        "when": "Jour 1",
+        "title": "Arrivée à Mohéli",
+        "text": "Accueil à Fomboni et transfert vers un écolodge du sud de l'île.",
+        "place": ""
+      },
+      {
+        "when": "Jour 2",
+        "title": "Les îlots de Nioumachoua",
+        "text": "Journée en barque, snorkeling et déjeuner de poisson grillé sur un îlot.",
+        "place": "parc-national-moheli"
+      },
+      {
+        "when": "Jour 3",
+        "title": "Forêt et lac",
+        "text": "Randonnée tranquille vers le lac Dziani Boundouni, à l'écoute des oiseaux.",
+        "place": "forets-et-lacs-de-moheli"
+      },
+      {
+        "when": "Jours 4-5",
+        "title": "Itsamia",
+        "text": "Nuit au village et observation des tortues sous les étoiles.",
+        "place": "itsamia"
+      },
+      {
+        "when": "Jour 6",
+        "title": "Retour",
+        "text": "Matinée libre et retour vers Fomboni.",
+        "place": ""
+      }
+    ],
+    "tips": "Mohéli est très calme : apportez livres et espèces, et laissez-vous gagner par le rythme de l'île."
+  }
+]
