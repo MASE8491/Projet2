@@ -3,9 +3,9 @@
 <section class="page-head">
   <div class="container">
     {{ ui.breadcrumbs([("Quiz", None)]) }}
-    <p class="kicker">{{ ui.icon('question') }} Testez vos connaissances</p>
-    <h1>Le quiz des Comores</h1>
-    <p class="lead">Dix questions sur la géographie, l'histoire et la culture de l'archipel. Choisissez une réponse pour découvrir l'explication.</p>
+    <p class="kicker">{{ ui.icon('question') }} {{ pg.quiz.kicker }}</p>
+    <h1>{{ pg.quiz.title }}</h1>
+    <p class="lead">{{ pg.quiz.lead }}</p>
   </div>
 </section>
 <section class="section">

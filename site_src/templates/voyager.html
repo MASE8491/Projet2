@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-{{ ui.hero("tortue_pilote", "Voyager aux Comores",
-   lead="Lieux incontournables, expériences, itinéraires et informations pratiques : tout pour partir à la découverte des quatre îles.",
-   kicker="Tourisme", crumbs=[("Voyager", None)]) }}
+{{ ui.hero(pg.voyager.hero, pg.voyager.title, lead=pg.voyager.lead, kicker=pg.voyager.kicker, crumbs=[("Voyager", None)]) }}
 
 <section class="section">
   <div class="container">

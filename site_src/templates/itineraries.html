@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-{{ ui.hero("moroni_panorama", "Itinéraires",
-   lead="Des routes thématiques prêtes à suivre, à adapter selon votre temps et vos envies.",
-   kicker="Routes de l'archipel", crumbs=[("Itinéraires", None)]) }}
+{{ ui.hero(pg.itineraires.hero, pg.itineraires.title, lead=pg.itineraires.lead, kicker=pg.itineraires.kicker, crumbs=[("Itinéraires", None)]) }}
 
 <section class="section">
   <div class="container">

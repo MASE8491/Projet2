@@ -1,0 +1,104 @@
+{
+  "iles": {
+    "title": "Les quatre îles",
+    "kicker": "L'archipel des Comores",
+    "hero": "lagon_dembeni",
+    "lead": "Ngazidja, Mwali, Ndzuwani, Maore : quatre îles sœurs, nées du même océan, qui partagent une langue et une histoire, chacune avec son caractère.",
+    "description": "Grande Comore, Mohéli, Anjouan et Mayotte : tableau comparatif, présentation et carte interactive des quatre îles."
+  },
+  "voyager": {
+    "title": "Voyager aux Comores",
+    "kicker": "Tourisme",
+    "hero": "tortue_pilote",
+    "lead": "Lieux incontournables, expériences, itinéraires et informations pratiques : tout pour partir à la découverte des quatre îles.",
+    "description": "Lieux incontournables, expériences, itinéraires et informations pratiques pour découvrir les quatre îles."
+  },
+  "experiences": {
+    "title": "Expériences",
+    "kicker": "Vivre l'archipel",
+    "hero": "tortue_pilote",
+    "lead": "Nager avec les tortues, gravir un volcan actif, sentir l'ylang-ylang au petit matin : choisissez ce qui vous fait vibrer.",
+    "description": "Nature, plages, plongée, randonnées, patrimoine et parfums : les expériences à vivre aux Comores."
+  },
+  "itineraires": {
+    "title": "Itinéraires",
+    "kicker": "Routes de l'archipel",
+    "hero": "moroni_panorama",
+    "lead": "Des routes thématiques prêtes à suivre, à adapter selon votre temps et vos envies.",
+    "description": "Itinéraires de 5 à 16 jours à travers l'archipel des Comores."
+  },
+  "preparer": {
+    "title": "Préparer son voyage",
+    "kicker": "Infos pratiques",
+    "hero": "barge",
+    "lead": "Formalités, saisons, transports, santé, budget : tout ce qu'il faut savoir avant de partir pour l'archipel.",
+    "description": "Formalités, climat, transports, santé, budget, hébergement et savoir-vivre aux Comores et à Mayotte.",
+    "intro_title": "L'archipel en un coup d'œil",
+    "intro": "<p>L'archipel réunit deux réalités administratives&nbsp;: l'<strong>Union des Comores</strong>\n(Grande Comore, Mohéli, Anjouan), État indépendant dont la monnaie est le franc comorien, et\n<strong>Mayotte</strong>, département français où l'on paie en euros. Passer de l'une à l'autre,\nc'est franchir une frontière&nbsp;: gardez toujours votre passeport sur vous.</p>\n<p>Les distances sont courtes mais les liaisons parfois capricieuses. Le secret d'un voyage\nréussi&nbsp;: réserver tôt les vols inter-îles, garder des journées de marge et se laisser porter\npar le rythme tranquille des îles.</p>\n<p>Pour aller plus loin, découvrez la [[geographie/index.html|géographie]],\nl'[[histoire/index.html|histoire]] et la\n[[culture/index.html|culture]] de l'archipel.</p>"
+  },
+  "galerie": {
+    "title": "Galerie photos",
+    "kicker": "Médiathèque",
+    "hero": "nioumachoua_ilots",
+    "lead": "Paysages, villes, faune et flore des quatre îles. Toutes les images sont sous licence libre.",
+    "description": "Photos sous licence libre des quatre îles de l'archipel des Comores : paysages, histoire, culture, faune."
+  },
+  "videos": {
+    "title": "Vidéos",
+    "kicker": "Médiathèque",
+    "hero": "baleine",
+    "lead": "Baleines, tortues et récifs : la vie marine de l'océan Indien en vidéos sous licence libre.",
+    "description": "Vidéos sous licence libre de la vie marine de l'archipel des Comores : baleines, tortues, récifs.",
+    "feature_text": "De juillet à octobre, les baleines à bosse fréquentent les eaux de l'archipel pour s'y reproduire.\nCoups de caudale, sauts et chants&nbsp;: un spectacle à vivre depuis un bateau, dans le respect des\ndistances d'approche.",
+    "notice": "Ces vidéos, issues de Wikimedia Commons, illustrent des espèces et des milieux présents\ndans l'archipel&nbsp;; certaines ont été tournées ailleurs dans l'océan Indien ou le Pacifique. Elles sont\nchargées à la demande, au format WebM. Vous avez filmé les Comores et souhaitez partager vos images sous\nlicence libre&nbsp;? [[contact.html|Contactez-nous]]."
+  },
+  "agenda": {
+    "title": "Agenda & saisons",
+    "kicker": "Toute l'année",
+    "hero": "moroni_mosquee",
+    "lead": "Fêtes, traditions et rendez-vous de la nature : le calendrier de l'archipel pour choisir le meilleur moment.",
+    "description": "Fêtes, traditions et saisons de la nature dans l'archipel des Comores.",
+    "notice": "Les dates des fêtes religieuses suivent le calendrier lunaire et sont confirmées\nquelques jours à l'avance. Pour la météo, voir [[preparer-son-voyage/quand-partir.html|Quand partir&nbsp;?]]"
+  },
+  "glossaire": {
+    "title": "Glossaire",
+    "kicker": "Lexique",
+    "lead": "Les mots comoriens et les notions utiles pour comprendre l'archipel, de A à Z.",
+    "description": "Les mots comoriens et les notions utiles pour comprendre l'archipel des Comores."
+  },
+  "quiz": {
+    "title": "Le quiz des Comores",
+    "kicker": "Testez vos connaissances",
+    "lead": "Dix questions sur la géographie, l'histoire et la culture de l'archipel. Choisissez une réponse pour découvrir l'explication.",
+    "description": "Testez vos connaissances sur la géographie, l'histoire et la culture des Comores."
+  },
+  "credits": {
+    "title": "Crédits photos & vidéos",
+    "lead": "Tous les médias de Komori proviennent de <a href=\"https://commons.wikimedia.org/\" rel=\"noopener\">Wikimedia Commons</a>,\nqui n'accepte que des fichiers sous licence libre ou dans le domaine public. Merci à leurs auteurs.",
+    "description": "Auteurs et licences des photos et vidéos utilisées sur Komori.",
+    "body": "<h2>Réutiliser ces médias</h2>\n<p>Les licences Creative Commons «&nbsp;BY&nbsp;» imposent de citer l'auteur et la licence&nbsp;; les licences\n«&nbsp;SA&nbsp;» demandent de partager les œuvres dérivées sous la même licence. Avant toute réutilisation,\nconsultez la page de chaque fichier sur Wikimedia Commons, qui fait foi.</p>\n<p>Les textes du site sont des créations originales de Komori.</p>"
+  },
+  "mentions": {
+    "title": "Mentions légales",
+    "description": "Mentions légales du site Komori.",
+    "body": "<h2>Éditeur</h2>\n<p>Komori est un site de découverte indépendant consacré à l'archipel des Comores. Il n'est\naffilié à aucun gouvernement ni office de tourisme. Les coordonnées complètes de l'éditeur et de\nl'hébergeur sont à compléter avant la mise en ligne.</p>\n<h2>Contenus</h2>\n<p>Les textes sont des créations originales. Ils sont fournis à titre informatif&nbsp;: les conditions\nd'entrée, de santé, de sécurité et de transport évoluent, et doivent être vérifiées auprès des\nsources officielles avant tout voyage. Komori ne saurait être tenu responsable d'une information\ndevenue inexacte.</p>\n<h2>Photos et vidéos</h2>\n<p>Les médias sont issus de Wikimedia Commons et utilisés conformément à leurs licences libres.\nLa liste complète des auteurs et licences figure sur la [[credits.html|page des crédits]].</p>\n<h2>Cartographie</h2>\n<p>Les cartes utilisent la bibliothèque Leaflet et les données © contributeurs\n<a href=\"https://www.openstreetmap.org/copyright\" rel=\"noopener\">OpenStreetMap</a>.</p>\n<h2>Données personnelles</h2>\n<p>Le site ne dépose aucun cookie de suivi. Les ressources externes (polices, cartes, images) sont\nchargées depuis leurs serveurs d'origine, qui peuvent enregistrer des données techniques de connexion.</p>\n<h2>Questions territoriales</h2>\n<p>Komori présente l'archipel des Comores dans son ensemble géographique et culturel. Mayotte est\nadministrée par la France&nbsp;; sa souveraineté est revendiquée par l'Union des Comores. Le site ne\nprend pas position sur cette question.</p>"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Contacter l'équipe de Komori.",
+    "lead": "Une question, une correction, des photos à partager sous licence libre&nbsp;? Écrivez-nous.",
+    "no_email_text": "<p>L'adresse de contact de Komori sera publiée prochainement.</p>\n<p>En attendant, vous trouverez la plupart des réponses dans nos\n[[preparer-son-voyage/index.html|informations pratiques]] et dans les rubriques\n[[geographie/index.html|Géographie]], [[histoire/index.html|Histoire]]\net [[culture/index.html|Culture &amp; folklore]].</p>",
+    "aside_title": "Avant d'écrire",
+    "aside": "<p>Les réponses à la plupart des questions se trouvent dans nos [[preparer-son-voyage/index.html|infos pratiques]].\nKomori est un site éditorial&nbsp;: nous ne vendons ni billets ni séjours.</p>"
+  },
+  "plan": {
+    "title": "Plan du site",
+    "description": "Toutes les pages du site Komori."
+  },
+  "404": {
+    "title": "Cette page a pris le large",
+    "kicker": "Erreur 404",
+    "lead": "Elle s'est peut-être perdue quelque part entre Moroni et Mamoudzou. Reprenez la route&nbsp;:",
+    "description": "Cette page n'existe pas."
+  }
+}

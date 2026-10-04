@@ -2,9 +2,9 @@
 {% block content %}
 <section class="page-head page-404">
   <div class="container narrow">
-    <p class="kicker">Erreur 404</p>
-    <h1>Cette page a pris le large</h1>
-    <p class="lead">Elle s'est peut-être perdue quelque part entre Moroni et Mamoudzou. Reprenez la route&nbsp;:</p>
+    <p class="kicker">{{ pg["404"].kicker }}</p>
+    <h1>{{ pg["404"].title }}</h1>
+    <p class="lead">{{ pg["404"].lead | safe }}</p>
     <div class="hero-ctas">
       <a class="btn btn-ocean" href="{{ url('index.html') }}">Retour à l'accueil</a>
       <a class="btn btn-outline" href="{{ url('iles/index.html') }}">Les quatre îles</a>

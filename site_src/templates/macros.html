@@ -2,7 +2,8 @@
 
 {% macro picture(key, sizes="100vw", cls="", loading="lazy", alt=None, fetch=None) -%}
 {%- set m = media[key] -%}
-<img class="{{ cls }}" src="{{ img_url(key, 1280) }}" srcset="{{ img_srcset(key) }}" sizes="{{ sizes }}"
+{%- set srcset = img_srcset(key) -%}
+<img class="{{ cls }}" src="{{ img_url(key, 1280) }}"{% if srcset %} srcset="{{ srcset }}" sizes="{{ sizes }}"{% endif %}
      alt="{{ alt if alt is not none else m.caption }}" loading="{{ loading }}" decoding="async"{% if fetch %} fetchpriority="{{ fetch }}"{% endif %}
      data-fallback="{{ m.caption }}">
 {%- endmacro %}
@@ -81,8 +82,8 @@
 <aside class="factbox">
   <h2>{{ title }}</h2>
   <dl>
-    {% for label, value in facts %}
-    <div><dt>{{ label }}</dt><dd>{{ value }}</dd></div>
+    {% for f in facts %}
+    {% if f is mapping %}<div><dt>{{ f.label }}</dt><dd>{{ f.value }}</dd></div>{% else %}<div><dt>{{ f[0] }}</dt><dd>{{ f[1] }}</dd></div>{% endif %}
     {% endfor %}
   </dl>
 </aside>

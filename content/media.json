@@ -1,0 +1,453 @@
+{
+  "moroni_panorama": {
+    "file": "Moroni_Capital_of_the_Comores_Photo_by_Sascha_Grabow.jpg",
+    "caption": "Moroni, capitale de l'Union des Comores, entre océan Indien et pentes du Karthala",
+    "island": "gc",
+    "author": "Sascha Grabow"
+  },
+  "moroni_centre": {
+    "file": "Moroni_Capital_of_Comores_Photo_by_Sascha_Grabow.jpg",
+    "caption": "Le cœur de Moroni : la mosquée du Vendredi et la baie du vieux port",
+    "island": "gc",
+    "author": "Sascha Grabow"
+  },
+  "moroni_mosquee": {
+    "file": "Moroni_Friday_Mosque_Comoros.jpg",
+    "caption": "La mosquée du Vendredi, silhouette blanche du front de mer de Moroni",
+    "island": "gc",
+    "license": "CC BY 3.0 PL"
+  },
+  "moroni_ancienne_mosquee": {
+    "file": "Ancienne_Mosquee_du_Vendredi_(10886895544).jpg",
+    "caption": "L'ancienne mosquée du Vendredi de Moroni, fondée au XVe siècle",
+    "island": "gc"
+  },
+  "moroni_mosquee_2": {
+    "file": "Mosque_in_Moroni,_Comoros_(3923026238).jpg",
+    "caption": "Minaret dans la vieille ville de Moroni",
+    "island": "gc"
+  },
+  "moroni_medina": {
+    "file": "Moroni_Medina_Comoros_2.jpg",
+    "caption": "Ruelles ombragées de la médina de Moroni",
+    "island": "gc"
+  },
+  "moroni_port": {
+    "file": "Moroni-Harbour.jpg",
+    "caption": "Le vieux port de Moroni, où accostaient autrefois les boutres",
+    "island": "gc"
+  },
+  "moroni_port_2": {
+    "file": "Moroni_harbour_(2).jpg",
+    "caption": "Barques et pirogues dans le port de Moroni",
+    "island": "gc"
+  },
+  "moroni_bord_de_mer": {
+    "file": "Moroni_beach.jpg",
+    "caption": "Bord de mer aux abords de Moroni",
+    "island": "gc"
+  },
+  "moroni_banner": {
+    "file": "Moroni_banner.jpg",
+    "caption": "Panorama de Moroni",
+    "island": "gc",
+    "gallery": false
+  },
+  "itsandra": {
+    "file": "Moroni,_Comoros.jpg",
+    "caption": "La plage d'Itsandra, à quelques minutes au nord de Moroni",
+    "island": "gc",
+    "author": "TheLizardQueen",
+    "license": "CC BY 2.0"
+  },
+  "karthala": {
+    "file": "Karthala_volcano-Comoros.jpg",
+    "caption": "La caldeira du Karthala, l'un des plus vastes cratères actifs du monde",
+    "island": "gc",
+    "author": "alKomor.com",
+    "license": "CC BY-SA 2.0"
+  },
+  "karthala_lave": {
+    "file": "Lava_Flows_of_Mount_Karthala_volcano_in_Grande_Comore.jpg",
+    "caption": "Anciennes coulées de lave du Karthala descendant vers la mer",
+    "island": "gc"
+  },
+  "mitsamiouli": {
+    "file": "Mitsamiouli_beach_pirogues_Comoros.jpg",
+    "caption": "Pirogues à balancier sur le sable blanc de Mitsamiouli",
+    "island": "gc",
+    "license": "CC BY 3.0 PL"
+  },
+  "moheli_banner": {
+    "file": "Mohéli_banner.jpg",
+    "caption": "Côte sauvage de Mohéli",
+    "island": "moheli"
+  },
+  "fomboni": {
+    "file": "Fomboni-Ship.jpg",
+    "caption": "Navire au mouillage devant Fomboni, chef-lieu de Mohéli",
+    "island": "moheli"
+  },
+  "nioumachoua_ilots": {
+    "file": "Îlot_de_Nioumachoua.jpg",
+    "caption": "Les îlots de Nioumachoua, joyaux du parc national de Mohéli",
+    "island": "moheli"
+  },
+  "nioumachoua_mangrove": {
+    "file": "Panorama_mangrove_de_nioumachoua.jpg",
+    "caption": "La mangrove de Nioumachoua, nurserie de la vie marine",
+    "island": "moheli"
+  },
+  "djoumbe_fatima": {
+    "file": "Queen_of_Mohéli.jpg",
+    "caption": "Djoumbé Fatima, reine de Mohéli au XIXe siècle",
+    "island": "moheli"
+  },
+  "domoni": {
+    "file": "Anjouan_-_Islands_of_Comoros.jpg",
+    "caption": "Domoni, ancienne cité des sultans sur la côte est d'Anjouan",
+    "island": "anjouan",
+    "author": "Haryamouji"
+  },
+  "mutsamudu": {
+    "file": "Mutsamudu_(9983246206).jpg",
+    "caption": "Mutsamudu, serrée entre l'océan et les pentes vertes d'Anjouan",
+    "island": "anjouan"
+  },
+  "mutsamudu_vue": {
+    "file": "Mutsamudu.jpg",
+    "caption": "Vue d'ensemble de Mutsamudu, chef-lieu d'Anjouan",
+    "island": "anjouan"
+  },
+  "mutsamudu_port": {
+    "file": "Mutsamudu_port1.jpg",
+    "caption": "Le port de Mutsamudu, porte d'entrée maritime d'Anjouan",
+    "island": "anjouan"
+  },
+  "mutsamudu_escalier": {
+    "file": "Mutsamudu_Stone_Stairway_(9983185465).jpg",
+    "caption": "Escaliers de pierre dans la médina de Mutsamudu",
+    "island": "anjouan"
+  },
+  "mutsamudu_rue": {
+    "file": "Mutsamudu_Street_(9983198004).jpg",
+    "caption": "Une ruelle étroite de la vieille ville de Mutsamudu",
+    "island": "anjouan"
+  },
+  "mayotte_banner": {
+    "file": "Mayotte_banner.jpg",
+    "caption": "Le lagon de Mayotte",
+    "island": "mayotte",
+    "gallery": false
+  },
+  "lagon_choungui": {
+    "file": "LAGON_MAYOTTE.jpg",
+    "caption": "Le lagon de Mayotte vu depuis le sommet du mont Choungui",
+    "island": "mayotte",
+    "license": "CC BY-SA 4.0"
+  },
+  "lagon_dembeni": {
+    "file": "Le_lagon_à_Dembéni_(Mayotte)_(34073252283).jpg",
+    "caption": "Le lagon à Dembéni, avec Petite-Terre à l'horizon",
+    "island": "mayotte"
+  },
+  "lagon_mbouzi": {
+    "file": "Mayotte_lagon_avec_ilôt_M'Bouzi_à_droite.jpg",
+    "caption": "Le lagon et l'îlot M'Bouzi",
+    "island": "mayotte"
+  },
+  "mbouzi": {
+    "file": "Îlot_M'Bouzi.jpg",
+    "caption": "L'îlot M'Bouzi, réserve naturelle nationale au large de Mamoudzou",
+    "island": "mayotte"
+  },
+  "plage_prefet": {
+    "file": "Plage_du_Préfet_(Mayotte).jpg",
+    "caption": "La plage du Préfet, à Mayotte",
+    "island": "mayotte"
+  },
+  "tahiti_plage": {
+    "file": "Tahiti_plage_Mayotte_2.JPG",
+    "caption": "Tahiti Plage, l'une des anses les plus fréquentées de Mayotte",
+    "island": "mayotte"
+  },
+  "tahiti_plage_2": {
+    "file": "Tahiti_plage_Mayotte_1.jpg",
+    "caption": "Sable clair et eaux calmes à Tahiti Plage",
+    "island": "mayotte"
+  },
+  "hamouro": {
+    "file": "Plage_de_Hamouro-Mayotte.jpg",
+    "caption": "La plage de Hamouro, sur la côte est de Grande-Terre",
+    "island": "mayotte"
+  },
+  "soulou": {
+    "file": "Plage_de_Soulou_2.JPG",
+    "caption": "La plage de Soulou, dans le nord-ouest de Mayotte",
+    "island": "mayotte"
+  },
+  "ngouja": {
+    "file": "N'Gouja_2.jpg",
+    "caption": "La plage de N'Gouja, dans le sud de Mayotte",
+    "island": "mayotte"
+  },
+  "ngouja_2": {
+    "file": "Nguja_(3063720186).jpg",
+    "caption": "Les eaux turquoise de N'Gouja, royaume des tortues",
+    "island": "mayotte"
+  },
+  "tortue_ngouja": {
+    "file": "Tortue_N'Gouja.jpg",
+    "caption": "Tortue verte broutant les herbiers de N'Gouja",
+    "island": "mayotte",
+    "author": "Frédéric Ducarme"
+  },
+  "tortue_pilote": {
+    "file": "Tortue_verte_et_poisson-pilote.jpg",
+    "caption": "Tortue verte escortée d'un poisson-pilote dans le lagon",
+    "island": "mayotte",
+    "author": "Frédéric Ducarme"
+  },
+  "dugong": {
+    "file": "Dugong_du_parc_marin_de_Mayotte.jpg",
+    "caption": "Un dugong, hôte rare et protégé du parc naturel marin de Mayotte",
+    "island": "mayotte"
+  },
+  "dziani": {
+    "file": "Mayotte-indian-ocean-dziani-lake-landscape-496a6b54ac95062ba05d28389a3cadac.jpg",
+    "caption": "Le lac Dziani, lac de cratère aux eaux vert émeraude sur Petite-Terre",
+    "island": "mayotte"
+  },
+  "dziani_aerien": {
+    "file": "Dziani_Dzaha_in_Volcanic_Crater_in_Mayotte.jpg",
+    "caption": "Vue aérienne du cratère du Dziani Dzaha",
+    "island": "mayotte"
+  },
+  "dziani_2": {
+    "file": "Lac_Dziani_Dzaha.jpg",
+    "caption": "Les rives du Dziani Dzaha",
+    "island": "mayotte"
+  },
+  "dzaoudzi": {
+    "file": "Dzaoudzi.jpg",
+    "caption": "Dzaoudzi, ancien chef-lieu installé sur son rocher de Petite-Terre",
+    "island": "mayotte"
+  },
+  "barge": {
+    "file": "La_barge_à_Dzaoudzi_(Mayotte)_(34019109614).jpg",
+    "caption": "La barge, trait d'union entre Grande-Terre et Petite-Terre",
+    "island": "mayotte"
+  },
+  "choungui": {
+    "file": "Choungui_nord.jpg",
+    "caption": "Le pic du mont Choungui vu du nord",
+    "island": "mayotte",
+    "author": "Frédéric Ducarme"
+  },
+  "choungui_2": {
+    "file": "Mont_Choungui.jpg",
+    "caption": "Le mont Choungui, sentinelle du sud de Mayotte",
+    "island": "mayotte",
+    "author": "Frédéric Ducarme"
+  },
+  "barriere_choungui": {
+    "file": "Barrière_de_corail_et_lagon_vus_du_Mont_Choungui.jpg",
+    "caption": "La double barrière de corail vue du mont Choungui",
+    "island": "mayotte"
+  },
+  "mamoudzou": {
+    "file": "Mayotte-mamoudzou-1800x1000-d259bf1d.jpg",
+    "caption": "Mamoudzou, principale ville de Mayotte, face au lagon",
+    "island": "mayotte",
+    "license": "CC BY-SA 4.0"
+  },
+  "mamoudzou_2": {
+    "file": "Mamoudzou_(10029936275).jpg",
+    "caption": "Le front de mer de Mamoudzou",
+    "island": "mayotte",
+    "author": "David Stanley"
+  },
+  "mtsapere": {
+    "file": "La_mosquée_de_Mtsapéré_(Mayotte)_(34746792691).jpg",
+    "caption": "La mosquée de Mtsapéré, à Mamoudzou",
+    "island": "mayotte"
+  },
+  "coucher_mamoudzou": {
+    "file": "2004_12_12_18-24-04_rose_sea_in_mamoudzou_mayotte_island.jpg",
+    "caption": "Coucher de soleil rose sur le lagon à Mamoudzou",
+    "island": "mayotte"
+  },
+  "maki": {
+    "file": "Maki_de_mayotte.jpg",
+    "caption": "Le maki de Mayotte, lémurien emblématique de l'île",
+    "island": "mayotte",
+    "author": "Jérôme G"
+  },
+  "coelacanthe": {
+    "file": "Latimeria_Chalumnae_-_Coelacanth_-_NHMW.jpg",
+    "caption": "Cœlacanthe pêché en 1974 au large de la Grande Comore (Muséum d'histoire naturelle de Vienne)",
+    "island": "archipel",
+    "author": "Alberto Fernandez Fernandez"
+  },
+  "roussette": {
+    "file": "Bristol.zoo.livfruitbat.arp.jpg",
+    "caption": "La roussette de Livingstone, chauve-souris géante endémique d'Anjouan et de Mohéli",
+    "island": "archipel"
+  },
+  "roussette_2": {
+    "file": "Livingstone's_Fruit_Bat.jpg",
+    "caption": "Roussette de Livingstone, l'un des mammifères les plus rares de l'océan Indien",
+    "island": "archipel"
+  },
+  "lemur_mongoz": {
+    "file": "Eulemur-mongoz_59489762.jpg",
+    "caption": "Le lémur mongoz, présent à Anjouan et à Mohéli",
+    "island": "archipel"
+  },
+  "ylang": {
+    "file": "Cananga_odorata_flowers.jpg",
+    "caption": "Fleurs d'ylang-ylang, l'or parfumé des Comores",
+    "island": "archipel"
+  },
+  "ylang_plantation": {
+    "file": "A_ylang-ylang_plantation,_near_a_factory_producing_essential_oil_from_the_flowers_(4).jpg",
+    "caption": "Plantation d'ylang-ylang à proximité d'une distillerie",
+    "island": "archipel"
+  },
+  "baleine": {
+    "file": "026e_Humpback_whale_jump_and_splash_Photo_by_Giles_Laurent.jpg",
+    "caption": "Saut de baleine à bosse (photo d'illustration)",
+    "island": "archipel",
+    "author": "Giles Laurent",
+    "license": "CC BY-SA 4.0"
+  },
+  "tortue_verte": {
+    "file": "Green_sea_turtle_(Chelonia_mydas)_Moorea.jpg",
+    "caption": "Tortue verte en pleine eau (photo d'illustration)",
+    "island": "archipel"
+  },
+  "carte_1976": {
+    "file": "Comoros_country_map_1976,_CIA.jpg",
+    "caption": "Carte de l'archipel des Comores publiée en 1976, un an après l'indépendance",
+    "island": "histoire",
+    "license": "Domaine public"
+  },
+  "carte_1808": {
+    "file": "Map_of_Africa_(1808)_-_CAMORA_excerpt.jpg",
+    "caption": "Extrait d'une carte de l'Afrique de 1808 où l'archipel apparaît sous le nom de « Camora »",
+    "island": "histoire",
+    "license": "Domaine public"
+  },
+  "carte_amiraute": {
+    "file": "Admiralty_Chart_No_2762_Comoro_Islands,_Published_1879.jpg",
+    "caption": "Carte marine britannique des îles Comores, publiée en 1879",
+    "island": "histoire",
+    "license": "Domaine public"
+  },
+  "sultan_said_ali": {
+    "file": "Sultan_Said_Ali_ben_Said_Omar_of_Bambao_with_other_important_people_in_Ngazidja_(grand_comore).jpg",
+    "caption": "Le sultan Saïd Ali ben Saïd Omar de Bambao entouré de notables de Ngazidja, avant 1916",
+    "island": "histoire",
+    "license": "Domaine public"
+  },
+  "said_ali": {
+    "file": "Said_Ali.jpg",
+    "caption": "Saïd Ali, dernier sultan de la Grande Comore",
+    "island": "histoire",
+    "license": "Domaine public"
+  },
+  "andriantsoly": {
+    "file": "Andriantsoly.jpg",
+    "caption": "Andriantsoly, souverain de Mayotte qui céda l'île à la France en 1841",
+    "island": "histoire",
+    "license": "Domaine public"
+  },
+  "ntsaoueni_rempart": {
+    "file": "Ntsaoueni_Wall_(10927095456).jpg",
+    "caption": "Le rempart de Ntsaoueni, bâti contre les razzias et qui protège aujourd'hui la ville des tempêtes",
+    "island": "gc"
+  },
+  "iconi": {
+    "file": "Grande_Comore-Iconi-Ancienne_capitale.jpg",
+    "caption": "Iconi, ancienne capitale de sultanat au sud de Moroni",
+    "island": "gc"
+  },
+  "residence_gouverneur": {
+    "file": "La_Résidence_du_gouverneur_(Dzaoudzi,_Mayotte)_(34824394185).jpg",
+    "caption": "La résidence du gouverneur à Dzaoudzi, bâtie à l'emplacement du palais du sultan Andriantsoly",
+    "island": "mayotte",
+    "author": "Jean-Pierre Dalbéra",
+    "license": "CC BY 2.0"
+  },
+  "hopital_dzaoudzi": {
+    "file": "L'hôpital_historique_(Dzaoudzi,_Mayotte)_(34787688536).jpg",
+    "caption": "L'ancien hôpital colonial du rocher de Dzaoudzi",
+    "island": "mayotte",
+    "author": "Jean-Pierre Dalbéra",
+    "license": "CC BY 2.0"
+  },
+  "manzaraka": {
+    "file": "Le_manzaraka,_le_grand_mariage_(musée_de_Mayotte)_(34751468196).jpg",
+    "caption": "La chambre nuptiale du manzaraka, le grand mariage mahorais (musée de Mayotte)",
+    "island": "culture",
+    "author": "Jean-Pierre Dalbéra",
+    "license": "CC BY 2.0"
+  },
+  "bijoux_mariage": {
+    "file": "Bijoux_d'un_grand_mariage_Comorien.jpg",
+    "caption": "Parure de bijoux en or offerte lors d'un grand mariage comorien",
+    "island": "culture"
+  },
+  "kofia_couture": {
+    "file": "Woman_sewing_Kofia.jpg",
+    "caption": "Brodeuse confectionnant une kofia, la calotte traditionnelle des hommes",
+    "island": "culture"
+  },
+  "marche_tissus": {
+    "file": "Women_selling_colourful_dress_in_Comoros.jpg",
+    "caption": "Étal de tissus colorés sur un marché comorien",
+    "island": "culture"
+  },
+  "comorienne": {
+    "file": "Comorian_Woman.jpg",
+    "caption": "Femme comorienne en tenue traditionnelle",
+    "island": "culture"
+  },
+  "v_baleine": {
+    "file": "032_Humpback_whale_lobtailing_in_slow_motion_Video_by_Giles_Laurent.webm",
+    "caption": "Baleine à bosse frappant la surface de sa nageoire caudale, au ralenti",
+    "island": "archipel",
+    "author": "Giles Laurent",
+    "license": "CC BY-SA 4.0",
+    "kind": "video",
+    "poster": "baleine"
+  },
+  "v_tortues": {
+    "file": "Green_sea_turtles_(Chelonia_mydas)_mating.webm",
+    "caption": "Tortues vertes dans leur milieu naturel",
+    "island": "archipel",
+    "kind": "video",
+    "poster": "tortue_pilote"
+  },
+  "v_bebe_tortue": {
+    "file": "Baby_turtle.webm",
+    "caption": "Une jeune tortue rejoint l'océan après l'éclosion",
+    "island": "archipel",
+    "kind": "video",
+    "poster": "tortue_ngouja"
+  },
+  "v_recif": {
+    "file": "Tropical_Fish_Banner_Fish_on_Coral_Reef.webm",
+    "caption": "Poissons-bannières sur un récif corallien de l'océan Indien",
+    "island": "archipel",
+    "kind": "video",
+    "poster": "lagon_dembeni"
+  },
+  "v_vagues": {
+    "file": "Waves_of_the_sea_(Video).webm",
+    "caption": "Le ressac de l'océan Indien sur le rivage",
+    "island": "archipel",
+    "kind": "video",
+    "poster": "itsandra"
+  }
+}

@@ -1,15 +1,13 @@
 {% extends "base.html" %}
 {% block body_class %}home{% endblock %}
 {% block content %}
-{{ ui.hero(home.hero, "Découvrir les quatre îles des Comores",
-   lead="Volcans et lagons, sultans et navigateurs, contes de djinns et grands mariages : explorez la géographie, l'histoire, la culture et les trésors de Ngazidja, Mwali, Ndzuwani et Maore.",
-   kicker="Komori · Les îles de la Lune", cls="hero-xl",
+{{ ui.hero(home.hero, home.title, lead=home.lead, kicker=home.kicker, cls="hero-xl",
    ctas=[{"label": "Explorer les îles", "href": "iles/index.html"}, {"label": "Voyager aux Comores", "href": "voyager/index.html", "cls": "btn-ghost"}]) }}
 
 <section class="stats-band">
   <div class="container stats">
-    {% for value, label in home.stats %}
-    <div class="stat"><strong>{{ value }}</strong><span>{{ label }}</span></div>
+    {% for s in home.stats %}
+    <div class="stat"><strong>{{ s.value }}</strong><span>{{ s.label }}</span></div>
     {% endfor %}
   </div>
 </section>
@@ -69,10 +67,10 @@
   <div class="container">
     {{ ui.section_head("Mille ans d'histoire en quelques dates", "Des premiers navigateurs à l'archipel d'aujourd'hui.", "histoire/index.html#frise", "Toute la frise") }}
     <ol class="chrono chrono-compact">
-      {% for date, title, text in timeline_highlights %}
+      {% for t in timeline_highlights %}
       <li class="chrono-item">
-        <p class="chrono-date">{{ date }}</p>
-        <div class="chrono-card"><h3>{{ title }}</h3><p>{{ text }}</p></div>
+        <p class="chrono-date">{{ t.date }}</p>
+        <div class="chrono-card"><h3>{{ t.title }}</h3><p>{{ t.text }}</p></div>
       </li>
       {% endfor %}
     </ol>
@@ -113,7 +111,7 @@
       <a class="btn btn-ocean" href="{{ url('galerie.html') }}">Ouvrir la galerie</a>
       <a class="btn btn-outline" href="{{ url('videos.html') }}">{{ ui.icon('play') }} Vidéos</a>
     </div>
-    {{ ui.gallery(["karthala", "nioumachoua_ilots", "mutsamudu_escalier", "dziani", "manzaraka", "sultan_said_ali"], cls="gallery-mosaic") }}
+    {{ ui.gallery(home.gallery, cls="gallery-mosaic") }}
   </div>
 </section>
 {% endblock %}

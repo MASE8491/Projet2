@@ -27,12 +27,12 @@
   <div class="container">
     {{ ui.section_head("Frise chronologique", "Les grandes dates de l'histoire de l'archipel.") }}
     <ol class="chrono">
-      {% for date, title, text in timeline %}
+      {% for t in timeline %}
       <li class="chrono-item">
-        <p class="chrono-date">{{ date }}</p>
+        <p class="chrono-date">{{ t.date }}</p>
         <div class="chrono-card">
-          <h3>{{ title }}</h3>
-          <p>{{ text }}</p>
+          <h3>{{ t.title }}</h3>
+          <p>{{ t.text }}</p>
         </div>
       </li>
       {% endfor %}

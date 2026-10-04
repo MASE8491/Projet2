@@ -4,52 +4,92 @@ Site de découverte des quatre îles de l'archipel des Comores : **Grande Comore
 **Mohéli (Mwali)**, **Anjouan (Ndzuwani)** et **Mayotte (Maore)**. Géographie, histoire,
 culture et folklore, et un volet tourisme pour préparer son voyage.
 
-Les textes sont originaux et le design est propre au site.
+Les textes sont originaux et le design est propre au site. Tout le contenu est administrable
+depuis un **back-office** intégré, sans connaissances techniques.
+
+## Administration du site (back-office)
+
+Adresse : **`/admin/`** du site publié, par exemple https://mase8491.github.io/Projet2/admin/
+
+### Ce que permet l'administration
+
+- **Arborescence** : voir toutes les pages, les modifier, les réordonner (↑ ↓), rattacher un lieu
+  à une autre île ou un article à une autre rubrique, changer l'adresse d'une page, la masquer,
+  la supprimer, ou ajouter îles, lieux, rubriques, articles, expériences, itinéraires et infos pratiques.
+- **Éditeur de page** : tous les champs (titre, chapeau, sections, encadrés, galerie…) avec un
+  éditeur de texte simple (gras, listes, liens vers les pages du site, encadré « Bon à savoir »)
+  et un **aperçu** avant enregistrement.
+- **Médiathèque** : téléverser une image depuis l'ordinateur (réduite automatiquement pour le web),
+  ajouter un média de Wikimedia Commons, modifier légendes et crédits, voir où une image est
+  utilisée, la remplacer partout.
+- **Menu et pied de page**, **page d'accueil**, **pages fixes** (contact, mentions légales…),
+  **frise**, **agenda**, **glossaire**, **quiz**, **vidéos** et **réglages** du site.
+- **Publication** en un clic, **historique** des versions et **restauration** d'une version précédente.
+
+### Garde-fous
+
+- **Chaque modification** (enregistrement, déplacement, masquage, changement d'adresse,
+  suppression, ajout d'image, modification du menu, publication, restauration) ouvre d'abord une
+  **fenêtre d'impact**. Elle indique les pages touchées, les liens mis à jour automatiquement, les
+  menus concernés et le niveau de risque (faible, important, risqué).
+- Les actions risquées demandent de **cocher une case** ou de **recopier un mot** (SUPPRIMER,
+  RESTAURER, ANNULER, CONFIRMER).
+- Certaines actions sont **bloquées** quand elles casseraient le site. Par exemple, supprimer
+  une île qui contient encore des lieux, ou une image encore utilisée.
+- Les nouvelles pages sont créées **masquées**. Les modifications restent en **brouillon**
+  (enregistré dans le navigateur) jusqu'à la publication.
+- Avant publication, une **vérification** bloque les erreurs : image manquante, adresse en double,
+  adresse réservée. Elle signale aussi les liens vers des pages masquées.
+- Si le contenu a été modifié ailleurs en même temps, la publication est **refusée** plutôt que
+  d'écraser ce travail.
+
+### Mise en route (une seule fois)
+
+1. **GitHub Pages** : *Settings → Pages → Deploy from a branch → `main` / `/docs`*. Le dépôt
+   doit être public, sauf offre payante.
+2. **Génération automatique** : le workflow `.github/workflows/build-site.yml` régénère `docs/`
+   à chaque publication. Si la génération échoue avec une erreur de droits, ouvrez
+   *Settings → Actions → General → Workflow permissions* et choisissez **Read and write permissions**.
+3. **Jeton d'accès** de l'administrateur : https://github.com/settings/personal-access-tokens/new
+   - *Repository access* : seulement ce dépôt ;
+   - *Permissions* : **Contents : Read and write**, **Actions : Read-only** ;
+   - collez le jeton dans l'écran de connexion de `/admin/`. Ne le partagez jamais. Vous pouvez
+     le révoquer à tout moment depuis GitHub.
+
+### Fonctionnement
+
+L'administration est une application web statique, publiée avec le site, sans serveur. Elle lit
+et écrit les fichiers `content/*.json` via l'API GitHub, avec le jeton de l'administrateur. Chaque
+publication crée un commit sur `main`. GitHub Actions lance alors `build.py`, qui régénère `docs/`,
+puis GitHub Pages met le site à jour (1 à 3 minutes). Les images téléversées sont stockées dans
+`site_src/static/uploads/`.
 
 ## Contenu (76 pages)
 
 | Rubrique | Pages |
 | --- | --- |
 | Accueil | îles, thèmes, frise, « Le saviez-vous ? », itinéraires, médiathèque |
-| Les îles | tableau comparatif + carte, 4 pages îles par thème (géographie, histoire, culture, nature, à voir) |
-| Lieux | 16 fiches (Moroni, Karthala, Iconi, Ntsaoueni, Mutsamudu, Domoni, lagon de Mayotte, Tsingoni…) |
-| Géographie | volcans et reliefs, climat et saisons, océan et lagons, faune et flore, population et territoires |
-| Histoire | premiers peuplements, temps des sultans, période coloniale, indépendance, grandes figures, frise chronologique |
-| Culture & folklore | langues, musique et danses, contes et légendes, coutumes et grand mariage, artisanat et costumes, cuisine, fêtes et religion, littérature et arts |
-| Voyager | hub, 6 expériences, 5 itinéraires, 8 pages pratiques, agenda |
-| Médiathèque | galerie filtrable, vidéos, glossaire (recherche), quiz interactif |
-| Divers | contact, crédits, mentions légales, plan du site, 404 |
-
-## Photos et vidéos
-
-Tous les médias viennent de **Wikimedia Commons** (licences libres ou domaine public) et sont
-chargés depuis Commons via `Special:FilePath`. La liste, avec auteurs et licences, est dans
-`site_src/media.py` et sur la page `credits.html`. Si une image ne répond pas, un aplat aux
-couleurs du site affiche sa légende. Pour la production, il est conseillé d'héberger les médias
-avec le site en conservant les mentions d'auteur et de licence.
+| Les îles | tableau comparatif + carte, 4 pages îles par thème |
+| Lieux | 16 fiches |
+| Géographie | volcans, climat, océan et lagons, faune et flore, population |
+| Histoire | 5 périodes et portraits, frise chronologique |
+| Culture & folklore | langues, musique, contes et légendes, coutumes, artisanat, cuisine, fêtes, littérature |
+| Voyager | expériences, itinéraires, infos pratiques, agenda |
+| Médiathèque | galerie, vidéos, glossaire, quiz |
 
 ## Structure
 
 ```
-build.py                    générateur statique (Jinja2) + vérification des liens
-site_src/
-  media.py                  médiathèque (fichiers Commons, légendes, crédits)
-  content_islands.py        les 4 îles, par thème
-  content_places.py         fiches des lieux
-  content_geographie.py     rubrique Géographie
-  content_histoire.py       rubrique Histoire + frise chronologique
-  content_culture.py        rubrique Culture & folklore
-  content_extras.py         glossaire, quiz, « Le saviez-vous ? »
-  content_experiences.py    expériences
-  content_itineraries.py    itinéraires
-  content_practical.py      préparer son voyage
-  content_misc.py           accueil, agenda, vidéos
-  templates/                gabarits HTML
-  static/                   CSS, JS, favicon
-docs/                       site généré (prêt pour GitHub Pages)
+content/*.json              tout le contenu éditorial (modifié par l'administration)
+site_src/templates/         gabarits HTML (Jinja2)
+site_src/static/            CSS, JS, favicon, images téléversées (uploads/)
+site_src/admin/             application d'administration
+build.py                    générateur statique + vérifications
+.github/workflows/          régénération automatique du site
+docs/                       site généré (publié par GitHub Pages)
 ```
 
-## Générer le site
+## Générer le site à la main
 
 ```bash
 pip install -r requirements.txt
@@ -57,14 +97,11 @@ python3 build.py          # régénère docs/ et vérifie les liens internes
 python3 -m http.server -d docs 8000
 ```
 
-## Publier
+## Médias et domaine
 
-1. *Settings → Pages → Branch : main, dossier `/docs`* (dépôt public ou offre payante requise).
-2. Le site est alors en ligne à l'adresse **https://mase8491.github.io/Projet2/**.
+Les médias proviennent de Wikimedia Commons (licences libres) ou sont téléversés par
+l'administrateur, avec légende, auteur et licence. Ils sont listés sur la page des crédits.
 
-Le domaine komori.com appartient à une autre organisation (Komori Corporation) et ne peut pas
-être utilisé. Pour publier sous votre propre domaine, achetez-en un, renseignez-le dans
-`CUSTOM_DOMAIN` (en haut de `build.py`), relancez `python3 build.py`, puis configurez son DNS
-vers GitHub Pages. L'adresse e-mail de la page Contact se règle de même avec `CONTACT_EMAIL`.
-
-Les informations pratiques (visas, santé, transports) sont indicatives et datées d'octobre 2026.
+Le domaine komori.com appartient à une autre organisation (Komori Corporation). Pour utiliser un
+domaine qui vous appartient, renseignez-le dans *Réglages → Nom de domaine personnel* puis
+configurez son DNS vers GitHub Pages.

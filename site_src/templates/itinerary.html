@@ -6,16 +6,16 @@
 <section class="section">
   <div class="container with-aside">
     <ol class="timeline">
-      {% for when, title, text, place_slug in it.days %}
+      {% for d in it.days %}{% set place_slug = d.place %}
       <li class="timeline-step">
-        <p class="timeline-when">{{ when }}</p>
+        <p class="timeline-when">{{ d.when }}</p>
         <div class="timeline-card">
           {% if place_slug %}{% set p = places[place_slug] %}
           <a class="timeline-media" href="{{ url('lieux/' ~ place_slug ~ '.html') }}">{{ ui.picture(p.hero, sizes="(min-width: 900px) 220px, 100vw", alt="") }}</a>
           {% endif %}
           <div>
-            <h2>{{ title }}</h2>
-            <p>{{ text }}</p>
+            <h2>{{ d.title }}</h2>
+            <p>{{ d.text }}</p>
             {% if place_slug %}<a class="link-arrow" href="{{ url('lieux/' ~ place_slug ~ '.html') }}">{{ places[place_slug].name }}</a>{% endif %}
           </div>
         </div>

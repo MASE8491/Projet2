@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-{{ ui.hero("tortue_pilote", "Expériences",
-   lead="Nager avec les tortues, gravir un volcan actif, sentir l'ylang-ylang au petit matin : choisissez ce qui vous fait vibrer.",
-   kicker="Vivre l'archipel", crumbs=[("Expériences", None)]) }}
+{{ ui.hero(pg.experiences.hero, pg.experiences.title, lead=pg.experiences.lead, kicker=pg.experiences.kicker, crumbs=[("Expériences", None)]) }}
 
 <section class="section">
   <div class="container">
