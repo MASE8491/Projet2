@@ -517,7 +517,6 @@ def build():
         "content_files": CONTENT_FILES,
         "uploads_dir": "site_src/static/uploads",
         "reserved_slugs": sorted(RESERVED_SLUGS),
-        "built_at": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),
     }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     for path, template, ctx in PAGES:
