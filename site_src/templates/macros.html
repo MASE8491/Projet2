@@ -107,7 +107,7 @@
     {% for b in refs %}
     <li class="source source-{{ b.kind }}">
       <span class="source-badge">{{ "Voix de l'archipel" if b.kind == "comorien" else "Regard extérieur" }}</span>
-      <a href="{{ url('bibliographie.html#ref-' ~ b.id) }}"><strong>{{ b.author }}</strong>, <em>{{ b.title }}</em></a>{% if b.year %}, {{ b.year }}{% endif %}{% if b.publisher %}. {{ b.publisher }}{% endif %}.
+      <a href="{{ url('bibliographie.html#ref-' ~ b.id) }}"><strong>{{ b.author }}</strong>, <em>{{ b.title }}</em></a>{% if b.get("year") %}, {{ b.year }}{% endif %}{% if b.get("publisher") %}. {{ b.publisher }}{% endif %}.
     </li>
     {% endfor %}
   </ul>

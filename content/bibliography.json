@@ -394,5 +394,126 @@
     "category": "documents",
     "note": "Rapport parlementaire ; il évalue entre 7 000 et 10 000 le nombre de morts lors des traversées en kwassa-kwassa depuis 1995.",
     "url": "https://www.senat.fr/rap/r11-675/r11-675_mono.html"
+  },
+  {
+    "id": "contes-inedits-mayotte",
+    "author": "Abdou S. Baco (dir.), Archives départementales de Mayotte",
+    "title": "Contes inédits de Mayotte (série : Fables, Légendes, Djinns, Méchanceté…)",
+    "year": "2010 –",
+    "publisher": "Archives départementales de Mayotte",
+    "kind": "comorien",
+    "category": "contes",
+    "note": "Contes et légendes recueillis dans les villages, enregistrés et traduits par les Archives départementales. Le tome Légendes contient notamment « Bwé la Yézi » (la pierre du pouvoir) et « L'origine du tremblement de terre ».",
+    "url": "https://francearchives.gouv.fr/fr/article/259652029"
+  },
+  {
+    "id": "rombi-1979",
+    "author": "Marie-Françoise Rombi",
+    "title": "Trois pauvres, deux tyrans, deux princesses. Conte mahorais",
+    "year": "1979",
+    "publisher": "Cahiers d'études africaines, vol. 19, n° 73-76, p. 549-578",
+    "kind": "comorien",
+    "category": "contes",
+    "note": "Conte enregistré en 1978 à Mtsapéré auprès du conteur Darvesh Soihili, publié en mahorais avec sa traduction et une analyse.",
+    "url": "https://www.persee.fr/doc/cea_0008-0055_1979_num_19_73_2879"
+  },
+  {
+    "id": "pangloss-maore",
+    "author": "Collection Pangloss (CNRS – LACITO)",
+    "title": "Corpus mahorais : contes enregistrés à Mtsapéré en 1978 par Marie-Françoise Rombi",
+    "year": "",
+    "publisher": "archive sonore en ligne avec transcriptions",
+    "kind": "comorien",
+    "category": "contes",
+    "note": "Enregistrements originaux, dont « L'homme et sa femme en bois » et « Trois pauvres, deux tyrans, deux princesses ».",
+    "url": "https://pangloss.cnrs.fr/corpus/Maore"
+  },
+  {
+    "id": "attoumani-contes",
+    "author": "Nassur Attoumani",
+    "title": "Contes traditionnels de Mayotte : nos ancêtres… les menteurs",
+    "year": "2003",
+    "publisher": "L'Harmattan, coll. La légende des mondes",
+    "kind": "comorien",
+    "category": "contes",
+    "note": "Contes, mythes et légendes de Mayotte traduits, annotés et commentés par l'écrivain mahorais.",
+    "url": ""
+  },
+  {
+    "id": "ravoay-30-contes",
+    "author": "Archimède Saïd Ravoay",
+    "title": "30 contes mahorais",
+    "year": "",
+    "publisher": "CEMÉA Mayotte",
+    "kind": "comorien",
+    "category": "contes",
+    "note": "Recueil d'un conteur qui anime les festivals de contes et légendes de Mayotte ; on y trouve « Le monstre et le pêcheur ».",
+    "url": ""
+  },
+  {
+    "id": "rissitoa-hale",
+    "author": "Élèves de cinquième du collège de Dzoumogné",
+    "title": "Rissitoa hale. Sept contes mahorais",
+    "year": "1999",
+    "publisher": "Baobab, coll. Grain d'encre",
+    "kind": "comorien",
+    "category": "contes",
+    "note": "Contes enregistrés auprès des conteurs du village par des collégiens, puis transcrits et illustrés.",
+    "url": ""
+  },
+  {
+    "id": "lauricella-oranger",
+    "author": "Anne Lauricella (ill. Izou)",
+    "title": "Le Secret de l'oranger, d'après un conte traditionnel recueilli à Mayotte",
+    "year": "2011",
+    "publisher": "",
+    "kind": "exterieur",
+    "category": "contes",
+    "note": "Album jeunesse adapté d'un conte mahorais où une femme apparaît grâce à un talisman suspendu à un oranger.",
+    "url": ""
+  },
+  {
+    "id": "dac-mwalimu-boro",
+    "author": "Collectivité territoriale de Mayotte, Délégation aux affaires culturelles",
+    "title": "Mwalimu Boro. Quelques éléments rapportés par la tradition orale et pouvant contribuer à établir l'histoire du roi Mwalimu Boro",
+    "year": "",
+    "publisher": "Cahiers des archives orales",
+    "kind": "comorien",
+    "category": "tradition",
+    "note": "Témoignages des anciens de Mtsamboro sur le dernier fani et l'arrivée du premier prince chirazien.",
+    "url": ""
+  },
+  {
+    "id": "sakuli-sada",
+    "author": "Mayotte, Délégation aux affaires culturelles",
+    "title": "De Sakuli à Sada. Récits traditionnels recueillis dans le village de Sada",
+    "year": "1998",
+    "publisher": "Éditions du Baobab, Cahiers des archives orales",
+    "kind": "comorien",
+    "category": "tradition",
+    "note": "Les anciens de Sada racontent l'origine du peuplement et du nom de leur village.",
+    "url": ""
+  },
+  {
+    "id": "hale-halele-podcast",
+    "author": "Abby Saïd Adinani",
+    "title": "Halé Halélé (podcast mensuel)",
+    "year": "depuis 2022",
+    "publisher": "",
+    "kind": "comorien",
+    "category": "tradition",
+    "note": "Histoire et légendes de Mayotte racontées à partir des Cahiers des archives orales ; le premier épisode est consacré à Mwalimu Boro.",
+    "url": "https://open.spotify.com/show/3IlbwY27iyG4PuSFJVWFkJ"
+  },
+  {
+    "id": "hebert-1960",
+    "author": "J.-C. Hébert",
+    "title": "Fêtes agraires dans l'île d'Anjouan (archipel des Comores)",
+    "year": "1960",
+    "publisher": "Journal de la Société des africanistes, t. 30, fasc. 1, p. 101-116",
+    "kind": "exterieur",
+    "category": "anthropologie",
+    "note": "Trois fêtes agraires d'origine préislamique : le koma à Ouani, le trimba au Nyumakele et le mudandra à Ouzini.",
+    "url": "https://www.persee.fr/doc/jafr_0037-9166_1960_num_30_1_1919"
   }
 ]

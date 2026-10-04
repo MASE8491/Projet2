@@ -419,7 +419,7 @@
     "icon": "moon",
     "hero": "dziani",
     "level": "Facile",
-    "lead": "Djinns, lacs engloutis et héros rusés : avez-vous bien écouté les conteurs ?",
+    "lead": "Djinns, lacs engloutis, monstres et héros rusés : avez-vous bien écouté les conteurs ?",
     "questions": [
       {
         "q": "Comment commencent traditionnellement les contes à Mayotte ?",
@@ -540,6 +540,54 @@
         "answer": 0,
         "explain": "Ibnasya, que les Swahilis appellent Abunuwasi, se joue des avares et des puissants.",
         "link": "contes/la-marmite-qui-avait-accouche.html"
+      },
+      {
+        "q": "Selon la tradition, qui a fondé Malé, dans le Mbadjini ?",
+        "choices": [
+          "Des djinns menés par leur chef Mdjonga",
+          "Des pêcheurs portugais",
+          "Le sultan de Bambao",
+          "Les tortues de Mohéli"
+        ],
+        "answer": 0,
+        "explain": "Hommes et djinns y auraient vécu ensemble ; Malé est réputé pour ses devins.",
+        "link": "contes/male-le-village-des-djinns.html"
+      },
+      {
+        "q": "Qui aide le pêcheur à renfermer le monstre dans sa bouteille ?",
+        "choices": [
+          "Boinawassi",
+          "Le chef du village",
+          "Le roi Souleymane",
+          "Mwalimu Boro"
+        ],
+        "answer": 0,
+        "explain": "Le rusé Boinawassi fait croire au monstre qu'il doute qu'il puisse tenir dans la bouteille.",
+        "link": "contes/le-pecheur-et-le-monstre.html"
+      },
+      {
+        "q": "D'où vient le nom de Mtsamboro, à Mayotte ?",
+        "choices": [
+          "De la « plage de Boro », le dernier fani",
+          "D'un poisson du lagon",
+          "D'un navire portugais",
+          "D'un volcan"
+        ],
+        "answer": 0,
+        "explain": "M'tsa Boro : la plage du chef Mwalimu Boro, dont la fille épousa un prince venu de la mer.",
+        "link": "contes/mwalimu-boro.html"
+      },
+      {
+        "q": "Que devient la femme de bois quand le talisman lui est retiré ?",
+        "choices": [
+          "Un oranger",
+          "Une tortue",
+          "Une étoile",
+          "Un djinn"
+        ],
+        "answer": 0,
+        "explain": "Ce que le talisman avait donné, le talisman le reprend : le roi n'a plus qu'un arbre.",
+        "link": "contes/la-femme-de-bois.html"
       }
     ]
   },

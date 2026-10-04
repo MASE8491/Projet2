@@ -26,9 +26,9 @@
           {% for b in g.entries %}
           <li class="biblio-entry" id="ref-{{ b.id }}" data-kind="{{ b.kind }}">
             <span class="source-badge source-{{ b.kind }}">{{ "Voix de l'archipel" if b.kind == "comorien" else "Regard extérieur" }}</span>
-            <p class="biblio-ref"><strong>{{ b.author }}</strong>, {% if b.url %}<a href="{{ b.url }}" rel="noopener"><em>{{ b.title }}</em></a>{% else %}<em>{{ b.title }}</em>{% endif %}{% if b.year %}, {{ b.year }}{% endif %}{% if b.publisher %}. {{ b.publisher }}{% endif %}.</p>
-            {% if b.note %}<p class="biblio-note">{{ b.note }}</p>{% endif %}
-            {% if b.cited %}
+            <p class="biblio-ref"><strong>{{ b.author }}</strong>, {% if b.get("url") %}<a href="{{ b.url }}" rel="noopener"><em>{{ b.title }}</em></a>{% else %}<em>{{ b.title }}</em>{% endif %}{% if b.get("year") %}, {{ b.year }}{% endif %}{% if b.get("publisher") %}. {{ b.publisher }}{% endif %}.</p>
+            {% if b.get("note") %}<p class="biblio-note">{{ b.note }}</p>{% endif %}
+            {% if b.get("cited") %}
             <p class="biblio-cited">Cité dans :
               {% for name, href in b.cited %}<a href="{{ url(href) }}">{{ name }}</a>{% if not loop.last %}, {% endif %}{% endfor %}
             </p>
