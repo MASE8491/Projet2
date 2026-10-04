@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+{{ ui.hero("baleine", "Vidéos",
+   lead="Baleines, tortues et récifs : la vie marine de l'océan Indien en vidéos sous licence libre.",
+   kicker="Médiathèque", crumbs=[("Vidéos", None)]) }}
+
+<section class="section">
+  <div class="container">
+    <div class="video-feature">
+      {{ ui.video(videos[0]) }}
+      <div>
+        <p class="kicker">À la une</p>
+        <h2>{{ media[videos[0]].caption }}</h2>
+        <p>De juillet à octobre, les baleines à bosse fréquentent les eaux de l'archipel pour s'y reproduire.
+        Coups de caudale, sauts et chants&nbsp;: un spectacle à vivre depuis un bateau, dans le respect des
+        distances d'approche.</p>
+        <p class="credit">{{ credit_text(videos[0]) }} — <a href="{{ commons_page(videos[0]) }}" rel="noopener">source</a></p>
+      </div>
+    </div>
+    <div class="video-grid">
+      {% for key in videos[1:] %}
+      <figure class="figure figure-video">
+        {{ ui.video(key) }}
+        <figcaption>{{ media[key].caption }} <span class="credit">{{ credit_text(key) }} — <a href="{{ commons_page(key) }}" rel="noopener">source</a></span></figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+    <div class="notice">Ces vidéos, issues de Wikimedia Commons, illustrent des espèces et des milieux présents
+    dans l'archipel&nbsp;; certaines ont été tournées ailleurs dans l'océan Indien ou le Pacifique. Elles sont
+    chargées à la demande, au format WebM. Vous avez filmé les Comores et souhaitez partager vos images sous
+    licence libre&nbsp;? <a href="{{ url('contact.html') }}">Contactez-nous</a>.</div>
+  </div>
+</section>
+{% endblock %}

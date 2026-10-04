@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+{{ ui.hero("nioumachoua_ilots", "Galerie photos",
+   lead="Paysages, villes, faune et flore des quatre îles. Toutes les images sont sous licence libre.",
+   kicker="Médiathèque", crumbs=[("Galerie", None)]) }}
+
+<section class="section">
+  <div class="container">
+    <div class="filters" role="toolbar" aria-label="Filtrer par île" data-filters>
+      <button class="chip is-active" data-filter="all" aria-pressed="true">Tout ({{ gallery_keys | length }})</button>
+      {% for code, label in island_labels.items() %}
+      <button class="chip" data-filter="{{ code }}" aria-pressed="false">{{ label }}</button>
+      {% endfor %}
+    </div>
+    {{ ui.gallery(gallery_keys, cls="gallery-masonry") }}
+    <p class="note">Cliquez sur une image pour l'agrandir. Auteurs et licences&nbsp;: <a href="{{ url('credits.html') }}">page des crédits</a>.</p>
+  </div>
+</section>
+{% endblock %}

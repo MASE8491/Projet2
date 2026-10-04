@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+{{ ui.hero("moroni_mosquee", "Agenda & saisons",
+   lead="Fêtes, traditions et rendez-vous de la nature : le calendrier de l'archipel pour choisir le meilleur moment.",
+   kicker="Toute l'année", crumbs=[("Agenda", None)]) }}
+
+<section class="section">
+  <div class="container">
+    <div class="event-grid event-grid-lg">
+      {% for ev in events %}
+      <article class="event">
+        <p class="event-when">{{ ui.icon('calendar') }} {{ ev.when }}</p>
+        <h2>{{ ev.title }}</h2>
+        <p>{{ ev.text }}</p>
+        <span class="tag">{{ ev.tag }}</span>
+      </article>
+      {% endfor %}
+    </div>
+    <div class="notice">Les dates des fêtes religieuses suivent le calendrier lunaire et sont confirmées
+    quelques jours à l'avance. Pour la météo, voir <a href="{{ url('preparer-son-voyage/quand-partir.html') }}">Quand partir&nbsp;?</a></div>
+  </div>
+</section>
+{% endblock %}

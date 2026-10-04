@@ -1,0 +1,133 @@
+{# Composants réutilisables. Les images viennent de Wikimedia Commons (Special:FilePath). #}
+
+{% macro picture(key, sizes="100vw", cls="", loading="lazy", alt=None, fetch=None) -%}
+{%- set m = media[key] -%}
+<img class="{{ cls }}" src="{{ img_url(key, 1280) }}" srcset="{{ img_srcset(key) }}" sizes="{{ sizes }}"
+     alt="{{ alt if alt is not none else m.caption }}" loading="{{ loading }}" decoding="async"{% if fetch %} fetchpriority="{{ fetch }}"{% endif %}
+     data-fallback="{{ m.caption }}">
+{%- endmacro %}
+
+{% macro figure(key, cls="", sizes="(min-width: 900px) 50vw, 100vw", zoom=True) -%}
+{%- set m = media[key] -%}
+{%- if m.kind == "video" -%}
+<figure class="figure figure-video {{ cls }}">
+  {{ video(key) }}
+  <figcaption>{{ m.caption }} <span class="credit">{{ credit_text(key) }}</span></figcaption>
+</figure>
+{%- else -%}
+<figure class="figure {{ cls }}">
+  {% if zoom %}<a href="{{ img_url(key, 1920) }}" class="zoom" data-lightbox-item data-caption="{{ m.caption }} — {{ credit_text(key) }}">{% endif %}
+  {{ picture(key, sizes=sizes) }}
+  {% if zoom %}</a>{% endif %}
+  <figcaption>{{ m.caption }} <span class="credit">{{ credit_text(key) }}</span></figcaption>
+</figure>
+{%- endif -%}
+{%- endmacro %}
+
+{% macro video(key, autoplay=False) -%}
+{%- set m = media[key] -%}
+<video class="video" controls preload="none" playsinline{% if autoplay %} autoplay muted loop{% endif %}
+       {% if m.get("poster") %}poster="{{ img_url(m.poster, 1280) }}"{% endif %} aria-label="{{ m.caption }}">
+  <source src="{{ file_url(key) }}" type="video/webm">
+  Votre navigateur ne lit pas cette vidéo. <a href="{{ commons_page(key) }}">Voir la vidéo sur Wikimedia Commons</a>.
+</video>
+{%- endmacro %}
+
+{% macro hero(key, title, lead=None, kicker=None, cls="", ctas=None, crumbs=None) -%}
+<section class="hero {{ cls }}">
+  <div class="hero-media">{{ picture(key, loading="eager", fetch="high", alt="") }}</div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    {% if crumbs %}{{ breadcrumbs(crumbs) }}{% endif %}
+    {% if kicker %}<p class="kicker">{{ kicker }}</p>{% endif %}
+    <h1>{{ title }}</h1>
+    {% if lead %}<p class="lead">{{ lead }}</p>{% endif %}
+    {% if ctas %}
+    <div class="hero-ctas">
+      {% for c in ctas %}<a class="btn {{ c.get("cls") or "btn-ylang" }}" href="{{ url(c.href) }}">{{ c.label }}</a>{% endfor %}
+    </div>
+    {% endif %}
+  </div>
+  <p class="hero-credit">{{ media[key].caption }} — {{ credit_text(key) }}</p>
+</section>
+{%- endmacro %}
+
+{% macro breadcrumbs(items) -%}
+<nav class="breadcrumbs" aria-label="Fil d'Ariane">
+  <ol>
+    <li><a href="{{ url('index.html') }}">Accueil</a></li>
+    {% for label, href in items %}
+    <li>{% if href %}<a href="{{ url(href) }}">{{ label }}</a>{% else %}<span aria-current="page">{{ label }}</span>{% endif %}</li>
+    {% endfor %}
+  </ol>
+</nav>
+{%- endmacro %}
+
+{% macro card(href, key, title, text=None, kicker=None, meta=None, cls="") -%}
+<article class="card {{ cls }}">
+  <a href="{{ url(href) }}" class="card-link">
+    <div class="card-media">{{ picture(key, sizes="(min-width: 1100px) 25vw, (min-width: 700px) 45vw, 100vw") }}</div>
+    <div class="card-body">
+      {% if kicker %}<p class="card-kicker">{{ kicker }}</p>{% endif %}
+      <h3>{{ title }}</h3>
+      {% if text %}<p>{{ text }}</p>{% endif %}
+      {% if meta %}<p class="card-meta">{{ meta }}</p>{% endif %}
+    </div>
+  </a>
+</article>
+{%- endmacro %}
+
+{% macro factbox(facts, title="En bref") -%}
+<aside class="factbox">
+  <h2>{{ title }}</h2>
+  <dl>
+    {% for label, value in facts %}
+    <div><dt>{{ label }}</dt><dd>{{ value }}</dd></div>
+    {% endfor %}
+  </dl>
+</aside>
+{%- endmacro %}
+
+{% macro gallery(keys, cls="") -%}
+<div class="gallery {{ cls }}">
+  {% for key in keys %}{% set m = media[key] %}
+  <a class="gallery-item" href="{{ img_url(key, 1920) }}" data-lightbox-item data-caption="{{ m.caption }} — {{ credit_text(key) }}" data-island="{{ m.island }}">
+    {{ picture(key, sizes="(min-width: 900px) 33vw, 50vw") }}
+  </a>
+  {% endfor %}
+</div>
+{%- endmacro %}
+
+{% macro section_head(title, text=None, href=None, link_label="Tout voir") -%}
+<div class="section-head">
+  <div>
+    <h2>{{ title }}</h2>
+    {% if text %}<p>{{ text }}</p>{% endif %}
+  </div>
+  {% if href %}<a class="link-arrow" href="{{ url(href) }}">{{ link_label }}</a>{% endif %}
+</div>
+{%- endmacro %}
+
+{% macro icon(name) -%}
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+{%- if name == "leaf" %}<path d="M5 19c0-8 6-14 15-14 0 9-6 15-14 15"/><path d="M5 19 14 10"/>
+{%- elif name == "sun" %}<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+{%- elif name == "wave" %}<path d="M2 12c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M2 17c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/>
+{%- elif name == "mountain" %}<path d="m3 20 6-11 4 7 3-4 5 8z"/>
+{%- elif name == "dome" %}<path d="M4 20h16M6 20v-6a6 6 0 0 1 12 0v6"/><path d="M12 5V3"/><path d="M10 20v-4h4v4"/>
+{%- elif name == "bowl" %}<path d="M3 11h18a9 9 0 0 1-18 0z"/><path d="M8 7c0-2 2-2 2-4M13 7c0-2 2-2 2-4"/>
+{%- elif name == "flower" %}<circle cx="12" cy="12" r="2.5"/><path d="M12 9.5C12 6 10 4 12 2c2 2 0 4 0 7.5M14.5 12c3.5 0 5.5-2 7.5 0-2 2-4 0-7.5 0M12 14.5c0 3.5 2 5.5 0 7.5-2-2 0-4 0-7.5M9.5 12C6 12 4 14 2 12c2-2 4 0 7.5 0"/>
+{%- elif name == "plane" %}<path d="M10 14 3 11l1-2 7 1 5-6h2l-2 7 5 1v2l-6 1-3 6h-2z"/>
+{%- elif name == "passport" %}<rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M9 16h6"/>
+{%- elif name == "calendar" %}<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>
+{%- elif name == "boat" %}<path d="M3 17h18l-2 4H5z"/><path d="M12 3v14M12 4l6 10H12"/>
+{%- elif name == "health" %}<path d="M12 21s-8-5-8-11a4.5 4.5 0 0 1 8-3 4.5 4.5 0 0 1 8 3c0 6-8 11-8 11z"/><path d="M12 9v6M9 12h6"/>
+{%- elif name == "coin" %}<circle cx="12" cy="12" r="8"/><path d="M14.5 9.5c-.5-1-1.5-1.5-2.5-1.5-1.7 0-3 1-3 2.2 0 2.8 6 1.4 6 4.3 0 1.2-1.3 2.2-3 2.2-1.2 0-2.3-.6-2.8-1.6M12 6v2M12 16v2"/>
+{%- elif name == "bed" %}<path d="M3 18V7M3 13h18v5M21 13a3 3 0 0 0-3-3h-7v3"/><circle cx="7" cy="10.5" r="1.5"/>
+{%- elif name == "chat" %}<path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/>
+{%- elif name == "pin" %}<path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/>
+{%- elif name == "clock" %}<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
+{%- elif name == "play" %}<circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4z" fill="currentColor"/>
+{%- else %}<circle cx="12" cy="12" r="8"/>{% endif -%}
+</svg>
+{%- endmacro %}

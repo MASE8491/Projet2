@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+{{ ui.hero("tortue_pilote", "Expériences",
+   lead="Nager avec les tortues, gravir un volcan actif, sentir l'ylang-ylang au petit matin : choisissez ce qui vous fait vibrer.",
+   kicker="Vivre l'archipel", crumbs=[("Expériences", None)]) }}
+
+<section class="section">
+  <div class="container">
+    <div class="exp-list">
+      {% for e in experiences %}
+      <article class="exp-row">
+        <a class="exp-row-media" href="{{ url('experiences/' ~ e.slug ~ '.html') }}">{{ ui.picture(e.card, sizes="(min-width: 900px) 40vw, 100vw") }}</a>
+        <div class="exp-row-body">
+          <p class="card-kicker">{{ ui.icon(e.icon) }} Expérience</p>
+          <h2><a href="{{ url('experiences/' ~ e.slug ~ '.html') }}">{{ e.name }}</a></h2>
+          <p>{{ e.lead }}</p>
+          <a class="link-arrow" href="{{ url('experiences/' ~ e.slug ~ '.html') }}">Découvrir</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

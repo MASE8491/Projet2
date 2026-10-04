@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="page-head">
+  <div class="container">
+    {{ ui.breadcrumbs([("Mentions légales", None)]) }}
+    <h1>Mentions légales</h1>
+  </div>
+</section>
+<section class="section">
+  <div class="container narrow prose">
+    <h2>Éditeur</h2>
+    <p>Le site komori.com est un guide de voyage indépendant consacré à l'archipel des Comores. Il n'est
+    affilié à aucun gouvernement ni office de tourisme. Les coordonnées complètes de l'éditeur et de
+    l'hébergeur sont à compléter avant la mise en ligne.</p>
+
+    <h2>Contenus</h2>
+    <p>Les textes sont des créations originales. Ils sont fournis à titre informatif&nbsp;: les conditions
+    d'entrée, de santé, de sécurité et de transport évoluent, et doivent être vérifiées auprès des
+    sources officielles avant tout voyage. Komori ne saurait être tenu responsable d'une information
+    devenue inexacte.</p>
+
+    <h2>Photos et vidéos</h2>
+    <p>Les médias sont issus de Wikimedia Commons et utilisés conformément à leurs licences libres.
+    La liste complète des auteurs et licences figure sur la <a href="{{ url('credits.html') }}">page des crédits</a>.</p>
+
+    <h2>Cartographie</h2>
+    <p>Les cartes utilisent la bibliothèque Leaflet et les données © contributeurs
+    <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a>.</p>
+
+    <h2>Données personnelles</h2>
+    <p>Le site ne dépose aucun cookie de suivi. Les ressources externes (polices, cartes, images) sont
+    chargées depuis leurs serveurs d'origine, qui peuvent enregistrer des données techniques de connexion.</p>
+
+    <h2>Questions territoriales</h2>
+    <p>Komori présente l'archipel des Comores dans son ensemble géographique et culturel. Mayotte est
+    administrée par la France&nbsp;; sa souveraineté est revendiquée par l'Union des Comores. Le site ne
+    prend pas position sur cette question.</p>
+  </div>
+</section>
+{% endblock %}

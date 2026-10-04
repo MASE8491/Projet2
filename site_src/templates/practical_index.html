@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+{{ ui.hero("barge", "Préparer son voyage",
+   lead="Formalités, saisons, transports, santé, budget : tout ce qu'il faut savoir avant de partir pour l'archipel.",
+   kicker="Infos pratiques", crumbs=[("Préparer son voyage", None)]) }}
+
+<section class="section">
+  <div class="container">
+    <div class="practical-grid practical-grid-lg">
+      {% for p in practical %}
+      <a class="practical-tile" href="{{ url('preparer-son-voyage/' ~ p.slug ~ '.html') }}">
+        {{ ui.icon(p.icon) }}
+        <strong>{{ p.name }}</strong>
+        <span>{{ p.summary }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-sand">
+  <div class="container with-aside">
+    <div class="prose">
+      <h2>L'archipel en un coup d'œil</h2>
+      <p>L'archipel réunit deux réalités administratives&nbsp;: l'<strong>Union des Comores</strong>
+      (Grande Comore, Mohéli, Anjouan), État indépendant dont la monnaie est le franc comorien, et
+      <strong>Mayotte</strong>, département français où l'on paie en euros. Passer de l'une à l'autre,
+      c'est franchir une frontière&nbsp;: gardez toujours votre passeport sur vous.</p>
+      <p>Les distances sont courtes mais les liaisons parfois capricieuses. Le secret d'un voyage
+      réussi&nbsp;: réserver tôt les vols inter-îles, garder des journées de marge et se laisser porter
+      par le rythme tranquille des îles.</p>
+      <p>Pour aller plus loin, découvrez l'[[archipel.html|histoire et la géographie de l'archipel]].</p>
+    </div>
+    {{ ui.factbox(archipel.facts) }}
+  </div>
+</section>
+{% endblock %}

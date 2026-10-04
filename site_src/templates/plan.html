@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="page-head">
+  <div class="container">
+    {{ ui.breadcrumbs([("Plan du site", None)]) }}
+    <h1>Plan du site</h1>
+  </div>
+</section>
+<section class="section">
+  <div class="container sitemap-grid">
+    {% for group in sitemap_groups %}
+    <div>
+      <h2>{{ group.title }}</h2>
+      <ul>{% for label, href in group.links %}<li><a href="{{ url(href) }}">{{ label }}</a></li>{% endfor %}</ul>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

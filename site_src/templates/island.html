@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+{{ ui.hero(island.hero, island.name, lead=island.lead, kicker=island.local ~ " · " ~ island.tagline,
+   crumbs=[("Destinations", "destinations/index.html"), (island.name, None)]) }}
+
+<section class="section">
+  <div class="container with-aside">
+    <div class="prose">
+      {{ island.intro | links | safe }}
+    </div>
+    {{ ui.factbox([("Nom local", island.local), ("Statut", island.status), ("Chef-lieu", island.chef_lieu), ("Superficie", island.area), ("Point culminant", island.summit)], title=island.name ~ " en bref") }}
+  </div>
+</section>
+
+{% for s in island.sections %}
+<section class="split split-compact {% if loop.index is even %}split-reverse{% endif %}">
+  <div class="split-media">{{ ui.figure(s.media, cls="figure-fill") }}</div>
+  <div class="split-body prose">
+    <h2>{{ s.title }}</h2>
+    {{ s.html | links | safe }}
+  </div>
+</section>
+{% endfor %}
+
+<section class="section section-sand">
+  <div class="container">
+    {{ ui.section_head("À voir à " ~ island.name, "Nos fiches détaillées pour préparer vos visites.") }}
+    <div class="card-grid">
+      {% for slug in island.places %}{% set p = places[slug] %}
+      {{ ui.card('lieux/' ~ slug ~ '.html', p.hero, p.name, p.lead, kicker=p.kicker) }}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container with-aside">
+    <div>
+      {{ ui.section_head("En images") }}
+      {{ ui.gallery(island.gallery) }}
+    </div>
+    <aside class="tips">
+      <h2>Conseils de voyage</h2>
+      <ul>{% for t in island.tips %}<li>{{ t }}</li>{% endfor %}</ul>
+      <a class="link-arrow" href="{{ url('preparer-son-voyage/index.html') }}">Préparer son voyage</a>
+    </aside>
+  </div>
+</section>
+
+<section class="section section-ocean">
+  <div class="container">
+    {{ ui.section_head("Continuer vers les autres îles") }}
+    <div class="island-mini-grid">
+      {% for other in islands if other.slug != island.slug %}
+      <a class="island-mini" href="{{ url('destinations/' ~ other.slug ~ '.html') }}">
+        <span class="tile-media">{{ ui.picture(other.card, sizes="(min-width: 900px) 30vw, 100vw", alt="") }}</span>
+        <span><strong>{{ other.name }}</strong> {{ other.tagline }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}
