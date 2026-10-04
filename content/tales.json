@@ -278,14 +278,87 @@
     "place": "forets-et-lacs-de-moheli",
     "hero": "moheli_banner",
     "lead": "Au sud-est de Mohéli, un ancien cratère abrite un lac aux eaux soufrées où aucun poisson ne vit. On lui prête pourtant le pouvoir de guérir.",
-    "text": "<p>Du côté d'Itsamia et de Hamavouna, au sud-est de Mwali, la route passe près d'un grand\ncreux rempli d'eau : le <strong>Dziani Boundouni</strong>. Autrefois, disent les anciens, c'était la bouche\nd'un volcan. Le feu s'est éteint, l'eau est venue, mais le lac n'a jamais tout à fait oublié ce qu'il\nétait.</p>\n<p>Son eau a une odeur de soufre, et l'on dit qu'<strong>aucun poisson</strong> n'a jamais pu y vivre. Les\nenfants s'en étonnent : comment un lac peut-il rester vide de poissons quand la mer, toute proche, en\nest si pleine ? Les grands répondent que cette eau-là n'est pas faite pour nourrir, mais pour\n<strong>soigner</strong>.</p>\n<p>Car on prête au lac des vertus. Ceux qui souffrent de la peau, des os ou de la fatigue viennent s'y\ntremper, ou en emportent un peu dans une bouteille. On s'y rend avec respect, on y parle doucement, et\nl'on remercie en repartant, comme on remercie quelqu'un qui vous a rendu service. Car à Mwali comme\ndans les autres îles, une eau qui guérit est toujours un peu habitée.</p>",
+    "text": "<p>Du côté d'Itsamia et de Hamavouna, au sud-est de Mwali, la route passe près d'un grand\ncreux rempli d'eau : le <strong>Dziani Boundouni</strong>. Autrefois, disent les anciens, c'était la bouche\nd'un volcan. Le feu s'est éteint, l'eau est venue, mais le lac n'a jamais tout à fait oublié ce qu'il\nétait.</p>\n<p>Son eau a une odeur de soufre, et l'on dit qu'<strong>aucun poisson</strong> n'a jamais pu y vivre. Les\nenfants s'en étonnent : comment un lac peut-il rester vide de poissons quand la mer, toute proche, en\nest si pleine ? Les grands répondent que cette eau-là n'est pas faite pour nourrir, mais pour\n<strong>soigner</strong>.</p>\n<p>Car on prête au lac des vertus. Ceux qui souffrent de la peau, des os ou de la fatigue viennent s'y\ntremper, ou en emportent un peu dans une bouteille. On s'y rend avec respect, on y parle doucement, et\nl'on remercie en repartant, comme on remercie quelqu'un qui vous a rendu service. Car à Mwali comme\ndans les autres îles, une eau qui guérit est toujours un peu habitée.</p>\n<p>Autrefois, à chaque fin d'année, les rives du lac devenaient le théâtre d'une grande fête. Les gens\nvenaient en foule déposer leurs offrandes au <em>ziara</em> de Bunduni, et l'on disait que les\n<strong>djinns de Datchimroni</strong> animaient eux-mêmes une semaine entière de réjouissances. Une fête\nsemblable se tenait à Mwadjiyo, près de Nioumachoua.</p>",
     "moral": "",
-    "about": "<p>Le lac Dziani Boundouni est un ancien cratère volcanique du sud-est de Mohéli, aux eaux\nsoufrées où aucun poisson ne vit ; on lui attribue des vertus thérapeutiques. Il est classé site Ramsar\n(zone humide d'importance internationale) et fait partie de l'île de Mohéli, réserve de biosphère de\nl'UNESCO depuis 2020.</p>\n<p>Les traditions orales de Mohéli sont moins publiées que celles des autres îles : si vous connaissez\ndes contes ou des légendes mohéliens, [[contact.html|écrivez-nous]]. Lire aussi :\n[[lieux/forets-et-lacs-de-moheli.html|Forêts et lacs de Mohéli]].</p>",
+    "about": "<p>Le lac Dziani Boundouni est un ancien cratère volcanique du sud-est de Mohéli, aux eaux\nsoufrées où aucun poisson ne vit ; on lui attribue des vertus thérapeutiques. Il est classé site Ramsar\n(zone humide d'importance internationale) et fait partie de l'île de Mohéli, réserve de biosphère de\nl'UNESCO depuis 2020.</p>\n<p>Selon le journal comorien <em>Kashkazi</em>, deux fêtes animistes de fin d'année attiraient autrefois les foules aux lieux d'offrandes de Bunduni et de Mwadjiyo (Nioumachoua).</p>\n<p>Les traditions orales de Mohéli sont moins publiées que celles des autres îles : si vous connaissez\ndes contes ou des légendes mohéliens, [[contact.html|écrivez-nous]]. Lire aussi :\n[[lieux/forets-et-lacs-de-moheli.html|Forêts et lacs de Mohéli]].</p>",
     "featured": false,
     "refs": [
-      "verin",
-      "walker"
+      "kashkazi-trimba",
+      "verin"
     ]
+  },
+  {
+    "local": "Nkoma",
+    "island": "anjouan",
+    "place": "",
+    "moral": "On ne s'installe pas chez autrui sans demander : une promesse faite aux premiers occupants se tient.",
+    "featured": false,
+    "refs": [
+      "bourhane-2017",
+      "masiwa-nkoma",
+      "hebert-1960"
+    ],
+    "slug": "le-pacte-de-basra",
+    "name": "Le pacte de Basra",
+    "kind": "legende",
+    "hero": "mutsamudu",
+    "lead": "À Ouani, les premiers habitants s'étaient installés chez les djinns sans leur demander. Un pacte fut conclu : tous les trois ans, hommes et djinns danseraient et mangeraient ensemble.",
+    "text": "<p>Il y a très longtemps, avant que l'islam n'arrive à Ndzuwani, des familles s'installèrent au\nnord-est de l'île, dans une plaine fertile qui descendait vers la mer. Elles appelèrent l'endroit\n<strong>Basra</strong>. C'est la ville que l'on nomme aujourd'hui Ouani.</p>\n<p>Mais les familles comprirent vite que quelque chose n'allait pas : les malheurs se succédaient.\nInquiètes, elles allèrent consulter un\n<strong><em>mwalimu</em></strong>, un savant qui connaissait les choses cachées. Il les écouta longtemps, puis\nil leur dit : « Vous avez bâti vos maisons sur un domaine qui appartient aux <strong>djinns</strong>. Ils\nétaient là avant vous, et vous ne leur avez pas demandé la permission. »</p>\n<p>Il fallait réparer cette offense. Deux hommes furent choisis pour parler au nom des humains :\n<strong>Mwé Beja Trandri</strong> et <strong>Mwé Combo Sele</strong>. Ils allèrent trouver les maîtres\ninvisibles du lieu et négocièrent avec eux. Un <strong>pacte</strong> fut conclu : les djinns acceptaient que\nles familles restent à Basra ; en échange, tous les trois ans, les hommes organiseraient une grande fête\noù les deux communautés danseraient et mangeraient ensemble, dans la joie.</p>\n<p>Ainsi naquit le <strong>nkoma</strong>. Pendant la fête, on joue avec des <em>koma</em>, des noix de coco si\njeunes que leur amande n'est pas encore formée, qui servent de balles. Et tant que la fête est\ncélébrée, dit-on, la paix entre les deux peuples de Ouani est respectée.</p>",
+    "about": "<p>Le <strong>nkoma</strong> est une fête agraire célébrée tous les trois ans à Ouani, au nord-est\nd'Anjouan. Son nom vient du mot <em>koma</em>, la noix de coco dont l'amande n'est pas encore formée. Selon\nla tradition orale, elle a été instituée par les deux familles fondatrices de la ville, les Bejani et les\nKomboni, pour honorer le contrat passé avec les djinns, premiers habitants des lieux. On y demande aussi la\nprotection des ancêtres pour les enfants et de bonnes récoltes.</p>\n<p>Décrite dès 1960 par J.-C. Hébert, puis étudiée par l'historien comorien Abderemane Bourhane parmi les\nrites préislamiques d'Anjouan, cette fête est aujourd'hui menacée de disparition. Lire aussi :\n[[contes/male-le-village-des-djinns.html|Malé, le village des djinns]], une tradition voisine en Grande\nComore.</p>"
+  },
+  {
+    "local": "Ntrimba",
+    "island": "anjouan",
+    "place": "",
+    "moral": "",
+    "featured": false,
+    "refs": [
+      "kashkazi-trimba",
+      "bourhane-2017",
+      "hebert-1960"
+    ],
+    "slug": "le-trimba-du-nyumakele",
+    "name": "Le Trimba, l'homme aux feuilles de bananier",
+    "kind": "legende",
+    "hero": "mutsamudu_vue",
+    "lead": "Sur le plateau du Nyumakele, les djinns enlevaient autrefois les hommes. Depuis la paix conclue avec eux, un personnage vêtu de feuilles de bananier mène chaque année leur procession.",
+    "text": "<p>Autrefois, sur le haut plateau du <strong>Nyumakele</strong>, au sud-est de Ndzuwani, les hommes\nvivaient dans la peur. Les <strong>djinns</strong>, premiers maîtres de ces terres, enlevaient des hommes et\ndes femmes pour les dévorer. Personne n'osait plus aller seul aux champs.</p>\n<p>Un jour pourtant, les djinns firent savoir qu'ils étaient prêts à vivre en paix avec les humains. Un\nhomme du pays, que la tradition appelle <strong>Waziri</strong>, alla négocier avec eux. Il obtint un\n<strong>pacte</strong> : les djinns cesseraient leurs enlèvements, et les hommes leur offriraient chaque\nannée un sacrifice, en suivant un long chemin choisi par les esprits eux-mêmes.</p>\n<p>Depuis, à la saison des pois d'Angole, une étrange silhouette sort du village : le\n<strong>Trimba</strong>. Il est couvert de la tête aux pieds de <strong>feuilles de bananier</strong>, porte des\ncornes et une queue, et nul ne doit savoir quel homme se cache dessous, sauf les chefs du rite. Pendant\ntrois jours, il conduit la procession de lieu sacré en lieu sacré, au son des tambours et des chants. Les\ndanseurs entrent en transe, les esprits parlent par leur bouche.</p>\n<p>Au bout du chemin, la procession atteint la mer, et l'on jette les offrandes aux djinns dans les\nvagues. Alors seulement on peut semer : la terre, dit-on, sera fertile, et la paix gardée pour un an de\nplus.</p>",
+    "about": "<p>Le <strong>Ntrimba</strong> (ou trimba) est un rite de fertilité qui ouvre l'année agricole dans\nle Nyumakele : une procession communautaire qui visite les <em>ziara</em>, lieux sacrés de la région, avec\nchants, danses et rites de possession. Les récits divergent : pour les uns, il scelle le pacte avec les\ndjinns ; pour d'autres, il commémore le voyage des premiers habitants échoués sur les rivages d'Anjouan,\nqui s'étaient réfugiés sur les hauteurs à l'arrivée des Chiraziens. Les sources le disent annuel ou\ncélébré tous les deux ans.</p>\n<p>Décrit par J.-C. Hébert en 1960, puis par le journal comorien <em>Kashkazi</em> en 2007 et par\nl'historien Abderemane Bourhane, il est désapprouvé par une partie des religieux, mais certains fidèles\nrefusent de l'abandonner, de peur de provoquer la colère des « premiers habitants des Comores ». Le\nNyumakele est aussi la région de la grande [[histoire/periode-coloniale.html|révolte de 1940]].</p>"
+  },
+  {
+    "local": "",
+    "island": "anjouan",
+    "place": "",
+    "moral": "",
+    "featured": false,
+    "refs": [
+      "bourhane-2017",
+      "hebert-1960"
+    ],
+    "slug": "la-grotte-de-hamampundru",
+    "name": "Hamampundru, la grotte de la mère muette",
+    "kind": "legende",
+    "hero": "roussette",
+    "lead": "Dans les hauteurs d'Anjouan, une grotte sacrée accueille la danse des esprits. On y entre pieds nus, on y dépose du miel, et l'on y parle bas.",
+    "text": "<p>Dans les collines du Bambao la Mtsanga, les villages de Koni Ngani, de Koni Djodjo et de\nMro-Maji partagent un même lieu sacré : une grotte que l'on appelle <strong>Hamampundru</strong>. Son nom\nveut dire « chez la mère muette » : c'est le ventre de la terre, d'où tout vient et qui ne dit rien.</p>\n<p>Des esprits habitent ses profondeurs. Parmi eux, on nomme <strong>Kokolampo</strong>, un esprit que l'on\nconnaît aussi dans le sud de Madagascar. On ne pénètre dans la grotte que <strong>pieds nus</strong>, pour ne\npas éveiller la colère de ses habitants, et l'on y dépose du <strong>miel</strong> pour les nourrir.</p>\n<p>Quand vient le temps du <em>Wutamaduni</em>, « nos us et coutumes », tout le village se met en route\nvers la grotte. On sacrifie un bœuf ou un cabri. Après une longue incantation, sur l'ordre de l'officiant,\nle porteur de lait en distribue aux enfants ; puis les fidèles descendent au fond de la grotte pour\ndanser le <strong><em>mdandra</em></strong>, la danse des esprits, jusqu'à ce que ceux-ci se manifestent.</p>\n<p>Plus haut, dans le village d'Ouzini, au fond de la vallée de l'Ajaho, on danse aussi le mdandra.\nAinsi, les montagnes d'Anjouan gardent la mémoire d'un temps où l'on\nparlait directement aux esprits de la terre.</p>",
+    "about": "<p>Le <strong>mdandra</strong> (ou mudandra), « danse des esprits », fait partie des rites\npréislamiques d'Anjouan étudiés par l'historien comorien Abderemane Bourhane : il est pratiqué notamment à\nOuzini et à Mro-Maji, dans une grotte sacrée. Ces rites témoignent de l'importance sociale des\n<em>mwalimu</em>, des séances de possession et du culte des esprits et des ancêtres.</p>\n<p>La présence de l'esprit Kokolampo, connu chez les Tandroy du sud de Madagascar, rappelle les liens\nanciens entre Anjouan et la Grande Île. Ces lieux sacrés sont à respecter : ils ne se visitent pas comme\ndes sites touristiques.</p>"
+  },
+  {
+    "local": "Mwana mroni",
+    "island": "anjouan",
+    "place": "domoni",
+    "moral": "",
+    "featured": false,
+    "refs": [
+      "bourhane-2017"
+    ],
+    "slug": "mwana-mroni-les-anguilles-sacrees",
+    "name": "Mwana Mroni, les anguilles sacrées",
+    "kind": "legende",
+    "hero": "domoni",
+    "lead": "Au pied des falaises d'Anjouan, dans des bassins d'eau vive, vivent des anguilles que nul ne pêche. On leur apporte des œufs et on leur confie ses prières.",
+    "text": "<p>À Ndzuwani, il y a des rivières qui ne tarissent jamais, même au plus fort de la saison sèche.\nAu pied de certaines falaises, elles forment de petits bassins sombres et frais. C'est là que vivent les\n<strong>anguilles sacrées</strong>, que l'on appelle <strong><em>mwana mroni</em></strong>, « les enfants de la\nrivière ».</p>\n<p>Personne ne les pêche. Personne ne leur fait de mal. Les anciens disent qu'elles ne sont pas des\npoissons comme les autres : elles sont liées aux esprits du lieu, et peut-être aux ancêtres eux-mêmes.\nCelui qui leur nuirait, dit-on, attirerait le malheur sur lui et sur sa famille.</p>\n<p>Alors, quand on a une grâce à demander ou un remerciement à adresser, on se rend au bassin. On y\ndépose des <strong>œufs</strong> en offrande, on prononce des prières, et l'on regarde les longues\nsilhouettes glisser dans l'eau sombre.</p>\n<p>À Papani, près de Domoni, à Ouani dans le puits sacré, ou à Mamahavuni près de Jimilime, on continue\nde veiller sur les enfants de la rivière.</p>",
+    "about": "<p>Le culte des anguilles sacrées (<em>muhunga</em> ou <em>mwana mroni</em>) s'est maintenu dans\nplusieurs localités d'Anjouan, notamment à Papani (Domoni), au puits sacré de Ouani et à Mamahavuni\n(Jimilime). Des œufs y sont déposés en offrande. Ces pratiques, observées surtout dans les régions\nrurales des hauts, se déroulent dans des <em>ziara</em>, des lieux sacrés.</p>\n<p>Elles ont été décrites par Abderemane Bourhane dans sa thèse sur les rites préislamiques d'Anjouan.\nDes cultes d'anguilles sacrées existent aussi à Madagascar et dans d'autres îles de l'océan Indien et du\nPacifique. Les motifs précis des prières varient selon les lieux et les familles.</p>"
   },
   {
     "slug": "les-femmes-d-iconi",
@@ -359,6 +432,61 @@
     "lead": "Le dernier des anciens chefs de Mayotte, un prince venu de la mer et un mariage qui fonde la première dynastie de l'île : l'histoire que racontent les anciens de Mtsamboro.",
     "text": "<p>Il y a très longtemps, à la pointe nord-ouest de Maore, face à la grande île que l'on voit\nau large, vivait un chef sage et respecté. On l'appelait <strong>Mwalimu Boro</strong>, « le maître\nBoro ». Il était <em>fani</em>, c'est-à-dire chef du pays, comme l'avaient été ses ancêtres avant\nlui.</p>\n<p>Un jour, une embarcation aborda la plage. Il en descendit un prince d'une famille dite de Chiraz,\nqui avait longtemps navigué de port en port. Le prince salua le fani, lui demanda l'hospitalité et\ns'installa au village. Il était instruit, pieux, habile à parler ; bientôt, il demanda en mariage la\nfille de Mwalimu Boro.</p>\n<p>Le vieux chef réfléchit longtemps, puis il accepta. De ce mariage naquit une lignée nouvelle, qui\nréunissait les anciens chefs du pays et les voyageurs venus de la mer. Ses descendants devinrent les\npremiers princes de Mayotte, et l'île entra dans le temps des sultans.</p>\n<p>Mwalimu Boro fut ainsi le dernier des fani. Mais on ne l'oublia pas : la plage où il régnait garda\nson nom. On l'appela <strong>M'tsa Boro</strong>, la « plage de Boro », et le village s'appelle\naujourd'hui encore <strong>Mtsamboro</strong>.</p>",
     "about": "<p>Ce récit a été recueilli auprès des anciens de Mtsamboro et publié par les services culturels\nde Mayotte dans la collection des <em>Cahiers des archives orales</em> ; il a aussi fait l'objet du\npremier épisode du podcast <em>Halé Halélé</em>. Le nom de Mtsamboro viendrait bien de <em>m'tsa</em>\n(diminutif de <em>m'tsanga</em>, « la plage ») et de Boro.</p>\n<p>Les traditions varient sur les noms : le prince est appelé Attoumani ben Mohamed dans certaines\nversions, Makabayila dans d'autres, et le chef Mwalimu Poro ou Boro. Elles s'accordent sur l'essentiel :\nMtsamboro accueille le premier sultan de Mayotte à la fin du XVe siècle, avant que le pouvoir ne se\nfixe à Tsingoni. Lire : [[histoire/le-temps-des-sultans.html|Le temps des sultans]].</p>"
+  },
+  {
+    "local": "Mwalimdjini",
+    "island": "moheli",
+    "place": "",
+    "moral": "",
+    "featured": false,
+    "refs": [
+      "gazette-mwalimdjini",
+      "muzdalifa-mwali",
+      "verin"
+    ],
+    "slug": "mwali-mdjini",
+    "name": "Mwali-Mdjini, la cité abandonnée",
+    "kind": "recit",
+    "hero": "nioumachoua_ilots",
+    "lead": "Sur les hauteurs de Djoiezi dorment les ruines de la plus ancienne ville de Mohéli. Ses habitants l'ont quittée ; certains ont traversé la mer jusqu'à la Grande Comore.",
+    "text": "<p>Au-dessus de Djoiezi, quand on grimpe à travers les champs, on finit par tomber sur des pierres\nqui ne sont pas là par hasard : des pans de <strong>remparts</strong>, des fondations de maisons, des tombes.\nC'est <strong>Mwali-Mdjini</strong>, « la ville de Mwali », la plus ancienne cité de l'île.</p>\n<p>Les anciens racontent qu'autrefois, des familles venues de la mer, que l'on dit arabes et\nchiraziennes, y vivaient dans des maisons de pierre. Elles commerçaient avec les navires de passage :\non trouve encore dans la terre des tessons de poteries anciennes et des morceaux de\n<strong>porcelaine de Chine</strong>.</p>\n<p>Puis, un jour, la ville se vida. Pourquoi ? Les récits ne s'accordent pas : guerres, maladies,\nquerelles entre familles, attaques venues de la mer… Ce que l'on sait, disent les anciens, c'est\nqu'une partie des habitants prit la mer vers l'est. Ils abordèrent en Grande Comore, dans la région du\nWashili, et s'installèrent au village d'<strong>Itsinkudi</strong>. Leurs descendants formèrent une lignée\nqui porte encore le souvenir de son île d'origine : l'<strong>Inya Matswa Mwali</strong>.</p>\n<p>À Itsinkudi, d'ailleurs, il existe des tombes semblables à celles de Mwali-Mdjini, comme si les\nvoyageurs avaient emporté avec eux la manière de bâtir de leur ville perdue.</p>",
+    "about": "<p>Mwali-Mdjini (ou Mwalimdjini) est un site archéologique situé sur les hauteurs de Djoiezi. On y\nvoit des remparts, des habitations en pierre et des sépultures ; des tessons de poterie de la période\nswahilie ancienne et de la porcelaine chinoise y ont été trouvés. Certains font remonter ses plus anciennes\ntraces au IXe siècle, une datation qui reste à confirmer par des fouilles.</p>\n<p>Le récit de la migration vers Itsinkudi et de la lignée Inya Matswa Mwali est rapporté notamment par le\nsociologue mohélien Salim Djabir. Le site, abandonné, se dégrade : les habitants y ont longtemps prélevé\ndes pierres pour construire. Lire : [[histoire/premiers-peuplements.html|Premiers peuplements]].</p>"
+  },
+  {
+    "local": "",
+    "island": "moheli",
+    "place": "",
+    "moral": "Le plus petit ne survit pas par la force, mais par la prudence et la solidarité.",
+    "featured": false,
+    "refs": [
+      "muzdalifa-mwali",
+      "martin"
+    ],
+    "slug": "la-forteresse-de-bandamale",
+    "name": "La forteresse cachée de Bandamale",
+    "kind": "recit",
+    "hero": "lemur_mongoz",
+    "lead": "Quand le danger venait de la mer, les Mohéliens savaient où fuir : une cité fortifiée cachée dans les hauteurs, que l'on atteignait par la rivière des fugitifs.",
+    "text": "<p>Mwali est la plus petite des quatre îles, et ses voisins étaient puissants. À plusieurs reprises,\nles sultans d'Anjouan voulurent la soumettre, puis vinrent les flottes de pillards. Les villes de la côte\navaient leurs <strong>remparts</strong>, mais que faire si les remparts tombaient ?</p>\n<p>Les anciens de Mwali eurent une idée que l'on ne trouve dans aucune autre île de l'archipel. Loin des\ncôtes, dans les hauteurs couvertes de forêt, à <strong>Bandamale</strong>, sur le mont des wanaMalungu, ils\nbâtirent une <strong>cité fortifiée</strong> secrète. Ce n'était pas une ville comme les autres : c'était un\nrefuge.</p>\n<p>Pour l'atteindre depuis le Djando, il fallait remonter une rivière que l'on appelait le\n<strong><em>Mro wa watoro</em></strong>, la « rivière des fugitifs », ou des insurgés. Ceux qui connaissaient\nle chemin s'y glissaient sans laisser de traces.</p>\n<p>Là-haut, à l'abri des regards, on tenait les conseils secrets, on préparait la résistance, et l'on\ncachait les femmes, les enfants et les vieillards quand le malheur frappait la côte. Les ennemis\npouvaient prendre les villes : ils ne trouvaient jamais le cœur de Mwali.</p>",
+    "about": "<p>Ce récit est rapporté par le sociologue mohélien Salim Djabir : une cité fortifiée bâtie dans\nles hauteurs, à Bandamale, servait de lieu de résistance, de réunion secrète et de refuge en cas\nd'extrême danger ; on y accédait depuis le Djando, l'une des anciennes régions de l'île (chef-lieu\nWanani), par la « rivière des insurgés » (<em>Mro wa watoro</em>). Selon lui, un tel lieu n'existait qu'à\nMohéli dans l'archipel.</p>\n<p>Le contexte est historique : Mohéli, liée à Kilwa, a été menacée par le sultanat d'Anjouan,\nnotamment aux XIVe et XVe siècles, puis par les [[histoire/traite-et-esclavage.html|razzias malgaches]]\nde la fin du XVIIIe siècle. Le site n'a pas, à notre connaissance, fait l'objet de fouilles.</p>"
+  },
+  {
+    "local": "Fumboni",
+    "island": "moheli",
+    "place": "",
+    "moral": "",
+    "featured": false,
+    "refs": [
+      "muzdalifa-fomboni",
+      "muzdalifa-mwali"
+    ],
+    "slug": "fomboni-la-ville-aux-sept-villages",
+    "name": "Fomboni, la ville aux sept villages",
+    "kind": "recit",
+    "hero": "fomboni",
+    "lead": "La capitale de Mohéli n'appartient pas à un seul village, mais à sept. D'où vient son nom, et pourquoi chacun s'y sent-il chez soi ?",
+    "text": "<p>Avant Fomboni, raconte-t-on, il y avait sur ce rivage plusieurs petites localités : Bandar\nes-Salam, Mrodewa, Kombani, Uvanga, Mlembeni… et <strong>Mafumbuni</strong>. C'est de ce dernier nom que\nviendrait celui de la ville, <strong>Fumboni</strong>, que l'on écrit aujourd'hui Fomboni.</p>\n<p>Peu à peu, ces localités se rapprochèrent et formèrent une seule ville, au bord de la mer, là où\nles boutres pouvaient accoster. Mais Fomboni ne se coupa jamais de l'intérieur de l'île. Les familles de\nsept villages y étaient liées par leurs origines et par les mariages : <strong>Hoani, Domoni, Hamba, Wanani,\nDjoiezi, Mlambenda et Hanyamwada</strong>.</p>\n<p>C'est pourquoi l'on dit que Fomboni est « la ville aux sept villages ». Quand un habitant de l'un de\nces villages vient à Fomboni, il n'y est pas un étranger : il est chez lui. Il y a des parents et une place\ndans la coutume.</p>\n<p>Au XIXe siècle, Fomboni devint la capitale des souverains de Mwali, ceux de la reine Djoumbé Fatima,\npuis la capitale de l'île tout entière.</p>",
+    "about": "<p>Ce récit de fondation est rapporté par la Muzdalifa House, notamment à partir des explications du sociologue Salim Djabir. Mohéli était autrefois divisée en\ngrandes régions, et Fomboni est restée une cité coutumière où les membres de sept localités sont « chez\neux », liés par leurs origines et leurs alliances.</p>\n<p>Lire : [[histoire/periode-coloniale.html|La période coloniale]] et\n[[histoire/personnages.html|Djoumbé Fatima]].</p>"
   },
   {
     "slug": "la-marmite-qui-avait-accouche",
