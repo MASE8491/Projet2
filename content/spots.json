@@ -32,7 +32,7 @@
     "where": "Moroni",
     "text": "Créé en 1979, le Centre national de documentation et de recherche scientifique abrite le Musée national, ouvert en 1989 : histoire, archéologie et religion, volcanologie, océanographie (avec le cœlacanthe) et anthropologie. Il réunit aussi les Archives et la Bibliothèque nationales et l'observatoire du Karthala.",
     "tip": "Une visite idéale en début de séjour, pour comprendre l'île avant de la parcourir, ou un jour de pluie.",
-    "media": "musee_comores",
+    "media": "moroni_centre",
     "place": ""
   },
   {
@@ -380,7 +380,7 @@
     "where": "Sud-est de l'île",
     "text": "Les tortues vertes viennent pondre en grand nombre sur les plages d'Itsamia. Fondée par les villageois en 1991, l'association ADSEI protège les sites de ponte et accueille les visiteurs dans ses bungalows communautaires, avec des guides du village.",
     "tip": "Ni lampe blanche ni flash près des tortues : suivez les consignes des guides.",
-    "media": "turtle_moheli",
+    "media": "tortue_verte",
     "place": "itsamia"
   },
   {
@@ -416,7 +416,7 @@
     "where": "Sud de l'île",
     "text": "Les forêts des hauteurs de Ouallah abritent la roussette de Livingstone, l'une des plus grandes chauves-souris du monde. Une marche d'une demi-heure mène aussi à la cascade de Ouallah 2.",
     "tip": "Partez avec un guide du village : il connaît les arbres où dorment les roussettes.",
-    "media": "moheli_cascade",
+    "media": "roussette_2",
     "place": ""
   },
   {
@@ -488,7 +488,7 @@
     "where": "Mamoudzou",
     "text": "Le principal marché de l'île : manioc, bananes plantain, mangues, papayes, vanille, cardamome, plantes médicinales, samoussas… et des stands d'artisanat : coffrets et boutres en bois sculpté, vannerie, bijoux, et salouva, le pagne des Mahoraises.",
     "tip": "Venez en matinée : c'est l'heure où le marché est le plus animé.",
-    "media": "marche_mamoudzou",
+    "media": "mamoudzou_2",
     "place": "mamoudzou-et-tsingoni"
   },
   {
@@ -536,7 +536,7 @@
     "where": "Dapani, sud de l'île",
     "text": "Un « désert rouge » face au lagon : le padza (« mauvaise terre » en shimaore) est un sol volcanique érodé et stérile. Un sentier géologique d'une vingtaine de minutes, avec panneaux explicatifs, mène à un point de vue où le rouge de la terre répond au bleu du lagon.",
     "tip": "Allez-y tôt : il n'y a aucune ombre.",
-    "media": "padza",
+    "media": "grande_terre",
     "place": ""
   },
   {
@@ -560,7 +560,7 @@
     "where": "Pointe sud-est",
     "text": "Des plages sauvages et protégées où pondent les tortues, face à l'îlot de Sable Blanc. On les rejoint à pied par un sentier côtier.",
     "tip": "Randonnée sans ombre : prévoyez beaucoup d'eau et partez tôt.",
-    "media": "saziley",
+    "media": "tortue_pilote",
     "place": ""
   },
   {

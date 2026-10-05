@@ -486,11 +486,6 @@
     "caption": "La plage de Bangoi-Kouni, au nord-est de la Grande Comore",
     "island": "gc"
   },
-  "musee_comores": {
-    "file": "Musee_des_Comores_(10842842534).jpg",
-    "caption": "Le Musée national des Comores, à Moroni",
-    "island": "gc"
-  },
   "fete_independance": {
     "file": "Independence_day_Moroni_Comoros_4.jpg",
     "caption": "Fête de l'indépendance à Moroni",
@@ -515,21 +510,6 @@
     "file": "Mohéli-Beach.jpg",
     "caption": "Une plage de Mohéli",
     "island": "moheli"
-  },
-  "moheli_cascade": {
-    "file": "Waterfalls_in_the_rainforest_of_Moheli.jpg",
-    "caption": "Cascade dans la forêt de Mohéli",
-    "island": "moheli"
-  },
-  "turtle_moheli": {
-    "file": "Turtle-Moheli.jpg",
-    "caption": "Tortue marine à Mohéli",
-    "island": "moheli"
-  },
-  "marche_mamoudzou": {
-    "file": "Marche_couvert_(3672190363).jpg",
-    "caption": "Le marché couvert de Mamoudzou",
-    "island": "mayotte"
   },
   "ecomusee_sel": {
     "file": "Éco_musée_du_sel.JPG",
@@ -579,16 +559,6 @@
   "grande_terre": {
     "file": "Mayotte,_Grande_Terre_(2850834274).jpg",
     "caption": "Paysage de Grande-Terre, à Mayotte",
-    "island": "mayotte"
-  },
-  "padza": {
-    "file": "Padza_érodé.jpg",
-    "caption": "Un padza, terre rouge érodée du sud de Mayotte",
-    "island": "mayotte"
-  },
-  "saziley": {
-    "file": "Plages_de_Saziley.jpg",
-    "caption": "Les plages sauvages de Saziley, à Mayotte",
     "island": "mayotte"
   }
 }
