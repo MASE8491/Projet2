@@ -68,7 +68,8 @@
       "mitsamiouli_plage",
       "bangoi_kouni_plage",
       "volo_volo",
-      "fete_independance"
+      "fete_independance",
+      "musee_comores"
     ],
     "tips": [
       "L'aéroport international Prince Saïd Ibrahim se trouve à Hahaya, à une vingtaine de kilomètres au nord de Moroni.",
@@ -151,7 +152,10 @@
       "lemur_mongoz",
       "tortue_verte",
       "moheli_plage",
-      "roussette_2"
+      "roussette_2",
+      "moheli_cascade",
+      "turtle_moheli",
+      "ouallah_corail"
     ],
     "tips": [
       "Les distributeurs automatiques sont très rares : emportez suffisamment d'espèces.",
@@ -339,7 +343,11 @@
       "mtsamboro_ilot",
       "ecomusee_sel",
       "grande_terre",
-      "mamoudzou_2"
+      "mamoudzou_2",
+      "marche_mamoudzou",
+      "padza",
+      "dapani",
+      "saziley"
     ],
     "tips": [
       "La monnaie est l'euro ; les cartes bancaires sont largement acceptées.",

@@ -560,5 +560,45 @@
     "file": "Mayotte,_Grande_Terre_(2850834274).jpg",
     "caption": "Paysage de Grande-Terre, à Mayotte",
     "island": "mayotte"
+  },
+  "marche_mamoudzou": {
+    "file": "Marché-Mamoudzou.jpg",
+    "caption": "Le marché couvert de Mamoudzou",
+    "island": "mayotte"
+  },
+  "musee_comores": {
+    "file": "Musee_des_Comores_(10842842534).jpg",
+    "caption": "Le Musée national des Comores (CNDRS), à Moroni",
+    "island": "gc"
+  },
+  "moheli_cascade": {
+    "file": "Waterfalls_in_the_rainforest_of_Moheli.jpg",
+    "caption": "Cascade dans la forêt de Mohéli",
+    "island": "moheli"
+  },
+  "turtle_moheli": {
+    "file": "Turtle-Moheli.jpg",
+    "caption": "Tortue marine sur la côte de Mohéli",
+    "island": "moheli"
+  },
+  "ouallah_corail": {
+    "file": "Ouallah-Mohéli-Corail.jpg",
+    "caption": "Côte corallienne à Ouallah, au sud de Mohéli",
+    "island": "moheli"
+  },
+  "padza": {
+    "file": "Padza_érodé.jpg",
+    "caption": "Un padza, sol rouge érodé, à Mayotte",
+    "island": "mayotte"
+  },
+  "dapani": {
+    "file": "Dapani.jpg",
+    "caption": "Dapani, dans le sud de Mayotte",
+    "island": "mayotte"
+  },
+  "saziley": {
+    "file": "Îlot-Sable-Blanc-pointe-Saziley.jpg",
+    "caption": "La pointe Saziley et l'îlot de Sable Blanc, au sud-est de Mayotte",
+    "island": "mayotte"
   }
 }
